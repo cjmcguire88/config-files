@@ -1,2 +1,2 @@
 # config-files
-config files for various linux applications
+personal config files for various linux applications
