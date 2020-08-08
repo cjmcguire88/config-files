@@ -122,7 +122,7 @@ super + {Left,Down,Up,Right}
 
 # open browser
 super + shift +b
-	firefox-developer-edition
+	firefox
 
 # open dolphin
 super + shift +f
@@ -133,8 +133,8 @@ super + shift + s
 	systemsettings5
 
 # open steam 
-super + shift + g
-	optirun -b primus steam
+#super + shift + g
+#	optirun -b primus steam
 
 # open systemlog
 super + shift + l
