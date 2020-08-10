@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + shift + t
-	terminator
+	st
 
 # program launcher
 super + @space
