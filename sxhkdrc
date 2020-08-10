@@ -42,6 +42,14 @@ super + g
 super + c
 	bspc node @/ -R 90
 
+# hide window
+super + b 	
+	bspc node -g hidden
+
+# unhide window
+super + alt + b
+	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+
 #
 # state/flags
 #
@@ -62,9 +70,13 @@ super + ctrl + {m,x,y,z}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
+# focus the next node in the current desktop
 super + x
 	bspc node -f next.local
+
+# focus the previous node in the current desktop
+super + alt + x
+	bspc node -f prev.local
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
