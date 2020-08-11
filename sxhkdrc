@@ -6,10 +6,6 @@
 super + shift + t
 	st
 
-# program launcher
-super + @space
-	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -35,7 +31,7 @@ super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest node
-super + g
+super + space 
 	bspc node -s biggest
 
 # rotate nodes
@@ -43,11 +39,11 @@ super + c
 	bspc node @/ -R 90
 
 # hide window
-super + b 	
+super + shift + v	
 	bspc node -g hidden
 
 # unhide window
-super + alt + b
+super + shift + alt + v
 	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
 #
@@ -55,11 +51,11 @@ super + alt + b
 #
 
 # set the window state
-super + {a,s,d,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + shift + {z,x,c}
+	bspc node -t {tiled,fullscreen,floating}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
+super + ctrl + {z,x,c,v}
 	bspc node -g {marked,locked,sticky,private}
 
 #
@@ -74,17 +70,13 @@ super + {p,b,comma,period}
 super + x
 	bspc node -f next.local
 
-# focus the previous node in the current desktop
-super + alt + x
-	bspc node -f prev.local
-
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+super + Tab
+	bspc desktop -f next.local
 
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+super + grave
+	bspc node -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -93,7 +85,7 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+super + {shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
@@ -101,7 +93,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -133,11 +125,11 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # open browser
-super + shift +b
+super + shift + b
 	firefox
 
 # open dolphin
-super + shift +f
+super + shift + f
 	dolphin
 
 # open settings
