@@ -128,6 +128,10 @@ super + {Left,Down,Up,Right}
 super + shift + b
 	firefox
 
+# open browser2
+super + alt + b
+	surf https://www.google.com
+
 # open dolphin
 super + shift + f
 	dolphin
@@ -137,9 +141,17 @@ super + shift + s
 	systemsettings5
 
 # open steam 
-#super + shift + g
-#	optirun -b primus steam
+super + shift + g
+	prime-run steam
 
 # open systemlog
-super + shift + l
+super + F2
 	ksystemlog
+
+# open task manager
+super + F1
+	ksysguard
+
+# open nvtop
+super + F3
+	st nvtop
