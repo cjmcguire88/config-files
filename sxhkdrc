@@ -7,7 +7,7 @@ super + shift + t
 	st
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + ctrl + Escape
 	pkill -USR1 -x sxhkd
 
 #
@@ -15,7 +15,7 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + {shift + Escape,Escape}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -39,11 +39,11 @@ super + c
 	bspc node @/ -R 90
 
 # hide window
-super + shift + v	
+super + m	
 	bspc node -g hidden
 
 # unhide window
-super + shift + alt + v
+super + shift + m 
 	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
 #
@@ -51,11 +51,11 @@ super + shift + alt + v
 #
 
 # set the window state
-super + shift + {z,x,c}
+super + {1,2,3}
 	bspc node -t {tiled,fullscreen,floating}
 
 # set the node flags
-super + ctrl + {z,x,c,v}
+super + ctrl + {1,2,3,4}
 	bspc node -g {marked,locked,sticky,private}
 
 #
@@ -85,7 +85,7 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {shift + }{1-9,0}
+super + shift + {1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
@@ -126,7 +126,7 @@ super + {Left,Down,Up,Right}
 
 # open browser
 super + shift + b
-	firefox
+	chromium
 
 # open browser2
 super + alt + b
@@ -134,7 +134,7 @@ super + alt + b
 
 # open dolphin
 super + shift + f
-	dolphin
+	thunar
 
 # open settings
 super + shift + s
@@ -144,13 +144,13 @@ super + shift + s
 super + shift + g
 	prime-run steam
 
-# open systemlog
-super + F2
-	ksystemlog
-
 # open task manager
 super + F1
-	ksysguard
+	st bashtop
+
+# open system log
+super + F2
+	ksystemlog
 
 # open nvtop
 super + F3
