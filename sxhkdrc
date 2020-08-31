@@ -134,7 +134,7 @@ super + alt + b
 
 # open dolphin
 super + shift + f
-	thunar
+	dolphin
 
 # open settings
 super + shift + s
@@ -143,6 +143,10 @@ super + shift + s
 # open steam 
 super + shift + g
 	prime-run steam
+
+# open lutris
+super + alt + g
+	lutris
 
 # open task manager
 super + F1
@@ -155,3 +159,4 @@ super + F2
 # open nvtop
 super + F3
 	st nvtop
+
