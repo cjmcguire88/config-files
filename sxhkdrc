@@ -63,8 +63,8 @@ super + ctrl + {1,2,3,4}
 #
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+#super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # focus the next node in the current desktop
 super + x
