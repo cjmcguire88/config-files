@@ -1,0 +1,67 @@
+These keybinds are not meant to be intuitive. They are meant for ease of use. All keybinds can be modified and functionality can be added or removed through ~/.config/sxhkd/sxhkdrc
+
+1. Node control
+	
+Switch between tiled and monocle layout:
+	super + z
+
+Focus next node in current desktop:
+	super + x
+
+Rotate nodes in current desktop:
+	super + c
+
+Close(kill) focused node:
+	super + v	
+
+Swap current node with largest node on current desktop:
+	super + shift + z
+
+Minimize focused node:
+	super + m
+
+Restore minimized nodes:
+	super + shift + m
+
+Set node state (tiled, fullscreen, floating):
+	super + ctrl + (1, 2, 3) [respectively]
+______________________________________________________________________
+2. Floating window control
+
+Move floating windows:
+	super + arrow keys
+
+Increase size of floating windows:
+	super + ctrl + arrow keys
+
+Decrease size of floating windows:
+	super + alt + arrow keys
+______________________________________________________________________ 
+3. Desktop control
+
+Switch to next desktop:
+	super + tab
+
+Send node to given desktop:
+	super + (1, 2) [assuming you have only 2 desktops]
+______________________________________________________________________
+4. Preselection (manually control where nodes open)
+
+Preselect direction of node (top, bottom, left, right,)
+	super + ctrl + (h, j, k, l) [respectively]
+
+Cancel preselection:
+	super + ctrl + end
+______________________________________________________________________
+5. Reload config files
+
+Reload sxhkd
+	super + ctrl + escape
+
+Reload bspwm
+	super + escape
+______________________________________________________________________
+6. Application control
+
+All applications open with super + shift + (user defined)
+
