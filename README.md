@@ -14,4 +14,5 @@ personal config files for various linux applications
 /etc/**mkinitcpio.conf**
 
 /etc/**makepkg.conf**
+
 ![desktop](desktop.png)
