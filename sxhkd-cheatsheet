@@ -20,7 +20,7 @@ Swap current node with largest node on current desktop:
 Minimize focused node:
 	super + m
 
-Restore minimized nodes:
+Restore minimized nodes (1 at a time):
 	super + shift + m
 
 Set node state (tiled, fullscreen, floating):
@@ -42,7 +42,7 @@ ______________________________________________________________________
 Switch to next desktop:
 	super + tab
 
-Send node to given desktop:
+Send focused node to given desktop:
 	super + (1, 2) [assuming you have only 2 desktops]
 ______________________________________________________________________
 4. Preselection (manually control where nodes open)
