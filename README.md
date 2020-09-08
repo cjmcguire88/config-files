@@ -1,19 +1,18 @@
 # <h1>**config-files**</h1>
 *personal config files for various linux applications**
 
-<ul> 
-<li>~/.config/bspwm/bspwmrc</li>
+~/.config/bspwm/**bspwmrc** 
+<ul><li>bspwm config file</li></ul>
+~/.config/sxhkd/**sxhkdrc**
 
-<li>~/.config/sxhkd/sxhkdrc</li>
+~/.config/sxhkd/**sxhkd-cheatsheet**
 
-<li>~/.config/sxhkd/sxhkd-cheatsheet</li>
+~/.config/picom/**picom.conf**
 
-<li>~/.config/picom/picom.conf</li>
+~/**.zshrc**
 
-<li>~/.zshrc</li>
+/usr/share/xsessions/**plasma-bspwm.desktop**</li>
 
-<li>/usr/share/xsessions/plasma-bspwm.desktop</li>
-</ul>
 
 <h3>**<strong>Do not attempt to use these unless you know what you're doing!</strong>**</h3>
 
@@ -22,6 +21,5 @@
 <li>/etc/**mkinitcpio.conf** </li> *For generating minimal initramfs. My modules will not be the same as yours. 
 See <a href="https://wiki.archlinux.org/index.php/Minimal_initramfs" title="Arch Wiki-Minimal initramfs">Minimal initramfs - ArchWiki</a>
 </ul>
-
 
 ![desktop](desktop.png)
