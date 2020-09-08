@@ -11,6 +11,8 @@ personal config files for various linux applications
 
 ~/**.zshrc**
 
+/usr/share/xsessions/**plasma-bspwm.desktop**
+
 /etc/**mkinitcpio.conf**
 
 /etc/**makepkg.conf**
