@@ -26,6 +26,6 @@
 
 - `/etc/mkinitcpio.conf`  
 *For generating minimal initramfs. My modules will not be the same as yours.* 
-See [Minimal initramfs](https://wiki.archlinux.org/index.php/Minimal_initramfs)
+See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 
 ![desktop](desktop.png)
