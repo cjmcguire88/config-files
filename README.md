@@ -1,7 +1,6 @@
 # <h1>**config-files**</h1>
 *personal config files for various linux applications**
-<p>
-~/.config/bspwm/**bspwmrc**
+<p>~/.config/bspwm/**bspwmrc**
 
 ~/.config/sxhkd/**sxhkdrc**
 
@@ -11,8 +10,7 @@
 
 ~/**.zshrc**
 
-/usr/share/xsessions/**plasma-bspwm.desktop**
-</p>
+/usr/share/xsessions/**plasma-bspwm.desktop**</p>
 
 <h3>**<strong>Do not attempt to use these unless you know what you're doing!</strong>**</h3>
 
