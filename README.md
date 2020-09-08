@@ -13,7 +13,7 @@
 - **picom.conf** *-picom compositor config*  
 `~/.config/picom/picom.conf`
 
-- **.zshrc** *-z shell config w/ powerlevel10k*  
+- **.zshrc** *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 `~/.zshrc`
 
 - **plasma-bspwm.desktop** *-.desktop to use bspwm in plasma*  
