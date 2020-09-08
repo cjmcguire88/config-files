@@ -20,8 +20,8 @@
 <ul>
 <li>/etc/**makepkg.conf**</li> *Compiles packages with -march=native and -O2 flags and uses clang when possible
 <li>/etc/**mkinitcpio.conf** </li> *for minimal initramfs. My modules will not be the same as yours. 
+See <a href="https://wiki.archlinux.org/index.php/Minimal_initramfs" title="Arch Wiki-Minimal initramfs">Arch Wiki-Minimal initramfs</a>
 </ul>
-See <a href="https://wiki.archlinux.org/index.php/Minimal_initramfs" title="Arch Wiki-Minimal initramfs">Minimal initramfs</a>
 
 
 ![desktop](desktop.png)
