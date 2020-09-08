@@ -1,5 +1,5 @@
 # <h1>**config-files**</h1>
-<h2>*personal config files for various linux applications**</h2>
+<h2>*personal config files for various linux applications*</h2>
 
 ~/.config/bspwm/**bspwmrc** *bspwm config*
 
