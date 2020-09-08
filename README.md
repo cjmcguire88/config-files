@@ -1,5 +1,5 @@
-#**config-files**
-##*personal config files for various linux applications*
+# **config-files**
+## *personal config files for various linux applications*
 
 - *bspwm config*  
 ~/.config/bspwm/**bspwmrc**
@@ -19,7 +19,7 @@
 - *.desktop to use bspwm in plasma*  
 /usr/share/xsessions/**plasma-bspwm.desktop**
 
-###**<strong>Do not attempt to use these unless you know what you're doing!</strong>**
+### **<strong>Do not attempt to use these unless you know what you're doing!</strong>**
 
 - /etc/**makepkg.conf**  
 *Compiles packages with -march=native and -O2 flags and uses clang when possible*
