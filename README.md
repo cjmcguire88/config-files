@@ -29,6 +29,7 @@ ___
 - `/etc/mkinitcpio.conf`  
 *For generating minimal initramfs. My modules will not be the same as yours.* 
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
-<sup>2</sup>*Seriously if you break your system by messing around with your mkinitcpio.conf I will laugh at you. You've been warned!!
+
+<sup>2</sup>*Seriously if you break your system by messing around with your mkinitcpio.conf I will laugh at you. You've been warned!*
 ___
 ![desktop](desktop.png)
