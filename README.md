@@ -23,6 +23,7 @@
 
 /etc/**makepkg.conf**  
 *Compiles packages with -march=native and -O2 flags and uses clang when possible*
+
 /etc/**mkinitcpio.conf**  
 *For generating minimal initramfs. My modules will not be the same as yours.* 
 See <a href="https://wiki.archlinux.org/index.php/Minimal_initramfs" title="Arch Wiki-Minimal initramfs">Minimal initramfs - ArchWiki</a>
