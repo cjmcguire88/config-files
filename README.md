@@ -1,8 +1,8 @@
 # <h1>**config-files**</h1>
 *personal config files for various linux applications**
 
-~/.config/bspwm/**bspwmrc** 
-<li>bspwm config file</li>
+<li>~/.config/bspwm/**bspwmrc**</li> 
+
 ~/.config/sxhkd/**sxhkdrc**
 
 ~/.config/sxhkd/**sxhkd-cheatsheet**
