@@ -16,7 +16,7 @@ ___
 - **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))    
 `~/.zshrc`
 
-- **plasma-bspwm.desktop** *-.desktop to use bspwm in plasma*  
+- **plasma-bspwm.desktop** *-.desktop to provide a session in which plasma uses bspwm instead of kwin*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
 ___
 ### **Do not attempt to use these unless you know what you're doing!**<sup>2</sup>
