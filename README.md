@@ -1,19 +1,18 @@
 # <h1>**config-files**</h1>
 *personal config files for various linux applications**
 
-<ul>
-**bspwmrc**  
+<ul> 
 <li>~/.config/bspwm/bspwmrc</li>
 
-<li>~/.config/sxhkd/sxhkdrc </li>
+<li>~/.config/sxhkd/sxhkdrc</li>
 
-<li>~/.config/sxhkd/**sxhkd-cheatsheet** </li>
+<li>~/.config/sxhkd/sxhkd-cheatsheet</li>
 
-<li>~/.config/picom/**picom.conf**</li>
+<li>~/.config/picom/picom.conf</li>
 
-<li>~/**.zshrc**</li>
+<li>~/.zshrc</li>
 
-<li>/usr/share/xsessions/**plasma-bspwm.desktop**</li>
+<li>/usr/share/xsessions/plasma-bspwm.desktop</li>
 </ul>
 
 <h3>**<strong>Do not attempt to use these unless you know what you're doing!</strong>**</h3>
