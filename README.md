@@ -21,10 +21,10 @@
 
 ### **<strong>Do not attempt to use these unless you know what you're doing!</strong>**
 
-- `/etc/**makepkg.conf**`  
+- `/etc/makepkg.conf`  
 *Compiles packages with -march=native and -O2 flags and uses clang when possible*
 
-- `/etc/**mkinitcpio.conf**`  
+- `/etc/mkinitcpio.conf`  
 *For generating minimal initramfs. My modules will not be the same as yours.* 
 See [Minimal initramfs](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 
