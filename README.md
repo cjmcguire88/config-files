@@ -2,7 +2,7 @@
 *personal config files for various linux applications**
 
 ~/.config/bspwm/**bspwmrc** 
-<ul><li>bspwm config file</li></ul>
+<li>bspwm config file</li>
 ~/.config/sxhkd/**sxhkdrc**
 
 ~/.config/sxhkd/**sxhkd-cheatsheet**
