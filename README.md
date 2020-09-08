@@ -29,6 +29,6 @@ ___
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
-<sup>2</sup>*Seriously, if you break your system by messing around with your mkinitcpio.conf I will laugh at you. You've been warned!*
+<sup>2</sup>*Seriously, if you break your system by messing around with your mkinitcpio.conf... I will laugh at you. You've been warned!*
 ___
 ![desktop](desktop.png)
