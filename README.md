@@ -25,7 +25,7 @@ ___
 *Compiles packages with -march=native and -O2 flags and uses clang when possible*
 
 - `/etc/mkinitcpio.conf`  
-*For generating minimal initramfs. My hooks/modules will not be the same as yours.*   
+*For generating a minimal initramfs for a system with a specific, known and static hardware configuration. My hooks/modules will not be the same as yours.*   
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
