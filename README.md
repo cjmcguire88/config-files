@@ -1,22 +1,30 @@
 # <h1>**config-files**</h1>
 <h2>*personal config files for various linux applications*</h2>
 
-~/.config/bspwm/**bspwmrc** *bspwm config*
+*bspwm config*
+~/.config/bspwm/**bspwmrc**
 
-~/.config/sxhkd/**sxhkdrc** *sxhkd hotkey config* 
+*sxhkd hotkey config*
+~/.config/sxhkd/**sxhkdrc**
 
-~/.config/sxhkd/**sxhkd-cheatsheet** *cheatsheet for my hotkeys*
+*cheatsheet for my hotkeys*
+~/.config/sxhkd/**sxhkd-cheatsheet**
 
-~/.config/picom/**picom.conf** *picom compositor config*
+*picom compositor config*
+~/.config/picom/**picom.conf**
 
-~/**.zshrc** *z shell config w/ powerlevel10k*
+*z shell config w/ powerlevel10k*
+~/**.zshrc**
 
-/usr/share/xsessions/**plasma-bspwm.desktop** *.desktop to use bspwm in plasma*
+*.desktop to use bspwm in plasma*
+/usr/share/xsessions/**plasma-bspwm.desktop**
 
 <h3>**<strong>Do not attempt to use these unless you know what you're doing!</strong>**</h3>
 
-/etc/**makepkg.conf** *Compiles packages with -march=native and -O2 flags and uses clang when possible*
-/etc/**mkinitcpio.conf**  *For generating minimal initramfs. My modules will not be the same as yours.* 
+/etc/**makepkg.conf** 
+*Compiles packages with -march=native and -O2 flags and uses clang when possible*
+/etc/**mkinitcpio.conf**  
+*For generating minimal initramfs. My modules will not be the same as yours.* 
 See <a href="https://wiki.archlinux.org/index.php/Minimal_initramfs" title="Arch Wiki-Minimal initramfs">Minimal initramfs - ArchWiki</a>
 
 ![desktop](desktop.png)
