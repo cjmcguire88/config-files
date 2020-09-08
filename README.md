@@ -1,6 +1,6 @@
 # **config-files**
-## *personal config files for my Arch Linux*
-
+### *personal config files for my Arch Linux*
+___
 - **bspwmrc** *-bspwm config*  
 `~/.config/bspwm/bspwmrc` 
  
@@ -18,8 +18,8 @@
 
 - **plasma-bspwm.desktop** *-.desktop to use bspwm in plasma*  
 `/usr/share/xsessions/plasma-bspwm.desktop`
-
-### **<strong>Do not attempt to use these unless you know what you're doing!</strong>**
+___
+### **Do not attempt to use these unless you know what you're doing!**
 
 - `/etc/makepkg.conf`  
 *Compiles packages with -march=native and -O2 flags and uses clang when possible*
@@ -27,5 +27,5 @@
 - `/etc/mkinitcpio.conf`  
 *For generating minimal initramfs. My modules will not be the same as yours.* 
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
-
+___
 ![desktop](desktop.png)
