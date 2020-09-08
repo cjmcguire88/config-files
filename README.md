@@ -2,8 +2,8 @@
 ## *personal config files for various linux applications*
 
 - *bspwm config*  
-~/.config/bspwm/**bspwmrc**
-    <p>cp config-files/bspwmrc ~.config/bspwm/bspwmrc</p>
+~/.config/bspwm/**bspwmrc**  
+    <p>cp config-files/bspwmrc ~.config/bspwm/bspwmrc</p>  
 - *sxhkd hotkey config*  
 ~/.config/sxhkd/**sxhkdrc**
 
