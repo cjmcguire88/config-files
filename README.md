@@ -3,7 +3,7 @@
 
 - *bspwm config*  
 ~/.config/bspwm/**bspwmrc**  
-    <p>cp config-files/bspwmrc ~.config/bspwm/bspwmrc</p>  
+ 
 - *sxhkd hotkey config*  
 ~/.config/sxhkd/**sxhkdrc**
 
