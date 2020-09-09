@@ -31,6 +31,6 @@ ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
 ___
-# *A programmers playground in a gamers paradise...*
+# *A programmer's playground in a gamer's paradise...*
 
 ![desktop](desktop.png)
