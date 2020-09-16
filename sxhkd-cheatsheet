@@ -5,6 +5,9 @@ These keybinds are not meant to be intuitive. They are meant for ease of use. Al
 Switch between tiled and monocle layout:
 	super + z
 
+Toggle fullscreen
+    super + alt + z
+
 Focus next node in current desktop:
 	super + x
 
@@ -23,8 +26,8 @@ Minimize focused node:
 Restore minimized nodes (1 at a time):
 	super + shift + m
 
-Set node state (tiled, fullscreen, floating):
-	super + ctrl + (1, 2, 3) [respectively]
+Set node state (tiled, floating):
+	super + ctrl + (1, 2)
 ______________________________________________________________________
 2. Floating window control
 

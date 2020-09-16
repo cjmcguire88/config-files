@@ -18,6 +18,7 @@ bspc rule -a Gimp state=floating follow=on
 bspc rule -a Screenkey manage=off
 bspc rule -a plasmashell state=floating border=off layer=normal
 bspc rule -a krunner state=floating border=off
-bspc rule -a Steam state=floating border=off follow=on desktop='^2'
+bspc rule -a Steam state=floating border=off follow=on 
 bspc rule -a Surf state=tiled
-bspc rule -a Lutris state=floating border=off follow=on desktop='^2'
+bspc rule -a Lutris state=floating border=off follow=on 
+bspc rule -a Emacs state=tiled 

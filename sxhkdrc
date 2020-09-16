@@ -26,6 +26,10 @@ super + v
 super + z
 	bspc desktop -l next
 
+# fullscreen
+super + alt + z
+	bspc node -t {fullscreen,tiled}
+
 # send the newest marked node to the newest preselected node
 #super + y
 #	bspc node newest.marked.local -n newest.!automatic.local
@@ -51,8 +55,8 @@ super + shift + m
 #
 
 # set the window state
-super + ctrl {1,2,3}
-	bspc node -t {tiled,fullscreen,floating}
+super + ctrl {1,2}
+	bspc node -t {tiled,floating}
 
 # set the node flags
 #super + ctrl + {1,2,3,4}
@@ -130,7 +134,7 @@ super + {Left,Down,Up,Right}
 
 # cheatsheet
 super + F4
-	st vim  ~/.config/sxhkd/sxhkd-cheatsheet
+	emacs  ~/.config/sxhkd/sxhkd-cheatsheet
 
 # open browser
 super + shift + b
@@ -148,6 +152,10 @@ super + shift + f
 super + alt + f
 	st ranger
 
+# open emacs
+super + shift + e
+	emacs
+
 # open settings
 super + shift + s
 	systemsettings5
@@ -159,6 +167,10 @@ super + shift + g
 # open lutris
 super + alt + g
 	lutris
+
+# open discord
+super + shift + d
+	discord
 
 # open task manager
 super + F1
