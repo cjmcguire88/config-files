@@ -64,7 +64,15 @@ Reload sxhkd
 Reload bspwm
 	super + escape
 ______________________________________________________________________
-6. Application control
+6. Power
+
+Poweroff:
+    super + ctrl + p
+
+Reboot:
+    super + ctrl + r
+______________________________________________________________________    
+7. Application control
 
 All applications open with super + shift + (user defined)
 

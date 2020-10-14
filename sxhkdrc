@@ -20,7 +20,7 @@ super + {shift + Escape,Escape}
 
 # close and kill
 super + v
-	bspc node -{c,k}
+	bspc node -k
 
 # alternate between the tiled and monocle layout
 super + z
@@ -127,6 +127,17 @@ super + alt + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+#
+# power
+#
+
+# poweroff
+super + ctrl + p
+	st poweroff
+
+# reboot
+super + ctrl + r
+	st reboot
 
 #
 # applications:
@@ -153,8 +164,12 @@ super + alt + f
 	st ranger
 
 # open emacs
-super + shift + e
+super + shift + c
 	emacs
+
+# open vscode
+super + alt + c
+	code
 
 # open settings
 super + shift + s
@@ -184,3 +199,6 @@ super + F2
 super + F3
 	st nvtop
 
+# open kodi
+super + shift + k
+	kodi
