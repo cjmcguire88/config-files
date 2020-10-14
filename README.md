@@ -1,5 +1,6 @@
 # **config-files**
 ### *personal config files for my Arch Linux*
+#### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
 ___
 - **bspwmrc** *-bspwm config*  
 `~/.config/bspwm/bspwmrc` 
@@ -31,6 +32,5 @@ ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
 ___
-# *A programmer's playground in a gamer's paradise...*
 
 ![desktop](desktop.png)
