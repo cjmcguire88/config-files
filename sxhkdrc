@@ -18,8 +18,12 @@ super + ctrl + Escape
 super + {shift + Escape,Escape}
 	bspc {quit,wm -r}
 
-# close and kill
+# close
 super + v
+	bspc node -c
+
+# kill
+super + alt + v
 	bspc node -k
 
 # alternate between the tiled and monocle layout
@@ -152,8 +156,12 @@ super + shift + b
 	chromium
 
 # open browser2
+#super + alt + b
+#	surf https://www.google.com
+
+# open tor browser
 super + alt + b
-	surf https://www.google.com
+	torbrowser-launcher
 
 # open file manager
 super + shift + f
@@ -202,3 +210,10 @@ super + F3
 # open kodi
 super + shift + k
 	kodi
+#
+# functions:
+#
+
+# update system
+super + ctrl + u
+	st yay -Syu

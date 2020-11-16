@@ -14,8 +14,11 @@ Focus next node in current desktop:
 Rotate nodes in current desktop:
 	super + c
 
-Close(kill) focused node:
+Close focused node:
 	super + v	
+
+Kill focused node:
+     super + alt + v
 
 Swap current node with largest node on current desktop:
 	super + shift + z
@@ -23,7 +26,7 @@ Swap current node with largest node on current desktop:
 Minimize focused node:
 	super + m
 
-Restore minimized nodes (1 at a time):
+Restore minimized nodes (last in first out):
 	super + shift + m
 
 Set node state (tiled, floating):
