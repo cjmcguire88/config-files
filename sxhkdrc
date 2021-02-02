@@ -165,15 +165,15 @@ super + alt + b
 
 # open file manager
 super + shift + f
-	index
+	dolphin
 
 # open file manager2
 super + alt + f
 	st ranger
 
-# open emacs
+# open kwrite
 super + shift + c
-	emacs
+	kwrite
 
 # open vscode
 super + alt + c
@@ -197,7 +197,7 @@ super + shift + d
 
 # open task manager
 super + F1
-	st bashtop
+	st bpytop
 
 # open system log
 super + F2
