@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jason/.oh-my-zsh"
@@ -52,7 +52,7 @@ export UPDATE_ZSH_DAYS=7
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -75,7 +75,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize archlinux adb emacs command-not-found extract)
+plugins=(git colorize command-not-found zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +106,28 @@ export OPENCV_LOG_LEVEL=ERROR
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# cmd replacement
+alias cat="bat"
+# package compilation
+alias packages="~/.build/arch/packages"
+# package management
+alias install="yay -S"
+alias search="yay -Ss"
+alias update="yay -Syu"
+alias remove="yay -Ru"
+# kernel
+alias kernel_dir="/usr/src/linux-5.10.10-MiniBeast-cki"
+alias kernel_menu="sudo make menuconfig"
+alias kernel_make="sudo make clean && sudo make -j8"
+alias kernel_install="sudo cp -v /usr/src/linux-5.10.10-MiniBeast-cki/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.10.10-MiniBeast-cki && sudo cp -v /boot/vmlinuz-linux-5.10.10-MiniBeast-cki /boot/efi/EFI/linux/vmlinuz-linux-5.10.10-MiniBeast-cki && sudo make modules_install && sudo mkinitcpio -p linux-5.10.10-MiniBeast-cki && sudo cp -v /boot/initramfs-linux-5.10.10-MiniBeast-cki.img /boot/efi/EFI/initramfs-linux-5.10.10-MiniBeast-cki.img && sudo dkms remove --no-depmod -m nvidia -v 460.39 -k 5.10.10-MiniBeast-cki && sudo dkms install --no-depmod -m nvidia -v 460.39 -k 5.10.10-MiniBeast-cki && sudo depmod 5.10.10-MiniBeast-cki"
+alias modules_install="sudo make modules_install"
+alias init_gen="sudo mkinitcpio -p linux-5.10.10-MiniBeast-cki && sudo cp /boot/initramfs-linux-5.10.10-MiniBeast-cki.img /boot/efi/EFI/initramfs-linux-5.10.10-MiniBeast-cki.img"
+# etc
+alias scan="sudo rkhunter --propupd && sudo rkhunter --check -sk ; sudo rkhunter --config-check ; sudo arch-audit"
+alias matrix="unimatrix"
+alias nf="neofetch"
+alias cpu="sudo i7z"
+alias zshrc="nvim ~/.zshrc"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-path+=/home/jason/.local.bin
