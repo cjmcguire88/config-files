@@ -28,6 +28,9 @@ ___
 - `/etc/mkinitcpio.conf`  
 *For generating a minimal initramfs for a system with a specific, known and static hardware configuration. My hooks/modules will not be the same as yours.*   
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
+
+- `/etc/hosts`  
+*My hosts file blocks traffic from over 59,000 different sites known to contain or distribute adware/malware.
 ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
