@@ -1,5 +1,8 @@
 # **config-files**
 ### *personal config files for my Arch Linux*
+
+![desktop](desktop.png)
+
 #### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
 ___
 - **bspwmrc** *-bspwm config*  
@@ -36,4 +39,4 @@ ___
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
 ___
 
-![desktop](desktop.png)
+![tmux](tmux.png)
