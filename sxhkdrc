@@ -2,9 +2,13 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + shift + t
+# terminal
+super + t
 	st
+
+# terminal (Multiplex)
+super + shift + t
+	st tmux
 
 # make sxhkd reload its configuration files:
 super + ctrl + Escape
@@ -148,12 +152,16 @@ super + ctrl + r
 #
 
 # cheatsheet
-super + F4
+super + F5
 	emacs  ~/.config/sxhkd/sxhkd-cheatsheet
+
+# network connections
+super + F4
+	st sudo nethogs
 
 # open browser
 super + shift + b
-	chromium
+	vivaldi-stable
 
 # open browser2
 #super + alt + b
@@ -170,6 +178,10 @@ super + shift + f
 # open file manager2
 super + alt + f
 	st ranger
+
+# open pamac 
+super + shift + u
+	pamac-manager
 
 # open kwrite
 super + shift + c
