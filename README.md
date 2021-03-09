@@ -20,6 +20,9 @@ ___
 - **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))    
 `~/.zshrc`
 
+- **unbound.conf** *-Uses Cloudflare's DNS over TLS for encrypted DNS queries*  
+`/etc/unbound/unbound.conf`
+
 - **plasma-bspwm.desktop** *-.desktop to provide a session in which plasma uses bspwm instead of kwin*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
 ___
