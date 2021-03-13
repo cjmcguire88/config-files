@@ -34,7 +34,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export OPENCV_LOG_LEVEL=ERROR
-export EDITOR=nvim visudo
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
