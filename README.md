@@ -29,7 +29,7 @@ ___
 ### **Do not attempt to use these unless you know what you're doing!**<sup>2</sup>
 
 - `/etc/makepkg.conf`  
-*Compiles packages with -march=native, -o3 and flto=auto [Link time optimization](https://gcc.gnu.org/wiki/LinkTimeOptimization) flags*
+*Compiles packages with -march=native, -o3 and flto=auto [Link time optimization](https://www.phoronix.com/scan.php?page=news_item&px=OpenSUSE-Tumbleweed-LTO) flags*
 
 - `/etc/mkinitcpio.conf`  
 *For generating a minimal initramfs for a system with a specific, known and static hardware configuration. My hooks/modules will not be the same as yours.*   
