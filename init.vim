@@ -1,4 +1,6 @@
-""" Jason's Neovim Init.vim
+"########################
+"## MINIBEAST INIT.VIM ##
+"########################
 
 """ Vim-Plug
 call plug#begin()
@@ -48,9 +50,6 @@ Plug 'honza/vim-snippets'
 Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 
-" Entertainment
-"Plug 'ryanss/vim-hackernews'
-
 call plug#end()
 
 """ Python3 VirtualEnv
@@ -99,7 +98,6 @@ let g:airline_section_warning = ''
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
-"tmap <C-d> <Esc>:q<CR>
 autocmd BufWinEnter,WinEnter term://* startinsert
 autocmd BufLeave term://* stopinsert
 

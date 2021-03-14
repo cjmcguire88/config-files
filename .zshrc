@@ -1,3 +1,7 @@
+#####################
+## MINIBEAST ZSHRC ##
+#####################
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -28,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize command-not-found zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git sudo zsh-vi-mode colorize command-not-found zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,6 +100,11 @@ alias nf="neofetch"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.zshrc"
 alias sa="systemd-analyze"
+
+# information gathering
+alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"
+alias username="python ~/Programs/sherlock/sherlock/sherlock.py"
+alias website="nikto -host"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,3 +1,7 @@
+#######################
+## MINIBEAST HOTKEYS ##
+#######################
+
 These keybinds are not meant to be intuitive. They are meant for ease of use. All keybinds can be modified and functionality can be added or removed through ~/.config/sxhkd/sxhkdrc
 
 1. Node control
