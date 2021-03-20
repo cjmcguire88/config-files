@@ -38,10 +38,18 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export OPENCV_LOG_LEVEL=ERROR
+export XDG_CONFIG_HOME='/home/jason/.config/'
+export KEYTIMEOUT=1
+export BROWSER='vivaldi-stable'
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
-export XDG_CONFIG_HOME='/home/jason/.config/'
+
+# Compilation flags
+export CFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
+export CPPFLAGS="D_FORTIFY_SOURCE=2"
+export CXXFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
+export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,-relro,-z,now"
 
 ## ALIASES
 
@@ -65,8 +73,6 @@ alias scustop="systemctl --user stop"
 alias scudisable="systemctl --user disable"
 
 # package compilation
-alias packages="/opt/packages"
-alias community="/opt/community"
 
 # package management
 alias install="yay -S"
@@ -85,12 +91,12 @@ alias pkglist="sudo pacman -Qqe > pkglist.txt"
 # kernel
 alias kernel_patch="patch -p1 < patches/*"
 alias kernel_config="sudo make oldconfig"
-alias kernel="/usr/src/linux-5.11.4-MiniBeast"
+alias kernel="/usr/src/linux-5.11.6-MiniBeast"
 alias kernel_menu="sudo make menuconfig"
 alias kernel_make="sudo make clean && sudo make -j8"
-alias kernel_install="sudo cp -v /usr/src/linux-5.11.4-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.11.4-MiniBeast && sudo cp -v /boot/vmlinuz-linux-5.11.4-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-5.11.4-MiniBeast && sudo make modules_install && sudo mkinitcpio -p linux-5.11.4-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.4-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.4-MiniBeast.img && sudo dkms remove --no-depmod -m nvidia -v 460.56 -k 5.11.4-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 460.56 -k 5.11.4-MiniBeast && sudo depmod 5.11.4-MiniBeast"
+alias kernel_install="sudo cp -v /usr/src/linux-5.11.6-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.11.6-MiniBeast && sudo cp -v /boot/vmlinuz-linux-5.11.6-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-5.11.6-MiniBeast && sudo make modules_install && sudo mkinitcpio -p linux-5.11.6-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.6-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.6-MiniBeast.img && sudo dkms remove --no-depmod -m nvidia -v 460.67 -k 5.11.6-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 460.67 -k 5.11.6-MiniBeast && sudo depmod 5.11.6-MiniBeast"
 alias modules_install="sudo make modules_install"
-alias init_gen="sudo mkinitcpio -p linux-5.11.4-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.4-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.4-MiniBeast.img"
+alias init_gen="sudo mkinitcpio -p linux-5.11.6-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.6-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.6-MiniBeast.img"
 alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
 
 # etc
@@ -105,6 +111,10 @@ alias sa="systemd-analyze"
 alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"
 alias username="python ~/Programs/sherlock/sherlock/sherlock.py"
 alias website="nikto -host"
+
+# virtual machines
+alias macos='cd ~/qemu/MacOS_Catalina/ && ./basic.sh ; cd ~/'
+alias android="genymotion"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
