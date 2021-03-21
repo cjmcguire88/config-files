@@ -49,6 +49,7 @@ export XDA_RUNTIME_DIR='/run/user/1000'
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Compilation flags
 export CFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
@@ -76,6 +77,11 @@ alias scustart="systemctl --user start"
 alias scuenable="systemctl --user enable"
 alias scustop="systemctl --user stop"
 alias scudisable="systemctl --user disable"
+
+# boot commands
+alias uefi="systemctl reboot --firmware-setup"
+alias windows="sudo efibootmgr -n 0 && reboot"
+alias grub="sudo efibootmgr -n 1 && reboot"
 
 # package compilation
 alias packages="cd /opt/sources/packages"
