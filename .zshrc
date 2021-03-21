@@ -38,20 +38,25 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export OPENCV_LOG_LEVEL=ERROR
-export XDG_CONFIG_HOME='/home/jason/.config/'
 export KEYTIMEOUT=1
 export BROWSER='vivaldi-stable'
+
+# XDG directories
+export XDG_CONFIG_HOME='/home/jason/.config/'
+export XDG_CACHE_HOME='/home/jason/.cache'
+export XDG_DATA_HOME='/home/jason/.local/share'
+export XDA_RUNTIME_DIR='/run/user/1000'
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 
 # Compilation flags
 export CFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
-export CPPFLAGS="D_FORTIFY_SOURCE=2"
+export CPPFLAGS="-D_FORTIFY_SOURCE=2"
 export CXXFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,-relro,-z,now"
 
-## ALIASES
+# Aliases
 
 # cmd replacement
 alias cat="bat"
@@ -73,6 +78,8 @@ alias scustop="systemctl --user stop"
 alias scudisable="systemctl --user disable"
 
 # package compilation
+alias packages="cd /opt/sources/packages"
+alias community="cd /opt/sources/community"
 
 # package management
 alias install="yay -S"
