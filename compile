@@ -3,7 +3,8 @@
 for pkg in "$@"
 do
     rm -rf /opt/sources/{packages,community}/$pkg
-    svn update /opt/sources/{packages,community}/$pkg
+    echo "Downloading PKGBUILD..."
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then
         cd /opt/sources/packages/$pkg/trunk/ && yes|makepkg -si
     else
