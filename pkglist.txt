@@ -1,7 +1,5 @@
-amd-ucode
 android-tools
 android-udev
-anything-sync-daemon
 apparmor
 arch-audit
 archlinux-appstream-data-pamac
@@ -26,6 +24,7 @@ compsize
 discord
 discover
 dolphin
+ecryptfs-utils
 efibootmgr
 fakeroot
 feh
@@ -180,6 +179,7 @@ tmux
 tor
 torbrowser-launcher
 transmission-qt
+tree
 unbound
 unimatrix-git
 vim-airline
