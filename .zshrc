@@ -55,7 +55,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export CFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
 export CPPFLAGS="-D_FORTIFY_SOURCE=2"
 export CXXFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
-export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,-relro,-z,now"
+export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+export MAKEFLAGS="-j$(nproc)"
 
 # Aliases
 
@@ -68,15 +69,19 @@ alias vim="nvim"
 # system
 alias scstatus="sudo systemctl status"
 alias scstart="sudo systemctl start"
+alias screstart="sudo systemctl restart"
 alias scenable="sudo systemctl enable"
 alias scstop="sudo systemctl stop"
 alias scdisable="sudo systemctl disable"
+alias scmask="sudo systemctl mask"
 # user
 alias scustatus="systemctl --user status"
 alias scustart="systemctl --user start"
+alias scurestart="systemctl --user restart"
 alias scuenable="systemctl --user enable"
 alias scustop="systemctl --user stop"
 alias scudisable="systemctl --user disable"
+alias scumask="systemctl --user mask"
 
 # boot commands
 alias uefi="systemctl reboot --firmware-setup"
@@ -99,7 +104,7 @@ alias remove="yay -Rsu"
 alias query="yay -Q"
 alias files="yay -Ql"      # either belonging to a specific package or the whole system
 alias cache="yay -Sc"
-alias pkglist="sudo pacman -Qqe > pkglist.txt"
+alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
 # kernel
 alias kernel_patch="patch -p1 < patches/*"
@@ -128,6 +133,8 @@ alias website="nikto -host"
 # virtual machines
 alias macos='cd ~/qemu/MacOS_Catalina/ && ./basic.sh ; cd ~/'
 alias android="genymotion"
+alias virtenv="sudo systemctl start libvirtd && sudo systemctl start ebtables"
+alias kvirtenv="sudo systemctl stop ebtables && sudo systemctl stop libvirtd"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
