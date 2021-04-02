@@ -17,12 +17,15 @@ bpytop
 bspwm
 btrfs-progs
 cava
+checkbashisms
 cheese
 chromium
 cmake
 compsize
+dash
 discord
 discover
+dmenu
 dolphin
 ecryptfs-utils
 efibootmgr
@@ -31,7 +34,6 @@ feh
 figlet
 file
 findutils
-firefox
 flameshot
 flex
 fzf
@@ -55,6 +57,7 @@ howdy
 hwinfo
 i2c-tools
 i7z
+inotify-tools
 intel-ucode
 iotop
 iptables-nft
@@ -119,6 +122,7 @@ pacman
 pam_ssh
 pamac-aur
 patch
+pfetch
 picom
 pkgconf
 plasma-browser-integration
@@ -130,6 +134,8 @@ plasma-wayland-session
 powerdevil
 powertop
 profile-sync-daemon
+projectm-pulseaudio
+projectm-sdl
 protontricks
 pulseaudio-bluetooth
 pulseaudio-equalizer
@@ -185,12 +191,11 @@ unimatrix-git
 vim-airline
 vim-airline-themes
 virt-manager
-vivaldi
-vivaldi-ffmpeg-codecs
 vscodium-git
 vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
+vulkan-swrast
 w3m
 wget
 which

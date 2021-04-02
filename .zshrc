@@ -36,16 +36,19 @@ plugins=(git sudo zsh-vi-mode colorize command-not-found zsh-syntax-highlighting
 
 source $ZSH/oh-my-zsh.sh
 
+# Autorun
+
 # User configuration
 export OPENCV_LOG_LEVEL=ERROR
 export KEYTIMEOUT=1
 export BROWSER='vivaldi-stable'
+export ZSH_COLORIZE_STYLE="colorful"
 
 # XDG directories
 export XDG_CONFIG_HOME='/home/jason/.config/'
 export XDG_CACHE_HOME='/home/jason/.cache'
 export XDG_DATA_HOME='/home/jason/.local/share'
-export XDA_RUNTIME_DIR='/run/user/1000'
+export XDG_RUNTIME_DIR='/run/user/1000'
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
@@ -109,12 +112,12 @@ alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.tx
 # kernel
 alias kernel_patch="patch -p1 < patches/*"
 alias kernel_config="sudo make oldconfig"
-alias kernel="/usr/src/linux-5.11.6-MiniBeast"
+alias kernel="/usr/src/linux-5.11.11-MiniBeast"
 alias kernel_menu="sudo make menuconfig"
 alias kernel_make="sudo make clean && sudo make -j8"
-alias kernel_install="sudo cp -v /usr/src/linux-5.11.6-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.11.6-MiniBeast && sudo cp -v /boot/vmlinuz-linux-5.11.6-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-5.11.6-MiniBeast && sudo make modules_install && sudo mkinitcpio -p linux-5.11.6-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.6-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.6-MiniBeast.img && sudo dkms remove --no-depmod -m nvidia -v 460.67 -k 5.11.6-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 460.67 -k 5.11.6-MiniBeast && sudo depmod 5.11.6-MiniBeast"
+alias kernel_install="sudo cp -v /usr/src/linux-5.11.11-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.11.11-MiniBeast && sudo cp -v /boot/vmlinuz-linux-5.11.11-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-5.11.11-MiniBeast && sudo make modules_install && sudo mkinitcpio -p linux-5.11.11-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.11-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.11-MiniBeast.img && sudo dkms remove --no-depmod -m nvidia -v 460.67 -k 5.11.11-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 460.67 -k 5.11.11-MiniBeast && sudo depmod 5.11.11-MiniBeast"
 alias modules_install="sudo make modules_install"
-alias init_gen="sudo mkinitcpio -p linux-5.11.6-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.6-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.6-MiniBeast.img"
+alias init_gen="sudo mkinitcpio -p linux-5.11.11-MiniBeast && sudo cp -v /boot/initramfs-linux-5.11.11-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.11.11-MiniBeast.img"
 alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
 
 # etc
@@ -124,6 +127,9 @@ alias nf="neofetch"
 alias cpu="sudo i7z"
 alias zshrc="nvim ~/.zshrc"
 alias sa="systemd-analyze"
+alias gitdir="/home/jason/.build/git"
+alias mntsec="ecryptfs-mount-private"
+alias umntsec="ecryptfs-umount-private"
 
 # information gathering
 alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"

@@ -58,6 +58,10 @@ super + m
 super + shift + m 
 	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
+# focused desktop window gap
+super + button{4,5}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+
 #
 # state/flags
 #
@@ -136,7 +140,7 @@ super + F4
 
 # open browser
 super + shift + b
-	vivaldi-stable
+    chromium	
 
 # open tor browser
 super + alt + b
