@@ -1,3 +1,4 @@
+alacritty
 android-tools
 android-udev
 apparmor
@@ -57,6 +58,7 @@ howdy
 hwinfo
 i2c-tools
 i7z
+imagemagick-doc
 inotify-tools
 intel-ucode
 iotop
@@ -148,6 +150,7 @@ python-beautifulsoup4
 python-pip
 python-pygame
 python-pynvim
+python-pywal
 python-tests
 python-ueberzug-git
 python-wheel

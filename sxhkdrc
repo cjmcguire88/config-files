@@ -10,6 +10,10 @@
 super + t
 	st
 
+# alternative terminal
+super + alt +t
+    alacritty
+
 # terminal (Multiplex)
 super + shift + t
 	st tmux2
