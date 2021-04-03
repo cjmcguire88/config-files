@@ -121,7 +121,7 @@ alias init_gen="sudo mkinitcpio -p linux-5.11.11-MiniBeast && sudo cp -v /boot/i
 alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
 
 # etc
-alias scan="sudo lynis audit system ; sudo rkhunter --propupd && sudo rkhunter --check -sk ; sudo rkhunter --config-check ; sudo arch-audit"
+alias sysscan="sudo lynis audit system ; sudo rkhunter --propupd && sudo rkhunter --check -sk ; sudo rkhunter --config-check ; sudo arch-audit"
 alias matrix="unimatrix"
 alias nf="neofetch"
 alias cpu="sudo i7z"

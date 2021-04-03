@@ -179,6 +179,7 @@ subversion
 sudo
 supertuxkart
 sxhkd
+systemd-kcm
 systemd-resolvconf
 texinfo
 thermald

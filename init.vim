@@ -26,6 +26,7 @@ Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'rhysd/vim-color-spring-night'
 
 " Functionalities
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
@@ -60,10 +61,6 @@ highlight Comment gui=bold
 highlight Normal gui=none
 highlight NonText guibg=none
 
-" Transparent Background (For i3 and compton)
-"highlight Normal guibg=NONE ctermbg=NONE
-"highlight LineNr guibg=NONE ctermbg=NONE
-
 """ Other Configurations
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
@@ -94,6 +91,10 @@ tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
 autocmd BufWinEnter,WinEnter term://* startinsert
 autocmd BufLeave term://* stopinsert
+
+" Set relative line number
+set number
+set relativenumber
 
 " Disable documentation window
 set completeopt-=preview
