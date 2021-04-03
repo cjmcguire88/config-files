@@ -13,7 +13,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jason/.oh-my-zsh"
+export ZSH="/home/jason/.config/zsh/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -35,31 +35,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git sudo zsh-vi-mode colorize command-not-found zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
-# Autorun
-
-# User configuration
-export OPENCV_LOG_LEVEL=ERROR
-export KEYTIMEOUT=1
-export BROWSER='vivaldi-stable'
-export ZSH_COLORIZE_STYLE="colorful"
-
-# XDG directories
-export XDG_CONFIG_HOME='/home/jason/.config/'
-export XDG_CACHE_HOME='/home/jason/.cache'
-export XDG_DATA_HOME='/home/jason/.local/share'
-export XDG_RUNTIME_DIR='/run/user/1000'
-
-# Preferred editor for local and remote sessions
-export EDITOR='nvim'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-# Compilation flags
-export CFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
-export CPPFLAGS="-D_FORTIFY_SOURCE=2"
-export CXXFLAGS="-march=native -O2 -pipe -fno-plt -flto=auto -ftree-vectorize -fuse-ld=gold"
-export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
-export MAKEFLAGS="-j$(nproc)"
 
 # Aliases
 
@@ -125,7 +100,7 @@ alias sysscan="sudo lynis audit system ; sudo rkhunter --propupd && sudo rkhunte
 alias matrix="unimatrix"
 alias nf="neofetch"
 alias cpu="sudo i7z"
-alias zshrc="nvim ~/.zshrc"
+alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias mntsec="ecryptfs-mount-private"
