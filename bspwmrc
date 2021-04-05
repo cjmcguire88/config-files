@@ -8,7 +8,8 @@ sxhkd &
 picom &
 
 # Monitor and desktop layout
-bspc monitor -d  
+bspc monitor eDP-1 -d  
+bspc monitor HDMI-1 -d 磊
 
 # Padding and gaps
 bspc config border_width        2

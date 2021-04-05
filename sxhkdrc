@@ -86,6 +86,10 @@ super + x
 super + Tab
 	bspc desktop -f next.local
 
+# focus the next/previous monitor
+super + alt + Tab
+    bspc monitor -f next
+
 # send to the given desktop
 super + {2,1}
 	bspc node -d {next,prev}

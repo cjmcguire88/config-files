@@ -1,4 +1,5 @@
 alacritty
+alsa-utils
 android-tools
 android-udev
 apparmor
@@ -47,6 +48,7 @@ gettext
 gimp
 git
 gnu-netcat
+grabc
 grep
 groff
 grub
@@ -70,6 +72,7 @@ kdeconnect
 kodi-addon-superrepo-all
 kodi-gbm
 kodi-x11
+kscreen
 ksshaskpass
 ksystemlog
 kwrite
@@ -108,7 +111,6 @@ nethogs
 netstat-nat
 networkmanager
 newsboat
-nikto
 nmap
 ntfs-3g
 nvidia-dkms
@@ -205,6 +207,7 @@ wget
 which
 whois
 x11vnc
+xclip
 xdg-desktop-portal-kde
 xdg-user-dirs
 xf86-video-vesa
@@ -246,5 +249,6 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay-git
+youtube-dl
 zsh
 zsh-doc
