@@ -135,6 +135,7 @@ plasma-nm
 plasma-pa
 plasma-systemmonitor
 plasma-wayland-session
+poppler-qt6
 powerdevil
 powertop
 profile-sync-daemon
