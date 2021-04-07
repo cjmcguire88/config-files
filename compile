@@ -7,8 +7,12 @@ do
     svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD and redirect output to null
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
         cd /opt/sources/packages/$pkg/trunk/
-    else
+    elif [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then
         cd /opt/sources/community/$pkg/trunk/
+    else
+        echo "$pkg not found\n"
+        failed+=($pkg)
+        continue
     fi
     if yes|makepkg -si; then # Attempt to compile and install package
         echo "\033[1;34m:: \033[1;37mInstallation successful\n"
