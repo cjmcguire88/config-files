@@ -2,24 +2,41 @@
 
 for pkg in "$@"
 do
-    rm -rf /opt/sources/{packages,community}/$pkg
+    rm -rf /opt/sources/{packages,community}/$pkg # Remove the package directory if it exists
     echo "\033[1;34m:: \033[1;37mDownloading PKGBUILD...\033[0m"
-    svn update /opt/sources/{packages,community}/$pkg >> /dev/null
-    if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD and redirect output to null
+
+    if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
         cd /opt/sources/packages/$pkg/trunk/
     else
         cd /opt/sources/community/$pkg/trunk/
     fi
-    if yes|makepkg -si; then
-        echo "\033[1;34m:: \033[1;37mInstallation successful"
-    else    
+
+    if yes|makepkg -si; then # Attempt to compile and install package
+        echo "\033[1;34m:: \033[1;37mInstallation successful\n"
+        successful+=($pkg)
+    else # Get key if failed due to unknown key and retry
         echo "\033[1;34m:: \033[1;37mAdding key and retrying..."
         key="$(makepkg -i 2>&1 | grep FAILED | awk -F"key" '{print $2}')"
         gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
+        keys+=(${key: : -1})
         if yes|makepkg -i; then
-            echo "\033[1;34m:: \033[1;37mInstallation successful"
+            echo "\033[1;34m:: \033[1;37mInstallation successful\n"
         else
-            echo "\033[1;31mInstallation failed"
+            echo "\033[1;31mInstallation failed/n"
+            failed+=($pkg)
         fi
     fi
 done
+
+echo "\n\033[1;34m:: \033[1;37mSuccessful:" # Print successful
+for i in "${successful[@]}"; do
+    echo "$i" ; done
+
+echo "\n\033[1;34m:: \033[1;31mFailed:" # Print failed 
+for i in "${failed[@]}"; do
+    echo "$i" ; done
+
+echo "\n\033[1;34m:: \033[1;37mKeys added:" # Print any keys that had to be added
+for i in "${keys[@]}"; do
+    echo "$i" ; done
