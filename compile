@@ -4,30 +4,35 @@ for pkg in "$@"
 do
     rm -rf /opt/sources/{packages,community}/$pkg # Remove the package directory if it exists
     echo "\033[1;34m:: \033[1;37mDownloading PKGBUILD...\033[0m"
-    svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD and redirect output to null
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
         cd /opt/sources/packages/$pkg/trunk/
-    elif [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then
+    elif [ -f "/opt/sources/community/$pkg/trunk/PKGBUILD" ]; then
         cd /opt/sources/community/$pkg/trunk/
     else
         echo "$pkg not found\n"
         failed+=($pkg)
         continue
     fi
-    if yes|makepkg -si; then # Attempt to compile and install package
+    if yes|makepkg -si 2> /run/user/1000/error; then # Attempt to compile and install package
         echo "\033[1;34m:: \033[1;37mInstallation successful\n"
         successful+=($pkg)
-    else # Get key if failed due to unknown key and retry
-        echo "\033[1;34m:: \033[1;37mAdding key and retrying..."
-        key="$(makepkg -i 2>&1 | grep FAILED | awk -F"key" '{print $2}')"
-        gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
-        keys+=(${key: : -1})
-        if yes|makepkg -i; then
-            echo "\033[1;34m:: \033[1;37mInstallation successful\n"
-            successful+=($pkg)
+    else
+        if cat /run/user/1000/error | grep -q "unknown public key"; then
+            echo "\033[1;34m:: \033[1;37mAdding key and retrying..."
+            key="$(cat /run/user/1000/error | grep FAILED | awk -F"key" '{print $2}')"
+            gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
+            keys+=(${key: : -1})
+            if yes|makepkg -i; then
+                echo "\033[1;34m:: \033[1;37mInstallation successful\n"
+                successful+=($pkg)
+            else
+                echo "\033[1;34m:: \033[1;31mInstallation failed"
+                failed+=($pkg)
+            fi
         else
-            echo "\033[1;34m:: \033[1;31mInstallation failed"
             failed+=($pkg)
+            echo "\033[1;34m:: \033[1;31mInstallation failed"
         fi
     fi
 done
