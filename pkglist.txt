@@ -24,6 +24,7 @@ cheese
 chromium
 cmake
 compsize
+cpufetch-git
 dash
 discord
 discover
@@ -36,6 +37,7 @@ feh
 figlet
 file
 findutils
+firefox
 flameshot
 flex
 fzf
@@ -54,6 +56,8 @@ groff
 grub
 grub-btrfs
 grub-customizer
+gtk3-demos
+gtk3-docs
 gzip
 hardinfo
 howdy
