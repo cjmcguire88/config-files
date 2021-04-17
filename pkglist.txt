@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 android-tools
 android-udev
+aom-docs
 apparmor
 arch-audit
 archlinux-appstream-data-pamac
