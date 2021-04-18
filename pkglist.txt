@@ -11,6 +11,7 @@ asp
 autoconf
 automake
 base
+bashtop
 bat
 bc
 binutils
@@ -72,6 +73,7 @@ iotop
 iptables-nft
 irqbalance
 isw
+jasper-doc
 kde-gtk-config
 kdeconnect
 kodi-addon-superrepo-all

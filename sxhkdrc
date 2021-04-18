@@ -188,7 +188,7 @@ super + shift + d
 
 # open task manager
 super + F1
-	st bpytop
+	st bashtop
 
 # open system log
 super + F2

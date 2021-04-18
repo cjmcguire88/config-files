@@ -1,4 +1,5 @@
-#! /bin/sh
+#!/bin/sh
+
 #######################
 ## MINIBEAST BSPWMRC ##
 #######################
@@ -28,7 +29,7 @@ bspc config presel_feedback_color "1793d1"
 
 ## Use Pywal to generate border colors
 ## Source the colors.
-#. "/home/jason/.cache/wal/colors.sh"
+#. "$XDG_CACHE_HOME/wal/colors.sh"
 
 ## Set the border colors.
 #bspc config normal_border_color "$color1"
