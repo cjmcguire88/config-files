@@ -142,6 +142,10 @@ super + ctrl + r
 super + F5
 	kwrite  ~/.config/sxhkd/sxhkd-cheatsheet
 
+# screenshot
+super + F6
+    scrot
+
 # network connections
 super + F4
 	st sudo nethogs

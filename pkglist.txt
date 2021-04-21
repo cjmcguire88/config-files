@@ -39,7 +39,6 @@ feh
 figlet
 file
 findutils
-firefox
 flameshot
 flex
 fzf
@@ -130,6 +129,7 @@ opencl-mesa
 openvpn
 packagekit-qt5
 pacman
+pacman-fix-permissions
 pam_ssh
 pamac-aur
 patch
@@ -158,6 +158,7 @@ pulseaudio-zeroconf
 python-audit
 python-beautifulsoup4
 python-pip
+python-protobuf
 python-pygame
 python-pynvim
 python-pywal
@@ -181,6 +182,7 @@ scrot
 sddm
 sddm-kcm
 sed
+shell-color-scripts
 sl
 snapper
 stacer
