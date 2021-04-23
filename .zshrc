@@ -44,7 +44,8 @@ source $ZSH/oh-my-zsh.sh
 
 # cmd replacement
 alias cat="bat"
-alias ls="ls --color --group-directories-first"
+alias ls="exa"
+alias la="exa -la"
 alias vim="nvim"
 
 # administration

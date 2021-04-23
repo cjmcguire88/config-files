@@ -19,6 +19,7 @@ bison
 bluedevil
 bpytop
 bspwm
+btrfs-du
 btrfs-progs
 cava
 checkbashisms
@@ -34,6 +35,7 @@ dmenu
 dolphin
 ecryptfs-utils
 efibootmgr
+exa
 fakeroot
 feh
 figlet
@@ -74,7 +76,6 @@ irqbalance
 isw
 jasper-doc
 kde-gtk-config
-kdeconnect
 kodi-addon-superrepo-all
 kodi-gbm
 kodi-x11
@@ -82,6 +83,7 @@ kscreen
 ksshaskpass
 ksystemlog
 kwrite
+lemon
 lib32-libpulse
 libnet
 libnm
@@ -105,6 +107,7 @@ m4
 make
 mesa-vdpau
 metasploit
+mpd
 mpv
 nano
 nasm
@@ -116,6 +119,7 @@ nerd-fonts-complete
 nethogs
 netstat-nat
 networkmanager
+networkmanager-dmenu-git
 newsboat
 nmap
 ntfs-3g
@@ -129,6 +133,7 @@ opencl-mesa
 openvpn
 packagekit-qt5
 pacman
+pacman-debug
 pacman-fix-permissions
 pam_ssh
 pamac-aur
@@ -146,6 +151,7 @@ poppler-qt6
 powerdevil
 powertop
 profile-sync-daemon
+progress
 projectm-pulseaudio
 projectm-sdl
 protontricks
@@ -185,6 +191,9 @@ sed
 shell-color-scripts
 sl
 snapper
+sqlite-analyzer
+sqlite-doc
+sqlite-tcl
 stacer
 steam
 subversion
