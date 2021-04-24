@@ -2,6 +2,9 @@
 ### *personal config files for my Arch Linux*
 
 ![desktop](desktop.png)
+![desktop2](desktop2.png)
+![desktop3](desktop3.png)
+![tmux](tmux.png)
 
 #### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
 ___
