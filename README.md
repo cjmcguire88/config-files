@@ -2,8 +2,8 @@
 ### *personal config files for my Arch Linux*
 
 ![desktop](screenshots/desktop.png)
-![desktop2](screenshots/desktop2.png)
-![desktop3](screenshots/desktop3.png)
+
+
 ![tmux](screenshots/tmux.png)
 
 #### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
@@ -32,6 +32,7 @@ ___
 - **.tmux.conf && .tmux.local.conf** *-[gpackosz/.tmux](https://github.com/gpakosz/.tmux)
 `~/.tmux.conf` && `~/.tmux.conf.local`  
 
+![desktop2](screenshots/desktop2.png)
 ___
 ### **Do not attempt to use these unless you know what you're doing!**<sup>2</sup>
 
@@ -49,6 +50,7 @@ See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_
 A script I made to automate compiling multiple packages with the Arch Build System. Automatically adds keys with gpg using an https server as well. You must make the directory /opt/sources (or change it in the script) then run `svn checkout --depth=empty svn://svn.archlinux.org/{packages,community}` inside of the directory.  
 Usage: `compile pkg1 pkg2 pkg3`  
 
+![desktop3](screenshots/desktop3.png)
 ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
