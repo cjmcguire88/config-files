@@ -44,8 +44,9 @@ source $ZSH/oh-my-zsh.sh
 
 # cmd replacement
 alias cat="bat"
-alias ls="exa"
-alias la="exa -la"
+alias ls="exa --icons"
+alias lr="exa -RT"
+alias la="exa -lag --octal-permissions --no-permissions --git"
 alias vim="nvim"
 
 # administration

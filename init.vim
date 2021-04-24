@@ -28,9 +28,9 @@ Plug 'rhysd/vim-color-spring-night'
 " Functionalities
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
@@ -42,7 +42,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/Colorizer'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-Plug 'vim-scripts/loremipsum'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'metakirby5/codi.vim'
@@ -168,7 +167,7 @@ endfunction
 
 " OneDark Mode (Dark)
 function! ColorOneDark()
-    let g:airline_theme=''
+    let g:airline_theme='deus'
     color onedark
     IndentLinesEnable
 endfunction
@@ -191,7 +190,7 @@ endfunction
 
 " Material Mode (Dark)
 function! ColorMaterial()
-    let g:airline_theme=''
+    let g:airline_theme='deus'
     color material
     IndentLinesEnable
 endfunction

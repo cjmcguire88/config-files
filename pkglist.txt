@@ -68,6 +68,7 @@ hwinfo
 i2c-tools
 i7z
 imagemagick-doc
+inkscape
 inotify-tools
 intel-ucode
 iotop
@@ -145,12 +146,12 @@ plasma-browser-integration
 plasma-desktop
 plasma-nm
 plasma-pa
+plasma-sdk
 plasma-systemmonitor
 plasma-wayland-session
 poppler-qt6
 powerdevil
 powertop
-profile-sync-daemon
 progress
 projectm-pulseaudio
 projectm-sdl
@@ -182,6 +183,7 @@ qt5-xcb-private-headers
 ranger
 reflector
 rkhunter
+rsync
 ruby-bundler
 rust
 scrot
