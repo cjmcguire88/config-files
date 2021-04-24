@@ -1,10 +1,10 @@
 # **config-files**
 ### *personal config files for my Arch Linux*
 
-![desktop](desktop.png)
-![desktop2](desktop2.png)
-![desktop3](desktop3.png)
-![tmux](tmux.png)
+![desktop](screenshots/desktop.png)
+![desktop2](screenshots/desktop2.png)
+![desktop3](screenshots/desktop3.png)
+![tmux](screenshots/tmux.png)
 
 #### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
 ___
@@ -53,5 +53,3 @@ ___
 <sup>1</sup>*.zshrc contains configurations unique to my setup and should not be used as is!*  
 <sup>2</sup>*Seriously, if you break your system by editing your mkinitcpio.conf... I will laugh at you. You've been warned!*
 ___
-
-![tmux](tmux.png)
