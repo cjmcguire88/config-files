@@ -16,6 +16,7 @@ bat
 bc
 binutils
 bison
+bleachbit
 bluedevil
 bpytop
 bspwm
@@ -164,6 +165,7 @@ pulseaudio-rtp
 pulseaudio-zeroconf
 python-audit
 python-beautifulsoup4
+python-grip
 python-pip
 python-protobuf
 python-pygame
@@ -183,6 +185,8 @@ qt5-xcb-private-headers
 ranger
 reflector
 rkhunter
+rmlint
+rmlint-shredder
 rsync
 ruby-bundler
 rust

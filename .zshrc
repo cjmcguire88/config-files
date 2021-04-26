@@ -10,7 +10,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jason/.config/zsh/.oh-my-zsh"
@@ -43,10 +43,11 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 
 # cmd replacement
+alias cpp="rsync -va"
 alias cat="bat"
 alias ls="exa --icons"
 alias lr="exa -RT"
-alias la="exa -lag --octal-permissions --no-permissions --git"
+alias la="exa -lag --octal-permissions --icons --no-permissions --git"
 alias vim="nvim"
 
 # administration
