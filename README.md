@@ -29,7 +29,7 @@ ___
 - **plasma-bspwm.desktop** *-.desktop to provide a session in which plasma uses bspwm instead of kwin*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
 
-- **.tmux.conf && .tmux.local.conf** *-[gpackosz/.tmux](https://github.com/gpakosz/.tmux)
+- **.tmux.conf && .tmux.local.conf** *-[gpackosz/.tmux](https://github.com/gpakosz/.tmux)*  
 `~/.tmux.conf` && `~/.tmux.conf.local`  
 
 ![desktop2](screenshots/desktop2.png)
