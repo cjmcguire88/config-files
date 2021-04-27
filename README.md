@@ -26,7 +26,7 @@ ___
 - **init.vim** *-vim configuration*  
 `~/.config/nvim/init.vim`
 
-- **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*
+- **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*  
 `~/.config/nvim/plugged/vim-startify/autoload/startify/fortune.vim`
 
 - **unbound.conf** *-Uses Cloudflare's DNS over TLS for encrypted DNS queries*  
