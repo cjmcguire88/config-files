@@ -64,10 +64,15 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 set ruler laststatus=2 showcmd showmode
 set list listchars=trail:»,tab:»-
+set backspace=indent,eol,start
+set relativenumber number
+set ttyfast lazyredraw
 set fillchars+=vert:\ 
 set wrap breakindent
 set encoding=utf-8
-set number
+set linebreak
+set mouse=a
+set confirm
 set title
 
 """ Plugin Configurations
@@ -87,10 +92,6 @@ tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
 autocmd BufWinEnter,WinEnter term://* startinsert
 autocmd BufLeave term://* stopinsert
-
-" Set relative line number
-set number
-set relativenumber
 
 " Disable documentation window
 set completeopt-=preview
