@@ -55,7 +55,8 @@ function! startify#fortune#cowsay(...) abort
     let quote = startify#fortune#quote()
   endif
   let boxed_quote = startify#fortune#boxed(quote)
-  return s:minibeast + boxed_quote + s:cow
+  let hostname = systemlist('hostname | figlet')
+  return hostname + boxed_quote + s:cow
 endfunction
 
 " Function: #predefined_quotes {{{1
@@ -84,14 +85,6 @@ let s:cow = [
       \ '       `--..__)8888P*`._/      `"""""""""""""`  `-` ',
       \ ]
 
-let s:minibeast = [
-      \ ' __  __ ___ _   _ ___ ____  _____    _    ____ _____',
-      \ '|  \/  |_ _| \ | |_ _| __ )| ____|  / \  / ___|_   _|',
-      \ '| |\/| || ||  \| || ||  _ \|  _|   / _ \ \___ \ | |',
-      \ '| |  | || || |\  || || |_) | |___ / ___ \ ___) || |',
-      \ '|_|  |_|___|_| \_|___|____/|_____/_/   \_\____/ |_|',
-      \ ''
-      \ ]
 
 let g:startify_fortune_use_unicode = &encoding == 'utf-8' && get(g:, 'startify_fortune_use_unicode')
 

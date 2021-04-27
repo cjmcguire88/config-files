@@ -20,8 +20,14 @@ ___
 - **picom.conf** *-picom compositor config*  
 `~/.config/picom/picom.conf`
 
-- **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))    
+- **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))  
 `~/.zshrc`
+
+- **init.vim** *-vim configuration*  
+`~/.config/nvim/init.vim`
+
+- **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*
+`~/.config/nvim/plugged/vim-startify/autoload/startify/fortune.vim`
 
 - **unbound.conf** *-Uses Cloudflare's DNS over TLS for encrypted DNS queries*  
 `/etc/unbound/unbound.conf`
