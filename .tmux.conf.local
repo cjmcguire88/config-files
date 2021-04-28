@@ -313,18 +313,12 @@ tmux_conf_copy_to_os_clipboard=false
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-# increase history size
 set -g history-limit 10000
-
-# start with mouse mode enabled
+set -g status-interval 5
 set -g mouse on
-
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
-set -g mode-keys vi
+#set -g mode-keys vi
 
-# replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
 # unbind C-a
 # unbind C-b
@@ -332,7 +326,7 @@ set -g mode-keys vi
 # bind C-a send-prefix
 
 # move status line to top
-#set -g status-position top
+set -g status-position bottom
 
 # -- tpm -----------------------------------------------------------------------
 

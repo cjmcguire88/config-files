@@ -60,20 +60,37 @@ highlight NonText guibg=none
 
 """ Other Configurations
 filetype plugin indent on
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-set incsearch ignorecase smartcase hlsearch
-set ruler laststatus=2 showcmd showmode
-set list listchars=trail:»,tab:»-
-set backspace=indent,eol,start
-set relativenumber number
-set ttyfast lazyredraw
-set fillchars+=vert:\ 
+set encoding       =utf-8
+set path          +=**
+set fillchars     +=vert:\ 
+set backspace      =indent,eol,start
+set list listchars =trail:»,tab:»-
+set tabstop        =4
+set softtabstop    =4
+set shiftwidth     =4
+set scrolloff      =5
+set laststatus     =2
+set mouse          =a
+set expandtab
+set showcmd
+set showmode
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set ruler
+set number
+set relativenumber
+set ttyfast
+set lazyredraw
 set wrap breakindent
-set encoding=utf-8
 set linebreak
-set mouse=a
 set confirm
 set title
+set smarttab
+set autoindent
+set wildmenu
+set cursorline
 
 """ Plugin Configurations
 
@@ -106,6 +123,8 @@ nmap ga <Plug>(EasyAlign)
 " indentLine
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = '#363949'
+let g:indentLine_setConceal = 2
+let g:indentLine_concealcursor = "nv"
 
 " TagBar
 let g:tagbar_width = 30
@@ -204,19 +223,17 @@ nmap <leader>e1 :call ColorMaterial()<CR>
 nmap <leader>e2 :call ColorZazen()<CR>
 nmap <leader>e3 :call ColorOneDark()<CR>
 nmap <leader>e4 :call ColorPaper()<CR>
-nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-nmap <leader>t :call TrimWhitespace()<CR>
-xmap <leader>a gaip*
-nmap <leader>a gaip*
-nmap <leader>s <C-w>s<C-w>j:terminal<CR>
+nmap <leader>r  :so ~/.config/nvim/init.vim<CR>
+nmap <leader>t  :call TrimWhitespace()<CR>
+xmap <leader>a  gaip*
+nmap <leader>a  gaip*
+nmap <leader>s  <C-w>s<C-w>j:terminal<CR>
 nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
-nmap <leader>f :Files<CR>
-nmap <leader>g :Goyo<CR>
-nmap <leader>h :RainbowParentheses!!<CR>
-nmap <leader>j :set filetype=journal<CR>
-nmap <leader>k :ColorToggle<CR>
-nmap <leader>l :Limelight!!<CR>
-xmap <leader>l :Limelight!!<CR>
+nmap <leader>f  :Files<CR>
+nmap <leader>g  :Goyo<CR>
+nmap <leader>h  :RainbowParentheses!!<CR>
+nmap <leader>j  :set filetype=journal<CR>
+nmap <leader>k  :ColorToggle<CR>
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>

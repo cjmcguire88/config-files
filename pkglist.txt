@@ -219,6 +219,7 @@ transmission-qt
 tree
 unbound
 unimatrix-git
+vifm
 vim-airline
 vim-airline-themes
 virt-manager
