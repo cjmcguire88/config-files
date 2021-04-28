@@ -23,7 +23,7 @@ ___
 - **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))  
 `~/.zshrc`
 
-- **init.vim** *-vim configuration sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim)*
+- **init.vim** *-vim configuration* (Sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))    
 `~/.config/nvim/init.vim`
 
 - **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*  
@@ -35,7 +35,7 @@ ___
 - **plasma-bspwm.desktop** *-.desktop to provide a session in which plasma uses bspwm instead of kwin*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
 
-- **.tmux.conf && .tmux.local.conf** *-[gpackosz/.tmux](https://github.com/gpakosz/.tmux)*  
+- **.tmux.conf && .tmux.local.conf** (Sourced from [gpackosz/.tmux](https://github.com/gpakosz/.tmux))  
 `~/.tmux.conf` && `~/.tmux.conf.local`  
 
 ![desktop2](screenshots/desktop2.png)
