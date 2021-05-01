@@ -62,6 +62,13 @@ grub-btrfs
 grub-customizer
 gtk3-demos
 gtk3-docs
+gvfs-afc
+gvfs-goa
+gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
 gzip
 hardinfo
 howdy
@@ -107,6 +114,7 @@ lutris
 lynis-git
 m4
 make
+makepkg-optimize
 mesa-vdpau
 metasploit
 mpd
@@ -208,6 +216,7 @@ supertuxkart
 sxhkd
 systemd-kcm
 systemd-resolvconf
+terminator
 texinfo
 thermald
 tk
@@ -219,7 +228,6 @@ transmission-qt
 tree
 unbound
 unimatrix-git
-vifm
 vim-airline
 vim-airline-themes
 virt-manager
@@ -235,7 +243,6 @@ whois
 x11vnc
 xclip
 xdg-desktop-portal-kde
-xdg-user-dirs
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs

@@ -2,7 +2,6 @@
 
 for pkg in "$@"
 do
-    rm -rf /opt/sources/{packages,community}/$pkg # Remove the package directory if it exists
     echo "\033[1;34m:: \033[1;37mDownloading PKGBUILD...\033[0m"
     svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
@@ -11,55 +10,55 @@ do
         cd /opt/sources/community/$pkg/trunk/
     else
         echo "$pkg not found\n"
-        failed+=($pkg)
+        failed+=$pkg
         continue
     fi
-    if yes|makepkg -si 2> /run/user/1000/error; then # Attempt to compile and install package
-        echo "\033[1;34m:: \033[1;37mInstallation successful\n"
-        successful+=($pkg)
+    if yes|makepkg -csi 2> /run/user/1000/error; then # Attempt to compile and install package
+        echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
+        successful+=$pkg
     else
         if cat /run/user/1000/error | grep -q "unknown public key"; then
-            echo "\033[1;34m:: \033[1;37mAdding key and retrying..."
-            key="$(cat /run/user/1000/error | grep FAILED | awk -F"key" '{print $2}')"
+            echo "\033[1;34m:: \033[1;37mAdding key and retrying...\033[0m"
+            key="$(cat /run/user/1000/error | grep -m 1 FAILED | awk -F"key" '{print $2}')"
             gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
-            keys+=(${key: : -1})
+            keys+=${key: : -1}
             if yes|makepkg -i; then
-                echo "\033[1;34m:: \033[1;37mInstallation successful\n"
-                successful+=($pkg)
+                echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
+                successful+=$pkg
             else
-                echo "\033[1;34m:: \033[1;31mInstallation failed"
-                failed+=($pkg)
+                echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
+                failed+=$pkg
             fi
         else
-            failed+=($pkg)
-            echo "\033[1;34m:: \033[1;31mInstallation failed"
+            failed+=$pkg
+            echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
         fi
     fi
 done
 
 if [ -z "$failed" ]; then
-    echo "\033[1;34m:: \033[1;37mAll packages compiled and installed successfully"
+    echo "\033[1;34m:: \033[1;37mAll packages compiled and installed successfully\033[0m"
     if [ ! -z "$keys" ]; then
-        echo "\n\033[1;34m:: \033[1;37mKeys added:" # Print any keys that had to be added
+        echo "\n\033[1;34m:: \033[1;37mKeys added:\033[0m" # Print any keys that had to be added
         for i in "${keys[@]}"; do
             echo "$i" ; done
     fi
 elif [ -z "$successful" ]; then
-    echo "\n\033[1;34m:: \033[1;31mFailed:" # Print failed
+    echo "\n\033[1;34m:: \033[1;31mFailed:\033[0m" # Print failed
     if [ ! -z "$keys" ]; then
-        echo "\n\033[1;34m:: \033[1;37mKeys added:" # Print any keys that had to be added
+        echo "\n\033[1;34m:: \033[1;37mKeys added:\033[0m" # Print any keys that had to be added
         for i in "${keys[@]}"; do
             echo "$i" ; done
     fi
 else
-    echo "\n\033[1;34m:: \033[1;37mSuccessful:" # Print successful
+    echo "\n\033[1;34m:: \033[1;37mSuccessful:\033[0m" # Print successful
     for i in "${successful[@]}"; do 
         echo "$i" ; done
-    echo "\n\033[1;34m:: \033[1;31mFailed:" # Print failed
+    echo "\n\033[1;34m:: \033[1;31mFailed:\033[0m" # Print failed
     for i in "${failed[@]}"; do
         echo "$i" ; done
     if [ ! -z "$keys" ]; then
-        echo "\n\033[1;34m:: \033[1;37mKeys added:" # Print any keys that had to be added
+        echo "\n\033[1;34m:: \033[1;37mKeys added:\033[0m" # Print any keys that had to be added
         for i in "${keys[@]}"; do
             echo "$i" ; done
     fi
