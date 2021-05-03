@@ -2,6 +2,7 @@
 
 for pkg in "$@"
 do
+    rm -rf /opt/sources/{packages,community}/$pkg 
     echo "\033[1;34m:: \033[1;37mDownloading $pkg PKGBUILD...\033[0m"
     svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD (redirect extraneous output to null)
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community

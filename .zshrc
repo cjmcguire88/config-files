@@ -119,10 +119,7 @@ alias username="python ~/Programs/sherlock/sherlock/sherlock.py"
 alias website="nikto -host"
 
 # virtual machines
-alias macos='cd ~/qemu/MacOS_Catalina/ && ./basic.sh ; cd ~/'
 alias android="genymotion"
-alias virtenv="sudo systemctl start libvirtd && sudo systemctl start ebtables"
-alias kvirtenv="sudo systemctl stop ebtables && sudo systemctl stop libvirtd"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
