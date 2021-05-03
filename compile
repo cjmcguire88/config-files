@@ -2,20 +2,20 @@
 
 for pkg in "$@"
 do
-    echo "\033[1;34m:: \033[1;37mDownloading PKGBUILD...\033[0m"
-    svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD
+    echo "\033[1;34m:: \033[1;37mDownloading $pkg PKGBUILD...\033[0m"
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD (redirect extraneous output to null)
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
         cd /opt/sources/packages/$pkg/trunk/
     elif [ -f "/opt/sources/community/$pkg/trunk/PKGBUILD" ]; then
         cd /opt/sources/community/$pkg/trunk/
     else
         echo "$pkg not found\n"
-        failed+=$pkg
+        failed+=($pkg)
         continue
     fi
-    if yes|makepkg -csi 2> /run/user/1000/error; then # Attempt to compile and install package
+    if yes|makepkg -si 2> /run/user/1000/error; then # Attempt to compile and install package
         echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
-        successful+=$pkg
+        successful+=($pkg)
     else
         if cat /run/user/1000/error | grep -q "unknown public key"; then
             echo "\033[1;34m:: \033[1;37mAdding key and retrying...\033[0m"
@@ -24,13 +24,13 @@ do
             keys+=${key: : -1}
             if yes|makepkg -i; then
                 echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
-                successful+=$pkg
+                successful+=($pkg)
             else
                 echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
-                failed+=$pkg
+                failed+=($pkg)
             fi
         else
-            failed+=$pkg
+            failed+=($pkg)
             echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
         fi
     fi

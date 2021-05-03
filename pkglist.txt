@@ -7,6 +7,7 @@ apparmor
 arch-audit
 archlinux-appstream-data-pamac
 archlinux-wallpaper
+ark
 asp
 autoconf
 automake
@@ -85,6 +86,7 @@ irqbalance
 isw
 jasper-doc
 kde-gtk-config
+kdeconnect
 kodi-addon-superrepo-all
 kodi-gbm
 kodi-x11
