@@ -1,5 +1,6 @@
 alacritty
 alsa-utils
+amd-ucode
 android-tools
 android-udev
 aom-docs
@@ -12,6 +13,7 @@ asp
 autoconf
 automake
 base
+bash-language-server
 bashtop
 bat
 bc
@@ -24,12 +26,12 @@ bspwm
 btrfs-du
 btrfs-progs
 cava
-checkbashisms
-cheese
+ccls
 chromium
 cmake
 compsize
 cpufetch-git
+ctags
 dash
 discord
 discover
@@ -111,6 +113,7 @@ linux-firmware
 linux-headers
 lolcat
 lsscsi
+lua-lsp-git
 luit
 lutris
 lynis-git
@@ -146,7 +149,6 @@ openvpn
 packagekit-qt5
 pacman
 pacman-debug
-pacman-fix-permissions
 pam_ssh
 pamac-aur
 patch
@@ -176,6 +178,7 @@ pulseaudio-zeroconf
 python-audit
 python-beautifulsoup4
 python-grip
+python-language-server
 python-pip
 python-protobuf
 python-pygame
@@ -199,7 +202,8 @@ rmlint
 rmlint-shredder
 rsync
 ruby-bundler
-rust
+rust-analyzer
+rustup
 scrot
 sddm
 sddm-kcm
@@ -218,7 +222,6 @@ supertuxkart
 sxhkd
 systemd-kcm
 systemd-resolvconf
-terminator
 texinfo
 thermald
 tk

@@ -18,6 +18,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'zaki/zazen'
 
 " Functionalities
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
@@ -32,10 +33,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/Colorizer'
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 
 call plug#end()
@@ -93,6 +91,9 @@ set wildmenu
 set cursorline
 
 """ Plugin Configurations
+
+" RustFmt
+let g:rustfmt_autosave = 1
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -224,6 +225,7 @@ nmap <leader>e2 :call ColorZazen()<CR>
 nmap <leader>e3 :call ColorOneDark()<CR>
 nmap <leader>e4 :call ColorPaper()<CR>
 nmap <leader>r  :so ~/.config/nvim/init.vim<CR>
+nmap <leader>0  :TagbarToggle<CR>
 nmap <leader>t  :call TrimWhitespace()<CR>
 xmap <leader>a  gaip*
 nmap <leader>a  gaip*
