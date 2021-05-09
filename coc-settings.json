@@ -2,36 +2,36 @@
    ## MINIBEAST COC-SETTINGS ##
    ############################ */
 {
-/* GENERAL SETTINGS */
- "coc.preferences.extensionUpdateCheck": "daily",
- "coc.preferences.formatOnType": true,
- "coc.preferences.formatOnSaveFiletypes": [
-     "c",
-     "rust",
-     "python",
-     "markdown",
-     "json",
-     "jsonc"
-   ],
-/* MARKDOWN SETTINGS */
- "markdownlint.config": {
-     "default": true,
-     "line-length": false
-   },
-/* PYTHON SETTINGS */
-   "signature.target": "echo",
-   "suggest.timeout": 5000,
-   "suggest.defaultSortMethod": "none",
-/* LANGUAGE SERVERS */
- "languageserver": {
-  /* Bash LSP */
+    /* GENERAL SETTINGS */
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "c",
+        "rust",
+        "python",
+        "markdown",
+        "json",
+        "jsonc"
+    ],
+    /* MARKDOWN SETTINGS */
+    "markdownlint.config": {
+        "default": true,
+        "line-length": false
+    },
+    /* PYTHON SETTINGS */
+    "signature.target": "echo",
+    "suggest.timeout": 5000,
+    "suggest.defaultSortMethod": "none",
+    /* LANGUAGE SERVERS */
+    "languageserver": {
+        /* Bash LSP
      "bash": {
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
-    },
-  /* C/C++/Obj-C LSP */
+    }, */
+        /* C/C++/Obj-C LSP
     "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
@@ -41,19 +41,21 @@
           "directory": "/tmp/ccls"
         }
       }
-    },
-  /* Lua LSP */
-    "lua": {
-    "command": "lua-lsp",
-    "filetypes": ["lua"]
-    },
-  /* Rust LSP */
+    }, */
+        /* Lua LSP */
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": [
+                "lua"
+            ]
+        }
+        /* Rust LSP
     "rust": {
       "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
-    },
-  /* Python LSP */
+    }, */
+        /* Python LSP
     "python": {
     "command": "python",
     "args": [
@@ -120,6 +122,6 @@
         }
       }
     }
-  }
-  }
+  } */
+    }
 }
