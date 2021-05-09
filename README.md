@@ -1,8 +1,9 @@
+
 # **config-files**
-### *personal config files for my Arch Linux*
+
+## *personal config files for my Arch Linux*
 
 ![desktop](screenshots/desktop.png)
-
 
 ![tmux](screenshots/tmux.png)
 
@@ -23,8 +24,11 @@ ___
 - **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))  
 `~/.zshrc`
 
-- **init.vim** *-vim configuration* (Sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))    
+- **init.vim** *-vim configuration* (Sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))  
 `~/.config/nvim/init.vim`
+
+- **coc-settings.json** *-Config for coc.nvim to use lang servers*  
+`~/.config/nvim/coc-settings.json`
 
 - **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*  
 `~/.config/nvim/plugged/vim-startify/autoload/startify/fortune.vim`
