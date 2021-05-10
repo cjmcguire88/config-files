@@ -24,14 +24,14 @@
     "suggest.defaultSortMethod": "none",
     /* LANGUAGE SERVERS */
     "languageserver": {
-        /* Bash LSP
+        /* Bash LSP    **Using coc-sh
      "bash": {
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     }, */
-        /* C/C++/Obj-C LSP
+        /* C/C++/Obj-C LSP    **Using coc-clangd
     "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
@@ -49,13 +49,13 @@
                 "lua"
             ]
         }
-        /* Rust LSP
+        /* Rust LSP    **Using coc-rust-analyzer
     "rust": {
       "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
     }, */
-        /* Python LSP
+        /* Python LSP    **Using coc-python
     "python": {
     "command": "python",
     "args": [

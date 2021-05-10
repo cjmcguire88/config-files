@@ -183,6 +183,8 @@ python-pip
 python-protobuf
 python-pygame
 python-pynvim
+python-pyqt5
+python-pyqt5-sip
 python-pywal
 python-tests
 python-ueberzug-git

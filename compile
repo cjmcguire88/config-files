@@ -1,8 +1,56 @@
 #!/bin/zsh
 
+makepkg_opt1() {
+    cd ~/
+    echo "\n\033[1;34m:: \033[1;37mRetrying with opt_lvl_1\033[0m\n"
+    echo "\033[1;34m:: \033[1;37mRemoving directories and redownloading $pkg PKGBUILD...\033[0m"
+    rm -rf /opt/sources/{packages,community}/$pkg
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null
+    if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
+        cd /opt/sources/packages/$pkg/trunk/
+    else
+        cd /opt/sources/community/$pkg/trunk/
+    fi
+    yes|makepkg -i --config /etc/makepkg/makepkg_1.conf
+}
+makepkg_opt2() {
+    cd ~/
+    echo "\n\033[1;34m:: \033[1;37mRetrying with opt_lvl_2\033[0m\n"
+    echo "\033[1;34m:: \033[1;37mRemoving directories and redownloading $pkg PKGBUILD...\033[0m"
+    rm -rf /opt/sources/{packages,community}/$pkg
+    svn update /opt/sources/{packages,community}/$pkg >> /dev/null
+    if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
+        cd /opt/sources/packages/$pkg/trunk/
+    else
+        cd /opt/sources/community/$pkg/trunk/
+    fi
+    yes|makepkg -i --config /etc/makepkg/makepkg_2.conf
+}
+makepkg_lowdep() {
+    if makepkg_opt2; then
+        echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
+        successful+=("${pkg} -opt_lvl_2")
+        cd ~/
+    elif makepkg_opt1; then
+        echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
+        successful+=("${pkg} -opt_lvl_1")
+        cd ~/
+    else
+        echo "\033[1;34m:: \033[1;31mInstallation Failed\033[0m\n"
+        failed+=("${pkg}")
+        rm -rf /opt/sources/{packages,community}/$pkg
+        cd ~/
+    fi
+}
+add_key() {
+    key="$(cat /run/user/1000/error | grep -m 1 FAILED | awk -F"key" '{print $2}')"
+    gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
+    keys+=${key: : -1}
+}
 for pkg in "$@"
 do
-    rm -rf /opt/sources/{packages,community}/$pkg 
+    rm -rf /opt/sources/{packages,community}/$pkg
+    echo "\n\033[1;34m:: \033[1;37mAttemping compilation with opt_lvl_3\033[0m\n"
     echo "\033[1;34m:: \033[1;37mDownloading $pkg PKGBUILD...\033[0m"
     svn update /opt/sources/{packages,community}/$pkg >> /dev/null # Get PKGBUILD (redirect extraneous output to null)
     if [ -f "/opt/sources/packages/$pkg/trunk/PKGBUILD" ]; then # Find if package is in core/extra or community
@@ -11,32 +59,25 @@ do
         cd /opt/sources/community/$pkg/trunk/
     else
         echo "$pkg not found\n"
-        failed+=($pkg)
+        failed+=("${pkg}")
         continue
     fi
-    if yes|makepkg -si 2> /run/user/1000/error; then # Attempt to compile and install package
+    if yes|makepkg -si --config /etc/makepkg/makepkg_3.conf 2> /run/user/1000/error; then
         echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
-        successful+=($pkg)
-    else
-        if cat /run/user/1000/error | grep -q "unknown public key"; then
-            echo "\033[1;34m:: \033[1;37mAdding key and retrying...\033[0m"
-            key="$(cat /run/user/1000/error | grep -m 1 FAILED | awk -F"key" '{print $2}')"
-            gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 "${key: : -1}"
-            keys+=${key: : -1}
-            if yes|makepkg -i; then
-                echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
-                successful+=($pkg)
-            else
-                echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
-                failed+=($pkg)
-            fi
+        successful+=("${pkg} -opt_lvl_3")
+    elif cat /run/user/1000/error | grep -q "unknown public key"; then
+        echo "\033[1;34m:: \033[1;37mAdding key and retrying...\033[0m"
+        add_key
+        if yes|makepkg -i --config /etc/makepkg/makepkg_3.conf; then
+            echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
+            successful+=("${pkg} -opt_lvl_3")
         else
-            failed+=($pkg)
-            echo "\033[1;34m:: \033[1;31mInstallation failed\033[0m"
+            makepkg_lowdep
         fi
+    else
+        makepkg_lowdep
     fi
 done
-
 if [ -z "$failed" ]; then
     echo "\033[1;34m:: \033[1;37mAll packages compiled and installed successfully\033[0m"
     if [ ! -z "$keys" ]; then
