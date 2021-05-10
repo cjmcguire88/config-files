@@ -11,7 +11,7 @@ makepkg_opt1() {
         cd /opt/sources/community/$pkg/trunk/
     fi
     echo "\n\033[1;34m:: \033[1;37mRetrying compilation with opt_lvl_1\033[0m\n"
-    yes|makepkg -i --config /etc/makepkg/makepkg_1.conf
+    makepkg -i --noconfirm --config /etc/makepkg/makepkg_1.conf
 }
 makepkg_opt2() {
     cd ~/
@@ -24,7 +24,7 @@ makepkg_opt2() {
         cd /opt/sources/community/$pkg/trunk/
     fi
     echo "\n\033[1;34m:: \033[1;37mRetrying compilation with \033[1;34mopt_lvl_2\033[0m\n"
-    yes|makepkg -i --config /etc/makepkg/makepkg_2.conf
+    makepkg -i --noconfirm --config /etc/makepkg/makepkg_2.conf
 }
 makepkg_lowdep() {
     if makepkg_opt2; then
@@ -62,13 +62,13 @@ do
         continue
     fi
     echo "\n\033[1;34m:: \033[1;37mAttemping compilation with \033[1;32mopt_lvl_3\033[0m\n"
-    if yes|makepkg -si --config /etc/makepkg/makepkg_3.conf 2> /run/user/1000/error; then
+    if makepkg -si --noconfirm --config /etc/makepkg/makepkg_3.conf 2> /run/user/1000/error; then
         echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
         successful+=("${pkg} - \033[32mopt_lvl_3\033[0m")
     elif cat /run/user/1000/error | grep -q "unknown public key"; then
         echo "\033[1;34m:: \033[1;33mAdding key and retrying...\033[0m"
         add_key
-        if yes|makepkg -i --config /etc/makepkg/makepkg_3.conf; then
+        if makepkg -i --noconfirm --config /etc/makepkg/makepkg_3.conf; then
             echo "\033[1;34m:: \033[1;37mInstallation successful\033[0m\n"
             successful+=("${pkg} - \033[32mopt_lvl_3\033[0m")
         else
