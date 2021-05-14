@@ -7,11 +7,12 @@
 
 ![tmux](screenshots/tmux.png)
 
-#### The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.  
+*The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.*  
 ___
+
 - **bspwmrc** *-bspwm config*  
-`~/.config/bspwm/bspwmrc` 
- 
+`~/.config/bspwm/bspwmrc`
+
 - **sxhkdrc** *-sxhkd hotkey config*  
 `~/.config/sxhkd/sxhkdrc`
 
@@ -55,10 +56,6 @@ See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_
 
 - `/etc/hosts`  
 *My hosts file blocks traffic from over 59,000 different sites known to contain or distribute adware/malware.*  
-
-- `/usr/bin/compile`  
-A script I made to automate compiling multiple packages with the Arch Build System. Automatically adds keys with gpg using an https server as well. You must make the directory /opt/sources (or change it in the script) then run `svn checkout --depth=empty svn://svn.archlinux.org/{packages,community}` inside of the directory.  
-Usage: `compile pkg1 pkg2 pkg3`  
 
 ![desktop3](screenshots/desktop3.png)
 ___

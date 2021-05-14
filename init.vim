@@ -70,8 +70,6 @@ set scrolloff      =5
 set laststatus     =2
 set cmdheight      =1
 set mouse          =a
-set nobackup
-set nowritebackup
 set hidden
 set expandtab
 set showcmd
@@ -92,6 +90,8 @@ set smarttab
 set autoindent
 set wildmenu
 set cursorline
+"set nobackup
+"set nowritebackup
 
 """ Plugin Configurations
 

@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+for kern in "$@"
+do
+    rm -rf /usr/src/*${kern}*
+    rm -rf /usr/lib/modules/*${kern}*
+    rm -rf /boot/*${kern}*
+    rm -rf /boot/efi/EFI/*${kern}*
+    rm -rf /boot/efi/EFI/Linux/*${kern}*
+    rm -rf /etc/mkinitcpio.d/*${kern}*
+done

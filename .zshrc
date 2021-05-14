@@ -94,11 +94,9 @@ alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.tx
 
 # kernel
 alias kernel_patch="patch -p1 < patches/*"
-alias kernel_config="sudo make oldconfig"
-alias kernel="/usr/src/linux-5.12.1-MiniBeast"
+alias kernel="/usr/src/linux-5.12.4-MiniBeast"
 alias kernel_menu="sudo make menuconfig"
 alias kernel_make="sudo make clean && sudo make -j8"
-alias kernel_install="sudo cp -v /usr/src/linux-5.12.1-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.12.1-MiniBeast && sudo cp -v /boot/vmlinuz-linux-5.12.1-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-5.12.1-MiniBeast && sudo make modules_install && sudo mkinitcpio -p linux-5.12.1-MiniBeast && sudo cp -v /boot/initramfs-linux-5.12.1-MiniBeast.img /boot/efi/EFI/initramfs-linux-5.12.1-MiniBeast.img && sudo dkms remove --no-depmod -m nvidia -v 465.27 -k 5.12.1-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 465.27 -k 5.12.1-MiniBeast && sudo depmod 5.12.1-MiniBeast"
 alias modules_install="sudo make modules_install"
 alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
 

@@ -27,6 +27,7 @@ btrfs-du
 btrfs-progs
 cava
 ccls
+cheese
 chromium
 cmake
 compsize
@@ -45,8 +46,10 @@ feh
 figlet
 file
 findutils
+fish
 flameshot
 flex
+fragments
 fzf
 gawk
 gcc
@@ -89,6 +92,7 @@ isw
 jasper-doc
 kde-gtk-config
 kdeconnect
+kmon
 kodi-addon-superrepo-all
 kodi-gbm
 kodi-x11
@@ -137,6 +141,7 @@ networkmanager
 networkmanager-dmenu-git
 newsboat
 nmap
+nnn
 ntfs-3g
 nvidia-dkms
 nvidia-prime
@@ -198,6 +203,7 @@ qemu-block-rbd
 qemu-guest-agent
 qt5-xcb-private-headers
 ranger
+raptor
 reflector
 rkhunter
 rmlint
@@ -224,6 +230,7 @@ supertuxkart
 sxhkd
 systemd-kcm
 systemd-resolvconf
+terminator
 texinfo
 thermald
 tk
