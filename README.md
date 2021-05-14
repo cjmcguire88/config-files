@@ -51,11 +51,14 @@ ___
 *Compiles packages with -march=native, -o3 and flto=auto [Link time optimization](https://www.phoronix.com/scan.php?page=news_item&px=OpenSUSE-Tumbleweed-LTO) flags*
 
 - `/etc/mkinitcpio.conf` && `/etc/dracut.conf.d/MiniBeast-dracut.conf`  
-*For generating a minimal initramfs for a system with a specific, known and static hardware configuration. My hooks/modules will not be the same as yours.*   
+*For generating a minimal initramfs for a system with a specific, known and static hardware configuration. My hooks/modules will not be the same as yours.*  
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 
 - `/etc/hosts`  
 *My hosts file blocks traffic from over 59,000 different sites known to contain or distribute adware/malware.*  
+
+- `~/.local/bin/kernel_install` && `~/.local/bin/kernel_remove`  
+*Scripts that I made to download, configure, install and remove kernels on my system*  
 
 ![desktop3](screenshots/desktop3.png)
 ___
