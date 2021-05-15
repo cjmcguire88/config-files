@@ -2,10 +2,10 @@
 
 for kern in "$@"
 do
-    rm -rf /usr/src/*${kern}*
-    rm -rf /usr/lib/modules/*${kern}*
-    rm -rf /boot/*${kern}*
-    rm -rf /boot/efi/EFI/*${kern}*
-    rm -rf /boot/efi/EFI/Linux/*${kern}*
-    rm -rf /etc/mkinitcpio.d/*${kern}*
+    rm -rfv /usr/src/*${kern}*
+    rm -rfv /usr/lib/modules/*${kern}*
+    rm -rfv /boot/*${kern}*
+    rm -rfv /boot/efi/EFI/*${kern}*
+    rm -rfv /boot/efi/EFI/Linux/*${kern}*
+    rm -rfv /etc/mkinitcpio.d/*${kern}*
 done

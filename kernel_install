@@ -1,39 +1,39 @@
 #!/bin/zsh
 
 cd $HOME
-echo "\n\033[1;34m:: \033[1;37mDownloading linux-${1}\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mDownloading linux-${1}\033[0m\n"
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${1}.tar.xz
-echo "\n\033[1;34m:: \033[1;37mUnpacking tarball\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mUnpacking tarball\033[0m\n"
 xz -d linux-${1}.tar.xz
 tar -xvf linux-${1}.tar
 cd linux-${1}
-echo "\n\033[1;34m:: \033[1;37mCopying patches and config from linux-$(uname -r)\033[0m"
+echo -e "\n\033[1;34m:: \033[1;37mCopying patches and config from linux-$(uname -r)\033[0m"
 cp -vr /usr/src/linux-$(uname -r)/{patches,.config} ./
-echo "\n\033[1;34m:: \033[1;37mPatching Kernel\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mPatching Kernel\033[0m\n"
 patch -p1 < patches/*
-echo "\n\033[1;34m:: \033[1;37mEditing Makefile\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mEditing Makefile\033[0m\n"
 sed -ie 's/^EXTRAVERSION =.*$/& -MiniBeast/g' Makefile
 grep -v "EXTRAVERSION := \$(EXTRAVERSION)\$(CKVERSION)" Makefile > tmpfile && mv tmpfile Makefile
-echo "\n\033[1;34m:: \033[1;37mUnlocking -O3 optimization\033[0m"
+echo -e "\n\033[1;34m:: \033[1;37mUnlocking -O3 optimization\033[0m"
 sed -e '/bool "Optimize more for performance (-O3)"/{n;d}' init/Kconfig > init/tmpfile && mv init/tmpfile init/Kconfig
-echo "\n\033[1;34m:: \033[1;37mGenerating kernel config\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mGenerating kernel config\033[0m\n"
 make oldconfig
-echo "\n\033[1;34m:: \033[1;37mMoving linux-${1} to /usr/src/linux-${1}-MiniBeast\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mMoving linux-${1} to /usr/src/linux-${1}-MiniBeast\033[0m\n"
 cd $HOME
 sudo mv linux-${1} /usr/src/linux-${1}-MiniBeast
-echo "\n\033[1;34m:: \033[1;37mGenerating linux-${1}-MiniBeast.preset\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mGenerating linux-${1}-MiniBeast.preset\033[0m\n"
 cd /etc/mkinitcpio.d/
 sudo cp linux-$(uname -r).preset linux-${1}-MiniBeast.preset
 sudo sed -i "s/$(uname -r)/${1}-MiniBeast/g" linux-${1}-MiniBeast.preset
 cd /usr/src/linux-${1}-MiniBeast
-echo "\033[1;34m:: \033[1;37mCompiling and installing kernel\033[0m\n"
+echo -e "\033[1;34m:: \033[1;37mCompiling and installing kernel\033[0m\n"
 sudo make clean && sudo make -j8
 sudo cp -v /usr/src/linux-${1}-MiniBeast/arch/x86_64/boot/bzImage /boot/vmlinuz-linux-${1}-MiniBeast && sudo cp -v /boot/vmlinuz-linux-${1}-MiniBeast /boot/efi/EFI/linux/vmlinuz-linux-${1}-MiniBeast
-echo "\n\033[1;34m:: \033[1;37mInstalling modules\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mInstalling modules\033[0m\n"
 sudo make modules_install
-echo "\n\033[1;34m:: \033[1;37mGenerating initramfs\033[0m\n"
+echo -e "\n\033[1;34m:: \033[1;37mGenerating initramfs\033[0m\n"
 sudo mkinitcpio -p linux-${1}-MiniBeast && sudo cp -v /boot/initramfs-linux-${1}-MiniBeast.img /boot/efi/EFI/initramfs-linux-${1}-MiniBeast.img
-echo "\n\033[1;34m:: \033[1;37mInstalling Nvidia graphics driver\033[0m"
+echo -e "\n\033[1;34m:: \033[1;37mInstalling Nvidia graphics driver\033[0m"
 sudo dkms remove --no-depmod -m nvidia -v 465.27 -k ${1}-MiniBeast ; sudo dkms install --no-depmod -m nvidia -v 465.27 -k ${1}-MiniBeast && sudo depmod ${1}-MiniBeast
-echo "\n\033[1;34m:: \033[1;37mGenerating new grub configuration file\033[0m"
+echo -e "\n\033[1;34m:: \033[1;37mGenerating new grub configuration file\033[0m"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
