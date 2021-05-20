@@ -46,9 +46,10 @@ source $ZSH/oh-my-zsh.sh
 alias cpp="rsync -va"
 alias cat="bat"
 alias l="exa --icons --group-directories-first "
-alias la="exa -laH@ --icons --group-directories-first"
+alias ll="exa -a --icons --group-directories-first"
+alias ls="exa -lg --group-directories-first --octal-permissions --icons --no-permissions --git"
+alias la="exa -lag --group-directories-first --octal-permissions --icons --no-permissions --git"
 alias lr="exa -RT --level=2"
-alias ls="exa -lag --group-directories-first --octal-permissions --icons --no-permissions --git"
 alias vim="nvim"
 
 # administration
@@ -93,7 +94,6 @@ alias cache="yay -Sc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
 # kernel
-alias kernel_patch="patch -p1 < patches/*"
 alias kernel="/usr/src/linux-5.12.4-MiniBeast"
 alias kernel_menu="sudo make menuconfig"
 alias kernel_make="sudo make clean && sudo make -j8"

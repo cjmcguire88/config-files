@@ -112,7 +112,6 @@ libvirt
 libvirt-storage-gluster
 libvirt-storage-iscsi-direct
 libvirt-storage-rbd
-linux
 linux-firmware
 linux-headers
 lolcat
@@ -245,7 +244,6 @@ unimatrix-git
 vim-airline
 vim-airline-themes
 virt-manager
-vscodium-git
 vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon

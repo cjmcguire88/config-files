@@ -43,9 +43,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-""" Python3 VirtualEnv
-let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
-
 """ Coloring
 syntax on
 color material
@@ -53,6 +50,7 @@ highlight Pmenu gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
 highlight NonText guibg=none
+
 
 """ Other Configurations
 filetype plugin indent on
@@ -127,6 +125,9 @@ let g:indentLine_concealcursor = "nv"
 " TagBar
 let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
+
+" Python3 VirtualEnv
+let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
 
 " Coc
 " Remap keys for applying codeAction to the current buffer.
