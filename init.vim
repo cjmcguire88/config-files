@@ -33,6 +33,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/Colorizer'
 Plug 'honza/vim-snippets'
 Plug 'dkarter/bullets.vim'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -88,13 +89,10 @@ set smarttab
 set autoindent
 set wildmenu
 set cursorline
-"set nobackup
-"set nowritebackup
+set nobackup
+set nowritebackup
 
 """ Plugin Configurations
-
-" RustFmt
-let g:rustfmt_autosave = 1
 
 " NERDTree
 let NERDTreeShowHidden=1
@@ -104,7 +102,7 @@ let g:NERDTreeDirArrowCollapsible = '↡'
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_section_warning = ''
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
@@ -126,21 +124,9 @@ let g:indentLine_concealcursor = "nv"
 let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
 
-" Python3 VirtualEnv
-let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
-
-" Coc
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
 " Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()

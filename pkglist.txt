@@ -194,6 +194,7 @@ python-tests
 python-ueberzug-git
 python-wheel
 python-whois
+python2-pip
 qemu
 qemu-arch-extra
 qemu-block-gluster

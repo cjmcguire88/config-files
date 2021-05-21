@@ -28,7 +28,7 @@ super + ctrl + Escape
 
 # quit/restart bspwm
 super + {shift + Escape,Escape}
-	bspc {quit,wm -r}
+	systemctl --user restart plasma-kwin_x11.service
 
 # close
 super + x
@@ -140,7 +140,7 @@ super + ctrl + r
 
 # cheatsheet
 super + F5
-	kwrite  ~/.config/sxhkd/sxhkd-cheatsheet
+	st cat ~/.config/sxhkd/sxhkd-cheatsheet
 
 # screenshot
 super + F6
@@ -168,7 +168,7 @@ super + shift + u
 
 # open kwrite
 super + shift + c
-	kwrite
+	st nvim
 
 # open vscode
 super + alt + c
@@ -210,6 +210,3 @@ super + shift + k
 # functions:
 #
 
-# update system
-super + ctrl + u
-	st yay -Syu
