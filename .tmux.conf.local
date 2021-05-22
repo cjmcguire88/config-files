@@ -313,7 +313,7 @@ tmux_conf_copy_to_os_clipboard=false
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-set -g history-limit 10000
+set -g history-limit 30000
 set -g status-interval 5
 set -g mouse on
 #set -g status-keys vi
