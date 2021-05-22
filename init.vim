@@ -6,34 +6,30 @@
 call plug#begin()
 
 " Aesthetics
-Plug 'mhinz/vim-startify'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/vim-journal'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'zaki/zazen'
+Plug 'mhinz/vim-startify'  " This plugin provides a start screen for Vim and Neovim.
+Plug 'kaicataldo/material.vim', { 'branch': 'main' } " A port of the Material color scheme for Vim/Neovim.
+Plug 'rakr/vim-one' " Light and dark vim colorscheme, shamelessly stolen from atom.
+Plug 'vim-airline/vim-airline' " Lean & mean status/tabline for vim that's light as air.
+Plug 'vim-airline/vim-airline-themes' " The official theme repository for vim-airline
+Plug 'junegunn/goyo.vim' " Distraction-free writing in Vim.
+Plug 'NLKNguyen/papercolor-theme' " Inspired by Google's Material Design.
+Plug 'zaki/zazen' " Zazen vim color scheme (a personalized version of zenesque)
 
 " Functionalities
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-easy-align'
-Plug 'alvan/vim-closetag'
-Plug 'Yggdroot/indentLine'
-Plug 'sheerun/vim-polyglot'
-Plug 'chrisbra/Colorizer'
-Plug 'honza/vim-snippets'
-Plug 'dkarter/bullets.vim'
-Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Make your Vim/Neovim as smart as VSCode.
+Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple
+Plug 'tpope/vim-sensible' " Defaults everyone can agree on
+Plug 'tpope/vim-commentary' " Comment stuff out
+Plug 'preservim/tagbar' " Vim plugin that displays tags in a window, ordered by scope
+Plug 'preservim/nerdtree' " A tree explorer plugin for vim.
+Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins.
+Plug 'junegunn/vim-easy-align' " A simple, easy-to-use Vim alignment plugin.
+Plug 'alvan/vim-closetag' " Auto close (X)HTML tags.
+Plug 'Yggdroot/indentLine' " A vim plugin to display the indention levels with thin vertical lines
+Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
+Plug 'chrisbra/Colorizer' " Color hex codes and color names.
+Plug 'honza/vim-snippets' " Community maintained snippets for various programming languages.
+Plug 'dkarter/bullets.vim' " Bullets.vim is a Vim plugin for automated bullet lists.
 
 call plug#end()
 
@@ -46,7 +42,13 @@ endif
 
 """ Coloring
 syntax on
-color material
+colorscheme material
+let g:airline_theme = 'material'
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'default'
+" options:| 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' |
+" | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community' |
+
 highlight Pmenu gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
@@ -55,42 +57,47 @@ highlight NonText guibg=none
 
 """ Other Configurations
 filetype plugin indent on
-set encoding       =utf-8
-set path          +=**
-set fillchars     +=vert:\ 
-set shortmess     +=c
-set backspace      =indent,eol,start
-set list listchars =trail:»,tab:»-
-set updatetime     =300
-set tabstop        =4
-set softtabstop    =4
-set shiftwidth     =4
-set scrolloff      =5
-set laststatus     =2
-set cmdheight      =1
-set mouse          =a
-set hidden
-set expandtab
-set showcmd
-set showmode
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set ruler
-set number
-set relativenumber
-set lazyredraw
-set wrap breakindent
-set linebreak
-set confirm
-set title
-set smarttab
-set autoindent
-set wildmenu
-set cursorline
-set nobackup
-set nowritebackup
+set encoding       =utf-8               " use utf-8 encoding
+set clipboard      =unnamed             " normal OS clipboard interaction
+set path          +=**                  " search files recursively
+set showbreak     +=>\                  " use > to indicate line breaks
+set cpoptions     +=n                   " show > for wrapped lines in number column
+set fillchars     +=vert:\              " characters to fill statusline vertical separator
+set shortmess     +=c                   " helps to avoid all the hit-enter prompts caused by file messages
+set backspace      =indent,eol,start    " allow backspacing over everything in insert mode
+set list listchars =trail:»,tab:»-      " show invisible characters
+set updatetime     =300                 " speed up the updatetime for plugins
+set tabstop        =4                   " a tab is four spaces
+set softtabstop    =4                   " when hitting <BS>, pretend like a tab is removed, even if spaces
+set shiftwidth     =4                   " number of spaces to use for autoindenting
+set scrolloff      =5                   " keep 5 lines off the edges of the screen when scrolling
+set laststatus     =2                   " always show status line
+set mouse          =nv                  " enable mouse in normal and visual mode
+set hidden                              " hidden instead of closed when opening new buffer
+set autoread                            " automatically reload files changed outside of Vim
+set expandtab                           " expand tabs by default (overloadable per file type later)
+set showcmd                             " show partial commands in the last line of the screen
+set showmatch                           " set show matching parenthesis
+set showmode                            " always show what mode we're currently editing in
+set ignorecase                          " ignore case when searching
+set smartcase                           " ignore case if search pattern is all lowercase
+set hlsearch                            " highlight search terms
+set incsearch                           " show search matches as you type
+set gdefault                            " search/replace globally (on a line) by default
+set ruler                               " always show cursor position
+set number                              " always show line numbers
+set relativenumber                      " set line numbers relative to the cursor
+set lazyredraw                          " buffer screen updates instead of updating all the time
+set wrap breakindent                    " wrap lines and keep indentation on wrap
+set linebreak                           " wrap on last word instead of last characters
+set confirm                             " prompt before closing with unsaved changes
+set title                               " set title of window to filename
+set smarttab                            " insert tabs on the start of a line according to shiftwidth
+set autoindent                          " always set autoindenting on
+set wildmenu                            " commandline completion menu
+set cursorline                          " highlight the cursorline
+set nobackup                            " no backup before overwriting
+set nowritebackup                       " no backup before overwriting
 
 """ Plugin Configurations
 
@@ -124,6 +131,7 @@ let g:indentLine_concealcursor = "nv"
 let g:tagbar_width = 30
 let g:tagbar_iconchars = ['↠', '↡']
 
+" Coc.nvim
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -201,11 +209,19 @@ function! TrimWhitespace()
     call winrestview(l:save)
 endfunction
 
-" OneDark Mode (Dark)
+" One Mode (Dark)
 function! ColorOneDark()
     let g:airline_theme='one'
     color one
     set background=dark
+    IndentLinesEnable
+endfunction
+
+" One Mode (light)
+function! ColorOneLight()
+    let g:airline_theme='one'
+    color one
+    set background=light
     IndentLinesEnable
 endfunction
 
@@ -224,10 +240,18 @@ function! ColorMaterial()
 endfunction
 
 " Paper Mode
-function! ColorPaper()
-    let g:airline_theme='deus'
+function! ColorPaperLight()
+    let g:airline_theme='papercolor'
     color PaperColor
     set background=light
+    IndentLinesEnable
+endfunction
+
+" Paper Mode
+function! ColorPaperDark()
+    let g:airline_theme='papercolor'
+    color PaperColor
+    set background=dark
     IndentLinesEnable
 endfunction
 
@@ -253,13 +277,15 @@ map <C-l> <C-W>l
 let mapleader=" "
 nmap <leader>q :NERDTreeToggle<CR>
 nmap \ <leader>q
-nmap <leader>   :ColorToggle<CR>
-nmap <leader>ee :Colors<CR>
+nmap <leader>ec :ColorToggle<CR>
+nmap <leader>ee :ColorHighlight<CR>
 nmap <leader>ea :AirlineTheme 
 nmap <leader>e1 :call ColorMaterial()<CR>
 nmap <leader>e2 :call ColorZazen()<CR>
-nmap <leader>e3 :call ColorOneDark()<CR>
-nmap <leader>e4 :call ColorPaper()<CR>
+nmap <leader>e3 :call ColorOneLight()<CR>
+nmap <leader>e4 :call ColorOneDark()<CR>
+nmap <leader>e5 :call ColorPaperLight()<CR>
+nmap <leader>e6 :call ColorPaperDark()<CR>
 nmap <leader>r  :so ~/.config/nvim/init.vim<CR>
 nmap <leader>0  :TagbarToggle<CR>
 nmap <leader>tw :call TrimWhitespace()<CR>
