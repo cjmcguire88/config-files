@@ -58,7 +58,6 @@ highlight NonText guibg=none
 """ Other Configurations
 filetype plugin indent on
 set encoding       =utf-8               " use utf-8 encoding
-set clipboard      =unnamed             " normal OS clipboard interaction
 set path          +=**                  " search files recursively
 set showbreak     +=>\                  " use > to indicate line breaks
 set cpoptions     +=n                   " show > for wrapped lines in number column
@@ -95,9 +94,14 @@ set title                               " set title of window to filename
 set smarttab                            " insert tabs on the start of a line according to shiftwidth
 set autoindent                          " always set autoindenting on
 set wildmenu                            " commandline completion menu
-set cursorline                          " highlight the cursorline
 set nobackup                            " no backup before overwriting
 set nowritebackup                       " no backup before overwriting
+set cursorline                          " hightlight the cursorline
+set magic                               " enable extended regex
+
+" remove cursorline when in insert mode
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
 
 """ Plugin Configurations
 
@@ -296,6 +300,7 @@ nmap <leader>vt <C-w>v<C-w>l:terminal<CR>
 nmap <leader>f  :Files<CR>
 nmap <leader>g  :Goyo<CR>
 nmap <leader>h  :RainbowParentheses!!<CR>
+nmap <leader>x  :bd<CR>
 nmap <silent> <leader><leader> :noh<CR>
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
+nmap <Tab>      :bnext<CR>
+nmap <S-Tab>    :bprevious<CR>
