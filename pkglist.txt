@@ -105,6 +105,7 @@ lib32-libpulse
 libnet
 libnm
 libtool
+libunrar
 libva-intel-driver
 libva-mesa-driver
 libva-utils
@@ -242,6 +243,7 @@ transmission-qt
 tree
 unbound
 unimatrix-git
+unrar
 vim-airline
 vim-airline-themes
 virt-manager
