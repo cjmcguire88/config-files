@@ -22,9 +22,6 @@ ___
 - **picom.conf** *-picom compositor config*  
 `~/.config/picom/picom.conf`
 
-- **.zshrc**<sup>1</sup> *-z shell config w/ powerlevel10k* (Must have [powerlevel10k](https://github.com/romkatv/powerlevel10k))  
-`~/.zshrc`
-
 - **init.vim** *-vim configuration* (Sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))  
 `~/.config/nvim/init.vim`
 
@@ -42,6 +39,13 @@ ___
 
 - **.tmux.conf && .tmux.local.conf** (Sourced from [gpackosz/.tmux](https://github.com/gpakosz/.tmux))  
 `~/.tmux.conf` && `~/.tmux.conf.local`  
+
+- **zsh** *-All my zsh config files*  
+  *p10k.zsh*  -Powerlevel10k config  
+  *zshrc* -Z Shell config file  
+  *zsh_aliases* -Aliases file  
+  *zsh_functions* -Functions file  
+`~/.config/zsh/`
 
 ![desktop2](screenshots/desktop2.png)
 ___
