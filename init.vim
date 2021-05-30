@@ -96,12 +96,17 @@ set autoindent                          " always set autoindenting on
 set wildmenu                            " commandline completion menu
 set nobackup                            " no backup before overwriting
 set nowritebackup                       " no backup before overwriting
-set cursorline                          " hightlight the cursorline
 set magic                               " enable extended regex
+" set cursorline                          " hightlight the cursorline
+" set cursorcolumn
 
 " remove cursorline when in insert mode
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
+" autocmd InsertLeave,WinEnter * set cursorline
+" autocmd InsertEnter,WinLeave * set nocursorline
+
+" remove cursorcolumn when in insert mode
+" autocmd InsertLeave,WinEnter * set cursorcolumn
+" autocmd InsertEnter,WinLeave * set nocursorcolumn
 
 """ Plugin Configurations
 

@@ -35,7 +35,6 @@ cpufetch-git
 ctags
 dash
 discord
-discover
 dmenu
 dolphin
 ecryptfs-utils
@@ -115,6 +114,7 @@ libvirt-storage-iscsi-direct
 libvirt-storage-rbd
 linux-firmware
 linux-headers
+linux-lts
 lolcat
 lsscsi
 lua-lsp-git
@@ -126,6 +126,7 @@ make
 makepkg-optimize
 mesa-vdpau
 metasploit
+mkinitcpio
 mpd
 mpv
 nano
@@ -239,6 +240,7 @@ tldr
 tmux
 tor
 torbrowser-launcher
+traceroute
 transmission-qt
 tree
 unbound
