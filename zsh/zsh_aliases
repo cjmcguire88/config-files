@@ -23,7 +23,7 @@ alias scstop="sudo systemctl stop"
 alias scdisable="sudo systemctl disable"
 alias scmask="sudo systemctl mask"
 # user
-alias scustatus="systemctl --usr status"
+alias scustatus="systemctl --user status"
 alias scustart="systemctl --user start"
 alias scurestart="systemctl --user restart"
 alias scuenable="systemctl --user enable"
