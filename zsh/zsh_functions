@@ -1,8 +1,8 @@
-#######################
-# MINIBEAST FUNCTIONS #
-#######################
+#########################
+## MINIBEAST FUNCTIONS ##
+#########################
 
-# ex: extract archives based on filetype
+# extract archives based on filetype
 ex ()
 {
   if [ -f $1 ] ; then
@@ -39,11 +39,24 @@ yt()
     if [[ -z "$1" ]]; then
         echo "Enter a search string!";
     else
-        mpv "$(youtube-dl --default-search 'ytsearch1:' \"$1\" --get-url | tail -1)" > /dev/null 2>&1 &; fi
+        mpv "$(youtube-dl --default-search 'ytsearch1:' \"$1\" --get-url | tail -1)" > /dev/null 2>&1;
+    fi
 }
 
 # arch news
 arch_news()
 {
     w3m https://www.archlinux.org/ | sed -n "/Latest News/,/Older News/p" | head -n -1
+}
+
+# change zsh theme
+ztheme()
+{
+    if [ "${1}" = "p10k" ]; then
+        sed -i 's|^ZSH_THEME=.*$|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.config/zsh/.zshrc
+        source ~/.config/zsh/.zshrc
+    else
+        sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="'${1}'"/' ~/.config/zsh/.zshrc
+        source ~/.config/zsh/.zshrc
+    fi
 }

@@ -1,6 +1,6 @@
-#####################
-# MINIBEAST ALIASES #
-#####################
+#######################
+## MINIBEAST ALIASES ##
+#######################
 
 # cmd replacement
 alias cpv='rsync -ah --info=progress2'
@@ -71,6 +71,8 @@ alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias mntsec="ecryptfs-mount-private"
 alias umntsec="ecryptfs-umount-private"
+alias rmf="rm -rf"
+alias dmesg="dmesg -H"
 
 # information gathering
 alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"
