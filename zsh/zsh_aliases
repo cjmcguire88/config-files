@@ -73,6 +73,7 @@ alias mntsec="ecryptfs-mount-private"
 alias umntsec="ecryptfs-umount-private"
 alias rmf="rm -rf"
 alias dmesg="dmesg -H"
+alias update_nv="sudo dkms install --no-depmod -m nvidia -v $(sudo pacman -Q nvidia-dkms | sed 's/-/ /g' | awk '{ print $3 }') -k $(uname -r) && sudo depmod $(uname -r)"
 
 # information gathering
 alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"
