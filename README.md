@@ -34,7 +34,7 @@ ___
 - **unbound.conf** *-Uses Cloudflare's DNS over TLS for encrypted DNS queries*  
 `/etc/unbound/unbound.conf`
 
-- **plasma-bspwm.desktop** *-.desktop to provide a session in which plasma uses bspwm instead of kwin*  
+- **plasma-bspwm.desktop && plasma-kwin_x11.service** *-.desktop to provide a session in which plasma uses bspwm instead of kwin and systemd service file for plasma systemd startup to still use bspwm.*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
 
 - **.tmux.conf && .tmux.local.conf** (Sourced from [gpackosz/.tmux](https://github.com/gpakosz/.tmux))  
