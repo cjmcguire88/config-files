@@ -36,6 +36,7 @@ ___
 
 - **plasma-bspwm.desktop && plasma-kwin_x11.service** *-.desktop to provide a session in which plasma uses bspwm instead of kwin and systemd service file for plasma systemd startup to still use bspwm.*  
 `/usr/share/xsessions/plasma-bspwm.desktop`  
+`/usr/lib/systemd/user/plasma-kwin_x11.service`  
 
 - **.tmux.conf && .tmux.local.conf** (Sourced from [gpackosz/.tmux](https://github.com/gpakosz/.tmux))  
 `~/.tmux.conf` && `~/.tmux.conf.local`  
