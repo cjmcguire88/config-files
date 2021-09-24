@@ -30,6 +30,7 @@ Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
 Plug 'chrisbra/Colorizer' " Color hex codes and color names.
 Plug 'honza/vim-snippets' " Community maintained snippets for various programming languages.
 Plug 'dkarter/bullets.vim' " Bullets.vim is a Vim plugin for automated bullet lists.
+Plug 'luochen1990/rainbow' " Rainbow parenthesis improved
 
 call plug#end()
 
@@ -65,6 +66,7 @@ set fillchars     +=vert:\              " characters to fill statusline vertical
 set shortmess     +=c                   " helps to avoid all the hit-enter prompts caused by file messages
 set backspace      =indent,eol,start    " allow backspacing over everything in insert mode
 set list listchars =trail:»,tab:»-      " show invisible characters
+set signcolumn     =number              " merge sign and number columns
 set updatetime     =300                 " speed up the updatetime for plugins
 set tabstop        =4                   " a tab is four spaces
 set softtabstop    =4                   " when hitting <BS>, pretend like a tab is removed, even if spaces
@@ -98,7 +100,7 @@ set nobackup                            " no backup before overwriting
 set nowritebackup                       " no backup before overwriting
 set magic                               " enable extended regex
 " set cursorline                          " hightlight the cursorline
-" set cursorcolumn
+" set cursorcolumn                        " highlight the cursorcolumn
 
 " remove cursorline when in insert mode
 " autocmd InsertLeave,WinEnter * set cursorline
@@ -119,6 +121,9 @@ let g:NERDTreeDirArrowCollapsible = '↡'
 let g:airline_powerline_fonts = 1
 let g:airline_section_warning = ''
 let g:airline#extensions#tabline#enabled = 1
+
+" Rainbow parenthesis
+let g:rainbow_active = 0
 
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
@@ -295,6 +300,7 @@ nmap <leader>e3 :call ColorOneLight()<CR>
 nmap <leader>e4 :call ColorOneDark()<CR>
 nmap <leader>e5 :call ColorPaperLight()<CR>
 nmap <leader>e6 :call ColorPaperDark()<CR>
+nmap <leader>[  :RainbowToggle<CR>
 nmap <leader>r  :so ~/.config/nvim/init.vim<CR>
 nmap <leader>0  :TagbarToggle<CR>
 nmap <leader>tw :call TrimWhitespace()<CR>

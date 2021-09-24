@@ -32,9 +32,6 @@
             ],
             "filetypes": [
                 "sh"
-            ],
-            "ignoredRootPaths": [
-                "~"
             ]
         },
         "clangd": {

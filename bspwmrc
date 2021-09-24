@@ -47,3 +47,4 @@ bspc rule -a Lutris state=floating border=off follow=on
 bspc rule -a android-studio state=floating border=off follow=on
 bspc rule -a Sxiv state=floating follow=on
 bspc rule -a Kodi state=fullscreen
+bspc rule -a Ulauncher state=floating border=off follow=on

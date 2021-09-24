@@ -318,6 +318,7 @@ set -g status-interval 5
 set -g mouse on
 #set -g status-keys vi
 #set -g mode-keys vi
+set-option -g default-shell /usr/bin/zsh
 
 # set -gu prefix2
 # unbind C-a

@@ -12,6 +12,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Enable autocomplete
+autoload -Uz compinit
+compinit
+
 # Path to your oh-my-zsh installation.
 # export ZSH="/home/jason/.config/zsh/.oh-my-zsh"
 export ZSH="/usr/share/oh-my-zsh"
@@ -32,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git svn sudo zsh-vi-mode colorize zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git svn sudo colorize zsh-vi-mode zsh-syntax-highlighting zsh-autosuggestions)
 
 HISTSIZE=1000000
 
@@ -44,3 +48,30 @@ source $ZDOTDIR/zsh_aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+cursor_mode() {
+    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+    cursor_block='\e[2 q'
+    cursor_beam='\e[6 q'
+
+    function zle-keymap-select {
+        if [[ ${KEYMAP} == vicmd ]] ||
+            [[ $1 = 'block' ]]; then
+            echo -ne $cursor_block
+        elif [[ ${KEYMAP} == main ]] ||
+            [[ ${KEYMAP} == viins ]] ||
+            [[ ${KEYMAP} = '' ]] ||
+            [[ $1 = 'beam' ]]; then
+            echo -ne $cursor_beam
+        fi
+    }
+
+    zle-line-init() {
+        echo -ne $cursor_beam
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
+}
+
+cursor_mode

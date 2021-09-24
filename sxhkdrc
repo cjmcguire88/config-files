@@ -8,7 +8,7 @@
 
 # terminal
 super + t
-	st
+	st -e /usr/bin/zsh
 
 # alternative terminal
 super + alt +t
@@ -131,8 +131,12 @@ super + ctrl + p
 	st poweroff
 
 # reboot
-super + ctrl + r
+super + ctrl + o
 	st reboot
+
+# hibernate
+super + ctrl + i
+    systemctl hibernate
 
 #
 # applications:
@@ -205,6 +209,14 @@ super + F3
 # open kodi
 super + shift + k
 	kodi
+
+# open email
+super + shift + m
+    mailspring
+
+# edex ui  (lol)
+super + shift + h
+    edex-ui
 
 #
 # functions:
