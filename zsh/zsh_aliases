@@ -3,8 +3,8 @@
 #######################
 
 # cmd replacement
-alias cpv='rsync -ah --info=progress2'
-alias cpp="rsync -va"
+alias cpp="rsync -HAX"
+alias cpr='rsync -rah --info=progress2'
 alias cat="bat"
 alias l="exa --icons --group-directories-first "
 alias ll="exa -a --icons --group-directories-first"
@@ -12,6 +12,7 @@ alias ls="exa -lg --group-directories-first --octal-permissions --icons --no-per
 alias la="exa -lag --group-directories-first --octal-permissions --icons --no-permissions --git"
 alias lr="exa -RT --level=2"
 alias vim="nvim"
+alias chmod="chmod --preserve-root"
 
 # administration
 # system
@@ -54,11 +55,6 @@ alias files="yay -Ql"      # either belonging to a specific package or the whole
 alias cache="yay -Sc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
-# kernel
-alias kernel="/usr/src/linux-5.12.4-MiniBeast"
-alias kernel_menu="sudo make menuconfig"
-alias kernel_make="sudo make clean && sudo make -j8"
-alias modules_install="sudo make modules_install"
 alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
 
 # etc
@@ -71,8 +67,10 @@ alias sa="systemd-analyze"
 alias gitdir="/home/jason/.build/git"
 alias mntsec="ecryptfs-mount-private"
 alias umntsec="ecryptfs-umount-private"
+alias efs="sudo cryptsetup open /dev/sda1 efs && sudo mount /dev/mapper/efs /home/jason/.secure"
+alias cefs="sudo umount /dev/mapper/efs && sudo cryptsetup close efs"
 alias rmf="rm -rf"
-alias dmesg="dmesg -H"
+alias dmesg="sudo dmesg"
 alias update_nv="sudo dkms install --no-depmod -m nvidia -v $(sudo pacman -Q nvidia-dkms | sed 's/-/ /g' | awk '{ print $3 }') -k $(uname -r) && sudo depmod $(uname -r)"
 
 # information gathering
