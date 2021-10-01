@@ -105,7 +105,7 @@ font-1 = "MesloLGS NF:weight=bold:size=10;0"
 font-2 = "JetBrainsMono Nerd Font:weight=bold:size=10;0"
 font-3 = "Noto Sans Mono:weight=bold:size=10;0"
 
-modules-left = bspwm
+modules-left = pacman-updates bspwm
 modules-center = xwindow
 modules-right = pavolume volume wireless-network battery date
 
@@ -131,9 +131,9 @@ scroll-down = bspwm-deskprev
 [bar/mainbar-bspwm-extra]
 monitor = eDP-1
 ;monitor-fallback = HDMI1
-width = 36%
+width = 42%
 height = 30
-offset-x = 32%
+offset-x = 29%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = true
@@ -172,7 +172,7 @@ font-1 = "MesloLGS NF:weight=bold:size=10;0"
 font-2 = "JetBrainsMono Nerd Font:weight=bold:size=10;0"
 font-3 = "Noto Sans Mono:weight=bold:size=10;0"
 
-modules-center = cpu2 memory2 networkspeedup networkspeeddown filesystem
+modules-center = cpu2 temperature1 memory2 system-nvidia-smi networkspeedup networkspeeddown filesystem
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -341,12 +341,12 @@ bar-empty = ─
 ;https://github.com/jaagr/polybar/wiki/Module:-battery
 type = internal/battery
 battery = BAT1
-adapter = AC0
+adapter = ADP1
 full-at = 100
 
 format-charging = <label-charging>
 label-charging = %percentage%%
-format-charging-prefix = " ﮣ "
+format-charging-prefix = " ﳧ "
 format-charging-prefix-foreground = #1793d1
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
@@ -446,7 +446,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "   "
+format-prefix = " "
 format-prefix-foreground = #c0392b
 format-underline = #c0392b
 
@@ -755,10 +755,10 @@ interface = wlo1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #FE522C
+format-connected-prefix-foreground = #9b59b6
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-;format-connected-underline = #62FF00
+format-connected-underline = #9b59b6
 
 ################################################################################
 
@@ -770,16 +770,15 @@ interface = wlo1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #3EC13F
+format-connected-prefix-foreground = #1abc9c
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-;format-connected-underline = #62FF00
+format-connected-underline = #1abc9c
 
 ################################################################################
 
 [module/pacman-updates]
 type = custom/script
-;exec = yay -Qu | wc -l
 exec = ~/.config/polybar/scripts/checkupdates
 interval = 1000
 label = %output%
@@ -788,6 +787,7 @@ format-background = ${colors.background}
 format-prefix = "   "
 format-prefix-foreground = #1793d1
 format-underline = #1793d1
+click-right = ~/.config/polybar/scripts/checkupdates
 
 ################################################################################
 
@@ -934,6 +934,20 @@ click-right = spotify
 
 ################################################################################
 
+[module/system-nvidia-smi]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-nvidia-smi.sh
+format = <label>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "   "
+format-prefix-foreground = #f1c40f
+format-underline = #f1c40f
+label = GPU %output%%
+interval = 10
+
+################################################################################
+
 [module/temperature1]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
 type = internal/temperature
@@ -948,18 +962,15 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 
-warn-temperature = 70
-format = <ramp> <label>
+format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-underline = #c72581
-format-warn = <ramp> <label-warn>
-format-warn-underline = #c7254f
+format-underline = #2ecc71
+format-prefix = "  "
+format-prefix-foreground = #2ecc71
 label = %temperature%
-label-warn =  %temperature%
-label-warn-foreground = #c7254f
 
 ramp-0 = 
 ramp-1 = 
