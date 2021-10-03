@@ -26,13 +26,33 @@ format-margin =
 format-offset =
 
 [colors]
+
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color7 = ${xrdb:color7}
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+
 ; Nord theme ============
-background = #2F343F
-foreground = #edfefe
-alert = #d08770
-volume-min = #a3be8c
-volume-med = #ebcb8b
-volume-max = #bf616a
+;background = #2F343F
+;foreground = #edfefe
+;alert = #d08770
+;volume-min = #a3be8c
+;volume-med = #ebcb8b
+;volume-max = #bf616a
 ; =======================
 
 ; Gotham theme ==========
@@ -65,13 +85,13 @@ volume-max = #bf616a
 monitor = eDP-1
 ;monitor-fallback = HDMI1
 width = 100%
-height = 30
+height = 22
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = false
-separator = |
+;separator = |
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -93,21 +113,22 @@ border-size = 0
 ;border-bottom-size = 25
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+;padding-left = 0
+;padding-right = 0
 
-module-margin-left = 3
-module-margin-right = 3
+;module-margin-left = 3
+;module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Nimbus Sans:weight=bold:size=10;0"
-font-1 = "MesloLGS NF:weight=bold:size=10;0"
-font-2 = "JetBrainsMono Nerd Font:weight=bold:size=10;0"
+font-1 = "MesloLGS NF:weight=bold:size=15;0"
+font-2 = "JetBrainsMono Nerd Font:weight=bold:size=15;0"
 font-3 = "Noto Sans Mono:weight=bold:size=10;0"
+font-4 = "Material Design Icons:style=Regular:size=15;2"
 
-modules-left = pacman-updates bspwm
+modules-left = kernel-updates pacman-updates sep0 bspwm
 modules-center = xwindow
-modules-right = pavolume volume wireless-network battery date
+modules-right = pavolume wireless-network battery sep date sep2 powermenu
 
 tray-detached = false
 tray-offset-x = 0
@@ -115,7 +136,7 @@ tray-offset-y = 0
 tray-padding = 2
 tray-maxsize = 20
 tray-scale = 1.0
-tray-position = right
+tray-position = left
 tray-background = ${colors.background}
 
 scroll-up = bspwm-desknext
@@ -180,7 +201,7 @@ modules-center = cpu2 temperature1 memory2 system-nvidia-smi networkspeedup netw
 ;tray-padding = 2
 ;tray-maxsize = 20
 ;tray-scale = 1.0
-;tray-position = right
+;tray-position = left
 ;tray-background = ${colors.background}
 
 scroll-up = bspwm-desknext
@@ -201,20 +222,13 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
+ws-icon-0 = 1;%{F#edfefe}
+ws-icon-1 = 2;%{F#4281E8}
+ws-icon-2 = 3;%{F#12B53E}
+ws-icon-3 = 4;%{F#fabea7}
+ws-icon-4 = 5;%{F#3B789E}
 
-
-format = <label-state> <label-mode>
+format = <label-state>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
@@ -234,21 +248,21 @@ label-empty = %icon%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
-label-monocle = "  "
+label-monocle = "       "
 label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
+label-tiled = "       "
 label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
+label-fullscreen = "       "
 label-fullscreen-foreground = ${colors.foreground}
-label-floating = "  "
+label-floating = "       "
 label-floating-foreground = ${colors.foreground}
-label-pseudotiled = "  "
+label-pseudotiled = "       "
 label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
+label-locked = "       "
 label-locked-foreground = ${colors.foreground}
-label-sticky = "  "
+label-sticky = "       "
 label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
+label-private =  "       "
 label-private-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
@@ -346,7 +360,7 @@ full-at = 100
 
 format-charging = <label-charging>
 label-charging = %percentage%%
-format-charging-prefix = " ﳧ "
+format-charging-prefix = "    "
 format-charging-prefix-foreground = #1793d1
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
@@ -447,8 +461,8 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #c0392b
-format-underline = #c0392b
+format-prefix-foreground = ${colors.color1}
+format-underline = ${colors.color1}
 
 label-font = 3
 
@@ -476,16 +490,16 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %Y-%m-%d%"
-date-alt = " %d-%m-%Y"
-time = %l:%M %p
-time-alt = %H:%M
-format-prefix = " "
-format-prefix-foreground = #1793d1
-format-underline = #1793d1
+date = " %Y-%m-%d% "
+date-alt = " %d-%m-%Y "
+time = "%l:%M %p "
+time-alt = "%Y-%m-%d "
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+;format-underline = ${colors.color4}
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-label = %date% %time%
+format-background = ${colors.color4}
+label = %time%
 
 #################################################################
 
@@ -578,8 +592,7 @@ spacing = 4
 format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.foreground}
 format-mounted-background = ${colors.background}
-format-mounted-underline = #fe0000
-
+format-mounted-underline = ${colors.color9}
 
 ; Available tokens:
 ;   %mountpoint%
@@ -611,7 +624,7 @@ interval = 1024
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = #0084FF
 format-underline = #0084FF
 
@@ -624,6 +637,20 @@ exec = echo "ArcoLinux"
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+################################################################################
+
+[module/kernel-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/kernel-update.sh
+click-right = "st kernel -u"
+interval = 1000
+label = %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "   "
+format-prefix-foreground = #ffffff
+format-underline = ${colors.color4}
 
 ################################################################################
 
@@ -691,8 +718,8 @@ label = %gb_used%
 
 format = RAM <label>
 format-prefix = "   "
-format-prefix-foreground = #3384d0
-format-underline = #3384d0
+format-prefix-foreground = ${colors.color4}
+format-underline = ${colors.color4}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -755,10 +782,10 @@ interface = wlo1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #9b59b6
+format-connected-prefix-foreground = ${colors.color5}
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-format-connected-underline = #9b59b6
+format-connected-underline = ${colors.color5}
 
 ################################################################################
 
@@ -770,10 +797,10 @@ interface = wlo1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #1abc9c
+format-connected-prefix-foreground = ${colors.color6}
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-format-connected-underline = #1abc9c
+format-connected-underline = ${colors.color6}
 
 ################################################################################
 
@@ -784,12 +811,10 @@ interval = 1000
 label = %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "   "
+format-prefix = "    "
 format-prefix-foreground = #1793d1
 format-underline = #1793d1
-click-right = ~/.config/polybar/scripts/checkupdates
-
-################################################################################
+click-right = st yay
 
 [module/pamac-manager]
 type = custom/script
@@ -815,13 +840,50 @@ exec = ~/.config/polybar/scripts/sound.sh
 click-right = ~/.config/polybar/scripts/sound.sh mute &
 scroll-up = ~/.config/polybar/scripts/sound.sh up &
 scroll-down = ~/.config/polybar/scripts/sound.sh down &
-format-prefix-foreground = #1793d1
-format-underline = #1793d1
+format-prefix-foreground = ${colors.color4}
+format-underline = ${colors.color4}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "ﱘ "
 
 #################################################################################
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = false
+#format-spacing = 1
+
+label-open = "EXIT "
+label-open-foreground = ${colors.background}
+label-open-background = ${colors.foreground}
+label-open-padding = 1
+label-close = "     "
+label-close-foreground = ${colors.background}
+label-close-background = ${colors.foreground}
+
+label-close-padding = 1
+
+label-separator = "     "
+
+menu-0-0 = "   "
+menu-0-0-exec = poweroff
+menu-0-0-background = ${colors.background}
+menu-0-0-foreground = ${colors.color4}
+menu-0-1 = 
+menu-0-1-exec = reboot
+menu-0-1-background = ${colors.background}
+menu-0-1-foreground = ${colors.color4}
+menu-0-2 = 
+menu-0-2-exec = systemctl hibernate
+menu-0-2-background = ${colors.background}
+menu-0-2-foreground = ${colors.color4}
+menu-0-3 = 
+menu-0-3-exec = pkill X
+menu-0-3-background = ${colors.background}
+menu-0-3-foreground = ${colors.color4}
+
+################################################################################
 
 [module/pulseaudio-devices]
 type = custom/script
@@ -833,7 +895,6 @@ click-right = exec pavucontrol &
 click-left = ~/.config/polybar/sound.sh mute &
 scroll-up = ~/.config/polybar/sound.sh up &
 scroll-down = ~/.config/polybar/sound.sh down &
-
 
 ################################################################################
 
@@ -865,13 +926,26 @@ format-underline = #62FF00
 ################################################################################
 
 [module/sep]
-; alternative separator
 type = custom/text
-content = 
+content = "%{T3}%{T-}"
+content-background = ${colors.background}
+content-foreground = ${colors.color4}
+
+################################################################################
+
+[module/sep2]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${colors.color4}
 content-foreground = ${colors.foreground}
-content-background =  ${colors.background}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+
+################################################################################
+
+[module/sep0]
+type = custom/text
+content = "     "
+content-background = ${colors.background}
+content-foreground = ${colors.background}
 
 ################################################################################
 
@@ -941,8 +1015,8 @@ format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "   "
-format-prefix-foreground = #f1c40f
-format-underline = #f1c40f
+format-prefix-foreground = ${colors.color3}
+format-underline = ${colors.color3}
 label = GPU %output%%
 interval = 10
 
@@ -964,13 +1038,14 @@ thermal-zone = 0
 ; Default reverts to thermal zone setting
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 
+warn-temperature = 90
 format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-underline = #2ecc71
+format-underline = ${colors.color2}
 format-prefix = "  "
-format-prefix-foreground = #2ecc71
-label = %temperature%
+format-prefix-foreground = ${colors.color2}
+label = %temperature-c%
 
 ramp-0 = 
 ramp-1 = 
@@ -1115,22 +1190,23 @@ format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-format-connected-prefix = "   "
-format-connected-prefix-foreground = #1793d1
+format-connected-prefix = "    "
+format-connected-prefix-foreground = ${colors.color4}
 format-connected-prefix-background = ${colors.background}
-format-connected-underline = #1793d1
+format-connected-underline = ${colors.color4}
+click-right = st nmtui
 
 label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.alert}
+label-disconnected-foreground = ${colors.color11}
 label-disconnected-background = ${colors.background}
 
 format-disconnected = <label-disconnected>
-format-disconnected-foreground = ${colors.alert}
+format-disconnected-foreground = ${colors.color11}
 format-disconnected-background = ${colors.background}
 format-disconnected-prefix = "   "
-format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected-prefix-foreground = ${colors.color11}
 format-disconnected-prefix-background = ${colors.background}
-format-disconnected-underline =${colors.alert}
+format-disconnected-underline =${colors.color11}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂

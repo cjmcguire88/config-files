@@ -5,31 +5,24 @@
 
 ![desktop](screenshots/desktop.png)
 
+![desktop-bspwm](screenshots/desktop-bspwm.png)
+
 ![tmux](screenshots/tmux.png)
 
 *The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.*  
 ___
 
-- **bspwmrc** *-bspwm config*  
+- **bspwm** *-bspwm config files*  
 `~/.config/bspwm/bspwmrc`
 
-- **sxhkdrc** *-sxhkd hotkey config*  
+- **sxhkd** *-sxhkd hotkey config files*  
 `~/.config/sxhkd/sxhkdrc`
 
-- **sxhkd-cheatsheet** *-cheatsheet for my hotkeys*  
-`~/.config/sxhkd/sxhkd-cheatsheet`
-
-- **picom.conf** *-picom compositor config*  
+- **picom** *-picom compositor config files*  
 `~/.config/picom/picom.conf`
 
-- **init.vim** *-vim configuration* (Sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))  
+- **nvim** *-neovim configuration files* (init.vim sourced from [Optixal/neovim-init.vim](https://github.com/Optixal/neovim-init.vim))  
 `~/.config/nvim/init.vim`
-
-- **coc-settings.json** *-Config for coc.nvim to use lang servers*  
-`~/.config/nvim/coc-settings.json`
-
-- **fortune.vim** *-vim startpage config, hostname is retrieved from hostname command (requires figlet)*  
-`~/.config/nvim/plugged/vim-startify/autoload/startify/fortune.vim`
 
 - **unbound.conf** *-Uses Cloudflare's DNS over TLS for encrypted DNS queries*  
 `/etc/unbound/unbound.conf`

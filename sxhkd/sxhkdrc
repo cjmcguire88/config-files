@@ -78,13 +78,21 @@ super + ctrl {1,2}
 # focus/swap
 #
 
-# focus the next node in the current desktop
+# focus the previous node in the current desktop
 super + s
-	bspc node -f next.local
+	bspc node -f prev.local
 
-# focus the next/previous desktop in the current monitor
-super + Tab
+# focus next node
+super + d
+    bspc node -f next.local
+
+# focus the next desktop in the current monitor
+super + w
 	bspc desktop -f next.local
+
+# previous desktop in current monitor
+super + q
+    bspc desktop -f prev.local
 
 # focus the next/previous monitor
 super + alt + Tab
@@ -137,6 +145,10 @@ super + ctrl + o
 # hibernate
 super + ctrl + i
     systemctl hibernate
+
+# kill xserver
+super + ctrl + u
+    pkill X
 
 #
 # applications:

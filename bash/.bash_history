@@ -946,3 +946,15 @@ sudo rm -rf 20-intel.conf
 cd
 #1632977280
 startx
+#1633132464
+nvim .xinitrc 
+#1633132477
+startx
+#1633162515
+nvim .xinitrc 
+#1633162520
+startx
+#1633195405
+zsh
+#1633198659
+startx

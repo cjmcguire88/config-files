@@ -6,6 +6,7 @@
 call plug#begin()
 
 " Aesthetics
+Plug 'nekonako/xresources-nvim' " Neovim colorscheme based on your xresources color
 Plug 'mhinz/vim-startify'  " This plugin provides a start screen for Vim and Neovim.
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } " A port of the Material color scheme for Vim/Neovim.
 Plug 'rakr/vim-one' " Light and dark vim colorscheme, shamelessly stolen from atom.
@@ -14,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes' " The official theme repository for vim-ai
 Plug 'junegunn/goyo.vim' " Distraction-free writing in Vim.
 Plug 'NLKNguyen/papercolor-theme' " Inspired by Google's Material Design.
 Plug 'zaki/zazen' " Zazen vim color scheme (a personalized version of zenesque)
+Plug 'raphamorim/lucario' " The best colorful flat theme for your favorite editor and terminal emulator.
 
 " Functionalities
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Make your Vim/Neovim as smart as VSCode.
@@ -44,7 +46,7 @@ endif
 """ Coloring
 syntax on
 colorscheme material
-let g:airline_theme = 'material'
+let g:airline_theme = 'deus'
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'default'
 " options:| 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' |

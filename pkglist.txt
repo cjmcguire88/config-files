@@ -38,11 +38,13 @@ edex-ui
 efibootmgr
 exa
 fakeroot
+feh
 figlet
 file
 findutils
 flameshot
 flex
+font-manager-git
 gawk
 gcc
 gcr
@@ -138,6 +140,7 @@ pwncat
 python-language-server
 python-pip
 python-protobuf
+python-pywal
 python2
 python2-pip
 qt5-xcb-private-headers
@@ -169,6 +172,7 @@ tor
 torbrowser-launcher
 traceroute
 tree
+ttf-material-design-icons
 ueberzug
 ulauncher
 unbound
@@ -179,10 +183,12 @@ which
 whois
 xbindkeys
 xclip
+xcursor-themes
 xorg-server
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
+xorg-xclock
 xorg-xinit
 xorg-xinput
 yarn

@@ -7,20 +7,20 @@
 # Startup
 sxhkd &
 picom &
-polybar mainbar-bspwm &
-polybar mainbar-bspwm-extra &
+polybar mainbar-bspwm 2>&1 | tee -a /tmp/polybar.log & disown
+polybar mainbar-bspwm-extra 2>&1 | tee -a /tmp/polybar-dock.log & disown
 nitrogen --restore &
 ulauncher &
 dunst &
 
 # Monitor and desktop layout
-bspc monitor eDP-1 -d 1 2
+bspc monitor eDP-1 -d 1 2 3 4 5
 bspc monitor HDMI-1 -d 1
 
 # Padding and gaps
 bspc config border_width        0
 bspc config window_gap          12
-bspc config top_padding	        30
+bspc config top_padding	        22
 #bspc config right_padding	    224
 bspc config split_ratio         0.50
 bspc config borderless_monocle  true
