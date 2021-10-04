@@ -5,8 +5,6 @@
 
 ![desktop](screenshots/desktop-bspwm.png)
 
-![desktop-plasma](screenshots/desktop.png)
-
 ![tmux](screenshots/tmux.png)
 
 *The files herein exist first and foremost as my backups. I've only made them public incase someone may find them useful.*  
@@ -42,7 +40,10 @@ ___
 `~/.config/zsh/`
 
 ![desktop2](screenshots/desktop2.png)
+
+![desktop-plasma](screenshots/desktop.png)
 ___
+
 ### **Do not attempt to use these unless you know what you're doing!**<sup>2</sup>
 
 - `/etc/makepkg.conf`  
