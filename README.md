@@ -3,9 +3,9 @@
 
 ## *personal config files for my Arch Linux*
 
-![desktop](screenshots/desktop.png)
+![desktop](screenshots/desktop-bspwm.png)
 
-![desktop-bspwm](screenshots/desktop-bspwm.png)
+![desktop-plasma](screenshots/desktop.png)
 
 ![tmux](screenshots/tmux.png)
 
