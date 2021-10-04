@@ -33,6 +33,7 @@ dialog
 dolphin
 dosfstools
 dunst
+easyeffects
 ecryptfs-utils
 edex-ui
 efibootmgr
@@ -133,6 +134,7 @@ plasma-wayland-session
 polybar
 poppler-qt6
 powerdevil
+powertop
 progress
 protontricks
 pv
@@ -147,6 +149,7 @@ qt5-xcb-private-headers
 ranger
 reflector
 rkhunter
+rofi
 rsync
 rust-analyzer
 rustup
@@ -156,6 +159,7 @@ sddm-kcm
 sed
 shellcheck
 sherlock-git
+smartmontools
 snapper
 speedtest-cli
 steam
@@ -167,6 +171,8 @@ terminus-font
 texinfo
 thermald
 timeshift
+tlp
+tlp-rdw
 tmux
 tor
 torbrowser-launcher
@@ -174,7 +180,6 @@ traceroute
 tree
 ttf-material-design-icons
 ueberzug
-ulauncher
 unbound
 vim-plug
 w3m

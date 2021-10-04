@@ -90,17 +90,21 @@ super + d
 super + w
 	bspc desktop -f next.local
 
+# focus desktop #
+super + {1,2,3,4,5}
+    bspc desktop -f ^{1,2,3,4,5}
+
 # previous desktop in current monitor
 super + q
     bspc desktop -f prev.local
 
 # focus the next/previous monitor
-super + alt + Tab
+super + Tab
     bspc monitor -f next
 
 # send to the given desktop
-super + {2,1}
-	bspc node -d {next,prev}
+super + shift + {1,2,3,4,5}
+	bspc node -d ^{1,2,3,4,5}
 
 #
 # preselect:
@@ -157,6 +161,10 @@ super + ctrl + u
 # cheatsheet
 super + F5
 	st cat ~/.config/sxhkd/sxhkd-cheatsheet
+
+# rofi
+super + grave
+    rofi -show drun
 
 # screenshot
 super + F6

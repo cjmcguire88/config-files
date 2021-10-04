@@ -1,6 +1,5 @@
 
 [global/wm]
-;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
 margin-top = 0
 margin-bottom = 0
 
@@ -120,24 +119,26 @@ border-color = #00000000
 ;module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Nimbus Sans:weight=bold:size=10;0"
-font-1 = "MesloLGS NF:weight=bold:size=15;0"
-font-2 = "JetBrainsMono Nerd Font:weight=bold:size=15;0"
-font-3 = "Noto Sans Mono:weight=bold:size=10;0"
-font-4 = "Material Design Icons:style=Regular:size=15;2"
+font-0 = "Noto Sans:weight=bold:size=10;0"
+font-1 = "Noto Sans Mono:weight=bold:size=12;0"
+font-2 = "JetBrainsMono Nerd Font:weight=bold:size=12;0"
+font-3 = "JetBrainsMono Nerd Font:weight=bold:size=14;0"
+font-4 = "JetBrainsMono Nerd Font:weight=bold:size=16;0"
+font-5 = "Material Design Icons:style=Regular:size=15;2"
 
-modules-left = kernel-updates pacman-updates sep0 bspwm
+modules-left = rofi kernel-updates pacman-updates sep0 bspwm
 modules-center = xwindow
 modules-right = pavolume wireless-network battery sep date sep2 powermenu
 
-tray-detached = false
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 2
-tray-maxsize = 20
-tray-scale = 1.0
-tray-position = left
-tray-background = ${colors.background}
+;tray-detached = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-padding = 2
+;tray-maxsize = 20
+;tray-scale = 1.0
+;tray-position = right
+;tray-foreground = ${colors.color4}
+;tray-background = ${colors.foreground}
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -152,14 +153,14 @@ scroll-down = bspwm-deskprev
 [bar/mainbar-bspwm-extra]
 monitor = eDP-1
 ;monitor-fallback = HDMI1
-width = 42%
-height = 30
-offset-x = 29%
+width = 56%
+height = 22
+offset-x = 22%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = true
-separator = |
+;separator = |
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -184,16 +185,17 @@ border-color = #00000000
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 2
+module-margin-right = 2
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Nimbus Sans:weight=bold:size=10;0"
 font-1 = "MesloLGS NF:weight=bold:size=10;0"
 font-2 = "JetBrainsMono Nerd Font:weight=bold:size=10;0"
 font-3 = "Noto Sans Mono:weight=bold:size=10;0"
+font-4 = "JetBrainsMono Nerd Font:weight=bold:size=18;0"
 
-modules-center = cpu2 temperature1 memory2 system-nvidia-smi networkspeedup networkspeeddown filesystem
+modules-center = sep4 cpu2 sep3 temperature1 sep3 memory2 sep3 system-nvidia-smi sep3 networkspeedup networkspeeddown sep3 filesystem sep5
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -222,11 +224,11 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;%{F#edfefe}
-ws-icon-1 = 2;%{F#4281E8}
-ws-icon-2 = 3;%{F#12B53E}
-ws-icon-3 = 4;%{F#fabea7}
-ws-icon-4 = 5;%{F#3B789E}
+ws-icon-0 = 1;%{F#edfefe}%{T5} %{T-}
+ws-icon-1 = 2;%{F#4281E8}%{T5} %{T-}
+ws-icon-2 = 3;%{F#12B53E}%{T5} %{T-}
+ws-icon-3 = 4;%{F#fabea7}%{T5} %{T-}
+ws-icon-4 = 5;%{F#0074CD}%{T5}%{T-}
 
 format = <label-state>
 
@@ -360,7 +362,8 @@ full-at = 100
 
 format-charging = <label-charging>
 label-charging = %percentage%%
-format-charging-prefix = "    "
+format-charging-prefix = "  "
+format-charging-prefix-font = 3
 format-charging-prefix-foreground = #1793d1
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
@@ -369,12 +372,14 @@ format-charging-underline = #1793d1
 format-discharging = <label-discharging>
 label-discharging =  %percentage%%
 format-discharging-prefix = "  "
+format-discharging-prefix-font = 3
 format-discharging-prefix-foreground = #1793d1
 format-discharging-underline = #1793d1
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
 format-full-prefix = "  "
+format-full-prefix-font = 3
 format-full-prefix-foreground = #1793d1
 format-full-underline = #1793d1
 format-full-foreground = ${colors.foreground}
@@ -630,11 +635,14 @@ format-underline = #0084FF
 
 ################################################################################
 
-[module/jgmenu]
+[module/rofi]
 type = custom/script
 interval = 120
-exec = echo "ArcoLinux"
-click-left = "jgmenu_run >/dev/null 2>&1 &"
+exec = echo "  "
+click-left = "rofi -show drun"
+format-prefix = "  "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.color1}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -643,14 +651,16 @@ format-background = ${colors.background}
 [module/kernel-updates]
 type = custom/script
 exec = ~/.config/polybar/scripts/kernel-update.sh
-click-right = "st kernel -u"
+enable-click = true
+click-left = "st sudo kernel -u"
 interval = 1000
 label = %output%
+label-font = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "   "
+format-prefix = " "
+format-prefix-font = 4
 format-prefix-foreground = #ffffff
-format-underline = ${colors.color4}
 
 ################################################################################
 
@@ -808,13 +818,17 @@ format-connected-underline = ${colors.color6}
 type = custom/script
 exec = ~/.config/polybar/scripts/checkupdates
 interval = 1000
+enable-click = true
 label = %output%
+label-font = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "    "
+format-prefix = "  "
+format-prefix-font = 4
 format-prefix-foreground = #1793d1
-format-underline = #1793d1
-click-right = st yay
+click-left = "st yay"
+
+################################################################################
 
 [module/pamac-manager]
 type = custom/script
@@ -840,11 +854,12 @@ exec = ~/.config/polybar/scripts/sound.sh
 click-right = ~/.config/polybar/scripts/sound.sh mute &
 scroll-up = ~/.config/polybar/scripts/sound.sh up &
 scroll-down = ~/.config/polybar/scripts/sound.sh down &
+format-prefix-font = 3
 format-prefix-foreground = ${colors.color4}
 format-underline = ${colors.color4}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "ﱘ "
+format-prefix = "  "
 
 #################################################################################
 
@@ -854,11 +869,13 @@ type = custom/menu
 expand-right = false
 #format-spacing = 1
 
-label-open = "EXIT "
+label-open = " "
+label-open-font = 4
 label-open-foreground = ${colors.background}
 label-open-background = ${colors.foreground}
 label-open-padding = 1
-label-close = "     "
+label-close = "  "
+label-close-font = 4
 label-close-foreground = ${colors.background}
 label-close-background = ${colors.foreground}
 
@@ -927,7 +944,7 @@ format-underline = #62FF00
 
 [module/sep]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T5}%{T-}"
 content-background = ${colors.background}
 content-foreground = ${colors.color4}
 
@@ -935,9 +952,39 @@ content-foreground = ${colors.color4}
 
 [module/sep2]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T5}%{T-}"
 content-background = ${colors.color4}
 content-foreground = ${colors.foreground}
+
+################################################################################
+
+[module/sep3]
+type = custom/text
+content = "%{T5}▒%{T-}"
+content-font = 5
+content-background = ${colors.background}
+content-foreground = ${colors.color4}
+
+
+################################################################################
+
+[module/sep4]
+type = custom/text
+content = "%{T5}%{T-}"
+content-font = 5
+content-background = ${colors.background}
+content-foreground = ${colors.color4}
+
+
+################################################################################
+
+[module/sep5]
+type = custom/text
+content = "%{T5} %{T-}"
+content-font = 5
+content-background = ${colors.background}
+content-foreground = ${colors.color4}
+
 
 ################################################################################
 
@@ -1190,7 +1237,8 @@ format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-format-connected-prefix = "    "
+format-connected-prefix = "  "
+format-connected-prefix-font = 3
 format-connected-prefix-foreground = ${colors.color4}
 format-connected-prefix-background = ${colors.background}
 format-connected-underline = ${colors.color4}
@@ -1204,6 +1252,7 @@ format-disconnected = <label-disconnected>
 format-disconnected-foreground = ${colors.color11}
 format-disconnected-background = ${colors.background}
 format-disconnected-prefix = "   "
+format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${colors.color11}
 format-disconnected-prefix-background = ${colors.background}
 format-disconnected-underline =${colors.color11}
