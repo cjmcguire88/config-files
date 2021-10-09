@@ -946,3 +946,15 @@ zsh
 zsh
 #1633297053
 startx
+#1633743540
+zsh
+#1633800612
+startx
+#1633810435
+start_plasma_wayland
+#1633810778
+cd
+#1633810783
+zsh
+#1633810451
+.local/bin/start_plasma_wayland 

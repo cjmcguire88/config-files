@@ -80,9 +80,7 @@ ksysguard
 ksystemlog
 kvantum-qt5
 kvantum-theme-materia
-kvantum-theme-sweet-git
-kvantum-theme-sweet-mars-git
-kvantum-theme-vimix-git
+lib32-polkit
 libtool
 linux-firmware
 linux-headers
@@ -118,6 +116,7 @@ os-prober
 pacman
 pacman-debug
 pacwall-git
+pamac-aur
 pass
 patch
 picom

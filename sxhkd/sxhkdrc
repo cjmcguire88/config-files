@@ -1,6 +1,11 @@
-#######################
-## MINIBEAST SXHKDRC ##
-#######################
+# ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ 
+# ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗
+# ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║
+# ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║
+# ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝
+# ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 #
 # wm independent hotkeys
@@ -8,7 +13,7 @@
 
 # terminal
 super + t
-	st -e /usr/bin/zsh
+	~/.local/bin/st -e /usr/bin/zsh
 
 # alternative terminal
 super + alt +t
@@ -16,7 +21,7 @@ super + alt +t
 
 # terminal (Multiplex)
 super + shift + t
-	st tmux2
+    ~/.local/bin/st ~/.local/bin/tmux2
 
 # make sxhkd reload its configuration files:
 super + ctrl + Escape
@@ -204,7 +209,7 @@ super + shift + s
 
 # open steam 
 super + shift + g
-	prime-run steam
+	prime-run /usr/bin/steam-runtime %U
 
 # open lutris
 super + alt + g

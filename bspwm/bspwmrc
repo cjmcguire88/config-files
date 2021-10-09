@@ -1,8 +1,13 @@
 #!/bin/sh
 
-#######################
-## MINIBEAST BSPWMRC ##
-#######################
+# ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗
+# ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║
+# ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║
+# ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║
+# ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║
+# ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # Startup
 sxhkd &
@@ -10,7 +15,6 @@ picom &
 polybar mainbar-bspwm 2>&1 | tee -a /tmp/polybar.log & disown
 polybar mainbar-bspwm-extra 2>&1 | tee -a /tmp/polybar-dock.log & disown
 nitrogen --restore &
-ulauncher &
 dunst &
 
 # Monitor and desktop layout
@@ -52,4 +56,3 @@ bspc rule -a Lutris state=floating border=off follow=on
 bspc rule -a android-studio state=floating border=off follow=on
 bspc rule -a Sxiv state=floating follow=on
 bspc rule -a Kodi state=fullscreen
-bspc rule -a Ulauncher state=floating border=off follow=on
