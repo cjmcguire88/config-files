@@ -10340,3 +10340,44 @@ cd projects/c
 : 1633814308:0;rm -rf neomutt
 : 1633814412:0;vim .local/bin/git_sync
 : 1633814576:0;git_sync
+: 1633814592:0;cd .build/git/config-files
+: 1633814597:0;l
+: 1633814602:0;l nvim
+: 1633814609:0;rmf fortune.vim
+: 1633814611:0;l
+: 1633814633:0;mv MiniBeast-dracut.conf etc
+: 1633814638:0;l
+: 1633814656:0;ga *
+: 1633814663:0;ga fortune.vim MiniBeast-dracut.conf
+: 1633814676:0;gc -m 10/9/21
+: 1633814684:0;cd
+: 1633814697:0;pass System/ssh
+: 1633814709:0;pass -c System/ssh
+: 1633814713:0;gp
+: 1633816429:0;cd /etc
+: 1633816436:0;sudoedit mkinitcpio.conf
+: 1633816466:0;cd
+: 1633816470:0;cd .build/git/config-files
+: 1633816473:0;l
+: 1633816488:0;cd cava
+: 1633816489:0;l
+: 1633816493:0;vim config
+: 1633816612:0;cava
+: 1633816732:0;cd
+: 1633816738:0;vim .Xresources
+: 1633816971:0;vim .xinitrc
+: 1633817103:0;vim .Xmodmap
+: 1633817312:0;vim .xbindkeysrc
+: 1633817322:0;cd
+: 1633817325:0;vim .Xmodmap
+: 1633817341:0;vim .xinitrc
+: 1633817603:0;l
+: 1633817605:0;ll
+: 1633817632:0;vim .bashrc
+: 1633817724:0;zshrc
+: 1633817849:0;cd /etc
+: 1633817850:0;l
+: 1633817861:0;sudoedit issue
+: 1633817928:0;cat /etc/issue
+: 1633818245:0;cd
+: 1633818274:0;git_sync
