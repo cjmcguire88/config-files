@@ -243,6 +243,10 @@ super + shift + m
 super + shift + h
     edex-ui
 
+# qutebrowser
+super + b
+    qutebrowser
+
 #
 # functions:
 #

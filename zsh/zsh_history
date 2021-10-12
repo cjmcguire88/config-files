@@ -10398,3 +10398,386 @@ cd projects/c
 : 1633819215:0;mkdir .build/git/config-files/rofi
 : 1633819394:0;cd .build/git/config-files
 : 1633819399:0;git_sync
+: 1633819408:0;ga *
+: 1633819442:0;git rm --cached rofi/rofi/rofi
+: 1633819453:0;gc -m 10/9/21
+: 1633819462:0;cd rofi
+: 1633819463:0;;
+: 1633819465:0;l
+: 1633819472:0;cd rofi
+: 1633819474:0;l
+: 1633819483:0;cd rofi
+: 1633819484:0;l
+: 1633819490:0;..
+: 1633819494:0;rm -rf rofi
+: 1633819495:0;l
+: 1633819501:0;rm -rf screenshots
+: 1633819502:0;l
+: 1633819514:0;rm -rf themes
+: 1633819553:0;ga *
+: 1633819562:0;ga rofi
+: 1633819572:0;ga screenshots/
+: 1633819578:0;ga themes/
+: 1633819588:0;gc -m 10/9/21
+: 1633819593:0;pass -c System/ssh
+: 1633819602:0;gp
+: 1633821264:0;cd .config
+: 1633821265:0;l
+: 1633821277:0;man bat
+: 1633821332:0;cd
+: 1633821340:0;bat -p /etc/issue
+: 1633821350:0;bat /etc/issue
+: 1633821387:0;bat -n /etc/issue
+: 1633821570:0;bat --style 'grid' /etc/issue
+: 1633821584:0;bat --style '' /etc/issue
+: 1633821592:0;bat --style /etc/issue
+: 1633821596:0;bat --style 'grid' /etc/issue
+: 1633821610:0;bat --style 'changes' /etc/issue
+: 1633821732:0;bat --style=plain /etc/issue
+: 1633821741:0;bat --style=plain --color=always /etc/issue
+: 1633821814:0;bat --style=changes /etc/issue
+: 1633821892:0;vim .config/zsh/zsh_aliases
+: 1633821942:0;source .config/zsh/zsh_aliases
+: 1633821950:0;bat /etc/issue
+: 1633821963:0;source .config/zsh/zsh_aliases
+: 1633821966:0;bat /etc/issue
+: 1633821980:0;vim .config/zsh/zsh_aliases
+: 1633821991:0;cat /etc/issue
+: 1633822014:0;cat .config/sxhkd/sxhkdrc
+: 1633822038:0;cat .config/bspwm/bspwmrc
+: 1633823325:0;nf
+: 1633823375:0;sa
+: 1633823403:0;sa blame
+: 1633823419:0;cd /etc
+: 1633823474:0;l
+: 1633823495:0;sudoedit tlp.conf
+: 1633823608:0;cat /sys/block/sda/queue/scheduler\
+
+: 1633823627:0;cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+: 1633823838:0;tlp diskid
+: 1633824151:0;vim xattr.conf
+: 1633824186:0;l i3
+: 1633824419:0;vim smartd.conf
+: 1633824480:0;sudo kernel
+: 1633914383:0;cd
+: 1633914387:0;yay
+: 1633964179:0;cd .build/
+: 1633964180:0;l
+: 1633964184:0;cd git
+: 1633964210:0;aria2c -x 3 -m 3 https://dl.suckless.org/dwm/dwm-6.2.tar.gz
+: 1633964214:0;l
+: 1633964219:0;ex dwm-6.2.tar.gz
+: 1633964221:0;l
+: 1633964227:0;cd dwm-6.2
+: 1633964228:0;l
+: 1633964345:0;vim patches
+: 1633964859:0;vim config.h
+: 1633964864:0;l
+: 1633964870:0;vim config.def.h
+: 1633965022:0;aria2c -x 3 -m 3 patches
+: 1633965027:0;l
+: 1633965041:0;aria2c -x 3 -m 3 -i patches
+: 1633965045:0;l
+: 1633965062:0;patch -p1 < dwm-activetagindicatorbar-6.2.diff
+: 1633965070:0;patch -p1 < dwm-colorbar-6.2.diff
+: 1633965080:0;patch -p1 < dwm-cool-autostart-6.2.diff
+: 1633965125:0;make -j4
+: 1633965141:0;make clean
+: 1633965213:0;wget https://dwm.suckless.org/patches/functionalgaps/dwm-functionalgaps-6.2.diff
+: 1633965221:0;patch -p1 < dwm-functionalgaps-6.2.diff
+: 1633965396:0;..
+: 1633965397:0;l
+: 1633965406:0;rm -rf dwm-6.2
+: 1633965407:0;l
+: 1633965472:0;vim dmenu-patches
+: 1633966070:0;l
+: 1633966103:0;aria2c -x 3 -m 3 https://dl.suckless.org/tools/dmenu-5.0.tar.gz
+: 1633966114:0;ex dmenu-5.0.tar.gz
+: 1633966119:0;cd dmenu-5.0
+: 1633966136:0;aria2c -x 3 -m 3 -i ../dmenu-patches
+: 1633966138:0;l
+: 1633966166:0;patch -p1 < dmenu-fuzzymatch-4.9.diff
+: 1633966176:0;patch -p1 < dmenu-fuzzyhighlight-4.9.diff
+: 1633966188:0;patch -p1 < dmenu-highpriority-4.9.diff
+: 1633966203:0;patch -p1 < dmenu-xresources-4.9.diff
+: 1633966237:0;vim dmenu.c.rej
+: 1633966273:0;patch -p1 < dmenu-xyw-5.0.diff
+: 1633966292:0;patch -p1 < dmenu-border-4.9.diff
+: 1633966300:0;..
+: 1633966308:0;rm -rf dmenu-5.0
+: 1633966311:0;ex dmenu-5.0.tar.gz
+: 1633966315:0;cd dmenu-5.0
+: 1633966325:0;aria2c -x 3 -m 3 -i ../dmenu-patches
+: 1633966349:0;patch -p1 < dmenu-fuzzymatch-4.9.diff
+: 1633966355:0;patch -p1 < dmenu-fuzzyhighlight-4.9.diff
+: 1633966374:0;vim config.def.h
+: 1633966535:0;vim config.mk
+: 1633966579:0;make install
+: 1633966604:0;dmenu
+: 1633966608:0;cd
+: 1633966620:0;cd .local/bin
+: 1633966621:0;l
+: 1633966661:0;cd
+: 1633966663:0;..
+: 1633966665:0;cd
+: 1633966666:0;l
+: 1633966671:0;rm -rf local
+: 1633966681:0;cd .build/git/
+: 1633966682:0;l
+: 1633966686:0;cd dmenu-5.0
+: 1633966690:0;make clean
+: 1633966698:0;vim config.mk
+: 1633966714:0;make install
+: 1633966718:0;dmenu
+: 1633966751:0;cd .local/bin
+: 1633966752:0;l
+: 1633966767:0;dmenu_run
+: 1633966818:0;rm -rf dmenu*
+: 1633966825:0;l
+: 1633966971:0;cd
+: 1633966975:0;search dwm
+: 1633967963:0;l
+: 1633967989:0;..
+: 1633968003:0;l
+: 1633968022:0;rm -rf dmenu-
+: 1633968029:0;rm -rf dmenu-5.0
+: 1633968042:0;ex surf-2.1.tar.gz
+: 1633968047:0;cd surf-2.1
+: 1633968048:0;l
+: 1633968052:0;make
+: 1633968072:0;make clean
+: 1633968121:0;man aria2c
+: 1633968176:0;vim config.def.h
+: 1633968281:0;..
+: 1633968294:0;cp surf-2.1 surf-2.1-test
+: 1633968300:0;cp -r surf-2.1 surf-2.1-test
+: 1633968306:0;cd surf-2.1-test
+: 1633968358:0;wget https://surf.suckless.org/patches/bookmarking/surf-bookmarks-20170722-723ff26.diff
+: 1633968371:0;patch -p1 surf-bookmarks-20170722-723ff26.diff
+: 1633968381:0;patch -p1 < surf-bookmarks-20170722-723ff26.diff
+: 1633968634:0;wget https://surf.suckless.org/patches/chromebar/surf-0.1-chromebar.diff
+: 1633968646:0;patch -p1 < surf-0.1-chromebar.diff
+: 1633968671:0;mv surf-bookmarks-20170722-723ff26.diff ..
+: 1633968673:0;..
+: 1633968682:0;rm -rf surf-2.1-test
+: 1633968704:0;mv surf-bookmarks-20170722-723ff26.diff surf-2.1
+: 1633968712:0;cp -r surf-2.1 surf-2.1-test
+: 1633968716:0;cd surf-2.1-test
+: 1633969439:0;wget https://surf.suckless.org/patches/notifications/surf-notifications-20201223-7dcce9e1.diff
+: 1633969453:0;patch -p1 < surf-notifications-20201223-7dcce9e1.diff
+: 1633969457:0;..
+: 1633969459:0;rm -rf surf-2.1-test
+: 1633969462:0;cp -r surf-2.1 surf-2.1-test
+: 1633969538:0;cd surf-2.1-test
+: 1633969721:0;wget https://surf.suckless.org/patches/playexternal/surf-playexternal-20190724-b814567.diff
+: 1633969738:0;patch -p1 < surf-playexternal-20190724-b814567.diff
+: 1633970065:0;mv surf-playexternal-20190724-b814567.diff ../surf-2.1
+: 1633970072:0;wget https://surf.suckless.org/patches/searchengines/surf-git-20170323-webkit2-searchengines.diff
+: 1633970087:0;patch -p1 < surf-git-20170323-webkit2-searchengines.diff
+: 1633970439:0;wget https://surf.suckless.org/patches/short-title/surf-short-title-20210206-7dcce9e.diff
+: 1633970448:0;patch -p1 < surf-short-title-20210206-7dcce9e.diff
+: 1633970486:0;mv surf-short-title-20210206-7dcce9e.diff ../surf-2.1
+: 1633970487:0;l
+: 1633970518:0;wget https://surf.suckless.org/patches/smoothscrolling-via-GTK3/surf-0.7-smoothscrolling.diff
+: 1633970529:0;patch -p1 < surf-0.7-smoothscrolling.diff
+: 1633970601:0;wget https://surf.suckless.org/patches/spacesearch/surf-spacesearch-20170408-b814567.diff
+: 1633970609:0;patch -p1 < surf-spacesearch-20170408-b814567.diff
+: 1633970696:0;wget https://surf.suckless.org/patches/startgo/surf-startgo-20200913-d068a38.diff
+: 1633970707:0;patch -p1 < surf-startgo-20200913-d068a38.diff
+: 1633970726:0;mv surf-startgo-20200913-d068a38.diff ../surf-2.1
+: 1633970891:0;wget https://surf.suckless.org/patches/xdg/surf-xdg-2.0.diff
+: 1633970899:0;patch -p1 < surf-xdg-2.0.diff
+: 1633970909:0;mv surf-xdg-2.0.diff ../surf-2.1
+: 1633970911:0;..
+: 1633970914:0;rm -rf surf-2.1-test
+: 1633970918:0;cd surf-2.1
+: 1633970919:0;l
+: 1633970945:0;patch -p1 < surf-xdg-2.0.diff
+: 1633970955:0;patch -p1 < surf-playexternal-20190724-b814567.diff
+: 1633970983:0;patch -p1 < surf-short-title-20210206-7dcce9e.diff
+: 1633970993:0;patch -p1 < surf-startgo-20200913-d068a38.diff
+: 1633971017:0;make -j5
+: 1633971075:0;mv surf-playexternal-20190724-b814567.diff surf-xdg-2.0.diff ..
+: 1633971077:0;..
+: 1633971083:0;rm -rf surf-2.1
+: 1633971087:0;ex surf-2.1.tar.gz
+: 1633971103:0;mv surf-xdg-2.0.diff surf-playexternal-20190724-b814567.diff surf-2.1
+: 1633971165:0;cd surf-2.1
+: 1633971172:0;vim config.def.h
+: 1633971231:0;wget https://surf.suckless.org/patches/bookmarking/surf-bookmarks-20170722-723ff26.diff
+: 1633971245:0;patch -p1 < surf-bookmarks-20170722-723ff26.diff
+: 1633971252:0;patch -p1 < surf-xdg-2.0.diff
+: 1633971261:0;patch -p1 < surf-playexternal-20190724-b814567.diff
+: 1633971268:0;make -j5
+: 1633971274:0;make clean
+: 1633971284:0;remove surf
+: 1633971294:0;cd .local/bin
+: 1633971295:0;l
+: 1633971307:0;rm -rf surf
+: 1633971317:0;vim config.mk
+: 1633971373:0;make install
+: 1633971385:0;surf https://www.youtube.com/watch\?v\=QKfk7YFILws\&t\=11001s
+: 1633971402:0;cd .surf
+: 1633971404:0;l
+: 1633971408:0;styles
+: 1633971410:0;l
+: 1633971411:0;ls
+: 1633971419:0;l
+: 1633971474:0;surf google.com
+: 1633971561:0;install nuspell
+: 1633971567:0;surf google.com
+: 1633971630:0;vim config.h
+: 1633971721:0;..
+: 1633971733:0;l
+: 1633971743:0;rm -rf dmenu-patches
+: 1633972610:0;search qutebrowser
+: 1633972628:0;cd
+: 1633972635:0;compile qutebrowser
+: 1633973279:0;cd .config/qutebrowser
+: 1633973280:0;l
+: 1633973286:0;vim config.py
+: 1633973525:0;rm -rf config.py 
+: 1633973526:0;l
+: 1633973549:0;vim config.py
+: 1633981185:0;l
+: 1633981197:0;mkdir scripts
+: 1633981241:0;vim scripts/vimpv
+: 1633981303:0;vim config.py
+: 1633981494:0;vim scripts/pass
+: 1633983537:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633983572:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.cache/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633983581:0;cd
+: 1633983584:0;cd .config
+: 1633983586:0;l
+: 1633983594:0;cd chromium
+: 1633983595:0;l
+: 1633983620:0;python /usr/share/qutebrowser/scripts/importer.py ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633983678:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633983691:0;python /usr/share/qutebrowser/scripts/importer.py chrome ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633983720:0;python /usr/share/qutebrowser/scripts/importer.py chrome
+: 1633983729:0;python /usr/share/qutebrowser/scripts/importer.py chromium
+: 1633983742:0;python /usr/share/qutebrowser/scripts/importer.py ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
+: 1633984431:0;vim config.py
+: 1633984585:0;cd
+: 1633984590:0;cd .cache
+: 1633984591:0;l
+: 1633984603:0;du -h youtube-dl
+: 1633984627:0;cd
+: 1633984632:0;l Videos
+: 1633986206:0;cd
+: 1633986207:0;yaya
+: 1633986211:0;yay
+: 1633986271:0;compile attica bluez-qt frameworkintegration kactivities karchive kauth kbookmarks kcmutils kcodecs kcompletion kconfig kcontacts kcoreaddons kcrash kdbusaddons kdeclarative kded kfilemetadata kglobalaccel kguiaddons kidletime kiconthemes kinit kio kitemmodels kitemviews kjs knewstuff knotifications knotifyconfig kservice ktexteditor kunitconversion kwallet kwidgetsaddons kwindowsystem kxmlgui plasma-framework prison purpose solid sonnet syndication syntax-highlighting threadweaver plasma-framework 
+: 1633988720:0;cd .config/qutebrowser
+: 1633988722:0;l
+: 1633988727:0;vim autoconfig.yml
+: 1633988761:0;vim config.py
+: 1633988820:0;cd
+: 1633988825:0;vim .config/sxhkd/sxhkdrc
+: 1633989376:0;pip3 install adblock
+: 1633989401:0;cd .local
+: 1633989402:0;l
+: 1633989406:0;cd lib
+: 1633989407:0;l
+: 1633989412:0;cd
+: 1633989423:0;search adblock
+: 1633989442:0;install python-adblock
+: 1633991340:0;pip3 uninstall adblock
+: 1633991786:0;yay
+: 1634051925:0;bash
+: 1634051987:0;python
+: 1634058558:0;man npm
+: 1634058719:0;l
+: 1634058720:0;ll
+: 1634058727:0;vim .zshenv
+: 1634058799:0;vim .profile
+: 1634058964:0;vim .config/sxhkd/sxhkdrc
+: 1634059033:0;ll
+: 1634059044:0;vim .bash_profile
+: 1634059165:0;vim .bash_logout
+: 1634059183:0;vim .bashrc
+: 1634059710:0;mv .zshenv .zshenv.bak
+: 1634059719:0;printenv
+: 1634059727:0;reboot
+: 1634059851:0;printenv
+: 1634059898:0;vim .zshenv.bak
+: 1634059931:0;vim .profile
+: 1634059955:0;mv .zshenv.bak Downloads
+: 1634059968:0;vim .bash_profile
+: 1634060043:0;l
+: 1634060045:0;ll
+: 1634060055:0;mv .bash_profile Downloads
+: 1634060069:0;vim .bashrc
+: 1634060139:0;zshrc
+: 1634060211:0;reboot
+: 1634060346:0;vim .profile
+: 1634060519:0;mkdir Documents/backups/dotfiles && mv Downloads/{.bash_profile,.zshenv.bak} Documents/backups/dotfiles
+: 1634060677:0;yt "imma firin muh lazer"
+: 1634060725:0;yt "welcome to the internet"
+: 1634060763:0;vim .config/zsh/zsh_functions
+: 1634060894:0;ll
+: 1634060933:0;mv .bashrc Documents/backups/dotfiles
+: 1634060936:0;ll
+: 1634060950:0;la
+: 1634060970:0;l .steam
+: 1634060993:0;l .steam/sdk32
+: 1634061003:0;l .steam/sdk64
+: 1634061067:0;bash
+: 1634061189:0;ln -s .config/bash/.bashrc ./
+: 1634061191:0;bash
+: 1634061199:0;ll
+: 1634061229:0;rm -rf Documents/backups/dotfiles/.bashrc
+: 1634061233:0;ll
+: 1634061269:0;rmf .Genymobile
+: 1634061356:0;rmf .thunderbird
+: 1634061469:0;vim .Xresources
+: 1634061649:0;vim .profile
+: 1634062644:0;ll
+: 1634062656:0;vim .bash_history
+: 1634062717:0;cp .Xresources .Xresources.bak
+: 1634062719:0;l
+: 1634062721:0;ll
+: 1634062731:0;cd /etc
+: 1634062732:0;ll
+: 1634062815:0;vim .config/zsh/zsh_aliases
+: 1634062826:0;vim .bashrc
+: 1634062993:0;cd
+: 1634063004:0;cd .config/bash
+: 1634063005:0;l
+: 1634063006:0;ll
+: 1634063023:0;vim bash_aliases
+: 1634063309:0;vim .config/zsh/zsh_functions
+: 1634063355:0;zshrc
+: 1634063495:0;cd .config/zsh
+: 1634063497:0;l
+: 1634063527:0;mkdir ../shell
+: 1634063544:0;mv zsh_aliases zsh_functions ../shell
+: 1634063547:0;ll
+: 1634063549:0;..
+: 1634063552:0;cd shell
+: 1634063553:0;ll
+: 1634063571:0;mv zsh_aliases aliases
+: 1634063581:0;mv zsh_functions functions
+: 1634063583:0;l
+: 1634063598:0;vim aliases
+: 1634063665:0;bash
+: 1634063696:0;ls
+: 1634063701:0;lk
+: 1634063870:0;cd .config
+: 1634063872:0;ll
+: 1634063874:0;lk
+: 1634063880:0;l
+: 1634063897:0;cd bash
+: 1634063898:0;l
+: 1634063900:0;ll
+: 1634063993:0;cd .config/zsh
+: 1634063995:0;l
+: 1634063996:0;ll
+: 1634065035:0;cd
+: 1634065119:0;zshrc
+: 1634065131:0;vim .bashrc 
+: 1634067692:0;vim .local/bin/git_sync
+: 1634069490:0;cd .build/git/config-files
+: 1634069497:0;git_sync
+: 1634069513:0;vim .local/bin/git_sync
+: 1634069556:0;git_sync

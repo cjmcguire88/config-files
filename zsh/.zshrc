@@ -48,8 +48,8 @@ HISTSIZE=1000000
 HISTFILE=~/.config/zsh/zsh_history
 
 source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/zsh_functions
-source $ZDOTDIR/zsh_aliases
+source ~/.config/shell/aliases
+source ~/.config/shell/functions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

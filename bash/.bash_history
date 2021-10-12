@@ -1,43 +1,3 @@
-la
-#1621550243
-l
-#1621550271
-ls /usr/src
-#1621550423
-ls /usr/src | sed -E /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550440
-ls /usr/src | sed -En /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550462
-ls /usr/src | grep /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550471
-ls /usr/src | egrep /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550481
-ls /usr/src | grep -E /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550493
-ls /usr/src | sed -En /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550522
-ls /usr/src | sed -En --  /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550536
-ls /usr/src | sed -E --  /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550548
-ls /usr/src | sed -En  /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550578
-ls /usr/src | sed -En  /^[0-9]?\.[0-9]+\.[0-9]*/p
-#1621550586
-ls /usr/src | sed -En  /[0-9]?\.[0-9]+\.[0-9]*/p
-#1621547976
-zsh
-#1621548156
-zsh
-#1621550782
-zsh
-#1621623090
-vim
-#1621745968
-find . -type f -empty -prune -o -type f -printf "%s\t" -exec file --brief --mime-type '{}' \; | awk 'BEGIN {printf("%12s\t%12s\n","bytes","type")} {type=$2; a[type]+=$1} END {for (i in a) printf("%12u\t%12s\n", a[i], i)|"sort -nr"}'
-#1621745973
-zsh
-#1622821355
 echo -e "\033[1;34m::
 #1622821361
 echo -e "\033[1;34m::"
@@ -958,3 +918,25 @@ cd
 zsh
 #1633810451
 .local/bin/start_plasma_wayland 
+#1633811036
+startx
+#1634051940
+zsh
+#1634059752
+printenv
+#1634059782
+vim .bash_profile 
+#1634059841
+startx
+#1634060236
+printenv
+cd .config/bash
+l
+la
+ls -a
+vim .bashrc 
+cd
+vim .profile 
+zsh
+#1634061197
+zsh

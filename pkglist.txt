@@ -106,6 +106,7 @@ nftables
 nitrogen
 nmap
 npm
+nuspell
 nvidia-dkms
 nvidia-prime
 nvme-cli
@@ -138,6 +139,7 @@ progress
 protontricks
 pv
 pwncat
+python-adblock
 python-language-server
 python-pip
 python-protobuf
@@ -145,6 +147,7 @@ python-pywal
 python2
 python2-pip
 qt5-xcb-private-headers
+qutebrowser
 ranger
 reflector
 rkhunter
