@@ -150,6 +150,73 @@ modules-right = pavolume wireless-network battery sep date sep2 powermenu
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+################################################################################
+################################################################################
+############                  MAINBAR-BSPWM-HDMI                    ############
+################################################################################
+################################################################################
+
+[bar/mainbar-bspwm-hdmi]
+monitor = HDMI-2
+width = 100%
+height = 22
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+bottom = false
+;separator = |
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+wm-restack = bspwm
+override-redirect = true
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+border-size = 0
+;border-left-size = 0
+;border-right-size = 25
+;border-top-size = 0
+;border-bottom-size = 25
+border-color = #00000000
+;padding-left = 0
+;padding-right = 0
+
+;module-margin-left = 3
+;module-margin-right = 3
+
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = "Noto Sans:weight=bold:size=10;0"
+font-1 = "Noto Sans Mono:weight=bold:size=12;0"
+font-2 = "JetBrainsMono Nerd Font:weight=bold:size=12;0"
+font-3 = "JetBrainsMono Nerd Font:weight=bold:size=14;0"
+font-4 = "JetBrainsMono Nerd Font:weight=bold:size=16;0"
+font-5 = "Material Design Icons:style=Regular:size=15;2"
+
+modules-left = rofi sep0 bspwm
+modules-center = xwindow
+modules-right = pavolume wireless-network battery sep date sep2 powermenu
+
+;tray-detached = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-padding = 2
+;tray-maxsize = 20
+;tray-scale = 1.0
+;tray-position = right
+;tray-foreground = ${colors.color4}
+;tray-background = ${colors.foreground}
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
 
 ################################################################################
 ################################################################################
@@ -231,19 +298,21 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;%{F#edfefe}%{T5} %{T-}
+ws-icon-0 = 1;%{F#777777}%{T5} %{T-}
 ws-icon-1 = 2;%{F#4281E8}%{T5} %{T-}
-ws-icon-2 = 3;%{F#12B53E}%{T5} %{T-}
+ws-icon-2 = 3;%{F#2ecc71}%{T5} %{T-}
 ws-icon-3 = 4;%{F#fabea7}%{T5} %{T-}
-ws-icon-4 = 5;%{F#0074CD}%{T5}%{T-}
-
+ws-icon-4 = 5;%{F#0072C9}%{T5} %{T-}
+ws-icon-5 = 6;%{F#B32B20}%{T5} %{T-}
+ws-icon-6 = 7;%{F#386F9B}%{T5} %{T-}
+ws-icon-7 = 8;%{F#879932}%{T5}調%{T-}
 format = <label-state>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= #1793d1
+label-focused-underline= ${colors.color4}
 label-focused-padding = 4
-label-focused-foreground = #1793d1
+label-focused-foreground = ${colors.color4}
 
 label-occupied = %icon%
 label-occupied-padding = 2
@@ -371,24 +440,21 @@ format-charging = <label-charging>
 label-charging = %percentage%%
 format-charging-prefix = "  "
 format-charging-prefix-font = 3
-format-charging-prefix-foreground = #1793d1
+format-charging-prefix-foreground = ${colors.color4}
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
-format-charging-underline = #1793d1
 
 format-discharging = <label-discharging>
 label-discharging =  %percentage%%
 format-discharging-prefix = "  "
 format-discharging-prefix-font = 3
-format-discharging-prefix-foreground = #1793d1
-format-discharging-underline = #1793d1
+format-discharging-prefix-foreground = ${colors.color4}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
 format-full-prefix = "  "
 format-full-prefix-font = 3
-format-full-prefix-foreground = #1793d1
-format-full-underline = #1793d1
+format-full-prefix-foreground = ${colors.color4}
 format-full-foreground = ${colors.foreground}
 format-full-background = ${colors.background}
 
@@ -667,7 +733,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
 format-prefix-font = 4
-format-prefix-foreground = #ffffff
+format-prefix-foreground = #888888
 
 ################################################################################
 
@@ -858,12 +924,11 @@ type = custom/script
 label = %output%
 interval = 1.0
 exec = ~/.config/polybar/scripts/sound.sh
-click-right = ~/.config/polybar/scripts/sound.sh mute &
+click-left = ~/.config/polybar/scripts/sound.sh mute &
 scroll-up = ~/.config/polybar/scripts/sound.sh up &
 scroll-down = ~/.config/polybar/scripts/sound.sh down &
 format-prefix-font = 3
 format-prefix-foreground = ${colors.color4}
-format-underline = ${colors.color4}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
@@ -1248,8 +1313,7 @@ format-connected-prefix = "  "
 format-connected-prefix-font = 3
 format-connected-prefix-foreground = ${colors.color4}
 format-connected-prefix-background = ${colors.background}
-format-connected-underline = ${colors.color4}
-click-right = st nmtui
+click-left = st nmtui
 
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.color11}
@@ -1262,7 +1326,6 @@ format-disconnected-prefix = "   "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${colors.color11}
 format-disconnected-prefix-background = ${colors.background}
-format-disconnected-underline =${colors.color11}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂

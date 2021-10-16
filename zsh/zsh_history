@@ -10781,3 +10781,416 @@ cd projects/c
 : 1634069497:0;git_sync
 : 1634069513:0;vim .local/bin/git_sync
 : 1634069556:0;git_sync
+: 1634069561:0;l
+: 1634069565:0;l shell
+: 1634069571:0;vim README.md
+: 1634069583:0;cd .build/git/config-files
+: 1634069584:0;l
+: 1634074189:0;ga *
+: 1634074233:0;l
+: 1634074237:0;cd rofi
+: 1634074237:0;l
+: 1634074255:0;mv rofi/* ./
+: 1634074260:0;l
+: 1634074271:0;l rofi
+: 1634074291:0;rmf rofi
+: 1634074292:0;l
+: 1634074295:0;..
+: 1634074300:0;ga *
+: 1634074318:0;gc -m 10/12/21
+: 1634074369:0;pass -c System/ssh
+: 1634074378:0;gp
+: 1634075176:0;yay
+: 1634077745:0;cd
+: 1634077749:0;cd .config/shell
+: 1634077752:0;vim aliases
+: 1634079655:0;vim functions
+: 1634080003:0;yt "welcome to the internet"
+: 1634080042:0;yt "spongebob theme"
+: 1634080065:0;vim functions
+: 1634080144:0;cd
+: 1634080149:0;man aria2c
+: 1634082019:0;cd
+: 1634082023:0;arch_news
+: 1634082516:0;vim .config/polybar/config
+: 1634082569:0;vim /usr/share/applications
+: 1634082724:0;sudoedit /usr/share/applications/st.desktop
+: 1634082757:0;l .local/bin
+: 1634082823:0;vim .profile
+: 1634082841:0;zshrc
+: 1634083008:0;source .profile
+: 1634083034:0;cd
+: 1634083038:0;vim .profile
+: 1634083052:0;source .profile
+: 1634083058:0;printenv
+: 1634083150:0;printenv | grep path
+: 1634083159:0;printenv | grep PATH
+: 1634083184:0;ll
+: 1634083196:0;cd /etc
+: 1634083201:0;vim profile
+: 1634083222:0;vim .profile
+: 1634083266:0;cd profile.d
+: 1634083268:0;l
+: 1634083279:0;..
+: 1634083280:0;l
+: 1634083283:0;vim environment
+: 1634083307:0;source .profile
+: 1634083315:0;printenv | grep PATH
+: 1634083337:0;zshrc
+: 1634083374:0;source .config/zsh/.zshrc
+: 1634083377:0;printenv | grep PATH
+: 1634083430:0;zshrc
+: 1634083607:0;vim .config/shell/functions
+: 1634083674:0;printenv | grep PATH
+: 1634083722:0;vim .profile
+: 1634083737:0;source .profile
+: 1634083742:0;printenv | grep PATH
+: 1634083791:0;bash
+: 1634083823:0;printenv
+: 1634083924:0;ls
+: 1634083926:0;la
+: 1634083933:0;vim .Xauthority
+: 1634083946:0;vim .xinitrc
+: 1634084019:0;zshrc
+: 1634084053:0;vim .bashrc
+: 1634084084:0;bash
+: 1634084203:0;vim .profile
+: 1634084221:0;cd .config/zsh
+: 1634084222:0;ll
+: 1634084238:0;cd ../bash
+: 1634084240:0;ll
+: 1634084249:0;vim .bash_profile
+: 1634084377:0;rm -rf bash_aliases
+: 1634084386:0;vim .bashrc
+: 1634084433:0;cd
+: 1634084434:0;l
+: 1634084506:0;ll
+: 1634084526:0;zsh
+: 1634084533:0;printenv
+: 1634084865:0;l /bin
+: 1634084879:0;l /
+: 1634084889:0;la /
+: 1634085001:0;sudoreplay
+: 1634085012:0;sudoreplay -h
+: 1634085098:0;ll
+: 1634085112:0;vim .osh-update
+: 1634085123:0;vim .python_history
+: 1634085147:0;vim .lesshst
+: 1634085161:0;vim .npmrc
+: 1634085175:0;vim .fonts.conf
+: 1634085193:0;vim .gitconfig
+: 1634085216:0;vim .dmrc
+: 1634085230:0;rmf .dmrc
+: 1634085244:0;vim .histfile
+: 1634085301:0;l .mozilla
+: 1634085312:0;l .mozbuild
+: 1634085336:0;l .cert
+: 1634085346:0;l .idlerc
+: 1634085355:0;l .phoronix-test-suite
+: 1634085401:0;vim .wget-hsts
+: 1634087569:0;search qtile
+: 1634087956:0;vim .local/bin/bspwm_floating
+: 1634087997:0;chmod +x .local/bin/bspwm_floating
+: 1634088004:0;vim .xinitrc
+: 1634088359:0;bspwm_floating
+: 1634088463:0;vim .xinitrc
+: 1634088479:0;vim .config/bspwm/bspwmrc
+: 1634088601:0;vim .xinitrc
+: 1634088625:0;pukeskull
+: 1634088632:0;nf
+: 1634089711:0;man pgrep
+: 1634089748:0;search nm-applet
+: 1634089760:0;search nm
+: 1634089784:0;search networkmanager
+: 1634166549:0;pukeskull
+: 1634166685:0;rofi --dmenu
+: 1634166714:0;yay
+: 1634168718:0;cd /etc
+: 1634168727:0;sudoedit lsb-release
+: 1634168785:0;nf
+: 1634168793:0;sudoedit lsb-release
+: 1634168824:0;nf
+: 1634168914:0;neofetch
+: 1634168957:0;cd
+: 1634168977:0;cd /etc
+: 1634168986:0;sudoedit lsb-release
+: 1634169003:0;nf
+: 1634170185:0;vim .config/polybar/config
+: 1634172313:0;bash
+: 1634172752:0;update-boot 5.14.12-MiniBeast
+: 1634172757:0;sudo update-boot 5.14.12-MiniBeast
+: 1634172766:0;cat /boot/loader/entries/MiniBeast.conf
+: 1634172770:0;nf
+: 1634172775:0;reboot
+: 1634172840:0;nf
+: 1634172842:0;sa
+: 1634173016:0;dmesg
+: 1634173022:0;bash
+: 1634203066:0;install nvidia-dkms
+: 1634205493:0;reboot
+: 1634253547:0;yay
+: 1634253863:0;vim .config/polybar/config
+: 1634266020:0;top
+: 1634266248:0;compile pcmanfm
+: 1634267106:0;search kakoune
+: 1634302968:0;vim .config/polybar/config
+: 1634304512:0;pukeskull
+: 1634304528:0;vim .Xresources
+: 1634304560:0;vim .config/polybar/config
+: 1634304678:0;vim .config/bspwm/bspwmrc
+: 1634305801:0;vim .config/polybar/config
+: 1634306303:0;yt "jeff bezos song"
+: 1634306328:0;yt "spongebob theme"
+: 1634310864:0;tmux2
+: 1634310874:0;man bspc
+: 1634310916:0;bspc -h
+: 1634310922:0;bspwm -h
+: 1634310929:0;bspwm -v
+: 1634311794:0;vim .config/bspwm/bspwmrc
+: 1634311809:0;vim .config/sxhkd/sxhkdrc
+: 1634312533:0;bspc wm -d
+: 1634312941:0;vim .config/bspwm/bspwmrc
+: 1634320315:0;vim .config/sxhkd/sxhkdrc
+: 1634320957:0;xrandr
+: 1634320990:0;vim .config/bspwm/bspwmrc
+: 1634321081:0;xrandr
+: 1634321114:0;vim .config/bspwm/bspwmrc
+: 1634321219:0;search pipewire
+: 1634321295:0;pipewire
+: 1634321321:0;man pipewire
+: 1634321341:0;pw-cli
+: 1634321526:0;xrandr
+: 1634321675:0;xrandr --output HDMI2 --auto --right-of eDP-1
+: 1634321684:0;xrandr --output HDMI-2 --auto --right-of eDP-1
+: 1634321745:0;xrandr
+: 1634321981:0;sudoedit /etc/X11/xorg.conf.d/10-monitor.conf
+: 1634322253:0;vim .config/bspwm/bspwmrc
+: 1634322266:0;xrandr -q
+: 1634322483:0;cava
+: 1634322567:0;unimatrix
+: 1634322575:0;install unimatrix
+: 1634322595:0;matrix
+: 1634322708:0;nitrogen --help
+: 1634322728:0;vim .config/bspwm/bspwmrc
+: 1634322984:0;nitrogen Pictures/Wallpapers
+: 1634323271:0;vim .config/polybar/config
+: 1634323574:0;xrandr | grep '\bconnected' | grep 'HDMI1' | awk '{ print \$2 }'
+: 1634323585:0;xrandr | grep '\bconnected' | grep 'HDMI1' | awk '{ print $2 }'
+: 1634323593:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'
+: 1634323603:0;xrandr | grep '\bconnected' | grep 'HDMI-1' | awk '{ print $2 }'
+: 1634323689:0;vim .local/bin/polybar_launch
+: 1634323819:0;vim .local/bin/kernel
+: 1634323869:0;vim .config/bspwm/bspwmrc
+: 1634324429:0;sudoedit /etc/X11/xorg.conf.d/10-monitor.conf
+: 1634324464:0;vim .config/bspwm/bspwmrc
+: 1634324614:0;chmod +x .local/bin/polybar_launch
+: 1634324623:0;reboot
+: 1634324950:0;vim .local/bin/polybar_launch
+: 1634324976:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'
+: 1634325054:0;polybar_launch
+: 1634325082:0;cd /tmp
+: 1634325083:0;l
+: 1634325108:0;vim .local/bin/polybar_launch
+: 1634325160:0;polybar mainbar-bspwm-hdmi 2>&1 | tee -a /tmp/polybar-hdmi.log & disown\
+
+: 1634325277:0;vim /tmp/polybar-hdmi.log
+: 1634325412:0;vim .config/polybar/config
+: 1634325581:0;polybar mainbar-bspwm-hdmi 2>&1 | tee -a /tmp/polybar-hdmi.log & disown\
+
+: 1634325809:0;vim .local/bin/polybar_launch
+: 1634326075:0;reboot
+: 1634326169:0;vim .local/bin/polybar_launch
+: 1634326201:0;reboot
+: 1634326238:0;vim .local/bin/polybar_launch
+: 1634326278:0;vim .local/bin/kernel
+: 1634326496:0;reboot
+: 1634326624:0;vim .config/polybar/config
+: 1634329103:0;vim .config/bspwm/bspwmrc
+: 1634329124:0;reboot
+: 1634329230:0;vim .config/polybar/config
+: 1634329742:0;search helvum
+: 1634329755:0;install helvum
+: 1634329944:0;pactl info
+: 1634329966:0;pactl list sinks
+: 1634330110:0;search pavucontrol
+: 1634330121:0;compile pavucontrol
+: 1634330129:0;remove helvum
+: 1634330291:0;man pavucontrol
+: 1634330305:0;pavucontrol
+: 1634330486:0;search wireplumber
+: 1634330500:0;compile wireplumber
+: 1634330557:0;scenable wireplumber
+: 1634330625:0;scstatus pipewire
+: 1634330646:0;scdisable pipewire-media-session
+: 1634330687:0;scdisable wireplumber
+: 1634330696:0;scustatus pipewire
+: 1634330710:0;scuenable wireplumber
+: 1634330726:0;scudisable pipewire-media-session
+: 1634330738:0;reboot
+: 1634331057:0;nitrogen Pictures/Wallpapers
+: 1634331143:0;vim .config/sxhkd/sxhkdrc
+: 1634331453:0;matrix
+: 1634332375:0;bashtop
+: 1634334930:0;startx
+: 1634334955:0;vim .xinitrc
+: 1634336373:0;scustatus
+: 1634336836:0;scstatus
+: 1634336934:0;nf
+: 1634338473:0;vim .local/bin/polybar_launch
+: 1634343292:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'\
+
+: 1634345492:0;nf
+: 1634345536:0;yay
+: 1634345863:0;cd /etc/X11/xinit
+: 1634345864:0;l
+: 1634345871:0;vim xserverrc
+: 1634345917:0;ls /usr/bin/X
+: 1634346030:0;vim .xserverrc
+: 1634346055:0;cd /usr/bin
+: 1634346102:0;ls X*
+: 1634346230:0;ls
+: 1634346234:0;lk
+: 1634346284:0;echo $XDG_VTNR
+: 1634347157:0;notify-send 'Hello world!' 'This is an example notification.' --icon=dialog-information
+: 1634347302:0;search vdpau
+: 1634347331:0;vainfo
+: 1634347349:0;vdpau
+: 1634347419:0;echo $VDPAU_DRIVER
+: 1634347439:0;ls /usr/lib/vdpau/
+: 1634347640:0;nvidia-settings -q gpucoretemp
+: 1634347721:0;modinfo nvidia
+: 1634347839:0;sudoedit /etc/modprobe.d/nvidia.conf\
+
+: 1634347908:0;vim .xserverrc
+: 1634347959:0;nv-reg.h
+: 1634348402:0;reboot
+: 1634348931:0;sudoedit /etc/modprobe.d/nvidia.conf\
+
+: 1634348951:0;cd /etc/modprobe.d/
+: 1634348952:0;l
+: 1634348968:0;sudo rm -rf nvidia.conf 
+: 1634348972:0;reboot
+: 1634349197:0;mv .xserverrc Documents/backups
+: 1634349204:0;sudo rm -rf nvidia.conf 
+: 1634349216:0;reboot
+: 1634350233:0;tmux2
+: 1634350557:0;vim Documents/backups/.xserverrc
+: 1634351190:0;cd .local/share/xorg
+: 1634351191:0;l
+: 1634351198:0;lk
+: 1634351216:0;vim Xorg.0.log
+: 1634352422:0;sudoedit /etc/modprobe.d/nvidia.conf
+: 1634352480:0;cd
+: 1634352499:0;mv Documents/backups/.xserverrc ./
+: 1634352504:0;vim .xserverrc
+: 1634352547:0;sudoedit /etc/X11/Xwrapper.config
+: 1634352589:0;reboot
+: 1634352685:0;scustatus
+: 1634352706:0;scstatus
+: 1634352824:0;ps -ef | grep x
+: 1634352831:0;ps -ef | grep X
+: 1634352841:0;bashtop
+: 1634352892:0;cd .local/share/xorg
+: 1634352893:0;l
+: 1634352900:0;vim xorg.log
+: 1634352919:0;vim Xorg.0.log
+: 1634353045:0;vim xorg.log
+: 1634353076:0;du -h Xorg.0.log
+: 1634353090:0;cd /tmp
+: 1634353091:0;l
+: 1634353109:0;du -h polybar.log
+: 1634353123:0;vim polybar.log
+: 1634354068:0;vim .config/polybar/config
+: 1634354091:0;echo ${xrdb:color0}
+: 1634354108:0;${xrdb:color0}
+: 1634354151:0;vim .config/sxhkd/sxhkdrc
+: 1634354253:0;vim .config/polybar/scripts/sound.sh
+: 1634354442:0;pw-play
+: 1634354522:0;vim .xbindkeysrc
+: 1634355014:0;vim .local/bin/kernel
+: 1634356230:0;vim .config/polybar/scripts/sound.sh
+: 1634356480:0;pw-record --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
+: 1634356513:0;pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
+: 1634357913:0;wget https://raw.githubusercontent.com/JopStro/bspswallow/master/bspswallow
+: 1634357915:0;l
+: 1634357948:0;chmod +x bspswallow
+: 1634357949:0;l
+: 1634357959:0;mv bspswallow .config/bspwm
+: 1634357964:0;cd .config/bspwm
+: 1634357965:0;l
+: 1634358027:0;pgrep xorg
+: 1634358035:0;pgrep bspwm
+: 1634358040:0;pgrep Xorg
+: 1634358059:0;vim bspwmrc
+: 1634358309:0;vim .config/bspwm/terminals
+: 1634358325:0;vim .config/bspwm/bspswallow
+: 1634358532:0;touch noswallow
+: 1634358533:0;l
+: 1634358702:0;feh
+: 1634358720:0;vim .config/bspwm/bspwmrc
+: 1634358769:0;mkdir .config/bspwm/scripts
+: 1634358798:0;l
+: 1634358824:0;mv .config/bspwm/bspswallow .config/bspwm/scripts
+: 1634358845:0;feh
+: 1634359081:0;ps -aux
+: 1634359097:0;ps -aux | grep Xorg
+: 1634360355:0;sudo kernel
+: 1634360377:0;cd /usr/src/linux-5.14.12-MiniBeast
+: 1634360384:0;sudo make menuconfig
+: 1634361306:0;cat /proc/cpuinfo | grep flags
+: 1634361336:0;cat /proc/cpuinfo | grep msr
+: 1634361364:0;cat /proc/cpuinfo | grep cpuid
+: 1634361740:0;cat /proc/cpuinfo | grep mtrr
+: 1634361866:0;cat /proc/cpuinfo | grep rdrand
+: 1634361880:0;cat /proc/cpuinfo | grep pat
+: 1634361907:0;cat /proc/cpuinfo | grep smap
+: 1634387600:0;cd
+: 1634387618:0;cd .config/polybar/scripts
+: 1634387619:0;l
+: 1634387625:0;vim sound.sh
+: 1634388593:0;cat /sys/kernel/mm/transparent_hugepage/enabled
+: 1634389049:0;grep AnonHugePages /proc/meminfo
+: 1634394334:0;nmtui
+: 1634394910:0;vim .config/polybar/config
+: 1634395051:0;cd
+: 1634395063:0;vim .local/bin/git_sync
+: 1634395077:0;ll
+: 1634395136:0;cd /etc/X11
+: 1634395138:0;l
+: 1634395340:0;cd .build/git/config-files
+: 1634395344:0;git_sync
+: 1634395360:0;cd /etc
+: 1634395364:0;popd
+: 1634395368:0;cd etc
+: 1634395370:0;ll
+: 1634395385:0;ll X11/
+: 1634395391:0;ll X11/xorg.conf.d
+: 1634395402:0;ll X11/xinit
+: 1634395416:0;ll X11/xinit/xinitrc.d
+: 1634395463:0;ll X11
+: 1634395477:0;l
+: 1634395483:0;ll *
+: 1634395495:0;vim xorg.conf.d/10-monitor.conf
+: 1634395636:0;cd
+: 1634395642:0;search btop
+: 1634395660:0;compile btop
+: 1634395743:0;btop
+: 1634396258:0;vim .config/sxhkd/sxhkdrc
+: 1634396369:0;ll
+: 1634396373:0;..
+: 1634396375:0;ll
+: 1634396397:0;l plasma
+: 1634396407:0;rmf plasma/plasma-kwin_x11.service
+: 1634396413:0;ga *
+: 1634396429:0;cd rofi
+: 1634396430:0;l
+: 1634396435:0;l rofi
+: 1634396441:0;l
+: 1634396450:0;cd rofi
+: 1634396451:0;l
+: 1634396455:0;..
+: 1634396465:0;vim .local/bin/git_sync
+: 1634396509:0;..
+: 1634396512:0;l
+: 1634396515:0;rmf rofi
+: 1634396520:0;git_sync

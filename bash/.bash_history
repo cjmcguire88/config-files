@@ -1,97 +1,3 @@
-echo -e "\033[1;34m::
-#1622821361
-echo -e "\033[1;34m::"
-#1622864701
-echo  XDG_RUNTIME_DIR
-#1622864720
-echo $XDG_RUNTIME_DIR
-#1622864898
-echo $XDG_CONFIG_HOME
-#1622821371
-zsh
-#1622936472
-bind -P
-#1622936544
-zsh
-#1626611447
-shopt expand_aliases
-#1628343194
-echo -e "vboxdrv\nvboxnetflt\nvboxnetadp\nvboxpci" > /etc/modules-load.d/virtualbox.conf
-#1628343194
-/etc/modules-load.d/virtualbox.conf 
-#1628346191
-pukeskull
-#1628887254
-dmesg
-#1628887265
-dmesg | grep cacule
-#1628887271
-dmesg | grep Cacule
-#1628887279
-dmesg | grep hamad
-#1628887283
-zsh
-#1629305627
-ls /usr/src | grep linux
-#1629316148
-dmesg raw
-#1629316154
-dmesg --raw
-#1629306370
-zsh
-#1629316206
-zsh
-#1629685228
-cd linux-5.13.10/
-#1629685230
-l
-#1629685240
-l patches/
-#1629685255
-patch -p1 < patches/*
-#1629685265
-patch -p1 < ./patches/*
-#1629685282
-patch -p1  ./patches/*
-#1629685373
-patch -p1  ./patches/0101-i8042-decrease-debug-message-level-to-info.patch 
-#1629685388
-patch -p1 < ./patches/0101-i8042-decrease-debug-message-level-to-info.patch 
-#1629685405
-patch -p1 < ./patches/*
-#1629685467
-patch -p1 < "patches/*"
-#1629685481
-patch -p1 < 'patches/*'
-#1629685492
-patch -p1 < patches/*
-#1629689957
-ls /boot/efi/EFI/Linux/
-#1629690068
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}'
-#1629690086
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2$3}'
-#1629690092
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2-$3}'
-#1629690103
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2\-$3}'
-#1629690128
-ls /boot/efi/EFI/Linux/ | awk -F "-" "{print $2\-$3}"
-#1629690143
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2.$3}'
-#1629690154
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2 $3}'
-#1629690171
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2 $3 $4}'
-#1629690212
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}''{print $3}'
-#1629690226
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}' '{print $3}'
-#1629690237
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}{print $3}'
-#1629690264
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}-{print $3}'
-#1629690274
 ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}.{print $3}'
 #1629690284
 ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2-}{print $3}'
@@ -940,3 +846,78 @@ vim .profile
 zsh
 #1634061197
 zsh
+#1634083807
+printenv | grep PATH
+#1634083828
+printenv
+#1634084002
+source .profile
+#1634084007
+printenv
+#1634060335
+startx
+#1634088166
+printenv
+#1634088208
+source .profile
+#1634088211
+printenv
+#1634088223
+startx
+#1634088278
+vim .xinitrc 
+#1634088317
+startx
+#1634084014
+zsh
+#1634063679
+alias
+#1634063684
+l
+#1634063687
+ll
+#1634063733
+yt "welcome to the internet"
+#1634067680
+zsh
+#1634084199
+zsh
+#1634172352
+ll
+#1634172435
+vim .bashrc
+startx
+#1634173026
+dmesg
+bash
+bash
+#1634302920
+startx
+startx
+BASH
+bash
+startx
+bash
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+bash
+#1634334924
+zsh
+bash
+startx
+startx
+#1634353456
+vim .xbindkeysrc 
+#1634353486
+vim .Xmodmap 
+#1634353540
+startx

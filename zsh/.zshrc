@@ -14,9 +14,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Enable autocomplete
 autoload -Uz compinit
 compinit
@@ -47,6 +44,7 @@ HISTSIZE=1000000
 
 HISTFILE=~/.config/zsh/zsh_history
 
+source ~/.profile
 source $ZSH/oh-my-zsh.sh
 source ~/.config/shell/aliases
 source ~/.config/shell/functions

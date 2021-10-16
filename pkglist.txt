@@ -23,6 +23,7 @@ bluez-hid2hci
 bluez-plugins
 bluez-utils
 bspwm
+btop
 btrfs-progs
 cava
 chromium
@@ -120,6 +121,8 @@ pacwall-git
 pamac-aur
 pass
 patch
+pavucontrol
+pcmanfm
 picom
 pipewire-alsa
 pipewire-docs
@@ -183,11 +186,14 @@ tree
 ttf-material-design-icons
 ueberzug
 unbound
+unimatrix-git
 vim-plug
 w3m
 wget
 which
 whois
+wireplumber
+wireplumber-docs
 xbindkeys
 xclip
 xcursor-themes

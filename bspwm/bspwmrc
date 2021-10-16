@@ -9,26 +9,35 @@
 
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
-# Startup
+# Startup programs
 sxhkd &
 picom &
-polybar mainbar-bspwm 2>&1 | tee -a /tmp/polybar.log & disown
-polybar mainbar-bspwm-extra 2>&1 | tee -a /tmp/polybar-dock.log & disown
+polybar_launch &
 nitrogen --restore &
 dunst &
 
+# Startup scripts
+~/.config/bspwm/scripts/bspswallow &
+
 # Monitor and desktop layout
 bspc monitor eDP-1 -d 1 2 3 4 5
-bspc monitor HDMI-1 -d 1
+bspc monitor HDMI-2 -d 6 7 8
 
 # Padding and gaps
 bspc config border_width        0
 bspc config window_gap          12
 bspc config top_padding	        22
-#bspc config right_padding	    224
 bspc config split_ratio         0.50
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
+bspc config single_monocle      true
+
+# Etc
+bspc config pointer_follows_monitor     true
+bspc config remove_disabled_monitors    true
+bspc config remove_unplugged_monitors   true
+bspc config automatic_scheme            spiral
+bspc config pointer_modifier            mod4
 
 # Border and preselect colors
 bspc config normal_border_color "333333"

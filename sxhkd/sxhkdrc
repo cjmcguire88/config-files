@@ -33,7 +33,7 @@ super + ctrl + Escape
 
 # quit/restart bspwm
 super + {shift + Escape,Escape}
-	systemctl --user restart plasma-kwin_x11.service
+	bspc {quit,wm -r}
 
 # close
 super + x
@@ -96,8 +96,8 @@ super + w
 	bspc desktop -f next.local
 
 # focus desktop #
-super + {1,2,3,4,5}
-    bspc desktop -f ^{1,2,3,4,5}
+super + {1-8}
+    bspc desktop -f ^{1-8}
 
 # previous desktop in current monitor
 super + q
@@ -108,8 +108,12 @@ super + Tab
     bspc monitor -f next
 
 # send to the given desktop
-super + shift + {1,2,3,4,5}
-	bspc node -d ^{1,2,3,4,5}
+super + shift + {1-8}
+	bspc node -d ^{1-8}
+
+# send to next monitor
+super + shift + Tab
+    bspc node -m next
 
 #
 # preselect:
@@ -221,7 +225,7 @@ super + shift + d
 
 # open task manager
 super + F1
-	st bashtop
+	st btop
 
 # open system log
 super + F2

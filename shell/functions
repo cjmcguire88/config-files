@@ -1,6 +1,11 @@
-#########################
-## MINIBEAST FUNCTIONS ##
-#########################
+# ███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+# ██╔════╝██║   ██║████╗  ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+# █████╗  ██║   ██║██╔██╗ ██║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+# ██╔══╝  ██║   ██║██║╚██╗██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+# ██║     ╚██████╔╝██║ ╚████║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+# ╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+
+# 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
 
 # extract archives based on filetype
 ex ()
@@ -39,7 +44,7 @@ yt()
     if [[ -z "$1" ]]; then
         echo "Enter path to file containing URLs";
     else
-        mpv "$(youtube-dl --default-search 'ytsearch1:' \"$1\" --get-url | tail -1)" # > /dev/null 2>&1;
+        mpv "$(youtube-dl --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M'--default-search 'ytsearch1:' \"$1\" --get-url | tail -1)" # > /dev/null 2>&1;
     fi
 }
 
@@ -59,4 +64,29 @@ ztheme()
         sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="'${1}'"/' ~/.config/zsh/.zshrc
         source ~/.config/zsh/.zshrc
     fi
+}
+# zsh cursor mode (called from zshrc)
+cursor_mode() {
+    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+    cursor_block='\e[2 q'
+    cursor_beam='\e[6 q'
+
+    zle-keymap-select() {
+        if [[ ${KEYMAP} == vicmd ]] ||
+            [[ $1 = 'block' ]]; then
+            echo -ne $cursor_block
+        elif [[ ${KEYMAP} == main ]] ||
+            [[ ${KEYMAP} == viins ]] ||
+            [[ ${KEYMAP} = '' ]] ||
+            [[ $1 = 'beam' ]]; then
+            echo -ne $cursor_beam
+        fi
+    }
+
+    zle-line-init() {
+        echo -ne $cursor_beam
+    }
+
+    zle -N zle-keymap-select
+    zle -N zle-line-init
 }
