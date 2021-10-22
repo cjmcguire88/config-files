@@ -53,35 +53,6 @@ color13 = ${xrdb:color13}
 color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
 
-; Nord theme ============
-;background = #2F343F
-;foreground = #edfefe
-;alert = #d08770
-;volume-min = #a3be8c
-;volume-med = #ebcb8b
-;volume-max = #bf616a
-; =======================
-
-; Gotham theme ==========
-; background = #0a0f14
-; foreground = #99d1ce
-; alert = #d26937
-; volume-min = #2aa889
-; volume-med = #edb443
-; volume-max = #c23127
-; =======================
-
-; INTRCPTR theme ============
-;background = ${xrdb:color0:#222}
-;background = #aa000000
-;background-alt = #444
-;foreground = ${xrdb:color7:#222}
-;foreground = #fff
-;foreground-alt = #555
-;primary = #ffb52a
-;secondary = #e60053
-;alert = #bd2c40
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-BSPWM                         ############
@@ -133,19 +104,19 @@ font-3 = "JetBrainsMono Nerd Font:weight=bold:size=14;0"
 font-4 = "JetBrainsMono Nerd Font:weight=bold:size=16;0"
 font-5 = "Material Design Icons:style=Regular:size=15;2"
 
-modules-left = rofi kernel-updates pacman-updates sep0 bspwm
+modules-left = rofi kernel-updates pacman-updates sep0 bspwm sxhkd
 modules-center = xwindow
-modules-right = pavolume wireless-network battery sep date sep2 powermenu
+modules-right = pavolume wireless-network battery sep date sep2
 
-;tray-detached = false
-;tray-offset-x = 0
-;tray-offset-y = 0
-;tray-padding = 2
-;tray-maxsize = 20
-;tray-scale = 1.0
-;tray-position = right
-;tray-foreground = ${colors.color4}
-;tray-background = ${colors.foreground}
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 2
+tray-maxsize = 20
+tray-scale = 1.0
+tray-position = right
+tray-foreground = ${colors.foreground}
+tray-background = ${colors.background}
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -205,7 +176,7 @@ modules-center = xwindow
 modules-right = pavolume wireless-network battery sep date sep2 powermenu
 
 ;tray-detached = false
-;tray-offset-x = 0
+;tray-offset-x = 10
 ;tray-offset-y = 0
 ;tray-padding = 2
 ;tray-maxsize = 20
@@ -230,8 +201,8 @@ monitor = eDP-1
 width = 56%
 height = 22
 offset-x = 22%
-;offset-y = 1%
-radius = 0.0
+offset-y = 1%
+radius = 10.0
 fixed-center = true
 bottom = true
 ;separator = |
@@ -309,8 +280,7 @@ ws-icon-7 = 8;%{F#879932}%{T5}調%{T-}
 format = <label-state>
 
 label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-underline= ${colors.color4}
+label-focused-background = ${colors.color8}
 label-focused-padding = 4
 label-focused-foreground = ${colors.color4}
 
@@ -925,6 +895,7 @@ label = %output%
 interval = 1.0
 exec = ~/.config/polybar/scripts/sound.sh
 click-left = ~/.config/polybar/scripts/sound.sh mute &
+click-right = pavucontrol
 scroll-up = ~/.config/polybar/scripts/sound.sh up &
 scroll-down = ~/.config/polybar/scripts/sound.sh down &
 format-prefix-font = 3
@@ -971,6 +942,19 @@ menu-0-3 = 
 menu-0-3-exec = pkill X
 menu-0-3-background = ${colors.background}
 menu-0-3-foreground = ${colors.color4}
+
+################################################################################
+
+[module/powermenu2]
+type = custom/script
+
+interval = 120
+exec = echo "  "
+click-left = "~/.config/rofi/powermenu/powermenu.sh"
+format-prefix = "  "
+format-prefix-font = 5
+format-prefix-foreground = ${colors.color1}
+format-background = ${colors.background}
 
 ################################################################################
 
@@ -1026,7 +1010,7 @@ content-foreground = ${colors.color4}
 type = custom/text
 content = "%{T5}%{T-}"
 content-background = ${colors.color4}
-content-foreground = ${colors.foreground}
+content-foreground = ${colors.background}
 
 ################################################################################
 
@@ -1056,6 +1040,26 @@ content = "%{T5} %{T-}"
 content-font = 5
 content-background = ${colors.background}
 content-foreground = ${colors.color4}
+
+
+################################################################################
+
+[module/sep6]
+type = custom/text
+content = "%{T5}%{T-}"
+content-font = 5
+content-background = ${colors.background}
+content-foreground = ${colors.color8}
+
+
+################################################################################
+
+[module/sep7]
+type = custom/text
+content = "%{T5}%{T-}"
+content-font = 5
+content-background = ${colors.background}
+content-foreground = ${colors.color8}
 
 
 ################################################################################
@@ -1124,6 +1128,17 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 click-left = playerctl next spotify
 click-right = spotify
+
+################################################################################
+
+[module/sxhkd]
+type = custom/script
+tail = true
+format = <label>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = %output%
+exec = /home/jason/.config/polybar/scripts/polybar-sxhkd.sh
 
 ################################################################################
 
@@ -1304,7 +1319,7 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 label-connected = %essid%
-
+enable-click = true
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.foreground}

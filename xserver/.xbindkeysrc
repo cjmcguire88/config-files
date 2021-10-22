@@ -74,23 +74,25 @@
 #  Control + b:2 + Release
 #
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+#"pactl set-sink-volume @DEFAULT_SINK@ +2000"
+"deadd-volume up"
    XF86AudioRaiseVolume
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+#"pactl set-sink-volume @DEFAULT_SINK@ -2000"
+"deadd-volume down"
    XF86AudioLowerVolume
 # Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+#"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"deadd-volume mute"
    XF86AudioMute
-# Mute microphone
-"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-   XF86AudioMicMute
 #
 # Increase brightness
-"xbacklight -inc 2"
+#"xbacklight -inc 2"
+"deadd-brightness inc"
    XF86MonBrightnessUp
 # Decrease brightness
-"xbacklight -dec 2"
+#"xbacklight -dec 2"
+"deadd-brightness dec"
    XF86MonBrightnessDown
 ##################################
 # End of xbindkeys configuration #

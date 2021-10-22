@@ -1,120 +1,3 @@
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}.{print $3}'
-#1629690284
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2-}{print $3}'
-#1629690289
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2}{print $3}'
-#1629690303
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2$3}'
-#1629690356
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2-4}'
-#1629690368
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2,4}'
-#1629690381
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2,$4}'
-#1629690393
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2,$3,$4}'
-#1629690742
-ls /boot/efi/EFI/Linux/ | awk -F "-" '{print $2,$3,$4}' | tr ' ' '-'
-#1629730412
-ls vmlinuz /boot
-#1629730439
-ls /boot/vmlinuz*
-#1629730939
-sed -i 's/^[^|]*|//' $(ls /boot)
-#1629734484
-kernel
-#1629685574
-zsh
-#1630121964
-printf '%s\n' "${$(ls /boot/efi/EFI/linux)//vmlinuz}"
-#1630121987
-printf '%s\n' "${$(ls /boot/efi/EFI/linux)//'vmlinuz-'}"
-#1630122000
-printf '%s\n' "${ $(ls /boot/efi/EFI/linux)//'vmlinuz-'}"
-#1630122017
-printf '%s\n' "${$(ls /boot/efi/EFI/linux) //'vmlinuz-'}"
-#1630122080
-printf '%s\n' "${$(ls /boot/efi/EFI/linux)//"vmlinuz-"}"
-#1630122241
-printf '%s\n' "${$(/boot/efi/EFI/linux)//vmlinuz-}"
-#1630122370
-printf '%s\n' "${(ls /boot/efi/EFI/linux)//vmlinuz-}"
-#1630122380
-printf '%s\n' "${ls /boot/efi/EFI/linux//vmlinuz-}"
-#1630122486
-printf '%s\n' "$($(ls /boot/efi/EFI/linux)//vmlinuz)"
-#1630122526
-printf '%s\n' "$(ls /boot/efi/EFI/linux)//vmlinuz-"
-#1630122557
-printf '%s\n' ${(ls /boot/efi/EFI/linux)//vmlinuz-}
-#1630122575
-printf '%s\n' ${(ls /boot/efi/EFI/linux) // vmlinuz-}
-#1630122591
-printf '%s\n' ${$(ls /boot/efi/EFI/linux) // vmlinuz-}
-#1630122599
-printf '%s\n' ${$(ls /boot/efi/EFI/linux)//vmlinuz-}
-#1630122618
-printf '%s\n' "${$(ls /boot/efi/EFI/linux)//vmlinuz-}"
-#1630123581
-for
-#1630123712
-for file in /boot/efi/EFI/Linux/; do printf '%s\n' "${file//vmlinuz}"
-#1630123743
-vim function
-#1630122121
-zsh
-#1630123632
-for file in /boot/efi/EFI/Linux/; do
-printf '%s\n' "${file//vmlinuz}"
-#1630123785
-zsh
-#1630290090
-printf '%s\n' "${$(ls /boot | grep vmlinuz)//vmlinuz-}" | grep linux
-#1630290090
-printf '%s\n' "${$(ls /boot | grep vmlinuz)//vmlinuz-}" | grep linux
-#1630290136
-ls boot
-#1630290141
-ls /boot
-#1630290177
-ls /boot | grep linux
-#1630290187
-ls /boot | grep vmlinuz
-#1630290210
-ls /boot | grep vmlinuz-linux
-#1630296705
-help [[
-#1630296766
-[[ -f /boot/*5.13.13* ]]
-#1630296779
-[[ -f /boot/*5.13.13* ]] && echo "yay"
-#1630296792
-[[ -f /boot/vmlinuz ]] && echo "yay"
-#1630296813
-[[ -f /boot/'*5.13.13*' ]] && echo "yay"
-#1630296945
-[[ -f /boot/*"5.13.13"* ]] && echo "yay"
-#1630297390
-[[ -a /boot/*"5.13.13"* ]] && echo "yay"
-#1630297418
-[[ -a /boot/vmlinuz ]] && echo "yay"
-#1630297487
-[[ -n /boot/*"5.13.13"* ]] && echo "yay"
-#1630297508
-[[ -n /boot/*"5.13.9"* ]] && echo "yay"
-#1630297526
-[[ -n /boot/*"5.13.vv"* ]] && echo "yay"
-#1630339743
-sudo ./kernel-testing -c 5.13.13
-#1630592582
-cd
-#1630592587
-zsh
-#1630593097
-nf
-#1630593104
-zsh
-#1630633228
 unitmatrix
 #1630633233
 unimatrix
@@ -921,3 +804,75 @@ vim .xbindkeysrc
 vim .Xmodmap 
 #1634353540
 startx
+startx
+bash
+bash
+#1634396814
+startx
+bash
+bash
+#1634399231
+startx
+#1634422421
+zsh
+#1634422463
+vim .Xresources
+bash
+reboot
+#1634426622
+startx
+#1634426705
+vim .Xresources
+#1634426761
+startx
+bash
+startx
+startx
+bash
+#1634663235
+startx
+bash
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+bash
+#1634753688
+startx
+bash
+startx
+bash
+bash
+#1634777902
+startx
+bash
+#1634869191
+startx
+bash
+#1634869189
+bash
+#1634874518
+startx
+bash
+#1634877148
+startx
+bash
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+bash
+#1634915797
+vim

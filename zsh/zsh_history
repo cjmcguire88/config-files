@@ -1,637 +1,3 @@
-: 1605824338:0;systemctl status iptables
-: 1605824514:0;sudo systemctl start nftables
-: 1605824565:0;systemctl stop firewalld
-: 1605824578:0;systemctl start firewalld
-: 1605824685:0;systemctl enable nftables
-: 1605824889:0;nftables
-: 1605824906:0;man nft
-: 1605824926:0;nft flush ruleset
-: 1605824934:0;sudo nft flush ruleset
-: 1605825101:0;systemctl disable iptables
-: 1605825191:0;systemctl nftables firewalld
-: 1605825203:0;systemctl restart nftables
-: 1605825220:0;systemctl restart firewalld
-: 1605825315:0;sudo pacman -Ru iptables
-: 1605825367:0;cd /etc/firewalld
-: 1605825559:0;sudo pacman -Ss iptables
-: 1605825667:0;sudo pacman -Ss iptables-nft
-: 1605825672:0;sudo pacman -S iptables-nft
-: 1605826257:0;yay -Ss rpfilter
-: 1605826291:0;sudo stop nftables
-: 1605826307:0;sudo systemctl stop nftables
-: 1605826322:0;sudo systemctl restart iptables
-: 1605826333:0;sudo systemctl restart firewalld
-: 1605826362:0;yay -Ss ebtables
-: 1605826383:0;yay -S ebtables
-: 1605826417:0;yay -S iptables
-: 1605826523:0;yay -S iptables-nft
-: 1605826557:0;sudo nvim /etc/firewalld/firewalld.config
-: 1605827159:0;systemctl status firewalld.service
-: 1605827196:0;yay -Ss python-nftables
-: 1605827400:0;cd linux-5.9.6
-: 1605827454:0;rm -r linux-5.9.6
-: 1605827471:0;sudo rm -r linux-5.9.6
-: 1605827485:0;cd linux-5.7.12-MiniBeast-ck
-: 1605827540:0;make xconfig
-: 1605829360:0;cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.9.6-MiniBeast-ck
-: 1605830672:0;ip add show
-: 1605830689:0;route -n
-: 1605831731:0;sudo firewall-cmd state
-: 1605831858:0;sudo firewall-cmd --info-zone
-: 1605832053:0;sudo firewall-cmd --list-all
-: 1605832099:0;sudo firewall-cmd --zone=home
-: 1605832112:0;sudo firewall-cmd --list-all-home
-: 1605833381:0;firewall-cmd --list-ports
-: 1605833408:0;firewall-cmd --list-ports --zone=home
-: 1605833429:0;firewall-cmd --get-active-ones
-: 1605833955:0;sudo pacman -Ru firewalld
-: 1605833975:0;sudo pacman -S ufw
-: 1605834004:0;sudo systemctl enable ufw
-: 1605834173:0;systemctl status ufw
-: 1605834190:0;ufw
-: 1605834194:0;man ufw
-: 1605834222:0;ufw status
-: 1605834226:0;sudo ufw status
-: 1605834261:0;systemctl start sshd
-: 1605834378:0;sudo ufw show
-: 1605834660:0;sudo ufw deny 22
-: 1605834681:0;sudo ufw deny 22/tcp
-: 1605834700:0;sudo systemctl stop sshd
-: 1605834735:0;sudo ufw deny 80/tcp
-: 1605834781:0;sudo ufw enable
-: 1605834801:0;iptables -L
-: 1605834938:0;sudo ufw allow 80/tcp
-: 1605834946:0;sudo iptables -L
-: 1605834980:0;sudo pacman -S gufw
-: 1605848124:0;wait 
-: 1605848175:0;wait -h
-: 1605904586:0;yay -Ss ossed
-: 1605904973:0;yay -S splunk
-: 1605905242:0;sudo systemctl start splunk
-: 1605905350:0;yay -Ss kibana
-: 1605906335:0;sudo systemctl start splunkweb
-: 1605906524:0;yay -S kibana
-: 1605906749:0;sudo systemctl start kibana
-: 1605906827:0;sudo systemctl restart kibana
-: 1605906830:0;sudo systemctl status kibana
-: 1605906858:0;yay -Ru kibana
-: 1605906891:0;yay -Ss rkhunter
-: 1605907173:0;sudo nvim /etc/kibana/kibana.yml
-: 1605907285:0;gpg -recv-keys --keyserver hkp://keys.gnupg.net 801C7171DAC74A6D3A61ED81F7F9B0A300C1B70D,
-: 1605907296:0;gpg -recv-keys --keyserver hkp://keys.gnupg.net 801C7171DAC74A6D3A61ED81F7F9B0A300C1B70D
-: 1605907321:0;gpg --recv-keys --keyserver hkp://keys.gnupg.net 801C7171DAC74A6D3A61ED81F7F9B0A300C1B70D
-: 1605907325:0;yay -S suricata
-: 1605907602:0;gunzip
-: 1605907618:0;gzip suricata-6.0.0.tar.gz
-: 1605907630:0;gzip -h
-: 1605907642:0;gzip -d suricata-6.0.0.tar.gz
-: 1605907652:0;tar -xvf suricata-6.0.0.tar
-: 1605907700:0;./install-sh
-: 1605907789:0;yay -Ss rust
-: 1605907810:0;yay -S rust
-: 1605908114:0;sudo nvim /etc/suricata/suricata.yaml
-: 1605908198:0;ip -d
-: 1605908212:0;ipaddr
-: 1605908280:0;/usr/bin/suricata -c /etc/suricata/suricata.yaml -i eth0
-: 1605908332:0;sudo make install-full
-: 1605908376:0;sudo /usr/bin/suricata -c /etc/suricata/suricata.yaml -i wlan0
-: 1605908398:0;sudo suricata -c /etc/suricata/suricata.yaml -i wlan0
-: 1605908433:0;sudo systemctl start suricata@wlan0.service
-: 1605908471:0;sudo  LD_LIBRARY_PATH=/usr/local/lib /usr/local/bin/suricata -c /usr/local/etc/suricata/suricata.yaml -i wlan0
-: 1605908573:0;suricata -c
-: 1605908673:0;yay -S snorby
-: 1605908778:0;git clone https://github.com/Snorby/snorby.git
-: 1605908830:0;cd snorby
-: 1605908909:0;gem
-: 1605909336:0;cd .build/git/snorby
-: 1605909357:0;gem install bundler
-: 1605909411:0;sudo bundle update --bundler
-: 1605909426:0;sudo gem install bundler
-: 1605909452:0;bundle update --bundler
-: 1605909477:0;yay -Ss bundler
-: 1605909496:0;yay -S ruby-bundler
-: 1605909523:0;sudo bundle install
-: 1605909561:0;bundle exec rake snorby:setup
-: 1605909627:0;gem install bundler:1.10.6
-: 1605909728:0;gem install byebug -v '6.0.0'
-: 1605909816:0;rm -rf Gemfile.lock
-: 1605909821:0;bundle install
-: 1605909863:0;rm -rf snorby
-: 1605910484:0;tar -xzvf splunk-8.1.0.1-24fd52428b5a-Linux-x86_64.tgz
-: 1605910515:0;cd splunk
-: 1605910522:0;cat README-splunk.txt
-: 1605910825:0;yay -Ss splunk
-: 1605910887:0;mv splunk /opt
-: 1605910893:0;sudo mv splunk /opt
-: 1605910950:0;cd /opt/splunk/bin
-: 1605910965:0;splunk start
-: 1605910985:0;./splunk
-: 1605910995:0;./splunk start
-: 1605911312:0;tar -xzvf splunk-ta-for-suricata_233.tgz
-: 1605911320:0;cd TA-Suricata
-: 1605911545:0;yay -S libnet
-: 1605911559:0;suricata
-: 1605911724:0;cd /usr/local/bin/
-: 1605911739:0;./suricatactl
-: 1605911747:0;./suricatactl -h
-: 1605911764:0;man suricata
-: 1605911851:0;suricata -h
-: 1605912966:0;systemctl status suricata
-: 1605913042:0;cd /var/log
-: 1605913082:0;sudo suricata --build-info
-: 1605913136:0;./suricata-update
-: 1605913142:0;sudo ./suricata-update
-: 1605913289:0;./suricata
-: 1605913314:0;./suricata -c suricata.yaml -s signatures.rules -i wlan0
-: 1605913438:0;cd suricata-6.0.0
-: 1605913467:0;./missing
-: 1605913475:0;./missing --help
-: 1605913548:0;sudo mkdir /etc/suricata
-: 1605913570:0;sudo mv suricata.yaml /etc/suricata
-: 1605913577:0;sudo ./suricata -c suricata.yaml -s signatures.rules -i wlan0
-: 1605913606:0;sudo ./suricata -c /etc/suricata/suricata.yaml -s signatures.rules -i wlan0
-: 1605913733:0;sudo tail /var/log/suricata/suricata.log
-: 1605913851:0;cd Downloads/suricata-6.0.0
-: 1605913873:0;cd rules
-: 1605913965:0;sudo nvim suricata.yaml
-: 1605913976:0;cd /usr/local/etc
-: 1605913980:0;cd suricata
-: 1605914104:0;yay -S libnss, libgeoip, liblua5.1, libhiredis, libevent
-: 1605914128:0;yay -S libnss libgeoip liblua5.1 libhiredis libevent
-: 1605914143:0;sudo pacman -S libnss libgeoip liblua5.1 libhiredis libevent
-: 1605914422:0;suricata --build-info
-: 1605914482:0;sudo rm -rf suricata*
-: 1605914533:0;cd log
-: 1605914539:0;ls suricata
-: 1605914552:0;rm -rf suricata
-: 1605914557:0;sudo rm -rf suricata
-: 1605914565:0;which suricata
-: 1605914609:0;cd suricata-6.0.0/
-: 1605914817:0;yay -S snort
-: 1605914841:0;yay -Ss snort
-: 1605914970:0;yay -Ss snort-nfqueue
-: 1605914987:0;yay -S snort-nfqueue
-: 1605915201:0;tar -xzvf snort-2.9.17.tar.gz
-: 1605915205:0;cd snort-2.9.17
-: 1605915319:0;tar -xzvf snort3-3.0.3-1.tar.gz
-: 1605915335:0;rm -rf snort-*
-: 1605915486:0;tar -xzvf daq-3.0.0-beta1.tar.gz
-: 1605915490:0;cd daq-3.0.0-beta1
-: 1605915529:0;systemctl status splunk
-: 1605915549:0;systemctl status splunkd
-: 1605915750:0;git clone https://github.com/snort3/libdaq.git
-: 1605915802:0;./bootstrap
-: 1605915819:0;./configure
-: 1605915950:0;yay -S libdnet
-: 1605915963:0;yay -S hwloc
-: 1605915977:0;yay -S openssl
-: 1605915989:0;yay -S pcap
-: 1605916008:0;yay -S pcre
-: 1605916025:0;yay -S zlib
-: 1605916040:0;cd snort3-3.0.3-1
-: 1605916129:0;yay -S cmake
-: 1605916138:0;./configure_cmake.sh
-: 1605916189:0;sudo make -j5 install
-: 1605916505:0;yay -Q libdaq
-: 1605916515:0;yay -Ss libdaq
-: 1605916544:0;cd libdaq
-: 1605916793:0;sudo cp * /usr/lib/
-: 1605916800:0;sudo cp -r * /usr/lib/
-: 1605916827:0;cd Downloads/snort3-3.0.3-1
-: 1605916830:0;src/snort -V
-: 1605916853:0;sudo src/snort -V
-: 1605917048:0;./snort
-: 1605917060:0;./snort --help
-: 1605917243:0;sudo nvim snort
-: 1605917406:0;sudo chmod +x snort
-: 1605917430:0;snort -V
-: 1605917450:0;snort --V
-: 1605917458:0;snort --help
-: 1605917516:0;sudo rm -rf /bin/snort
-: 1605917700:0;yay -Ss luajit
-: 1605917709:0;yay -S luajit
-: 1605917794:0;cp bin/* ../bin
-: 1605917804:0;sudo cp bin/* ../bin
-: 1605917826:0;cp etc/* ../etc
-: 1605917836:0;sudo cp -r etc/* ../etc
-: 1605917854:0;sudo cp -r include/* ../include
-: 1605917871:0;sudo cp -r lib/* ../lib
-: 1605917892:0;sudo cp -r share/* ../share
-: 1605917921:0;snort
-: 1605918252:0;tar -xzvf snort3-community-rules.tar.gz
-: 1605918259:0;cd snort3-community-rules
-: 1605918330:0;cp snort3-community.rules /usr/local/etc/snort
-: 1605918336:0;sudo cp snort3-community.rules /usr/local/etc/snort
-: 1605918468:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules
-: 1605918684:0;snort -dev -l ./log -h 192.168.1.0/24 -c snort.conf
-: 1605918847:0;cd daqs
-: 1605918922:0;cd /usr/local/lib
-: 1605918962:0;sudo cp -r snort /usr/lib
-: 1605919068:0;ls /usr/lib/daq
-: 1605919131:0;sudo mv /usr/lib/daq/* /usr/lib/
-: 1605919222:0;snort -v --daq-dir=/usr/lib/daq
-: 1605919229:0;snort -v --daq-dir=/usr/lib/daq/
-: 1605919271:0;snort -v
-: 1605919323:0;sudo rm -rf /usr/lib/daq/
-: 1605919360:0;snort -v --daq-dir=/usr/local/lib/daq
-: 1605919384:0;snort -V --daq-dir=/usr/local/lib/daq
-: 1605919424:0;snort -r a.pcap
-: 1605919496:0;snort -i eth0 -L pcap -n 10
-: 1605919535:0;snort -i eth0 -L pcap -n 10 --daq-dir=/usr/local/lib/daq
-: 1605919558:0;sudo snort -i eth0 -L pcap -n 10 --daq-dir=/usr/local/lib/daq
-: 1605919577:0;sudo snort -i wlan0 -L pcap -n 10 --daq-dir=/usr/local/lib/daq
-: 1605919861:0;snort -dev -l ./log -h 192.168.1.0/24 -c /usr/local/etc/snort/snort3-community.rules
-: 1605919997:0;cd snort
-: 1605920076:0;mkdir .pcap
-: 1605920087:0;mv log.pcap.1605919577 .pcap
-: 1605920156:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -r ~/.pcap -A alert_test -n 100000
-: 1605920183:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -r ~/.pcap/log.pcap.1605919577 -A alert_test -n 100000
-: 1605920203:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -A alert_test -n 100000
-: 1605920211:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules -A alert_test -n 100000
-: 1605920347:0;snort -r .pcap/log.pcap.1605919577
-: 1605920375:0;snort -r .pcap/log.pcap.1605919577 --daq-dir=/usr/local/lib/daq/
-: 1605920385:0;sudo snort -r .pcap/log.pcap.1605919577 --daq-dir=/usr/local/lib/daq/
-: 1605920485:0;snort -c
-: 1605920526:0;snort.lua -R
-: 1605920750:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -r <pcap> -A alert_test -n 100000
-: 1605920772:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -r .pcap -A alert_test -n 100000
-: 1605920823:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \ -r .pcap/log.pcap.1605919577 -A alert_test -n 100000
-: 1605920844:0;snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \-r .pcap/log.pcap.1605919577 -A alert_test -n 100000
-: 1605920902:0;sudo snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/snort/snort3-community.rules \-r .pcap/log.pcap.1605919577 -A alert_test -n 100000 --daq-dir=/usr/local/lib/daq
-: 1605921170:0;yay -Ru splunk
-: 1605921182:0;which splunk
-: 1605921247:0;sudo rm -rf /usr/lib/daq*
-: 1605921292:0;sudo rm -rf snort
-: 1605921365:0;ls etc
-: 1605921374:0;rm -rf etc/snort
-: 1605921379:0;sudo rm -rf etc/snort
-: 1605921385:0;ls include
-: 1605921400:0;rm -rf include/*
-: 1605921408:0;sudo rm -rf include/*
-: 1605921468:0;sudo rm -rf lib/lib* snort daq
-: 1605921503:0;sudo rm -rf lib/snort lib/daq
-: 1605921519:0;ls man
-: 1605921524:0;ls man/man1
-: 1605921542:0;ls var
-: 1605921699:0;cd var
-: 1605921753:0;yay -S rkhunter
-: 1605921801:0;sudo bashtop
-: 1605921971:0;sudo rkhunter propupd
-: 1605922800:0;yay -Ss tripwire
-: 1605922823:0;yay -Ss ossec
-: 1605922836:0;yay -Ss wazuh
-: 1605943383:0;ls asm
-: 1605943476:0;ls python
-: 1605943505:0;cat python/useful/keylogger.py
-: 1605943970:0;code prac.c
-: 1605944818:0;cat system-auth
-: 1605944900:0;sudo gufw
-: 1605945378:0;yay -Ss kismet
-: 1605945412:0;yay -S kismet
-: 1605945431:0;man kismet
-: 1605945497:0;sudo kismet
-: 1605947601:0;sudo systemctl restart NetworkManager
-: 1605947764:0;sudo usermod kismet jason
-: 1605947786:0;sudo usermod -aG kismet jason
-: 1605947829:0;systemctl kismet
-: 1605947839:0;systemctl status kismet
-: 1605947880:0;kismet wlan0
-: 1605950052:0;kismet --help
-: 1605987792:0;kismet -c wlan0
-: 1605987960:0;nmap localhost
-: 1605995848:0;file Kismet-20201121-08-38-00-1.kismet
-: 1605995870:0;cat Kismet-20201121-08-38-00-1.kismet
-: 1606001146:0;code scratchpad
-: 1606011825:0;cat connect_four.c
-: 1606022244:0;rm -rf connect_four
-: 1606024949:0;code python/useful/pycomp.py
-: 1606024980:0;python python/useful/pycomp.py
-: 1606092440:0;gc -m 11/22/20
-: 1606094594:0;code ex.c
-: 1606094822:0;gcc -0 ex ex.c
-: 1606098464:0;gcc -o ex ex.c
-: 1606098466:0;./ex
-: 1606098952:0;code ex2.c
-: 1606116541:0;cp connect_four.c .build/git/useless_experimental_snippets
-: 1606116557:0;cd .build/git/useless_experimental_snippets
-: 1606124762:0;mkdir /opt/jason
-: 1606124768:0;sudo mkdir /opt/jason
-: 1606124842:0;erubis
-: 1606124867:0;zstd
-: 1606124993:0;sudo chmod +x /usr/bin/c4
-: 1606125060:0;sudo nvim /usr/bin/c4
-: 1606125360:0;gcc -o connect_four connect_four.c
-: 1606125480:0;cp connect_four /opt/jason
-: 1606125486:0;sudo cp connect_four /opt/jason
-: 1606162791:0;rm -rf *.kismet scratchpad ex ex.c
-: 1606162823:0;cp connect_four c/
-: 1606162845:0;mv connect_four.c c/useful
-: 1606162852:0;rm connect_four
-: 1606164501:0;gcc -o c/connect_four c/useful/connect_four.c
-: 1606164787:0;cp c/useful/connect_four.c .build/git/random-projects
-: 1606165069:0;cd useless_experimental_snippets
-: 1606165076:0;rm connect_four.c
-: 1606165082:0;ga connect_four.c
-: 1606165105:0;rm -rf useless_experimental_snippets
-: 1606165306:0;rm -rf random-projects
-: 1606165314:0;git clone https://github.com/cjmcguire88/random-projects.git
-: 1606165331:0;cp pycomp/pycomp.py random-projects
-: 1606165335:0;cd random-projects
-: 1606165339:0;ga pycomp.py
-: 1606165348:0;gc -m 11/23/20
-: 1606175362:0;systemctl disable ufw
-: 1606175382:0;systemctl stop ufw
-: 1606175405:0;sudo pacman -Ru ufw gufw
-: 1606175419:0;sudo pacman -S firewalld
-: 1606175448:0;sudo systemctl enable firewalld
-: 1606175504:0;man firewalld
-: 1606176187:0;firewall-cmd --state
-: 1606176246:0;firewall-cmd --get-active-zones
-: 1606178026:0;sudo nvim /etc/systemd/system/snapper-timeline.timer
-: 1606178538:0;sudo nvim /etc/systemd/system/snapper-cleanup.timer
-: 1606178791:0;sudo systemctl enable snapper-timeline.timer
-: 1606178814:0;sudo systemctl enable snapper-cleanup.timer
-: 1606178884:0;sudo systemctl start snapper-timeline.timer
-: 1606178898:0;sudo systemctl start snapper-cleanup.timer
-: 1606180178:0;grep -r . /sys/devices/system/cpu/vulnerabilities/
-: 1606183084:0;sudo pacman -Ss wireshark
-: 1606183126:0;sudo pacman -S wireshark
-: 1606183162:0;sudo pacman -S wireshark-cli
-: 1606183447:0;man wireshark
-: 1606183452:0;wireshark
-: 1606183458:0;wireshark-cli
-: 1606183486:0;ws
-: 1606183493:0;wc
-: 1606254403:0;cd KDE
-: 1606254537:0;cp plasma-org.kde.plasma.desktop-appletsrc ~/Documents
-: 1606254583:0;cp plasmashellrc plasmarc ~/Documents
-: 1606256458:0;sudo pacman -S openvpn
-: 1606256493:0;sudo openvpn Downloads/xXmercXx.ovpn
-: 1606257423:0;yay -Ss searchsploit
-: 1606268318:0;sudo pacman
-: 1606273166:0;ss -t
-: 1606273217:0;wait ss -t
-: 1606273275:0;yay -Ss netstat
-: 1606273290:0;netstat-net
-: 1606273296:0;netstat-nat
-: 1606437609:0;code a.c
-: 1606438445:0;gcc -o num a.c
-: 1606438447:0;./num
-: 1606438681:0;rm a.c
-: 1606438683:0;hbvfffffffffffffffffffffffffffffhbvffffffffffffffffffffffffbhvffffffffffffffffffffffvfhbbbbbbbbbbbbbbbbbbbvfhbbbbbbbbbbbbbbbbbbbbvffvbhhhhhhhhhhhhhhhhhfhbvvvvvvvv
-: 1606465083:0;code print_ram.c
-: 1606552944:0;cat bandit20.txt
-: 1606609675:0;ls arch/packages
-: 1606609839:0;cp /usr/src/linux-5.9.6-MiniBeast/.config .build/git/linux-5.7.12-MiniBeast-ck/
-: 1606609849:0;cd .build/git/linux-5.7.12-MiniBeast-ck
-: 1606609869:0;gc -m 11/28/20
-: 1606609903:0;rm -rf linux-5.7.12-MiniBeast-ck
-: 1606609921:0;sudo rm -rf linux-5.7.12-MiniBeast-ck
-: 1606629149:0;cd /etc/systemd/system
-: 1606633231:0;rm -rf num kodi*
-: 1606633268:0;cd .cargo/registry/
-: 1606633278:0;ls index
-: 1606633295:0;ls .designer
-: 1606633332:0;ls .games
-: 1606633372:0;ls .kde4
-: 1606633424:0;ls .pcap
-: 1606633439:0;cat .pcap/log.pcap.1605919577
-: 1606633448:0;sudo cat .pcap/log.pcap.1605919577
-: 1606633482:0;ls .splunk
-: 1606633488:0;rm -rf .splunk
-: 1606633520:0;\ls .subversion
-: 1606633530:0;cat .subversion/config
-: 1606633577:0;ls .projectM
-: 1606633583:0;cat .projectM/config.inp
-: 1606633611:0;rm -rf .projectM
-: 1606633624:0;ls .themes
-: 1606633642:0;ls .wine
-: 1606633688:0;ls .ccache
-: 1606633806:0;rm -rf Maui/ 
-: 1606633817:0;ls plasmashell
-: 1606633846:0;ls .android
-: 1606633871:0;ls .nv
-: 1606633881:0;ls .newsboat
-: 1606633888:0;ls .npm
-: 1606634826:0;sudo pacman -Ss ipset
-: 1606635780:0;systemctl status wpa_supplicant.service
-: 1606636419:0;sudo pacman -Ru pulseeffects
-: 1606637993:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw' --verbose
-: 1606638563:0;cd System\ Volume\ Information
-: 1606638849:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch Linux" --loader /boot/vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw' --verbose
-: 1606639513:0;efibootmgr -v
-: 1606639895:0;ls efi
-: 1606639907:0;ls efi/EFI
-: 1606640214:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux-MiniBeast" --loader /boot/vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=/intel-ucode.img' --verbose
-: 1606640878:0;sudo cp vmlinuz-linux-5.9.6-MiniBeast efi/EFI/vmlinuz-linux-5.9.6-MiniBeast.efi
-: 1606641053:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux-MiniBeast" --loader /vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=/intel-ucode.img' --verbose
-: 1606641775:0;sudo cp /boot/intel-ucode.img /boot/efi/EFI
-: 1606641809:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux" --loader /vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=/intel-ucode.img' --verbose
-: 1606641890:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux" --loader /vmlinuz-linux-5.9.6-MiniBeast.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=/intel-ucode.img' --verbose
-: 1606642003:0;cp Documents/plasma-org.kde.plasma.desktop-appletsrc Documents/plasmarc Documents/plasmashellrc .config
-: 1606642801:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux" --loader \EFI\vmlinuz-linux-5.9.6-MiniBeast.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=\EFI\intel-ucode.img' --verbose
-: 1606642837:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux2" --loader \vmlinuz-linux-5.9.6-MiniBeast.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=\intel-ucode.img' --verbose
-: 1606644892:0;nvim kernel-command-line.txt
-: 1606645315:0;objcopy \\
-    --add-section .osrel="/usr/lib/os-release" --change-section-vma .osrel=0x20000 \\
-    --add-section .cmdline="kernel-command-line.txt" --change-section-vma .cmdline=0x30000 \\
-    --add-section .splash="/usr/share/systemd/bootctl/splash-arch.bmp" --change-section-vma .splash=0x40000 \\
-    --add-section .linux="/boot/vmlinuz-linux-5.9.6-MiniBeast" --change-section-vma .linux=0x2000000 \\
-    "/usr/lib/systemd/boot/efi/linuxx64.efi.stub" "linux.efi"
-: 1606645327:0;cat linux.efi
-: 1606645375:0;sudo mv linux.efi /boot/efi/EFI
-: 1606645594:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux" --loader \EFI\linux.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=\EFI\intel-ucode.img' --verbose
-: 1606645639:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux2" --loader /linux.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=\EFI\intel-ucode.img' --verbose
-: 1606645657:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Linux3" --loader \linux.efi --unicode 'root=PARTUUID=28cd9033-5d61-744f-913f-13b2774f2704 rw initrd=\EFI\intel-ucode.img' --verbose
-: 1606647558:0;rm -rf intel-ucode.img linux.efi vmlinuz-linux-5.9.6-MiniBeast
-: 1606647563:0;sudo rm -rf intel-ucode.img linux.efi vmlinuz-linux-5.9.6-MiniBeast
-: 1606647600:0;mkdir efi/EFI/kernels
-: 1606647605:0;sudo mkdir efi/EFI/kernels
-: 1606647631:0;sudo mkdir efi/EFI/initrd
-: 1606647680:0;cp initramfs-linux.img intel-ucode.img efi/EFI/initrd
-: 1606647686:0;sudo cp initramfs-linux.img intel-ucode.img efi/EFI/initrd
-: 1606647723:0;sudo cp vmlinuz-linux vmlinuz-linux-5.9.6-MiniBeast efi/EFI/kernels
-: 1606647989:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch MB" --loader /vmlinuz-linux-5.9.6-MiniBeast --unicode 'root=/dev/sda3 rw initrd=\EFI\initrd\intel-ucode.img' --verbose
-: 1606648067:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch" --loader /vmlinuz-linux --unicode 'root=/dev/sda3 rw initrd=\EFI\initrd\initramfs-linux.img' --verbose
-: 1606648097:0;sudo efibootmgr -b 6 -B
-: 1606648175:0;sudo cp kernels/* .
-: 1606648197:0;sudo rm -rf kernels
-: 1606648353:0;ls GRUB
-: 1606648369:0;mv vmlinuz-linux vmlinuz-linux.efi
-: 1606648375:0;sudo mv vmlinuz-linux vmlinuz-linux.efi
-: 1606648427:0;sudo mv vmlinuz-linux-5.9.6-MiniBeast vmlinuz-linux-5.9.6-MiniBeast.efi
-: 1606648471:0;sudo efibootmgr -b 7 -B
-: 1606648478:0;sudo efibootmgr -b 8 -B
-: 1606648536:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch" --loader /vmlinuz-linux.efi --unicode 'root=/dev/sda3 rw initrd=\EFI\initrd\initramfs-linux.img' --verbose
-: 1606648572:0;sudo efibootmgr --disk /dev/sda --part 1 --create --label "Arch MB" --loader /vmlinuz-linux-5.9.6-MiniBeast.efi --unicode 'root=/dev/sda3 rw initrd=\EFI\initrd\intel-ucode.img' --verbose
-: 1606682606:0;sudo rm -rf initrd vmlinuz-linux-5.9.6-MiniBeast.efi vmlinuz-linux.efi
-: 1606682894:0;ls loader/entries
-: 1606683678:0;sudo cp intel-ucode vmlinuz-linux-5.9.6-MiniBeast efi/EFI
-: 1606683692:0;sudo cp intel-ucode.img vmlinuz-linux-5.9.6-MiniBeast efi/EFI
-: 1606683748:0;sudo efibootmgr -b 4 -B
-: 1606683753:0;sudo efibootmgr -b 5 -B
-: 1606684264:0;sudo mv intel-ucode.img vmlinuz-linux-5.9.6-MiniBeast ../
-: 1606684404:0;cat /usr/share/systemd/bootctl/loader.conf
-: 1606684712:0;df -Th /boot/efi
-: 1606684745:0;sudo mv intel-ucode.img vmlinuz-linux-5.9.6-MiniBeast EFI
-: 1606684800:0;sudo mv vmlinuz-linux-5.9.6-MiniBeast Linux
-: 1606684825:0;sudo nvim entries/MiniBeast.conf
-: 1606685253:0;sudo cp vmlinuz-linux efi/EFI/Linux
-: 1606685289:0;sudo cp initramfs-linux.img efi/EFI
-: 1606685300:0;cd efi/loader/entries
-: 1606685322:0;sudo cp MiniBeast.conf linux.conf
-: 1606686772:0;sudo nvim linux.conf
-: 1606687173:0;cat linux.conf
-: 1606687276:0;cp MiniBeast.conf MiniBeast-ck.conf
-: 1606687280:0;sudo cp MiniBeast.conf MiniBeast-ck.conf
-: 1606687380:0;sudo cp vmlinuz-linux-5.9.6-MiniBeast-ck efi/EFI/Linux
-: 1606687411:0;sudo cp initramfs-linux-5.9.6-MiniBeast-ck efi/EFI
-: 1606687420:0;sudo cp initramfs-linux-5.9.6-MiniBeast-ck.img efi/EFI
-: 1606687507:0;sudo nvim MiniBeast-ck.conf
-: 1606687664:0;=..
-: 1606688248:0;cd /boot/efi/loader/
-: 1606688444:0;sudo efibootmgr -o 6,1,0
-: 1606689092:0;cd drivers/video/logo
-: 1606689114:0;feh logo_linux_mono.pbm
-: 1606689130:0;feh logo_linux_clut224.ppm
-: 1606689150:0;feh logo_mac_clut224.ppm
-: 1606689171:0;feh logo_sgi_clut224.ppm
-: 1606689187:0;feh logo_linux_vga16.ppm
-: 1606689202:0;feh logo_dec_clut224.ppm
-: 1606689213:0;feh clut_vga16.ppm
-: 1606689234:0;feh logo_parisc_clut224.ppm
-: 1606689631:0;yay -Ss netpbm
-: 1606689639:0;yay -S netpbm
-: 1606690363:0;gimp Downloads/logo.jpg
-: 1606690618:0;ppmquant 224 Downloads/logo.ppm > logo_224.ppm
-: 1606690654:0;pnmnoraw logo_224.ppm > logo.ppm
-: 1606690666:0;rm -rf logo_224.ppm
-: 1606690670:0;feh logo.ppm
-: 1606691301:0;rm -rf logo*
-: 1606691312:0;rm -rf kernel-command-line.txt
-: 1606691385:0;yay -Ru netpbm
-: 1606691402:0;bootctl list
-: 1606692097:0;sudo cp arch/x86_64/boot/bzImage /boot/efi/EFI/Linux/vmlinuz-linux-5.9.6-MiniBeast-ck
-: 1606692112:0;sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.9.6-MiniBeast-ck
-: 1606692157:0;sudo mkinitcpio -p linux-5.9.6-MiniBeast-ck
-: 1606692203:0;sudo cp /boot/initramfs-linux-5.9.6-MiniBeast-ck.img /boot/efi/EFI/initramfs-linux-5.9.6-MiniBeast-ck.img
-: 1606693070:0;sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.9.6-MiniBeast
-: 1606693095:0;make modules_install
-: 1606693173:0;sudo rm -rf vmlinuz-linux vmlinuz-linux-5.9.6-MiniBeast
-: 1606693192:0;sudo rm -rf initramfs-linux.img
-: 1606693218:0;rm -rf MiniBeast.conf linux.conf
-: 1606693222:0;sudo rm -rf MiniBeast.conf linux.conf
-: 1606693565:0;lsattr
-: 1606693655:0;systemd-analyze time
-: 1606694523:0;telinit 6
-: 1606768369:0;cat kde.org/plasmashell.conf
-: 1606768380:0;cat kde.org/systemsettings.conf
-: 1606768397:0;cat kde.org/UserFeedback.org.kde.plasmashell.conf
-: 1606768443:0;cat KDE/UserFeedback.conf
-: 1606768482:0;cat ksplashrc
-: 1606769327:0;cat Trolltech.conf
-: 1606770006:0;ss -h
-: 1606770071:0;ss -4
-: 1606770083:0;ss -6
-: 1606770099:0;ss -0
-: 1606770799:0;sudo pacman -Ru gnome-desktop
-: 1606770812:0;sudo pacman -Q gnome-desktop
-: 1606770834:0;sudo pacman -Q index
-: 1606771567:0;yay -Ss plymouth
-: 1606771602:0;yay -S plymouth
-: 1606771917:0;plymouth
-: 1606772041:0;yay -Ru plymouth
-: 1606772070:0;sudo mkinitcpio -p *
-: 1606778246:0;nmap 127.0.0.1
-: 1606778275:0;nmap -Sn 127.0.0.1
-: 1606785497:0;cd applications
-: 1606785529:0;cd jason
-: 1606785554:0;sudo pacman -Ru splunk
-: 1606785567:0;rm -rf splunk
-: 1606785572:0;sudo rm -rf splunk
-: 1606785611:0;cd neofetch
-: 1606785982:0;nvim config.conf
-: 1606857830:0;feh 2020-12-01-162338_1920x1080_scrot.png
-: 1606858740:0;mv 2020-12-01-162338_1920x1080_scrot.png Pictures/Screenshots
-: 1606859190:0;cd c/useful
-: 1606859198:0;code connect_four.c
-: 1606861044:0;df -Th sda
-: 1606861062:0;df -Th /dev/sda3
-: 1606861080:0;df -Th /dev/sda[1-3
-: 1606861086:0;df -Th /dev/sda[1-3]
-: 1606861096:0;df -Th /dev/sda[1-5]
-: 1606861114:0;df -Th /dev/sda[1-4]
-: 1606861361:0;df -Th /boot/efi /boot / /home /var /Games
-: 1606861497:0;df -Th /boot/efi /boot / /home /var /home/jason/Games
-: 1606861611:0;feh 2020-12-01-172640_1920x1080_scrot.png
-: 1606899281:0;code ram.c
-: 1606900177:0;rm 2020-12-01-172640_1920x1080_scrot.png
-: 1606901196:0;cat wiram.c
-: 1606901303:0;code wiram.c
-: 1606901313:0;gcc -o ram ram.c
-: 1606966181:0;svn update firewalld
-: 1606966987:0;rm -rf breeze
-: 1606967164:0;rm -rf
-: 1606967173:0;rm -rf kactivitymanagerd
-: 1606967312:0;gpg --recv-keys --keyserver hkp://keys.gnupg.net D55D978A8A1420E4
-: 1606967920:0;rm -rf plasma-integration
-: 1606968009:0;rm -rf plasma-nm
-: 1606968235:0;cd plasma-sdk/trunk
-: 1606968772:0;rm -rf powerdevil
-: 1606969123:0;svn update python
-: 1606969128:0;cd python/trunk
-: 1606969242:0;gpg --recv-keys --keyserver hkp://keys.gnupg.net B26995E310250568
-: 1607331345:0;sudo pacman -Ss python-dlib
-: 1607331565:0;ls autocomplete
-: 1607331580:0;ls howdy
-: 1607331793:0;pip3
-: 1607331805:0;sudo pacman -Ss pip
-: 1607331864:0;sudo pacman -S python-pip
-: 1607331878:0;pip
-: 1607331927:0;yay -Ss python-wheel
-: 1607331952:0;yay -S python-wheel
-: 1607332241:0;pip install dlib
-: 1607416425:0;git clone git clone https://git.suckless.org/dwm\
-
-: 1607416619:0;nvim config.def.h
-: 1607417009:0;nvim config.mk
-: 1607417075:0;nvim transient.c
-: 1607417101:0;nvim util.c
-: 1607417128:0;nvim dwm.1
-: 1607417159:0;nvim dwm.c
-: 1607417313:0;rm -rf dwm howdy 
-: 1607417354:0;nvim config.h
-: 1607483779:0;yay -Ss auto-cpufreq
-: 1607483795:0;yay -S auto-cpufreq
-: 1607484051:0;sudo auto-cpufreq
-: 1607484343:0;sudo auto-cpufreq --live
-: 1607484372:0;sudo systemctl enable auto-cpufreq
-: 1607485026:0;auto-cpufreq
-: 1607485052:0;sudo auto-cpufreq --monitor
-: 1607485205:0;tlp-ui
-: 1607485233:0;sudo systemctl status tlpui
-: 1607485293:0;yay -S tlpui
-: 1607485319:0;tlpui
-: 1607485924:0;nvim /etc/tlp.conf
-: 1607485963:0;sudo nvim /etc/tlp.conf
-: 1607485995:0;ls /etc/tlp.d
-: 1607486012:0;cat /etc/tlp.d/00-template.conf
-: 1607486434:0;sudo systemctl start auto-cpufreq
-: 1607486440:0;sudo systemctl status auto-cpufreq
-: 1607486924:0;sudo systemctl status tlp
-: 1607486961:0;sudo auto-cpufreq --log
-: 1607487411:0;sudo systemctl stop auto-cpufreq
-: 1607487425:0;sudo systemctl disable auto-cpufreq
-: 1607487438:0;yay -Ru auto-cpufreq
-: 1607504238:0;code python/useful/pong.py
-: 1607504249:0;python /home/jason/.vscode-oss/extensions/ms-python.python-2020.10.332292344/pythonFiles/pyvsc-run-isolated.py pip install -U pylint --user
-: 1607504316:0;python python/useful/pong.py
-: 1607590544:0;ls ../.snapshots
-: 1607590680:0;sudo ls ../.snapshots/12
-: 1607590689:0;sudo ls ../.snapshots/12/snapshot
-: 1607590697:0;sudo ls ../.snapshots/12/snapshot/jason
-: 1607590957:0;rm -rf /etc/mkinitcpio.d/linux-5.7.12-MiniBeast-ck.preset
-: 1607590964:0;sudo rm -rf /etc/mkinitcpio.d/linux-5.7.12-MiniBeast-ck.preset
 : 1607591196:0;yay -S grub-btrfs
 : 1607934689:0;sudo rk-hunter
 : 1607934719:0;sudo rkhunter --check
@@ -906,7 +272,6 @@
 : 1611875659:0;cat /etc/xdg/nvim/sysinit.vim
 : 1611877305:0;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 : 1611877353:0;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-: 1611877624:0;vainfo
 : 1611877638:0;sudo pacman -Q
 : 1611886796:0;kwrite Downloads/banned_hosts.txt
 : 1611887078:0;sudo kwrite /etc/hosts
@@ -1236,7 +601,6 @@ ureh hee\
 : 1612307420:0;compile_desktop
 : 1612308118:0;ls bspwm
 : 1612308134:0;ls bspwm/trunk
-: 1612308971:0;man bspwm
 : 1612309019:0;sxhkd
 : 1612309184:0;main
 : 1612309418:0;search bpytop
@@ -1502,7 +866,6 @@ ureh hee\
 : 1613072703:0;code
 : 1613073547:0;rm -rf sddm
 : 1613074242:0;cat /proc/meminfo | grep Huge
-: 1613074287:0;cat /sys/kernel/mm/transparent_hugepage/enabled
 : 1613089331:0;man pactl
 : 1613265205:0;sudo systemctl disable man-db
 : 1613306759:0;search entr
@@ -1941,7 +1304,6 @@ cd bbr/
 : 1614631933:0;lynis
 : 1614632290:0;systemctl disable auditd
 : 1614632329:0;systemctl stop auditd
-: 1614632470:0;cat /etc/issue
 : 1614637334:0;grep -r '^psk=' /etc/NetworkManager/system-connections/
 : 1614637343:0;sudo grep -r '^psk=' /etc/NetworkManager/system-connections/
 : 1614637789:0;drill archlinux.org | grep "Query time"\
@@ -1989,7 +1351,6 @@ cd bbr/
 : 1614689114:0;local
 : 1614689135:0;man local
 : 1614689240:0;i
-: 1614689250:0;man d
 : 1614689261:0;s
 : 1614689304:0;if
 : 1614689475:0;install fzf
@@ -2948,7 +2309,6 @@ Total' >> f.txt\
 : 1616092849:0;la src
 : 1616092900:0;cd /lib/modules/5.11.7-arch1-1
 : 1616093137:0;cd 5.11.6-MiniBeast
-: 1616093219:0;cd build
 : 1616093634:0;la ../
 : 1616093728:0;ls 5.11.6-MiniBeast/kernel
 : 1616093737:0;ls 5.11.6-MiniBeast/kernel/arch
@@ -3073,7 +2433,6 @@ Total' >> f.txt\
 : 1616284985:0;cat environment
 : 1616285405:0;cat .zsh_history | grep pkglist.txt
 : 1616285413:0;cat .zshrc
-: 1616285985:0;printenv
 : 1616286054:0;cp .zshrc .build/git/config-files
 : 1616295985:0;search dm-verity
 : 1616297306:0;cp suckless-st-fork ./st-backup
@@ -3104,7 +2463,6 @@ Total' >> f.txt\
 : 1616310357:0;search nix
 : 1616310391:0;lsof
 : 1616312577:0;export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-: 1616312628:0;man bspc
 : 1616341644:0;gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 3353C9CEF108B584)
 : 1616341649:0;gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 3353C9CEF108B584
 : 1616341656:0;compile libvirt qemu
@@ -3505,7 +2863,6 @@ Total' >> f.txt\
 : 1616903223:0;gunzip -f dmenu-5.0.tar.gz
 : 1616903234:0;tar -xvf dmenu-5.0.tar
 : 1616903245:0;rm -rf dmenu-5.0.tar
-: 1616903249:0;cd dmenu-5.0
 : 1616903334:0;gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 F3D322D0EC4582C3
 : 1616903647:0;search dmenu
 : 1616904006:0;dmenu -m 0
@@ -3516,7 +2873,6 @@ Total' >> f.txt\
 : 1616904363:0;dmenu -p
 : 1616904685:0;compile webkit2gtk
 : 1616904836:0;install dmenu
-: 1616904842:0;dmenu
 : 1616904852:0;dmenu -b
 : 1616905354:0;cd .build/git/dmenu-5.0
 : 1616908954:0;cd .build/git/surf-2.0
@@ -3526,8 +2882,6 @@ Total' >> f.txt\
 : 1616909043:0;rm -rf surf-2.0.tar
 : 1616909060:0;cp surf-2.0 surf-2.0bak
 : 1616909070:0;cp -r surf-2.0 surf-2.0bak
-: 1616909103:0;wget https://surf.suckless.org/patches/smoothscrolling-via-GTK3/surf-0.7-smoothscrolling.diff
-: 1616909109:0;patch -p1 < surf-0.7-smoothscrolling.diff
 : 1616909140:0;rm -rf surf-2.0bak && cp -r surf-2.0 surf-2.0bak
 : 1616909146:0;cd surf-2.0bak
 : 1616909195:0;cd surf-2.0
@@ -3541,7 +2895,6 @@ Total' >> f.txt\
 : 1616944888:0;gpg --recv-keys --keyserver hkps://hkps.pool.sks-keyservers.net:443 72D23FBAC99D4E75
 : 1616944902:0;cd groff/trunk
 : 1616945084:0;man groff
-: 1616949079:0;cd cava
 : 1616951908:0;cava -p .config/cava/config
 : 1616957230:0;ga st config.h st.o x.o
 : 1616957416:0;ls /etc/*
@@ -3611,7 +2964,6 @@ Total' >> f.txt\
 : 1617107174:0;systemctl -t service
 : 1617111125:0;systemd-cgtop
 : 1617115217:0;ls /
-: 1617115223:0;la /
 : 1617118779:0;wget https://youtu.be/sPpIeIIU-UU
 : 1617118804:0;vlc sPpIeIIU-UU
 : 1617119551:0;la /bin | grep sh
@@ -3620,7 +2972,6 @@ Total' >> f.txt\
 : 1617119597:0;la /bin/ | grep sh
 : 1617119607:0;la /bin/ | grep -e sh
 : 1617119817:0;sa | lolcat
-: 1617119916:0;gimp
 : 1617120979:0;for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done
 : 1617121087:0;zsh -xv
 : 1617121693:0;search chroma
@@ -3997,7 +3348,6 @@ Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 : 1617568612:0;remove kscreen
 : 1617569266:0;cd kscreen/trunk
 : 1617570054:0;bspc query -M --names
-: 1617570058:0;xrandr -q
 : 1617587727:0;ga bspwmrc pkglist.txt sxhkdrc
 : 1617587744:0;gc -m 4/4/21
 : 1617608886:0;watch echo angel is a nigger
@@ -4324,8 +3674,6 @@ Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 : 1618544369:0;compile liburing
 : 1618544647:0;search intellij
 : 1618544705:0;install intellij-idea-community-edition
-: 1618546872:0;search ytop
-: 1618546890:0;install ytop
 : 1618591512:0;update-mirrors
 : 1618591787:0;sudo cp linux-5.11.14-MiniBeast.preset linux-5.11.15-MiniBeast.preset
 : 1618591803:0;sudoedit linux-5.11.15-MiniBeast.preset
@@ -4355,7 +3703,6 @@ Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 : 1618607359:0;cd ../plasma-desktop
 : 1618608040:0;echo %n
 : 1618608685:0;p10k configure
-: 1618610654:0;d
 : 1618612328:0;cd colors
 : 1618612341:0;vim config.h.onedark
 : 1618613921:0;rm -rf linux-5.11.15.tar ChangeLog-5.11.14 nerd-fonts Public Templates Videos Music
@@ -4689,7 +4036,6 @@ git checkout google-bbr/v2alpha
 : 1618869363:0;cd steamapps/common/Grand\ Theft\ Auto\ V
 : 1618869569:0;remove firefox
 : 1618869594:0;compile protobuf
-: 1618869860:0;cat .config/bspwm/bspwmrc
 : 1618871054:0;search systemd-homed
 : 1618871207:0;vim homed.conf
 : 1618871371:0;diff homed.conf homed.conf.pacnew
@@ -4945,19 +4291,14 @@ git checkout google-bbr/v2alpha
 : 1619129960:0;wget https://dwm.suckless.org/patches/functionalgaps/dwm-functionalgaps+pertag-6.2.diff
 : 1619130033:0;wget https://dwm.suckless.org/patches/focusmaster/dwm-focusmaster-20200717-bb2e722.diff
 : 1619130206:0;cat dwm.c.rej
-: 1619130416:0;wget https://dwm.suckless.org/patches/functionalgaps/dwm-functionalgaps-6.2.diff
 : 1619130441:0;wget https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfullscreen-20191112-cb3f58a.diff
 : 1619130469:0;patch -p1 dwm-actualfullscreen-20191112-cb3f58a.diff
-: 1619130793:0;patch -p1 < dwm-functionalgaps-6.2.diff
 : 1619130826:0;cp dwm-actualfullscreen-20191112-cb3f58a.diff dwm-functionalgaps-6.2.diff ..
-: 1619130843:0;rm -rf dwm-6.2
 : 1619130848:0;tar -xvf dwm-6.2.tar
 : 1619130866:0;mv dwm-functionalgaps-6.2.diff dwm-actualfullscreen-20191112-cb3f58a.diff dwm-6.2
-: 1619130870:0;cd dwm-6.2
 : 1619130919:0;wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 : 1619130939:0;patch -p1 < dwm-fullgaps-6.2.diff
 : 1619130947:0;patch -p1 < dwm-actualfullscreen-20191112-cb3f58a.diff
-: 1619130981:0;search dwm
 : 1619132152:0;mv .tmux/.tmux.conf.local ./
 : 1619132199:0;ls .tmux
 : 1619132203:0;la .tmux
@@ -4970,7 +4311,6 @@ git checkout google-bbr/v2alpha
 : 1619133476:0;cp /usr/share/doc/polybar/config ./
 : 1619133483:0;cat config
 : 1619134767:0;search networkmanager_dmenu
-: 1619135061:0;install networkmanager-dmenu-git
 : 1619135102:0;git clone git@github.com:adi1090x/polybar-themes.git
 : 1619135424:0;install calc
 : 1619135543:0;./launch.sh --material
@@ -4983,8 +4323,6 @@ git checkout google-bbr/v2alpha
 : 1619136719:0;nmcli --ask dev wifi PureBroadband_892838
 : 1619136780:0;sudo nmcli --ask dev wifi connect PureBroadband_892838
 : 1619136937:0;nmcli con delete PureBroadband_892838
-: 1619138279:0;search  mpd
-: 1619138556:0;feh
 : 1619138574:0;tldr feh
 : 1619138638:0;seh --bg-scale Pictures/Wallpapers/skulls.jpeg
 : 1619138648:0;feh --bg-scale Pictures/Wallpapers/skulls.jpeg
@@ -4999,7 +4337,6 @@ git checkout google-bbr/v2alpha
 : 1619139326:0;./preview.sh
 : 1619139687:0;remove polybar
 : 1619139721:0;rm -rf .config/polybar*
-: 1619140314:0;man rofi
 : 1619141292:0;ddld
 : 1619145203:0;search kdeconnect
 : 1619145599:0;scstatus kdeconnect
@@ -5092,7 +4429,6 @@ git checkout google-bbr/v2alpha
 : 1619236902:0;rm -rf chromium*
 : 1619237151:0;sudo chown -R jason:jason {.cache,.config}/chromium*
 : 1619237327:0;ls chromium
-: 1619237400:0;cd chromium
 : 1619237487:0;chown -R jason:jason *
 : 1619237505:0;rm -rf Singleton*
 : 1619237526:0;rm -rf .cache/chromium
@@ -5377,7 +4713,6 @@ git checkout google-bbr/v2alpha
 : 1619832067:0;rm -rf vifm
 : 1619832145:0;cd common
 : 1619832498:0;install wine
-: 1619832825:0;cd .local
 : 1619832828:0;fzf
 : 1619833298:0;search dxvk
 : 1619834525:0;du sda3
@@ -5708,7 +5043,6 @@ git checkout google-bbr/v2alpha
 : 1620253008:0;compile sddm linux-firmware
 : 1620262965:0;youtube-dl
 : 1620263561:0;youtube-dl https://www.youtube.com/watch\?v\=xHu7qI1gDPA\&t\=333s
-: 1620263646:0;.
 : 1620263658:0;vlc Unix\ system\ calls\ \(1_2\)-xHu7qI1gDPA.webm
 : 1620263683:0;youtube-dl https://www.youtube.com/watch\?v\=2DrjQBL5FMU
 : 1620337022:0;compile networkmanager
@@ -5941,7 +5275,6 @@ git checkout google-bbr/v2alpha
 : 1620678443:0;mv compile compile.bak
 : 1620678519:0;cd ~/.config/compile
 : 1620678566:0;cp compile-testing compile/compile
-: 1620679762:0;ls *
 : 1620679937:0;ls /opt/sources/packages >> packages.txt
 : 1620679956:0;rm  packages.txt
 : 1620679967:0;l /opt/sources/packages >> packages.txt
@@ -5993,7 +5326,6 @@ git checkout google-bbr/v2alpha
 \
 
 : 1620780662:0;gc -m install.sh_call_zsh_not_bash
-: 1620780726:0;neofetch
 : 1620780785:0;wget https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.12.2
 : 1620780804:0;cat ChangeLog-5.12.2| grep btrfs
 : 1620780810:0;cat ChangeLog-5.12.2| grep intel
@@ -6051,7 +5383,6 @@ git checkout google-bbr/v2alpha
 : 1620834591:0;git clone git@github.com:jdah/minecraft-weekend.git
 : 1620834778:0;git clone --recurse-submodules https://github.com/jdah/minecraft-weekend.git
 : 1620834805:0;cd minecraft-weekend
-: 1620834814:0;cd lib
 : 1620834895:0;cd cglm
 : 1620834986:0;./configure.ac
 : 1620835011:0;cat README.md
@@ -6264,7 +5595,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1621051893:0;ls Webcam
 : 1621051898:0;rm -rf Webcam
 : 1621051906:0;rm -rf minecraft-weekend
-: 1621052691:0;cat MiniBeast.conf
 : 1621053145:0;sudo update-sysdboot 5.12.3
 : 1621078730:0;update-sysdboot 5.12.3
 : 1621087954:0;sudo pacman -Syyu
@@ -6353,7 +5683,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1621192915:0;compile qemu libvirtd
 : 1621195971:0;rm -rf kernel_install kernel_remove
 : 1621195986:0;gc -m 5/16/21
-: 1621196110:0;mkdir scripts
 : 1621196197:0;cp ~/.local/bin/{kernel_install,kernel_patch,kernel_remove,git_sync} ./
 : 1621196204:0;git init
 : 1621196239:0;ga git_sync kernel_install kernel_patch kernel_remove
@@ -6367,10 +5696,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1621198750:0;cat .dmrc
 : 1621198772:0;cat .emulator_console_auth_token
 : 1621198794:0;cat .fonts.conf
-: 1621198811:0;vim .lesshst
-: 1621198855:0;vim .npmrc
-: 1621198893:0;vim .osh-update
-: 1621198907:0;vim .python_history
 : 1621198924:0;rm .python_history
 : 1621198931:0;cat .rnd
 : 1621198940:0;cat .viminfo
@@ -6634,7 +5959,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1621463341:0;sudo update-sysdboot 5.12.5
 : 1621464553:0;kernel_install 5.12.3
 : 1621466795:0;mv .local/bin/update-sysdboot .local/bin/update-boot
-: 1621467354:0;sudo update-boot
 : 1621468500:0;ga git_sync
 : 1621468524:0;gc -m "Added files"
 : 1621468701:0;ga update-boot
@@ -6823,7 +6147,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1621702056:0;qwdjqwi
 : 1621702069:0;echo $127
 : 1621708313:0;echo file{1..4}.dat
-: 1621708359:0;cd shell
 : 1621708369:0;vim test.h
 : 1621708489:0;kernel_cl 5.12.6
 : 1621708527:0;rm -rf ChangeLog-5.12.6
@@ -7092,7 +6415,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1622403783:0;vim .config/zsh/zshrc.tmp
 : 1622403928:0;mv zshrc.tmp .zshrc2
 : 1622404074:0;source .config/zsh/.zshrc2
-: 1622405735:0;source .config/zsh/.zshrc
 : 1622406206:0;ztheme crcandy
 : 1622406216:0;ll /usr/share/oh-my-zsh/themes
 : 1622406228:0;ztheme maran
@@ -7160,7 +6482,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1622665797:0;sudo mv pacman.conf.pacnew pacman.conf
 : 1622666308:0;l doc
 : 1622666577:0;cd /opt/yay-git
-: 1622713236:0;l .local/bin
 : 1622730721:0;mv update-kernel.sh update-kernel
 : 1622730759:0;kernel remove 5.12.9
 : 1622730930:0;rm -rf linux-5.12.9.tar.xz
@@ -7195,7 +6516,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 
 : 1622808881:0;ex pooler-cpuminer-2.3.2.tar.gz
 : 1622808890:0;cd cpuminer-2.3.2
-: 1622808928:0;make -j4
 : 1622808940:0;k
 : 1622808974:0;screen
 : 1622809165:0;ex dogecoin-1.14.3-x86_64-linux-gnu.tar.gz
@@ -7204,12 +6524,10 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1622809363:0;./dogecoin-cli
 : 1622809417:0;./dogecoin-qt
 : 1622809829:0;rm -rf dogecoin-1.14.3*
-: 1622810020:0;vim README
 : 1622810076:0;minerd --help
 : 1622810085:0;./minerd --help
 : 1622810130:0;prime-run minerd -B
 : 1622810136:0;prime-run ./minerd -B
-: 1622810148:0;nvtop
 : 1622810308:0;pacman -Q nvidia-dkms
 : 1622810509:0;sudo dkms install --no-depmod -m nvidia -v $(sudo pacman -Q nvidia-dkms | sed 's/-/ /g' | awk '{ print $3 }') -k $(uname -r) && sudo depmod $(uname -r)
 : 1622821019:0;vim kernel_patch.sh
@@ -7245,7 +6563,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1623362814:0;sudo rm -rf linux-5.12.10-MiniBeast
 : 1623363121:0;cd /usr/src/linux-5.12.9-MiniBeast
 : 1623363227:0;rm -rf linux-5.12.10*
-: 1623363436:0;update-boot 5.12.9
 : 1623363442:0;sudo update-boot 5.12.9
 : 1623531440:0;compile dash pacman sudo
 : 1623531535:0;yt "golden earring twilight zone"
@@ -7318,7 +6635,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1628886070:0;sudo mv linux-5.13.10 /usr/src/linux-5.13.10-MiniBeast
 : 1628886108:0;kernel_remove 5.12.8
 : 1628886114:0;sudo kernel_remove 5.12.8
-: 1628886140:0;cd src
 : 1628886201:0;cd *5.13.10*
 : 1628886255:0;sudo make -j4
 : 1628886262:0;cd /etc/mkinitcpio.d
@@ -7461,7 +6777,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1629316447:0;dmesg --color=time
 : 1629316459:0;dmesg --color=on
 : 1629316505:0;dmesg --color=always
-: 1629317151:0;arch_news
 : 1629332082:0;git clone 	https://git.kernel.org/5.13.12
 : 1629415173:0;compile audit enchant gnome-desktop nftables
 : 1629423287:0;cd books
@@ -7504,7 +6819,6 @@ sudo sed -i "s/$(uname -r)/5.12.4-MiniBeast/g" linux-5.12.4-MiniBeast.preset\
 : 1629594731:0;al
 : 1629598541:0;time
 : 1629598552:0;ftime
-: 1629633506:0;uptime
 : 1629638127:0;yt "pantera cemetary gates"
 : 1629640327:0;cp update-kernel kernel
 : 1629641498:0;vim .local/bin/kernel_cl
@@ -7612,7 +6926,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1629832011:0;git clone --depth=1 https://github.com/adi1090x/rofi.git
 : 1629832026:0;chmod +x setup.sh
 : 1629832152:0;rofi --show run
-: 1629832289:0;cd powermenu
 : 1629832326:0;cd bin
 : 1629832349:0;./android_apps
 : 1629832367:0;./android_mpd
@@ -7628,7 +6941,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1629832669:0;./launcher_text
 : 1629832679:0;./launcher_ribbon
 : 1629832700:0;./menu_network
-: 1629833673:0;rmf rofi
 : 1629838750:0;install rofi
 : 1629838889:0;rofi -dump-xresources
 : 1629838911:0;rofi -dump-xresources >> rofi.txt
@@ -7642,7 +6954,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1629839871:0;rofi -upgrade-config
 : 1629839918:0;rmf config.rasi
 : 1629839928:0;mv config config.rasi
-: 1629840005:0;cd .local/share/icons
 : 1629840016:0;cd We10X-blue-dark
 : 1629840666:0;rofi
 : 1629840687:0;rofi -show file-browser
@@ -7741,7 +7052,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630184269:0;sudo mv xorg.conf.new /etc/X11/xorg.conf
 : 1630184298:0;sudo chown root:root xorg.conf
 : 1630184442:0;vim Documents/xorg.conf
-: 1630184737:0;xrandr
 : 1630184967:0;search arandr
 : 1630184975:0;compile aranr
 : 1630184985:0;compile arandr
@@ -7833,7 +7143,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630269321:0;search aria2
 : 1630271066:0;rm -rf linux-5.13.10.tar.xz
 : 1630271773:0;mv patch_links.txt patchfile
-: 1630277164:0;pwd
 : 1630277679:0;echo $CONFIG_HOME
 : 1630277772:0;rmf patches linux-5.13.10.tar.xz
 : 1630277779:0;kernel -p
@@ -7908,7 +7217,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630358100:0;update-boot 5.14
 : 1630358104:0;sudo update-boot 5.14
 : 1630358148:0;sudo update-boot 5.14-MiniBeast
-: 1630358176:0;cd /boot/efi/loader/entries
 : 1630358181:0;sudoedit MiniBeast.conf
 : 1630358277:0;sudoedit mkinitcpio.d/linux-5.14-MiniBeast.preset
 : 1630358344:0;rmf initramfs-linux-5.14-MiniBeast*
@@ -8043,7 +7351,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630690808:0;sudo mount /dev/sdb2 /mnt
 : 1630691166:0;sudo umount /dev/sdb2
 : 1630691916:0;sudo mount /dev/sdb1 /mnt
-: 1630691929:0;l arch
 : 1630691937:0;l EFI
 : 1630691946:0;l EFI/archiso
 : 1630691954:0;l isolinux
@@ -8070,7 +7377,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630736858:0;sudo cp initramfs-linux-5.14.1-MiniBeast.img efi/EFI/
 : 1630737410:0;sudo make xconfig
 : 1630737555:0;sudo make gconfig
-: 1630737584:0;search gtk
 : 1630739853:0;sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.14.1-MiniBeast && sudo cp /boot/vmlinuz-linux-5.14.1-MiniBeast /boot/efi/EFI/Linux
 : 1630739866:0;sudo mkinitcpio -p linux-5.14.1-MiniBeast
 : 1630739875:0;sudo cp /boot/initramfs-linux-5.14.1-MiniBeast.img /boot/efi/EFI/
@@ -8100,7 +7406,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1630864949:0;compile dkms imagemagick
 : 1630911288:0;cd /usr/src/linux-5.14.1-MiniBeast
 : 1630911355:0;fnrnownfknvke;krnjrnvnoerjofnnerkjnfnrorenkn'fmrfd
-: 1630911369:0;unimatrix
 : 1630912918:0;cd eDEX-UI
 : 1630912928:0;vim settings.json
 : 1630912969:0;cd .config/eDEX-UI
@@ -8114,7 +7419,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1631006330:0;vim touchpadxlibinputrc
 : 1631006374:0;vim plasma-nm
 : 1631040561:0;compile plasma-workspace plasma-wayland-session
-: 1631041180:0;compile zathura
 : 1631041188:0;jobs
 : 1631041238:0;search z
 : 1631041406:0;vim .nvidia-settings-rc
@@ -8208,7 +7512,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1631094445:0;ytdl cert.txt
 : 1631095525:0;vlc Computer\ Networking\ Course\ -\ Network\ Engineering\ \[CompTIA\ Network+\ Exam\ Prep\].mp3
 : 1631145740:0;search protonvpn
-: 1631146113:0;search openvpn
 : 1631146133:0;compile networkmanager-openvpn
 : 1631146273:0;compile harfbuzz
 : 1631146935:0;find / protonvpn
@@ -8283,7 +7586,6 @@ git clone git@github.com:kleber-swf/orchis-dark-ulauncher.git \\
 : 1631316049:0;packages
 : 1631316086:0;rmf .cache/*
 : 1631316357:0;cd .build
-: 1631316364:0;cd git
 : 1631316448:0;cd /mnt/@root/usr/bin
 : 1631316482:0;cp st /usr/bin
 : 1631316485:0;sudo cp st /usr/bin
@@ -8376,7 +7678,6 @@ makepkg -si\
 : 1631329976:0;scmask NetworkManager-wait-online.service
 : 1631331849:0;mount /dev/sda4 /home/jason/Games
 : 1631331973:0;cd 
-: 1631332061:0;rmf .thunderbird
 : 1631332091:0;search tomb
 : 1631332139:0;man ecryptfs
 : 1631332667:0;search fscrypt
@@ -8420,11 +7721,9 @@ makepkg -si\
 : 1631381934:0;sudo kernel -i 5.14.1
 : 1631382474:0;modprobe nvidia
 : 1631382855:0;update-boot 5.14.1-MiniBeast
-: 1631382882:0;vim .local/bin/update-boot
 : 1631382903:0;sudo update-boot 5.14.1-MiniBeast
 : 1631383309:0;sudo cp initramfs-linux-5.14.1-MiniBeast.img EFI
 : 1631383334:0;sudo cp vmlinuz-linux-5.14.1-MiniBeast EFI/Linux
-: 1631383344:0;cd Linux
 : 1631384280:0;linux-5.14.1-MiniBeast
 : 1631385263:0;gc -m 9/11/21
 : 1631388408:0;compile hdparm
@@ -8475,7 +7774,6 @@ makepkg -si\
 : 1631407720:0;cat /etc/fstab
 : 1631412275:0;search vanadium
 : 1631415596:0;poweroff
-: 1631439821:0;rmf *
 : 1631439880:0;search librewolf
 : 1631439902:0;install librewolf
 : 1631478504:0;cd .build/android
@@ -8492,14 +7790,12 @@ makepkg -si\
 : 1631495495:0;vim cs.txt
 : 1631495506:0;ytdl cs.txt
 : 1631495532:0;man youtube-dl
-: 1631495601:0;vim .config/zsh/zsh_functions
 : 1631498732:0;vlc Cyber\ Security\ Full\ Course\ for\ Beginner.mp3
 : 1631525887:0;rmf *.txt
 : 1631525949:0;vim metallica
 : 1631526304:0;yt metallica
 : 1631526319:0;ytdl metallica
 : 1631658811:0;sudo cp Documents/backups/usr/lib/systemd/user/plasma-kwin_x11.service /usr/lib/systemd/user/plasma-kwin_x11.service 
-: 1631658902:0;zsh
 : 1631659300:0;cat bandit23.txt
 : 1631659380:0;ssh bandit23@bandit.labs.overthewire.org -p 2220
 : 1631659594:0;man timeout
@@ -8511,7 +7807,6 @@ makepkg -si\
 : 1631663321:0;ls /etc/mkinitcpio.d
 : 1631666501:0;sudo kernel -r 5.14.1-MiniBeast
 : 1631669548:0;gc -m "Removing a kernel will now list files to be deleted and warn"
-: 1631669570:0;pass System/ssh
 : 1631669972:0;echo $EUID
 : 1631670251:0;echo $EDITOR
 : 1631670406:0;$EDITOR 
@@ -8557,7 +7852,6 @@ makepkg -si\
 : 1631736458:0;sudo rm -rf 5.14.2-MiniBeast
 : 1631736469:0;sudo tar -xzf 5.14.2-MiniBeast.tar.gz
 : 1631736488:0;l linux-5.14.2-MiniBeast
-: 1631736554:0;sudo rm -rf *
 : 1631741525:0;ls ../
 : 1631741543:0;sudo kernel-testing -h
 : 1631741820:0;sudo kernel-testing -a
@@ -8569,7 +7863,6 @@ makepkg -si\
 : 1631743144:0;sudo kernel-testing
 : 1631743154:0;ls backups
 : 1631743172:0;vim kernel-testing
-: 1631743274:0;uname -r
 : 1631743489:0;sudo kernel-testing -r 5.14.4-MiniBeast
 : 1631743513:0;sudo kernel-testing -r 5.14.3-MiniBeast
 : 1631743598:0;mv kernel-testing kernel
@@ -8659,13 +7952,10 @@ makepkg -si\
 : 1632014736:0;mv surf-0.6-chromekeys.diff surf-0.7-smoothscrolling.diff surf-2.1
 : 1632014782:0;patch -p1 < surf-0.*
 : 1632014813:0;rmf surf-2.1
-: 1632014820:0;ex surf-2.1.tar.gz
-: 1632014825:0;cd surf-2.1
 : 1632014918:0;cd /mnt/@root/.snapshots
 : 1632015734:0;sudo make clean install
 : 1632015822:0;search gcr
 : 1632015833:0;install gcr
-: 1632015868:0;make -j5
 : 1632015959:0;search webkit
 : 1632015993:0;install webkit2gtk
 : 1632016002:0;surf
@@ -8678,7 +7968,6 @@ makepkg -si\
 : 1632016240:0;l lib
 : 1632016249:0;sudo rm -rf lib/surf/
 : 1632016256:0;install surf
-: 1632016301:0;surf google.com
 : 1632016359:0;ls | grep surf
 : 1632016405:0;install grip
 : 1632016467:0;surf localhost:8410
@@ -8814,12 +8103,10 @@ makepkg -si\
 : 1632091443:0;systemctl hibernate
 : 1632092451:0;compile thunderbird
 : 1632095116:0;install thunderbird
-: 1632095198:0;bootctl
 : 1632096009:0;compile mailspring
 : 1632096023:0;remove thunderbird
 : 1632096036:0;install mailspring
 : 1632108012:0;rmf *.mp3
-: 1632108091:0;surf https://www.youtube.com/watch\?v\=QKfk7YFILws\&t\=11001s
 : 1632108170:0;rmf How\ To\ Add\ and\ Subtract\ Binary\ Numbers.m4a.part*
 : 1632108304:0;rmf Home\ Assistant\ Conference.m4a.part*
 : 1632179365:0;rm -rf Home\ Assistant\ Conference.m4a.part*
@@ -8828,7 +8115,6 @@ makepkg -si\
 : 1632180851:0;cd Music
 : 1632185111:0;vim networking
 : 1632185138:0;ytdl ../networking
-: 1632187680:0;apropos grep
 : 1632187706:0;search ripgrep
 : 1632187738:0;search ag
 : 1632303109:0;compile sudo
@@ -8851,18 +8137,14 @@ makepkg -si\
 : 1632410263:0;install xorg-xinit
 : 1632410270:0;compile xorg-xinit
 : 1632410310:0;cd X11/xinit
-: 1632410570:0;scstatus
 : 1632410826:0;sudo cp xinitrc /home/jason/.xinitrc
 : 1632410918:0;sudo chown jason:jason .xinitrc
-: 1632410982:0;scustatus
-: 1632411056:0;zshrc
 : 1632411093:0;scdisable sddm
 : 1632411405:0;sudo systemctl start sddm
 : 1632412012:0;man xmodmap
 : 1632412640:0;chsh -s /bin/bash
 : 1632413668:0;sudo cp /etc/skel/.bashrc .config/bash/.bashrc
 : 1632413694:0;sudo chown -R jason:jason .config/bash/.bashrc 
-: 1632414771:0;vim .tmux.conf.local
 : 1632415584:0;echo $SHELL
 : 1632415605:0;cat /etc/passwd
 : 1632417431:0;cd /run/timeshift/backup/@home/jason/.config/bash
@@ -8928,7 +8210,6 @@ makepkg -si\
 : 1632438979:0;sed -n '/mainline/ {1 p}' index.html
 : 1632439092:0;cat index.html | grep -A mainline
 : 1632440358:0;vim tmux2
-: 1632444007:0;sudoedit mkinitcpio.conf
 : 1632444501:0;search aide
 : 1632444518:0;install aide
 : 1632444716:0;aide -D
@@ -9023,7 +8304,6 @@ makepkg -si\
 : 1632504057:0;search rkhunter
 : 1632504064:0;compile rkhunter
 : 1632504128:0;install arch-audit
-: 1632504135:0;sysscan
 : 1632504481:0;cd audit
 : 1632504502:0;sudoedit auditd.conf
 : 1632504616:0;sudo mkdir rules.d
@@ -9041,7 +8321,6 @@ makepkg -si\
 : 1632505826:0;ls /var/log/audit
 : 1632505960:0;sudo aureport -au -i | more
 : 1632505984:0;vim /etc/audit/auditd.conf
-: 1632512272:0;man grep
 : 1632512347:0;grep -A3 'mainline' index.html
 : 1632512392:0;grep -A1 'mainline' index.html
 : 1632512424:0;vim index.html
@@ -9079,7 +8358,6 @@ makepkg -si\
 : 1632535331:0;vim kernel.bak
 : 1632536975:0;sudo echo $HOME
 : 1632537036:0;sudo cat ~/patchfile
-: 1632539069:0;xprop
 : 1632539953:0;mv patchfile Documents
 : 1632540068:0;sudo rm -rf linux-5.14.7-Titties/
 : 1632544911:0;sudo kernel -r 5.14.7-Titiies
@@ -9152,7 +8430,6 @@ done
 : 1632663122:0;l junk/
 : 1632663131:0;vim useful/connect_four.c
 : 1632663185:0;vim connect_four
-: 1632664126:0;cd projects/c
 : 1632664152:0;sudo ./connect_four
 : 1632664219:0;chmod +x connect_four
 : 1632664231:0;./connect_four
@@ -9186,29 +8463,24 @@ done
 : 1632679336:0;cd .build/git/linux-scripts
 : 1632679641:0;cd ~/.local/bin
 : 1632680825:0;man echo
-: 1632684068:0;man aria2c
 : 1632684126:0;man wget
 : 1632685207:0;sudo rm -rf linux-tarball-verify.5kuG6sUoE.untrusted/
 : 1632685763:0;cd linux-tarball-verify.8dSVTP4Pk.untrusted
 : 1632690149:0;vim get-verified-tarball
-: 1632690318:0;vim kernel
 : 1632690439:0;ga kernel/get-verified-tarball kernel/kernel
 : 1632690696:0;ga kernel/get-verified-tarball
 : 1632690700:0;gc -m "Downloader choice is now universal"
 : 1632693414:0;vi
 : 1632693513:0;l kernel
 : 1632693641:0;gc -m "Update README.md"
-: 1632693817:0;sudo kernel -r 5.14.8-MiniBeast
 : 1632695553:0;sudo kernel -r 5.14.6-MiniBeast
 : 1632695953:0;cd linux-lts
-: 1632695958:0;vim Makefile
 : 1632697094:0;du -h backups
 : 1632700861:0;l /etc/mkinitcpio.d
 : 1632700971:0;sudo kernel -r 5.14.8-shitty-kitty-titties
 : 1632753541:0;sudo kernel -r 5.10.69-Testing
 : 1632755688:0;ls boot
 : 1632755692:0;l /boot
-: 1632756247:0;cd EFI
 : 1632758532:0;ls /usr/src
 : 1632758568:0;cd /usr/src/linux-5.14.8-Testing
 : 1632758582:0;cd arch/x86_64/boot
@@ -9218,7 +8490,6 @@ done
 : 1632762795:0;ga update-boot.sh
 : 1632762820:0;gc -m "#bash"
 : 1632762892:0;gc -m "fixed shabang"
-: 1632763522:0;sudo update-mirrors
 : 1632763859:0;compile exa grub-btrfs neovim
 : 1632764745:0;sudo rm -rf linux-5.12.0-MiniBeast 
 : 1632764758:0;rm -rf linux-5.10.69.tar.xz
@@ -9259,7 +8530,6 @@ done
 : 1632789553:0;vim ca-certificates.crt
 : 1632789603:0;curl -L https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.14.8.tar.sign
 : 1632789784:0;nmcli connection show
-: 1632789819:0;startx
 : 1632789837:0;wget --no-dns-cache https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.14.8.tar.sign
 : 1632789996:0;openssl s_client -connect mirrors.kernel.org:443
 : 1632790016:0;openssl s_client -connect cdn.kernel.org:443
@@ -9274,7 +8544,6 @@ done
 : 1632845335:0;sudo kernel -n
 : 1632845471:0;sudo kernel -r 5.14.8-Testing
 : 1632845482:0;sudo kernel -r 5.14.8-testing
-: 1632852409:0;vim loader/entries/MiniBeast.conf
 : 1632852506:0;aa-notify
 : 1632852591:0;cd /usr/src/linux-5.14.8-MiniBeast
 : 1632854780:0;search waydroid
@@ -9383,9 +8652,7 @@ ot
     .                  .     OP"          : o     .\
                               :\
                               \033[0m ' > issue
-: 1632879403:0;sudoedit issue
 : 1632880528:0;sudo echo -e '\n' >> issue
-: 1632881022:0;cd .config/bash
 : 1632881455:0;vim bash_welcome
 : 1632881464:0;./bash_welcome
 : 1632881981:0;vim makepkg.conf.pacnew
@@ -9394,7 +8661,6 @@ ot
 : 1632882305:0;search nmtui
 : 1632883247:0;zle
 : 1632883250:0;zle -la
-: 1632883288:0;cd etc
 : 1632883353:0;ping google.com
 : 1632883374:0;ping 127.0.0.1
 : 1632883445:0;l keyutils
@@ -9416,14 +8682,11 @@ ot
 : 1632889399:0;search grabc
 : 1632889412:0;install grabc
 : 1632889853:0;compile ueberzug
-: 1632923574:0;yt "metallica fuel"
 : 1632923642:0;install cava
-: 1632923877:0;cava
 : 1632929947:0;search komoreabi
 : 1632929959:0;komorebi
 : 1632929964:0;search komorebi
 : 1632932938:0;pacwall -h
-: 1632933006:0;cd Pictures/Wallpapers
 : 1632933055:0;mv skull-backgrounds-19375-19866-hd-wallpapers.jpg skulls.jpg
 : 1632933750:0;query reiserfsprogs
 : 1632938633:0;cd \
@@ -9439,11 +8702,7 @@ cd projects/c
 : 1632942571:0;vim .config/pacwall/pacwall.conf
 : 1632942583:0;pacwall
 : 1632943627:0;sudo -i make clean install
-: 1632943652:0;make install
-: 1632943974:0;cd .config/zsh
 : 1632943989:0;vim .zshrc
-: 1632944022:0;vim .zshenv
-: 1632944050:0;vim .bashrc
 : 1632944126:0;sudo -i make install
 : 1632944175:0;sudo cp .config/bash/.bashrc .zshenv /root
 : 1632945210:0;sudo chattr +i issue
@@ -9453,7 +8712,6 @@ cd projects/c
 : 1632945357:0;install min
 : 1632946290:0;cd /usr/share/plasma/look-and-feel
 : 1632946306:0;cd desktoptheme
-: 1632946307:0;;
 : 1632946336:0;cd .local/share/plasma/
 : 1632946368:0;cd look-and-feel/Materia-Manjaro-Dark
 : 1632946373:0;l contents
@@ -9472,7 +8730,6 @@ cd projects/c
 : 1632948149:0;vim .local/share/plasma/desktoptheme/Materia-Manjaro-Dark-Blur-Mono/colors
 : 1632948277:0;vim plasma_theme_Materia-Manjaro-Dark-Blur-Mono.kcache
 : 1632948321:0;df -h ./
-: 1632948447:0;cd Downloads
 : 1632948591:0;kquitapp5 plasmashell
 : 1632948703:0;t
 : 1632953171:0;xmodmap -pke > ~/.Xmodmap
@@ -9506,7 +8763,6 @@ cd projects/c
 : 1632958471:0;upower
 : 1632958475:0;upower -h
 : 1632958485:0;upower -i
-: 1632958648:0;cd .local/share
 : 1632958662:0;find upower
 : 1632958669:0;find ./ upower
 : 1632958769:0;cd /sys
@@ -9516,7 +8772,6 @@ cd projects/c
 : 1632958817:0;l power/power
 : 1632958828:0;l pnp0
 : 1632958834:0;l pnp0/power
-: 1632958865:0;cd /
 : 1632958874:0;find ./ battery
 : 1632959102:0;acpi -V
 : 1632959127:0;upower -i /org/freedesktop/UPower/devices/battery_BAT0
@@ -9553,7 +8808,6 @@ cd projects/c
 : 1632973033:0;search xf86-input-libinput
 : 1632973199:0;xinput list
 : 1632973272:0;cd /etc/X11/xorg.conf.d
-: 1632973357:0;search xf86
 : 1632973406:0;sudoedit 30-touchpad.conf
 : 1632973680:0;libinput list-devices
 : 1632973682:0;sudo libinput list-devices
@@ -9561,8 +8815,6 @@ cd projects/c
 : 1632974343:0;nitrogen Pictures/Wallpapers/skulls.jpg
 : 1632974393:0;nitrogen Pictures/Wallpapers/
 : 1632975739:0;echo $env
-: 1632976485:0;compile pavucontrol
-: 1632976531:0;pavucontrol
 : 1632976640:0;remove pavucontrol
 : 1632976651:0;compile xbindkeys
 : 1632976673:0;xbindkeys -d > ~/.xbindkeysrc
@@ -9581,8 +8833,6 @@ cd projects/c
 : 1632977906:0;gpasswd -a jason video
 : 1632977908:0;sudo gpasswd -a jason video
 : 1632977918:0;groups jason
-: 1632978018:0;xbacklight -dec 50
-: 1632978026:0;xbacklight -inc 50
 : 1632978340:0;xbindkeys
 : 1632979290:0;compile kvantum-qt5
 : 1632979669:0;install kvantum-theme-sweet-mars-git
@@ -9590,7 +8840,6 @@ cd projects/c
 : 1632980410:0;sudoedit environment
 : 1632980626:0;search kvantum
 : 1632980752:0;install kvantum-theme-materia kvantum-theme-vimix-git kvantum-theme-sweet-git
-: 1632980974:0;cd .cache
 : 1632981648:0;ulauncher
 : 1632982922:0;cp .config/polybar/ polybar.bak
 : 1632982929:0;cp -r .config/polybar/ polybar.bak
@@ -9614,29 +8863,23 @@ cd projects/c
 : 1632984760:0;rm -rf polybar.bak
 : 1632984839:0;rm -rf polybar.old
 : 1632984842:0;cd polybar
-: 1632986321:0;colorscript -e pacman
-: 1632986340:0;colorscript -r
 : 1632986367:0;search colorscript
 : 1632987753:0;nmcli --ask dev wifi connect PureBroadband_892838
 : 1633010629:0;compile dunst
 : 1633010695:0;mkdir .config/dunst
 : 1633010702:0;cp /etc/dunst/dunstrc .config/dunst
 : 1633011085:0;cd .local/share/icons/Win11-dark/devices
-: 1633011099:0;cd 16
 : 1633011619:0;echo $DISPLAY
 : 1633011663:0;dunst
 : 1633011714:0;vim ../bspwm/bspwmrc
-: 1633012021:0;vim .config/dunst/dunstrc
 : 1633023446:0;mv patchfile.bak patchfile
 : 1633023589:0;./les.sh --checksec
 : 1633023592:0;sudo ./les.sh --checksec
 : 1633023737:0;yt "wap"
 : 1633023790:0;yt "wap explicit"
 : 1633024127:0;sudo update-boot 5.14.9-MiniBeast
-: 1633024133:0;vim /boot/loader/entries/MiniBeast.conf
 : 1633024218:0;sudo dmesg
 : 1633024258:0;sudo aide -u
-: 1633024527:0;vim .config/zsh/zsh_aliases
 : 1633024742:0;sudo mv /var/lib/aide/aide.db.gz /var/lib/aide/aide.db.gz.bak && mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 : 1633024765:0;sudo mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 : 1633024775:0;l /var/lib/aide
@@ -9646,7 +8889,6 @@ cd projects/c
 : 1633030956:0;sudo pacman -Rcsn pulseaudio
 : 1633030983:0;compile pipewire pipewire-pulse
 : 1633031420:0;install pipewire-pulse
-: 1633031496:0;pactl info
 : 1633031850:0;l scripts
 : 1633032352:0;cd scripts
 : 1633032358:0;vim pavolume.sh
@@ -9654,11 +8896,8 @@ cd projects/c
 : 1633032426:0;mv sounds.sh sound.sh
 : 1633032500:0;mv sound.sh ../
 : 1633032553:0;vim sounds.sh
-: 1633032561:0;vim sound.sh
 : 1633032597:0;pw-play --list-targets
 : 1633033378:0;echo $curVol
-: 1633033750:0;pactl list sinks
-: 1633033857:0;pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
 : 1633034581:0;pactl list sinks | sed -n "/Volume/ s--list-targets[[:space:]]\+Volume:.* \([[:digit:]]\+\)%.*"
 : 1633034665:0;pactl list sinks | grep Volume
 : 1633034724:0;pactl list sinks | grep $Volume | awk -F "/" '{print $2}'
@@ -9670,23 +8909,16 @@ cd projects/c
 : 1633034896:0;pactl list sinks | grep "    Volume" | awk -F "/" '{print $2}'
 : 1633034927:0;pactl list sinks | grep -m1 "Volume" | awk -F "/" '{print $2}'
 : 1633035558:0;pacmd list-sinks
-: 1633036137:0;search pavucontrol
-: 1633036167:0;vim .Xmodmap
-: 1633036182:0;vim .xbindkeysrc
 : 1633039616:0;pacman -Qu | wc -l
 : 1633039852:0;lsb_release
 : 1633039857:0;lsb_release -a
 : 1633040504:0;vpim .config/bspwm/bspwmrc
-: 1633049733:0;matrix
-: 1633049757:0;install unimatrix
 : 1633051495:0;man wc
 : 1633051841:0;vim .config/polybar/sound.sh
-: 1633052550:0;vim bspwmrc
 : 1633052706:0;cd Documents
 : 1633052732:0;cd /usr/lib/systemd/user
 : 1633052767:0;sudoedit plasma-kwin_x11.service 
 : 1633052852:0;cp .build/git/config-files/bspwmrc .config/bspwm/bspwmrc2
-: 1633052859:0;cd .config/bspwm
 : 1633052953:0;vim .config/bspwm/bspwmrc2
 : 1633053092:0;yay -Qyu | wc -l
 : 1633053142:0;yay -Qu
@@ -9694,7 +8926,6 @@ cd projects/c
 : 1633055178:0;mv sound.sh scripts
 : 1633055331:0;yay -Sy
 : 1633055503:0;chmod +x .config/polybar/scripts/checkupdates
-: 1633056636:0;vim .config/polybar/scripts/sound.sh
 : 1633057464:0;rm -rf bspwmrc
 : 1633057568:0;rm -rf coc-settings.json init.vim
 : 1633057628:0;ls .config/zsh
@@ -9717,7 +8948,6 @@ cd projects/c
 : 1633058286:0;rm -rf hosts
 : 1633058634:0;l .tmux
 : 1633058643:0;l cava
-: 1633058676:0;ll *
 : 1633058740:0;ll * .*
 : 1633058803:0;rm -rf zsh/zsh_history zsh/.zcompdump*
 : 1633058881:0;ga bspwmrc coc-settings.json config hosts init.vim makepkg.conf .p10k.zsh nftables.conf pacman.conf picom.conf plasma-kwin_x11.service mkinitcpio.conf sxhkd-cheatsheet plasmarc sysctl.conf .tmux/ sxhkdrc    .tmux.conf zsh_aliases
@@ -9738,7 +8968,6 @@ cd projects/c
 : 1633063407:0;for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done\
 
 : 1633065785:0;sudo kernel -r 5.14.7-MiniBeast
-: 1633066362:0;vim .local/bin/compile
 : 1633066405:0;vim .config/polybar/scripts/checkupdates
 : 1633066571:0;.config/polybar/scripts/checkupdates
 : 1633067091:0;ga plasma/plasma-kwin_x11.service polybar/config polybar/scripts/ zsh/.zcompdump-MiniBeast-5.8 zsh/.zcompdump zsh/zsh_history
@@ -9753,12 +8982,8 @@ cd projects/c
 : 1633067380:0;ga .tmux
 : 1633067383:0;gc -m 10/1/21
 : 1633067425:0;vim ~/.local/bin/git_sync
-: 1633068177:0;cd .config/dunst
-: 1633068561:0;vim dunstrc
 : 1633068798:0;notify-send "Title" "NOW"
-: 1633101178:0;nmtui
 : 1633101395:0;st bashtop
-: 1633110381:0;vim task-manager.sh
 : 1633110466:0;chmod +x task-manager.sh
 : 1633110489:0;.config/polybar/scripts/task-manager.sh
 : 1633113096:0;ps aux | sort -nrk 3,3
@@ -9770,7 +8995,6 @@ cd projects/c
 : 1633113947:0;ps aux | sort -nrk 3,3 | head -n 5 | awk '{print $2" "$11}'
 : 1633114383:0;watch ps aux | sort -nrk 3,3 | head -n 5 | awk '{print $2" "$11}'
 : 1633114416:0;watch "ps aux | sort -nrk 3,3 | head -n 5 | awk '{print $2" "$11}'"
-: 1633114483:0;top
 : 1633114509:0;ps aux | sort -nrk 3,3 | head -n 5
 : 1633114563:0;watch "ps aux | sort -nrk 3,3 | head -n 5 | awk '{print $1" "$2" "$11}'"
 : 1633114624:0;ps aux
@@ -9803,10 +9027,8 @@ cd projects/c
 
 : 1633116675:0;aria2c -x 3 -m 3 -d /run/usr/1000 https://www.kernel.org/finger_banner\
 
-: 1633116712:0;vim .local/bin/kernel
 : 1633116763:0;aria2c -x 3 -m 3 -d /run/user/1000 https://www.kernel.org/finger_banner\
 
-: 1633117705:0;cd /run/user/1000
 : 1633117780:0;awk '{print NF}' /run/user/1000/finger_banner
 : 1633117834:0;cat finger_banner
 : 1633117856:0;awk '{print $NF}' /run/user/1000/finger_banner
@@ -9814,15 +9036,11 @@ cd projects/c
 : 1633117946:0;aria2c -q -x 3 -m 3 -d /run/user/1000 https://www.kernel.org/finger_banner \\
     | awk '{print $NF}' /run/user/1000/finger_banner | head -n 1 \\
     | rm -f /run/user/1000/finger_banner*
-: 1633117983:0;vim .local/bin/get-verified-tarball
 : 1633118175:0;./kernel-module
 : 1633118199:0;vim kernel-module
 : 1633118295:0;mv kernel-module .config/polybar/scripts/kernel-update.sh
 : 1633118305:0;l .config/polybar
 : 1633118438:0;l .config/polybar/scripts
-: 1633118694:0;cd .config/polybar/scripts
-: 1633120309:0;cd /tmp
-: 1633120319:0;vim polybar.log
 : 1633120332:0;vim polybar-dock.log
 : 1633126987:0;�   
 : 1633127000:0;ﮣ
@@ -9844,7 +9062,6 @@ cd projects/c
 : 1633131751:0;cd .icons/
 : 1633131798:0;cd Win10OS-cursors
 : 1633132068:0;install xcursor-themes
-: 1633132214:0;cd /usr/share/icons
 : 1633132299:0;vim .xresources
 : 1633132358:0;cd breeze-dark
 : 1633132392:0;cd breeze_cursors
@@ -9881,24 +9098,17 @@ cd projects/c
 : 1633194262:0;compile nitrogen
 : 1633194368:0;nitrogen --set-scaled ~/Pictures/Wallpapers/hydrant.jpg
 : 1633194421:0;man nitrogen
-: 1633195420:0;sudo make install
 : 1633195704:0;cp suckless-st-fork suckless-st-fork.bak
 : 1633195950:0;vim st-xresources-20200604-9ba7ecf.diff
 : 1633196155:0;mv suckless-st-fork.bak suckless-st-fork
 : 1633196167:0;cp -r suckless-st-fork suckless-st-fork.bak
 : 1633196237:0;../suckless-st-fork.bak
-: 1633196252:0;make
 : 1633196434:0;diff config.h config.def.h
-: 1633196464:0;vim config.def.h
 : 1633196837:0;vim x.c
 : 1633197458:0;rm -rf suckless-st-fork*
-: 1633197515:0;cd .build/git
 : 1633197540:0;rm -rf st-xresources-20200604-9ba7ecf.diff
 : 1633197579:0;rm -rf suckless-st-fork
-: 1633309419:0;
 : 1633198762:0;mv .Xresources.bak .Xresources
-: 1633198766:0;xrdb -query -all
-: 1633198787:0;xrdb ~/.Xresources
 : 1633198878:0;git clone git@github.com:cjmcguire88/suckless-st-fork.git
 : 1633198905:0;cd suckless-st-fork
 : 1633198914:0;cp config.h config.def.h
@@ -9909,28 +9119,18 @@ cd projects/c
 : 1633202241:0;search pywal
 : 1633202259:0;install python-pywal
 : 1633202489:0;mkdir .build/git/config-files/xserver
-: 1633202551:0;cd .build/git/
 : 1633202554:0;cd config-files
 : 1633202560:0;cd xserver
 : 1633202601:0;rsync -a /home/jason/{.Xresources,.xinitrc,.xmodmap,xbindkeys} /home/jason/.config/.build/config-files/xserver
-: 1633202659:0;popd
-: 1633202750:0;vim .local/bin/git_sync
-: 1633204521:0;vim .config/nvim/init.vim
-: 1633204863:0;cp .Xresources .Xresources.bak
 : 1633209095:0;cd .config/nvim/plugged
 : 1633209102:0;cd material.vim
-: 1633209145:0;grabc
 : 1633209170:0;vim colors/material.vim
-: 1633221391:0;nitrogen Pictures/Wallpapers
 : 1633271368:0;vim .config/polybar/scripts/kernel-update.sh
 : 1633271732:0;vim /tmp/polybar.log
-: 1633272041:0;speedtest
 : 1633272092:0;search xclock
 : 1633272109:0;compile xorg-xclock
 : 1633272142:0;xclock
-: 1633272779:0;pukeskull
 : 1633272870:0;fff
-: 1633272925:0;cd .build/git/config-files
 : 1633273193:0;scrot .build/git/config-files/screenshots/desktop-bspwm
 : 1633273201:0;scrot .build/git/config-files/screenshots/
 : 1633273268:0;scrot ~/.build/git/config-files/screenshots/
@@ -9939,10 +9139,8 @@ cd projects/c
 : 1633273779:0;cd nvim
 : 1633273787:0;cd plugged
 : 1633273794:0;cd vim-startify
-: 1633273805:0;l *
 : 1633273862:0;l autoload/startify
 : 1633273901:0;cp autoload/startify/fortune.vim ~/.build/git/config-files/nvim
-: 1633273905:0;../..
 : 1633273918:0;ga nvim/fortune.vim
 : 1633273928:0;gc -m 10/3/21
 : 1633279848:0;search powerdevil
@@ -9954,14 +9152,12 @@ cd projects/c
 : 1633283191:0;man tlp
 : 1633283693:0;search tlpui
 : 1633283701:0;install tlpui
-: 1633284060:0;sudoedit tlp.conf
 : 1633286560:0;cd /sys/devices
 : 1633286581:0;cd system/cpu/intel_pstate
 : 1633286589:0;vim hwp_dynamic_boost
 : 1633286630:0;sudoedit hwp_dynamic_boost
 : 1633286774:0;cat /proc/cpuinfo
 : 1633286878:0;dmesg | grep intel
-: 1633287035:0;cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 : 1633287616:0;cd sys/block/DEVICE/queue/iosched
 : 1633287625:0;cd sys/block/DEVICE/queue/
 : 1633287780:0;search bfq
@@ -9986,43 +9182,30 @@ cd projects/c
 : 1633294306:0;vim discard_max_bytes
 : 1633294338:0;cd /usr/src/linux-5.14.9-MiniBeast
 : 1633294461:0;sudoedit scheduler
-: 1633295297:0;sudo make menuconfig
 : 1633295326:0;sudo make clean
 : 1633295334:0;sudo make -j6
 : 1633295838:0;sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.14.9-MiniBeast && sudo cp /boot/vmlinuz-linux-5.14.9-MiniBeast /boot/EFI/Linux
 : 1633295850:0;sudo make modules_install
 : 1633295862:0;sudo mkinitcpio -p linux-5.14.9-MiniBeast && sudo cp /boot/initramfs-linux-5.14.9-MiniBeast.img /boot/EFI
 : 1633296044:0;vim cc.txt
-: 1633296085:0;cd /boot
-: 1633296102:0;sudoedit loader/entries/MiniBeast.conf
 : 1633296258:0;vim grub/grub.cfg
 : 1633296422:0;tlp-stat -s
 : 1633296677:0;sudo echo bfq > /sys/block/sda/queue/scheduler
 : 1633296812:0;cd /sys/block/nvme0n1/queue
-: 1633296913:0;su
-: 1633296944:0;sudoedit /etc/tlp.conf
-: 1633297048:0;bash
 : 1633297063:0;cat /sys/block/nvme0n1/queue/scheduler
-: 1633297074:0;cat /sys/block/sda/queue/scheduler\
-
 : 1633298604:0;sudoedit /boot/efi/loader/entries/MiniBeast.conf\
 : 1633298632:0;sudoedit /boot/efi/loader/entries/MiniBeast.conf
 : 1633298644:0;sudoedit /boot/loader/entries/MiniBeast.conf
 : 1633298701:0;vim .config/nvim/plugged/material.vim/colors/material.vim
 : 1633306951:0;bspc desktop --focus ^2
 : 1633306958:0;bspc desktop --focus ^5
-: 1633306989:0;notify-send "Sup nigga" "fuck outta here"
 : 1633307617:0;bspc desktop -f ^5
 : 1633308042:0;query xorg-server
 : 1633308264:0;loginctl user-status
 : 1633308368:0;cd pulse
 : 1633308382:0;cat client.conf
 : 1633308551:0;ps -o user $(pgrep Xorg)
-: 1633308635:0;cd /etc/X11
 : 1633308719:0;$XDG_VTNR
-: 1633308725:0;echo $XDG_VTNR
-: 1633309117:0;vim .xinitrc
-: 1633309209:0;cd /etc/X11/xinit
 : 1633309223:0;sudoedit xinitrc
 : 1633309236:0;cd xinitrc.d
 : 1633309255:0;sudoedit 50-systemd-user.sh
@@ -10030,14 +9213,12 @@ cd projects/c
 : 1633309419:0;exec ls
 : 1633309677:0;search easyeffects
 : 1633309692:0;compile easyeffects
-: 1633309908:0;yt "imma firin muh lazer"
 : 1633310846:0;yt "simxsantana for a fact"
 : 1633311875:0;yt "sad but true"
 : 1633324543:0;wget https://raw.githubusercontent.com/siduck76/bspwm-dotfiles/main/rofi/config.rasi
 : 1633324567:0;https://raw.githubusercontent.com/siduck76/bspwm-dotfiles/main/rofi/simple.rasi
 : 1633324576:0;wget https://raw.githubusercontent.com/siduck76/bspwm-dotfiles/main/rofi/simple.rasi
 : 1633324588:0;compile rofi
-: 1633324627:0;cd .config
 : 1633324640:0;mkdir rofi
 : 1633324656:0;mv ../*.rasi rofi
 : 1633324679:0;rofi -show combi
@@ -10056,32 +9237,24 @@ cd projects/c
 : 1633328301:0;git clone https://github.com/lr-tech/rofi-themes-collection.git
 : 1633328317:0;cd rofi-themes-collection
 : 1633328322:0;cd theme
-: 1633328324:0;cd themes
 : 1633328341:0;vim spotlight-dark.rasi
 : 1633328489:0;cp ~/rofi-themes-collection/* ./
 : 1633328511:0;cp -r ~/rofi-themes-collection/* ./
 : 1633328526:0;rm -rf LICENSE README.md
-: 1633329187:0;vim .Xresources
 : 1633330739:0;vim nord.rasi
 : 1633330845:0;vim themes/nord.rasi
-: 1633332220:0;vim .config/bspwm/bspwmrc
-: 1633332851:0;vim .config/picom/picom.conf
 : 1633333180:0;vim .config/rofi/simple.rasi
 : 1633333306:0;wmctrl
 : 1633333319:0;man wmctrl
 : 1633334141:0;vim rofi-themes-collection/themes/nord.rasi
 : 1633357708:0;git clone git@github.com:adi1090x/rofi.git
-: 1633357733:0;cd rofi
-: 1633357746:0;cd 1080p
 : 1633357772:0;cd launchers
 : 1633357779:0;cd ribbon
 : 1633357797:0;vim full_left.rasi
 : 1633357840:0;cp * ../../../../themes
 : 1633357850:0;cp -r * ../../../../themes
 : 1633357863:0;cd ../../../../themes
-: 1633357871:0;l styles
 : 1633358337:0;mv squared-nord.rasi ../
-: 1633358459:0;vim config.rasi
 : 1633358562:0;vim squared-nord.rasi
 : 1633362015:0;cat .Xresources
 : 1633363970:0;echo ﮃ�
@@ -10094,39 +9267,23 @@ cd projects/c
 : 1633365589:0;vim install.sh
 : 1633365625:0;./install.sh
 : 1633365698:0;vim .config/rofi/config.rasi
-: 1633366522:0;sudo rmorphan
 : 1633388473:0;sudo nf
 : 1633388553:0;rm -rf cc.txt
 : 1633388561:0;rmf les.sh issue
-: 1633388580:0;vim .build/git/suckless-st-fork/config.h
-: 1633388654:0;sudo kernel
-: 1633388736:0;ls
-: 1633388738:0;ll
 : 1633388800:0;mv 2021-10-04-190610_1920x1080_scrot.png .build/git/config-files/screenshots/desktop-bspwm.png
-: 1633388827:0;git_sync
-: 1633389125:0;vim README.md
-: 1633389176:0;ga
 : 1633389184:0;ga README.md
-: 1633389258:0;vim
 : 1633389269:0;msfconsole
-: 1633389309:0;dmesg
 : 1633389431:0;cd .build/git/config-files/
 : 1633389434:0;cd screenshots
 : 1633389463:0;mv 2021-10-04-191640_1920x1080_scrot.png .build/git/config-files/screenshots/tmux.png
 : 1633389638:0;cd .build/git/config-files/screenshots
-: 1633389640:0;ranger
 : 1633389664:0;mv 2021-10-04-191950_1920x1080_scrot.png .build/git/config-files/screenshots/desktop3.png
-: 1633390029:0;vim .build/git/suckless-st-fork/st.c
 : 1633390039:0;df 
 : 1633390055:0;df -h
-: 1633390085:0;nf
 : 1633390090:0;df -Th
 : 1633390139:0;mv 2021-10-04-192836_1920x1080_scrot.png .build/git/config-files/screenshots/desktop2.png
 : 1633390231:0;vim ../README.md
-: 1633390368:0;ga *
 : 1633390371:0;gc -m 10/4/21
-: 1633390375:0;pass -c System/ssh
-: 1633390381:0;gp
 : 1633391051:0;cd .local/share/applications
 : 1633391062:0;vim Apex\ Legends.desktop
 : 1633391501:0;l steam
@@ -10143,124 +9300,70 @@ cd projects/c
 : 1633392338:0;%U
 : 1633392372:0;prime-run /usr/bin/steam-runtime %U
 : 1633393060:0;cd /usr/share/applications
-: 1633394778:0;vim .config/polybar/config
 : 1633404327:0;mpv https://www.youtube.com/watch\?v\=UcckLr4fQQs\&list\=WL\&index\=124
 : 1633405205:0;mpv https://www.youtube.com/watch\?v\=tVajRJzpeVY
-: 1633481670:0;sa blame
 : 1633481708:0;vim /tmp/polybar-dock.log
 : 1633565635:0;pass
 : 1633565664:0;pass Streaming/Netflix
 : 1633651633:0;compile ark dolphin ksystemlog okular
-: 1633651640:0;sudo kernel -u
-: 1633652069:0;bashtop
 : 1633655757:0;sudo update-boot 5.14.10-MiniBeast
-: 1633655775:0;cat /boot/loader/entries/MiniBeast.conf
-: 1633719210:0;install nvidia-dkms
 : 1633719297:0;sudo rm -rf /var/lib/pacman/db.lck
 : 1633719301:0;fg
-: 1633719691:0;reboot
-: 1633719853:0;tmux2
-: 1633719861:0;yay
-: 1633722849:0;sa
 : 1633730398:0;search pamac
 : 1633730671:0;rm -rf dracut.conf.d
 : 1633730674:0;sudo rm -rf dracut.conf.d
-: 1633730975:0;cd /etc
 : 1633731120:0;sudoedit makepkg.conf
 : 1633731135:0;install pamac-all-git
 : 1633731213:0;scp
 : 1633731375:0;query snapd
 : 1633731393:0;install pamac
-: 1633739476:0;vim simple.rasi
 : 1633739767:0;../polybar
-: 1633739772:0;vim config
 : 1633740093:0;echo env
 : 1633740103:0;echo $ENV
 : 1633740107:0;env
-: 1633740272:0;echo ${xrdb:color0}
 : 1633741572:0;install rofi-power-menu
-: 1633741602:0;rofi -show power-menu -modi power-menu:rofi-power-menu
 : 1633741808:0;ls /bin/rofi
 : 1633741827:0;ls /usr/local/bin
 : 1633741848:0;ls ~/.local/bin
 : 1633741870:0;ls /opt
 : 1633741977:0;find /usr/bin rofi-power-menu
 : 1633742187:0;sudoedit /usr/bin/rofi-power-menu
-: 1633742467:0;cd .config/rofi
 : 1633742477:0;rmf squared-nord.rasi
 : 1633742575:0;chmod +x rofi-p_menu.sh
-: 1633742582:0;./rofi-p_menu.sh
 : 1633742661:0;vim rofi-p_menu.sh
 : 1633742743:0;remove rofi-power-menu
 : 1633742765:0;git clone https://github.com/jluttine/rofi-power-menu.git
 : 1633742774:0;cd rofi-power-menu
-: 1633742782:0;vim rofi-power-menu
 : 1633743014:0;mv rofi-power-menu ~/.local/bin
 : 1633743030:0;rm -rf rofi-*
 : 1633743038:0;rm -rf polybar-themes
-: 1633743051:0;rofi -show p -modi p:rofi-power-menu \\
-  -theme Paper \\
-  -font "JetBrains Mono NF 16" \\
-  -width 20 \\
-  -lines 6
 : 1633743079:0;rofi -show p -modi p:rofi-power-menu \\
   -font "JetBrains Mono NF 16" \\
   -width 20 \\
   -lines 6
-: 1633743126:0;cd /usr/bin
-: 1633743153:0;..
-: 1633743160:0;cd share
-: 1633743195:0;cd .build/git/suckless-st-fork
-: 1633743201:0;make clean
-: 1633743233:0;vim config.h
-: 1633743254:0;vim config.mk
 : 1633743313:0;cd /usr/share/man
 : 1633743336:0;man st
 : 1633743381:0;sudo mv /usr/bin/st .local/bin
-: 1633743391:0;cd .local/bin
 : 1633743416:0;sudo chown jason:jason st
-: 1633743417:0;l
-: 1633743419:0;la
-: 1633743471:0;cd
-: 1633743477:0;vim .config/sxhkd/sxhkdrc
 : 1633743526:0;su
-: 1633743550:0;vim .config/sxhkd/sxhkdrc
 : 1633744653:0;speedtest
-: 1633745222:0;notify-send "Sup nigga" "fuck outta here"
-: 1633745461:0;..
 : 1633745463:0;cd dunst
-: 1633745464:0;l
-: 1633745467:0;vim dunstrc
 : 1633745549:0;vim .build/git/suckless-st-fork/st.c
 : 1633745556:0;vim .build/git/suckless-st-fork/config.h
-: 1633745592:0;notify-send "Sup nigga" "fuck outta here"
 : 1633745715:0;cd .local/share/icons
-: 1633745716:0;l
 : 1633745761:0;cd Tela-black
-: 1633745762:0;l
 : 1633745787:0;cd 16
-: 1633745788:0;l
-: 1633745942:0;notify-send "Sup nigga" "fuck outta here"
-: 1633746000:0;cd
-: 1633746006:0;vim .config/bspwm/bspwmrc
-: 1633746225:0;cd
 : 1633746242:0;../..
 : 1633746246:0;cd papirus-folders-master
-: 1633746248:0;l
 : 1633746320:0;cd /usr/share/icons
-: 1633746322:0;l
 : 1633746333:0;cd ePapirus
-: 1633746334:0;l
 : 1633746392:0;vim .config/dunst/dunstrc
 : 1633746475:0;cd 16x16
-: 1633746476:0;l
 : 1633746561:0;notify-send "Sup nigga" "fuck outta here"
 : 1633746587:0;dunstify
 : 1633746602:0;dunstify Hello Mr. McGuire
 : 1633746611:0;dunstify Hello Mr McGuire
 : 1633746628:0;dunstify Hello Jason
-: 1633746753:0;dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \\
-    -h int:value:"$volume" "Volume: ${volume}%"
 : 1633746791:0;dunstify -a "changeVolume" -u low -i audio-volume-high -r "msgId" \\
     -h int:value:"$volume" "Volume: ${volume}%"
 : 1633746795:0;dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \\
@@ -10271,164 +9374,61 @@ cd projects/c
 : 1633746856:0;dunstify -a "changeVolume" -u low -i audio-volume-high -r "3" \\
     -h int:value:"$volume" "Volume: ${volume}%"
 : 1633747110:0;cd status
-: 1633747111:0;l
-: 1633747116:0;ranger
-: 1633747289:0;cd .config/polybar/scripts
-: 1633747290:0;l
-: 1633747308:0;vim kernel-update.sh
-: 1633747734:0;cd
 : 1633747746:0;install pamac-aur
 : 1633748045:0;sudo pacman -S polkit polkit-kde-agent polkit-qt5 lib32-polkit
-: 1633748533:0;search polkit
 : 1633748625:0;/usr/lib/polkit-kde-authentication-agent-1
-: 1633784917:0;yay
 : 1633793229:0;yt "metallica fuel"
 : 1633797510:0;yt "sia greatest"
 : 1633797853:0;yt "metallica memory remains"
 : 1633799133:0;search polkit
-: 1633799233:0;sudo kernel -u
-: 1633799974:0;yay
 : 1633800011:0;sudo rmorphan
-: 1633800019:0;yay
-: 1633800040:0;sudo kernel
 : 1633800068:0;sudo kernel -r 5.14.8-MiniBeast
 : 1633800175:0;sudo kernel -r 5.14.9-MiniBeast
-: 1633800364:0;sudo kernel
-: 1633800397:0;install nvidia-dkms
 : 1633800568:0;sudo update-boot 5.14.11-MiniBeast
-: 1633800574:0;cat /boot/loader/entries/MiniBeast.conf
-: 1633800587:0;reboot
-: 0:0;
-: 1633800632:0;nf
-: 1633800645:0;sudo kernel
-: 1633801210:0;sa
-: 1633802285:0;yt "imma firin muh lazer"
 : 1633803026:0;scuenable mailspring
-: 1633803499:0;vim .xinitrc
 : 1633803929:0;echo $DBUS_SESSION_BUS_ADDRESS
 : 1633803992:0;scstatus dbus
 : 1633809158:0;search wayland
 : 1633809292:0;compile plasma-desktop plasma-workspace plasma-framework
-: 1633809376:0;vim .local/bin/start_plasma_wayland
 : 1633809446:0;chmod +x .local/bin/start_plasma_wayland
-: 1633809455:0;l .local/bin
 : 1633809536:0;vim .local/bin/start_plasma_wayland
-: 1633810111:0;vim /usr/lib/systemd/user/plasma-kwin_x11.service
 : 1633810137:0;install pplasma-workspace
 : 1633810143:0;install plasma-workspace
-: 1633810149:0;vim /usr/lib/systemd/user/plasma-kwin_x11.service
 : 1633810247:0;install plasma-framework
 : 1633810252:0;vim /usr/lib/systemd/user/plasma-kwin_x11.service
-: 1633810797:0;bashtop
-: 1633811762:0;vim .config/polybar/config
 : 1633811955:0;vim .config/nvim/init.vim
-: 1633812061:0;vim .config/bspwm/bspwmrc
-: 1633812190:0;vim .config/sxhkd/sxhkdrc
-: 1633812265:0;cat .config/sxhkd/sxhkdrc
 : 1633812334:0;vim .config/picom/picom.conf
-: 1633812436:0;zshrc
 : 1633812548:0;vim .tmux.conf.local
-: 1633812635:0;cd .config
-: 1633812636:0;l
 : 1633813556:0;vim bspwm/bspwmrc
 : 1633813948:0;vim sxhkd/sxhkdrc
 : 1633813985:0;vim polybar/config
-: 1633814026:0;vim .config/bspwm/bspwmrc
 : 1633814087:0;vim nvim/init.vim
-: 1633814097:0;vim .config/bspwm/bspwmrc
 : 1633814166:0;vim picom/picom.conf
 : 1633814308:0;rm -rf neomutt
-: 1633814412:0;vim .local/bin/git_sync
-: 1633814576:0;git_sync
-: 1633814592:0;cd .build/git/config-files
-: 1633814597:0;l
 : 1633814602:0;l nvim
 : 1633814609:0;rmf fortune.vim
-: 1633814611:0;l
 : 1633814633:0;mv MiniBeast-dracut.conf etc
-: 1633814638:0;l
-: 1633814656:0;ga *
 : 1633814663:0;ga fortune.vim MiniBeast-dracut.conf
-: 1633814676:0;gc -m 10/9/21
-: 1633814684:0;cd
 : 1633814697:0;pass System/ssh
-: 1633814709:0;pass -c System/ssh
-: 1633814713:0;gp
-: 1633816429:0;cd /etc
 : 1633816436:0;sudoedit mkinitcpio.conf
-: 1633816466:0;cd
-: 1633816470:0;cd .build/git/config-files
-: 1633816473:0;l
 : 1633816488:0;cd cava
-: 1633816489:0;l
 : 1633816493:0;vim config
-: 1633816612:0;cava
-: 1633816732:0;cd
-: 1633816738:0;vim .Xresources
-: 1633816971:0;vim .xinitrc
-: 1633817103:0;vim .Xmodmap
-: 1633817312:0;vim .xbindkeysrc
-: 1633817322:0;cd
 : 1633817325:0;vim .Xmodmap
-: 1633817341:0;vim .xinitrc
-: 1633817603:0;l
-: 1633817605:0;ll
-: 1633817632:0;vim .bashrc
-: 1633817724:0;zshrc
-: 1633817849:0;cd /etc
-: 1633817850:0;l
 : 1633817861:0;sudoedit issue
-: 1633817928:0;cat /etc/issue
-: 1633818245:0;cd
-: 1633818274:0;git_sync
-: 1633818280:0;cd .build/git/config-files
-: 1633818291:0;ga *
-: 1633818296:0;gc -m 10/9/21
-: 1633818309:0;pass -c System/ssh
-: 1633818316:0;gp
-: 1633818487:0;l
 : 1633818502:0;cd ~/.config/rofi
-: 1633818503:0;l
-: 1633818517:0;vim config.rasi
-: 1633818753:0;vim simple.rasi
-: 1633818760:0;vim config.rasi
-: 1633818979:0;vim .config/polybar/config
-: 1633819190:0;cd
-: 1633819194:0;vim .local/bin/git_sync
 : 1633819215:0;mkdir .build/git/config-files/rofi
-: 1633819394:0;cd .build/git/config-files
-: 1633819399:0;git_sync
-: 1633819408:0;ga *
 : 1633819442:0;git rm --cached rofi/rofi/rofi
-: 1633819453:0;gc -m 10/9/21
-: 1633819462:0;cd rofi
 : 1633819463:0;;
-: 1633819465:0;l
-: 1633819472:0;cd rofi
-: 1633819474:0;l
-: 1633819483:0;cd rofi
-: 1633819484:0;l
-: 1633819490:0;..
 : 1633819494:0;rm -rf rofi
-: 1633819495:0;l
 : 1633819501:0;rm -rf screenshots
-: 1633819502:0;l
 : 1633819514:0;rm -rf themes
-: 1633819553:0;ga *
 : 1633819562:0;ga rofi
 : 1633819572:0;ga screenshots/
 : 1633819578:0;ga themes/
 : 1633819588:0;gc -m 10/9/21
-: 1633819593:0;pass -c System/ssh
-: 1633819602:0;gp
-: 1633821264:0;cd .config
-: 1633821265:0;l
 : 1633821277:0;man bat
-: 1633821332:0;cd
 : 1633821340:0;bat -p /etc/issue
-: 1633821350:0;bat /etc/issue
 : 1633821387:0;bat -n /etc/issue
-: 1633821570:0;bat --style 'grid' /etc/issue
 : 1633821584:0;bat --style '' /etc/issue
 : 1633821592:0;bat --style /etc/issue
 : 1633821596:0;bat --style 'grid' /etc/issue
@@ -10436,20 +9436,12 @@ cd projects/c
 : 1633821732:0;bat --style=plain /etc/issue
 : 1633821741:0;bat --style=plain --color=always /etc/issue
 : 1633821814:0;bat --style=changes /etc/issue
-: 1633821892:0;vim .config/zsh/zsh_aliases
-: 1633821942:0;source .config/zsh/zsh_aliases
-: 1633821950:0;bat /etc/issue
 : 1633821963:0;source .config/zsh/zsh_aliases
 : 1633821966:0;bat /etc/issue
-: 1633821980:0;vim .config/zsh/zsh_aliases
 : 1633821991:0;cat /etc/issue
 : 1633822014:0;cat .config/sxhkd/sxhkdrc
 : 1633822038:0;cat .config/bspwm/bspwmrc
-: 1633823325:0;nf
-: 1633823375:0;sa
 : 1633823403:0;sa blame
-: 1633823419:0;cd /etc
-: 1633823474:0;l
 : 1633823495:0;sudoedit tlp.conf
 : 1633823608:0;cat /sys/block/sda/queue/scheduler\
 
@@ -10458,421 +9450,179 @@ cd projects/c
 : 1633824151:0;vim xattr.conf
 : 1633824186:0;l i3
 : 1633824419:0;vim smartd.conf
-: 1633824480:0;sudo kernel
-: 1633914383:0;cd
-: 1633914387:0;yay
 : 1633964179:0;cd .build/
-: 1633964180:0;l
 : 1633964184:0;cd git
 : 1633964210:0;aria2c -x 3 -m 3 https://dl.suckless.org/dwm/dwm-6.2.tar.gz
-: 1633964214:0;l
 : 1633964219:0;ex dwm-6.2.tar.gz
-: 1633964221:0;l
 : 1633964227:0;cd dwm-6.2
-: 1633964228:0;l
 : 1633964345:0;vim patches
-: 1633964859:0;vim config.h
-: 1633964864:0;l
-: 1633964870:0;vim config.def.h
 : 1633965022:0;aria2c -x 3 -m 3 patches
-: 1633965027:0;l
 : 1633965041:0;aria2c -x 3 -m 3 -i patches
-: 1633965045:0;l
 : 1633965062:0;patch -p1 < dwm-activetagindicatorbar-6.2.diff
 : 1633965070:0;patch -p1 < dwm-colorbar-6.2.diff
 : 1633965080:0;patch -p1 < dwm-cool-autostart-6.2.diff
 : 1633965125:0;make -j4
-: 1633965141:0;make clean
 : 1633965213:0;wget https://dwm.suckless.org/patches/functionalgaps/dwm-functionalgaps-6.2.diff
 : 1633965221:0;patch -p1 < dwm-functionalgaps-6.2.diff
-: 1633965396:0;..
-: 1633965397:0;l
 : 1633965406:0;rm -rf dwm-6.2
-: 1633965407:0;l
 : 1633965472:0;vim dmenu-patches
-: 1633966070:0;l
 : 1633966103:0;aria2c -x 3 -m 3 https://dl.suckless.org/tools/dmenu-5.0.tar.gz
-: 1633966114:0;ex dmenu-5.0.tar.gz
-: 1633966119:0;cd dmenu-5.0
-: 1633966136:0;aria2c -x 3 -m 3 -i ../dmenu-patches
-: 1633966138:0;l
-: 1633966166:0;patch -p1 < dmenu-fuzzymatch-4.9.diff
-: 1633966176:0;patch -p1 < dmenu-fuzzyhighlight-4.9.diff
 : 1633966188:0;patch -p1 < dmenu-highpriority-4.9.diff
 : 1633966203:0;patch -p1 < dmenu-xresources-4.9.diff
 : 1633966237:0;vim dmenu.c.rej
 : 1633966273:0;patch -p1 < dmenu-xyw-5.0.diff
 : 1633966292:0;patch -p1 < dmenu-border-4.9.diff
-: 1633966300:0;..
-: 1633966308:0;rm -rf dmenu-5.0
 : 1633966311:0;ex dmenu-5.0.tar.gz
-: 1633966315:0;cd dmenu-5.0
 : 1633966325:0;aria2c -x 3 -m 3 -i ../dmenu-patches
 : 1633966349:0;patch -p1 < dmenu-fuzzymatch-4.9.diff
 : 1633966355:0;patch -p1 < dmenu-fuzzyhighlight-4.9.diff
-: 1633966374:0;vim config.def.h
-: 1633966535:0;vim config.mk
-: 1633966579:0;make install
-: 1633966604:0;dmenu
-: 1633966608:0;cd
-: 1633966620:0;cd .local/bin
-: 1633966621:0;l
-: 1633966661:0;cd
-: 1633966663:0;..
-: 1633966665:0;cd
-: 1633966666:0;l
 : 1633966671:0;rm -rf local
 : 1633966681:0;cd .build/git/
-: 1633966682:0;l
 : 1633966686:0;cd dmenu-5.0
-: 1633966690:0;make clean
-: 1633966698:0;vim config.mk
-: 1633966714:0;make install
 : 1633966718:0;dmenu
-: 1633966751:0;cd .local/bin
-: 1633966752:0;l
 : 1633966767:0;dmenu_run
 : 1633966818:0;rm -rf dmenu*
-: 1633966825:0;l
-: 1633966971:0;cd
 : 1633966975:0;search dwm
-: 1633967963:0;l
-: 1633967989:0;..
-: 1633968003:0;l
 : 1633968022:0;rm -rf dmenu-
 : 1633968029:0;rm -rf dmenu-5.0
-: 1633968042:0;ex surf-2.1.tar.gz
-: 1633968047:0;cd surf-2.1
-: 1633968048:0;l
 : 1633968052:0;make
-: 1633968072:0;make clean
-: 1633968121:0;man aria2c
-: 1633968176:0;vim config.def.h
-: 1633968281:0;..
 : 1633968294:0;cp surf-2.1 surf-2.1-test
-: 1633968300:0;cp -r surf-2.1 surf-2.1-test
-: 1633968306:0;cd surf-2.1-test
-: 1633968358:0;wget https://surf.suckless.org/patches/bookmarking/surf-bookmarks-20170722-723ff26.diff
 : 1633968371:0;patch -p1 surf-bookmarks-20170722-723ff26.diff
-: 1633968381:0;patch -p1 < surf-bookmarks-20170722-723ff26.diff
 : 1633968634:0;wget https://surf.suckless.org/patches/chromebar/surf-0.1-chromebar.diff
 : 1633968646:0;patch -p1 < surf-0.1-chromebar.diff
 : 1633968671:0;mv surf-bookmarks-20170722-723ff26.diff ..
-: 1633968673:0;..
-: 1633968682:0;rm -rf surf-2.1-test
 : 1633968704:0;mv surf-bookmarks-20170722-723ff26.diff surf-2.1
-: 1633968712:0;cp -r surf-2.1 surf-2.1-test
-: 1633968716:0;cd surf-2.1-test
 : 1633969439:0;wget https://surf.suckless.org/patches/notifications/surf-notifications-20201223-7dcce9e1.diff
 : 1633969453:0;patch -p1 < surf-notifications-20201223-7dcce9e1.diff
-: 1633969457:0;..
-: 1633969459:0;rm -rf surf-2.1-test
 : 1633969462:0;cp -r surf-2.1 surf-2.1-test
 : 1633969538:0;cd surf-2.1-test
 : 1633969721:0;wget https://surf.suckless.org/patches/playexternal/surf-playexternal-20190724-b814567.diff
-: 1633969738:0;patch -p1 < surf-playexternal-20190724-b814567.diff
 : 1633970065:0;mv surf-playexternal-20190724-b814567.diff ../surf-2.1
 : 1633970072:0;wget https://surf.suckless.org/patches/searchengines/surf-git-20170323-webkit2-searchengines.diff
 : 1633970087:0;patch -p1 < surf-git-20170323-webkit2-searchengines.diff
 : 1633970439:0;wget https://surf.suckless.org/patches/short-title/surf-short-title-20210206-7dcce9e.diff
-: 1633970448:0;patch -p1 < surf-short-title-20210206-7dcce9e.diff
 : 1633970486:0;mv surf-short-title-20210206-7dcce9e.diff ../surf-2.1
-: 1633970487:0;l
 : 1633970518:0;wget https://surf.suckless.org/patches/smoothscrolling-via-GTK3/surf-0.7-smoothscrolling.diff
 : 1633970529:0;patch -p1 < surf-0.7-smoothscrolling.diff
 : 1633970601:0;wget https://surf.suckless.org/patches/spacesearch/surf-spacesearch-20170408-b814567.diff
 : 1633970609:0;patch -p1 < surf-spacesearch-20170408-b814567.diff
 : 1633970696:0;wget https://surf.suckless.org/patches/startgo/surf-startgo-20200913-d068a38.diff
-: 1633970707:0;patch -p1 < surf-startgo-20200913-d068a38.diff
 : 1633970726:0;mv surf-startgo-20200913-d068a38.diff ../surf-2.1
 : 1633970891:0;wget https://surf.suckless.org/patches/xdg/surf-xdg-2.0.diff
-: 1633970899:0;patch -p1 < surf-xdg-2.0.diff
 : 1633970909:0;mv surf-xdg-2.0.diff ../surf-2.1
-: 1633970911:0;..
 : 1633970914:0;rm -rf surf-2.1-test
-: 1633970918:0;cd surf-2.1
-: 1633970919:0;l
-: 1633970945:0;patch -p1 < surf-xdg-2.0.diff
-: 1633970955:0;patch -p1 < surf-playexternal-20190724-b814567.diff
 : 1633970983:0;patch -p1 < surf-short-title-20210206-7dcce9e.diff
 : 1633970993:0;patch -p1 < surf-startgo-20200913-d068a38.diff
-: 1633971017:0;make -j5
 : 1633971075:0;mv surf-playexternal-20190724-b814567.diff surf-xdg-2.0.diff ..
-: 1633971077:0;..
 : 1633971083:0;rm -rf surf-2.1
 : 1633971087:0;ex surf-2.1.tar.gz
 : 1633971103:0;mv surf-xdg-2.0.diff surf-playexternal-20190724-b814567.diff surf-2.1
 : 1633971165:0;cd surf-2.1
-: 1633971172:0;vim config.def.h
 : 1633971231:0;wget https://surf.suckless.org/patches/bookmarking/surf-bookmarks-20170722-723ff26.diff
 : 1633971245:0;patch -p1 < surf-bookmarks-20170722-723ff26.diff
 : 1633971252:0;patch -p1 < surf-xdg-2.0.diff
 : 1633971261:0;patch -p1 < surf-playexternal-20190724-b814567.diff
-: 1633971268:0;make -j5
-: 1633971274:0;make clean
 : 1633971284:0;remove surf
-: 1633971294:0;cd .local/bin
-: 1633971295:0;l
 : 1633971307:0;rm -rf surf
-: 1633971317:0;vim config.mk
-: 1633971373:0;make install
 : 1633971385:0;surf https://www.youtube.com/watch\?v\=QKfk7YFILws\&t\=11001s
 : 1633971402:0;cd .surf
-: 1633971404:0;l
 : 1633971408:0;styles
-: 1633971410:0;l
-: 1633971411:0;ls
-: 1633971419:0;l
-: 1633971474:0;surf google.com
 : 1633971561:0;install nuspell
 : 1633971567:0;surf google.com
-: 1633971630:0;vim config.h
-: 1633971721:0;..
-: 1633971733:0;l
 : 1633971743:0;rm -rf dmenu-patches
 : 1633972610:0;search qutebrowser
-: 1633972628:0;cd
 : 1633972635:0;compile qutebrowser
-: 1633973279:0;cd .config/qutebrowser
-: 1633973280:0;l
-: 1633973286:0;vim config.py
 : 1633973525:0;rm -rf config.py 
-: 1633973526:0;l
-: 1633973549:0;vim config.py
-: 1633981185:0;l
 : 1633981197:0;mkdir scripts
 : 1633981241:0;vim scripts/vimpv
-: 1633981303:0;vim config.py
 : 1633981494:0;vim scripts/pass
-: 1633983537:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
 : 1633983572:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.cache/chromium/Default >> ~/.config/qutebrowser/quickmarks
-: 1633983581:0;cd
-: 1633983584:0;cd .config
-: 1633983586:0;l
 : 1633983594:0;cd chromium
-: 1633983595:0;l
-: 1633983620:0;python /usr/share/qutebrowser/scripts/importer.py ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
 : 1633983678:0;python /usr/share/qutebrowser/scripts/importer.py chromium ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
 : 1633983691:0;python /usr/share/qutebrowser/scripts/importer.py chrome ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
 : 1633983720:0;python /usr/share/qutebrowser/scripts/importer.py chrome
 : 1633983729:0;python /usr/share/qutebrowser/scripts/importer.py chromium
 : 1633983742:0;python /usr/share/qutebrowser/scripts/importer.py ~/.config/chromium/Default >> ~/.config/qutebrowser/quickmarks
-: 1633984431:0;vim config.py
-: 1633984585:0;cd
 : 1633984590:0;cd .cache
-: 1633984591:0;l
 : 1633984603:0;du -h youtube-dl
-: 1633984627:0;cd
 : 1633984632:0;l Videos
-: 1633986206:0;cd
 : 1633986207:0;yaya
-: 1633986211:0;yay
 : 1633986271:0;compile attica bluez-qt frameworkintegration kactivities karchive kauth kbookmarks kcmutils kcodecs kcompletion kconfig kcontacts kcoreaddons kcrash kdbusaddons kdeclarative kded kfilemetadata kglobalaccel kguiaddons kidletime kiconthemes kinit kio kitemmodels kitemviews kjs knewstuff knotifications knotifyconfig kservice ktexteditor kunitconversion kwallet kwidgetsaddons kwindowsystem kxmlgui plasma-framework prison purpose solid sonnet syndication syntax-highlighting threadweaver plasma-framework 
 : 1633988720:0;cd .config/qutebrowser
-: 1633988722:0;l
 : 1633988727:0;vim autoconfig.yml
 : 1633988761:0;vim config.py
-: 1633988820:0;cd
-: 1633988825:0;vim .config/sxhkd/sxhkdrc
 : 1633989376:0;pip3 install adblock
 : 1633989401:0;cd .local
-: 1633989402:0;l
 : 1633989406:0;cd lib
-: 1633989407:0;l
-: 1633989412:0;cd
 : 1633989423:0;search adblock
 : 1633989442:0;install python-adblock
 : 1633991340:0;pip3 uninstall adblock
-: 1633991786:0;yay
-: 1634051925:0;bash
 : 1634051987:0;python
 : 1634058558:0;man npm
-: 1634058719:0;l
-: 1634058720:0;ll
 : 1634058727:0;vim .zshenv
-: 1634058799:0;vim .profile
-: 1634058964:0;vim .config/sxhkd/sxhkdrc
-: 1634059033:0;ll
-: 1634059044:0;vim .bash_profile
 : 1634059165:0;vim .bash_logout
-: 1634059183:0;vim .bashrc
 : 1634059710:0;mv .zshenv .zshenv.bak
-: 1634059719:0;printenv
-: 1634059727:0;reboot
-: 1634059851:0;printenv
 : 1634059898:0;vim .zshenv.bak
-: 1634059931:0;vim .profile
 : 1634059955:0;mv .zshenv.bak Downloads
-: 1634059968:0;vim .bash_profile
-: 1634060043:0;l
-: 1634060045:0;ll
 : 1634060055:0;mv .bash_profile Downloads
-: 1634060069:0;vim .bashrc
-: 1634060139:0;zshrc
-: 1634060211:0;reboot
-: 1634060346:0;vim .profile
 : 1634060519:0;mkdir Documents/backups/dotfiles && mv Downloads/{.bash_profile,.zshenv.bak} Documents/backups/dotfiles
 : 1634060677:0;yt "imma firin muh lazer"
-: 1634060725:0;yt "welcome to the internet"
-: 1634060763:0;vim .config/zsh/zsh_functions
-: 1634060894:0;ll
 : 1634060933:0;mv .bashrc Documents/backups/dotfiles
-: 1634060936:0;ll
-: 1634060950:0;la
 : 1634060970:0;l .steam
 : 1634060993:0;l .steam/sdk32
 : 1634061003:0;l .steam/sdk64
-: 1634061067:0;bash
 : 1634061189:0;ln -s .config/bash/.bashrc ./
-: 1634061191:0;bash
-: 1634061199:0;ll
 : 1634061229:0;rm -rf Documents/backups/dotfiles/.bashrc
-: 1634061233:0;ll
 : 1634061269:0;rmf .Genymobile
 : 1634061356:0;rmf .thunderbird
-: 1634061469:0;vim .Xresources
-: 1634061649:0;vim .profile
-: 1634062644:0;ll
 : 1634062656:0;vim .bash_history
 : 1634062717:0;cp .Xresources .Xresources.bak
-: 1634062719:0;l
-: 1634062721:0;ll
-: 1634062731:0;cd /etc
-: 1634062732:0;ll
 : 1634062815:0;vim .config/zsh/zsh_aliases
-: 1634062826:0;vim .bashrc
-: 1634062993:0;cd
 : 1634063004:0;cd .config/bash
-: 1634063005:0;l
-: 1634063006:0;ll
 : 1634063023:0;vim bash_aliases
 : 1634063309:0;vim .config/zsh/zsh_functions
-: 1634063355:0;zshrc
-: 1634063495:0;cd .config/zsh
-: 1634063497:0;l
 : 1634063527:0;mkdir ../shell
 : 1634063544:0;mv zsh_aliases zsh_functions ../shell
-: 1634063547:0;ll
-: 1634063549:0;..
 : 1634063552:0;cd shell
-: 1634063553:0;ll
 : 1634063571:0;mv zsh_aliases aliases
 : 1634063581:0;mv zsh_functions functions
-: 1634063583:0;l
-: 1634063598:0;vim aliases
-: 1634063665:0;bash
-: 1634063696:0;ls
-: 1634063701:0;lk
-: 1634063870:0;cd .config
-: 1634063872:0;ll
-: 1634063874:0;lk
-: 1634063880:0;l
 : 1634063897:0;cd bash
-: 1634063898:0;l
-: 1634063900:0;ll
-: 1634063993:0;cd .config/zsh
-: 1634063995:0;l
-: 1634063996:0;ll
-: 1634065035:0;cd
-: 1634065119:0;zshrc
 : 1634065131:0;vim .bashrc 
-: 1634067692:0;vim .local/bin/git_sync
-: 1634069490:0;cd .build/git/config-files
-: 1634069497:0;git_sync
-: 1634069513:0;vim .local/bin/git_sync
-: 1634069556:0;git_sync
-: 1634069561:0;l
 : 1634069565:0;l shell
 : 1634069571:0;vim README.md
-: 1634069583:0;cd .build/git/config-files
-: 1634069584:0;l
-: 1634074189:0;ga *
-: 1634074233:0;l
-: 1634074237:0;cd rofi
-: 1634074237:0;l
 : 1634074255:0;mv rofi/* ./
-: 1634074260:0;l
-: 1634074271:0;l rofi
-: 1634074291:0;rmf rofi
-: 1634074292:0;l
-: 1634074295:0;..
-: 1634074300:0;ga *
 : 1634074318:0;gc -m 10/12/21
-: 1634074369:0;pass -c System/ssh
-: 1634074378:0;gp
-: 1634075176:0;yay
-: 1634077745:0;cd
 : 1634077749:0;cd .config/shell
 : 1634077752:0;vim aliases
-: 1634079655:0;vim functions
 : 1634080003:0;yt "welcome to the internet"
-: 1634080042:0;yt "spongebob theme"
 : 1634080065:0;vim functions
-: 1634080144:0;cd
 : 1634080149:0;man aria2c
-: 1634082019:0;cd
 : 1634082023:0;arch_news
-: 1634082516:0;vim .config/polybar/config
 : 1634082569:0;vim /usr/share/applications
 : 1634082724:0;sudoedit /usr/share/applications/st.desktop
 : 1634082757:0;l .local/bin
-: 1634082823:0;vim .profile
-: 1634082841:0;zshrc
-: 1634083008:0;source .profile
-: 1634083034:0;cd
-: 1634083038:0;vim .profile
-: 1634083052:0;source .profile
-: 1634083058:0;printenv
 : 1634083150:0;printenv | grep path
-: 1634083159:0;printenv | grep PATH
-: 1634083184:0;ll
-: 1634083196:0;cd /etc
 : 1634083201:0;vim profile
-: 1634083222:0;vim .profile
 : 1634083266:0;cd profile.d
-: 1634083268:0;l
-: 1634083279:0;..
-: 1634083280:0;l
 : 1634083283:0;vim environment
-: 1634083307:0;source .profile
-: 1634083315:0;printenv | grep PATH
-: 1634083337:0;zshrc
 : 1634083374:0;source .config/zsh/.zshrc
-: 1634083377:0;printenv | grep PATH
-: 1634083430:0;zshrc
 : 1634083607:0;vim .config/shell/functions
-: 1634083674:0;printenv | grep PATH
-: 1634083722:0;vim .profile
 : 1634083737:0;source .profile
 : 1634083742:0;printenv | grep PATH
-: 1634083791:0;bash
-: 1634083823:0;printenv
-: 1634083924:0;ls
 : 1634083926:0;la
-: 1634083933:0;vim .Xauthority
-: 1634083946:0;vim .xinitrc
 : 1634084019:0;zshrc
-: 1634084053:0;vim .bashrc
-: 1634084084:0;bash
 : 1634084203:0;vim .profile
 : 1634084221:0;cd .config/zsh
-: 1634084222:0;ll
 : 1634084238:0;cd ../bash
-: 1634084240:0;ll
 : 1634084249:0;vim .bash_profile
 : 1634084377:0;rm -rf bash_aliases
 : 1634084386:0;vim .bashrc
-: 1634084433:0;cd
-: 1634084434:0;l
-: 1634084506:0;ll
 : 1634084526:0;zsh
-: 1634084533:0;printenv
 : 1634084865:0;l /bin
 : 1634084879:0;l /
 : 1634084889:0;la /
 : 1634085001:0;sudoreplay
 : 1634085012:0;sudoreplay -h
-: 1634085098:0;ll
 : 1634085112:0;vim .osh-update
 : 1634085123:0;vim .python_history
 : 1634085147:0;vim .lesshst
@@ -10891,123 +9641,47 @@ cd projects/c
 : 1634087569:0;search qtile
 : 1634087956:0;vim .local/bin/bspwm_floating
 : 1634087997:0;chmod +x .local/bin/bspwm_floating
-: 1634088004:0;vim .xinitrc
 : 1634088359:0;bspwm_floating
-: 1634088463:0;vim .xinitrc
-: 1634088479:0;vim .config/bspwm/bspwmrc
-: 1634088601:0;vim .xinitrc
-: 1634088625:0;pukeskull
-: 1634088632:0;nf
 : 1634089711:0;man pgrep
 : 1634089748:0;search nm-applet
 : 1634089760:0;search nm
 : 1634089784:0;search networkmanager
-: 1634166549:0;pukeskull
 : 1634166685:0;rofi --dmenu
-: 1634166714:0;yay
-: 1634168718:0;cd /etc
-: 1634168727:0;sudoedit lsb-release
-: 1634168785:0;nf
-: 1634168793:0;sudoedit lsb-release
-: 1634168824:0;nf
 : 1634168914:0;neofetch
-: 1634168957:0;cd
-: 1634168977:0;cd /etc
 : 1634168986:0;sudoedit lsb-release
-: 1634169003:0;nf
-: 1634170185:0;vim .config/polybar/config
-: 1634172313:0;bash
 : 1634172752:0;update-boot 5.14.12-MiniBeast
 : 1634172757:0;sudo update-boot 5.14.12-MiniBeast
-: 1634172766:0;cat /boot/loader/entries/MiniBeast.conf
-: 1634172770:0;nf
-: 1634172775:0;reboot
-: 1634172840:0;nf
-: 1634172842:0;sa
-: 1634173016:0;dmesg
 : 1634173022:0;bash
-: 1634203066:0;install nvidia-dkms
-: 1634205493:0;reboot
-: 1634253547:0;yay
-: 1634253863:0;vim .config/polybar/config
 : 1634266020:0;top
 : 1634266248:0;compile pcmanfm
 : 1634267106:0;search kakoune
-: 1634302968:0;vim .config/polybar/config
-: 1634304512:0;pukeskull
-: 1634304528:0;vim .Xresources
-: 1634304560:0;vim .config/polybar/config
-: 1634304678:0;vim .config/bspwm/bspwmrc
-: 1634305801:0;vim .config/polybar/config
 : 1634306303:0;yt "jeff bezos song"
 : 1634306328:0;yt "spongebob theme"
-: 1634310864:0;tmux2
-: 1634310874:0;man bspc
 : 1634310916:0;bspc -h
 : 1634310922:0;bspwm -h
 : 1634310929:0;bspwm -v
-: 1634311794:0;vim .config/bspwm/bspwmrc
-: 1634311809:0;vim .config/sxhkd/sxhkdrc
 : 1634312533:0;bspc wm -d
-: 1634312941:0;vim .config/bspwm/bspwmrc
-: 1634320315:0;vim .config/sxhkd/sxhkdrc
-: 1634320957:0;xrandr
-: 1634320990:0;vim .config/bspwm/bspwmrc
-: 1634321081:0;xrandr
-: 1634321114:0;vim .config/bspwm/bspwmrc
-: 1634321219:0;search pipewire
 : 1634321295:0;pipewire
 : 1634321321:0;man pipewire
 : 1634321341:0;pw-cli
-: 1634321526:0;xrandr
 : 1634321675:0;xrandr --output HDMI2 --auto --right-of eDP-1
 : 1634321684:0;xrandr --output HDMI-2 --auto --right-of eDP-1
 : 1634321745:0;xrandr
-: 1634321981:0;sudoedit /etc/X11/xorg.conf.d/10-monitor.conf
-: 1634322253:0;vim .config/bspwm/bspwmrc
 : 1634322266:0;xrandr -q
 : 1634322483:0;cava
 : 1634322567:0;unimatrix
 : 1634322575:0;install unimatrix
-: 1634322595:0;matrix
 : 1634322708:0;nitrogen --help
-: 1634322728:0;vim .config/bspwm/bspwmrc
-: 1634322984:0;nitrogen Pictures/Wallpapers
-: 1634323271:0;vim .config/polybar/config
 : 1634323574:0;xrandr | grep '\bconnected' | grep 'HDMI1' | awk '{ print \$2 }'
 : 1634323585:0;xrandr | grep '\bconnected' | grep 'HDMI1' | awk '{ print $2 }'
-: 1634323593:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'
 : 1634323603:0;xrandr | grep '\bconnected' | grep 'HDMI-1' | awk '{ print $2 }'
-: 1634323689:0;vim .local/bin/polybar_launch
-: 1634323819:0;vim .local/bin/kernel
-: 1634323869:0;vim .config/bspwm/bspwmrc
 : 1634324429:0;sudoedit /etc/X11/xorg.conf.d/10-monitor.conf
-: 1634324464:0;vim .config/bspwm/bspwmrc
 : 1634324614:0;chmod +x .local/bin/polybar_launch
-: 1634324623:0;reboot
-: 1634324950:0;vim .local/bin/polybar_launch
 : 1634324976:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'
 : 1634325054:0;polybar_launch
-: 1634325082:0;cd /tmp
-: 1634325083:0;l
-: 1634325108:0;vim .local/bin/polybar_launch
-: 1634325160:0;polybar mainbar-bspwm-hdmi 2>&1 | tee -a /tmp/polybar-hdmi.log & disown\
-
 : 1634325277:0;vim /tmp/polybar-hdmi.log
-: 1634325412:0;vim .config/polybar/config
 : 1634325581:0;polybar mainbar-bspwm-hdmi 2>&1 | tee -a /tmp/polybar-hdmi.log & disown\
 
-: 1634325809:0;vim .local/bin/polybar_launch
-: 1634326075:0;reboot
-: 1634326169:0;vim .local/bin/polybar_launch
-: 1634326201:0;reboot
-: 1634326238:0;vim .local/bin/polybar_launch
-: 1634326278:0;vim .local/bin/kernel
-: 1634326496:0;reboot
-: 1634326624:0;vim .config/polybar/config
-: 1634329103:0;vim .config/bspwm/bspwmrc
-: 1634329124:0;reboot
-: 1634329230:0;vim .config/polybar/config
 : 1634329742:0;search helvum
 : 1634329755:0;install helvum
 : 1634329944:0;pactl info
@@ -11015,7 +9689,6 @@ cd projects/c
 : 1634330110:0;search pavucontrol
 : 1634330121:0;compile pavucontrol
 : 1634330129:0;remove helvum
-: 1634330291:0;man pavucontrol
 : 1634330305:0;pavucontrol
 : 1634330486:0;search wireplumber
 : 1634330500:0;compile wireplumber
@@ -11026,32 +9699,18 @@ cd projects/c
 : 1634330696:0;scustatus pipewire
 : 1634330710:0;scuenable wireplumber
 : 1634330726:0;scudisable pipewire-media-session
-: 1634330738:0;reboot
-: 1634331057:0;nitrogen Pictures/Wallpapers
-: 1634331143:0;vim .config/sxhkd/sxhkdrc
 : 1634331453:0;matrix
-: 1634332375:0;bashtop
 : 1634334930:0;startx
 : 1634334955:0;vim .xinitrc
-: 1634336373:0;scustatus
-: 1634336836:0;scstatus
-: 1634336934:0;nf
 : 1634338473:0;vim .local/bin/polybar_launch
 : 1634343292:0;xrandr | grep '\bconnected' | grep 'HDMI-2' | awk '{ print $2 }'\
 
-: 1634345492:0;nf
-: 1634345536:0;yay
 : 1634345863:0;cd /etc/X11/xinit
-: 1634345864:0;l
 : 1634345871:0;vim xserverrc
 : 1634345917:0;ls /usr/bin/X
-: 1634346030:0;vim .xserverrc
 : 1634346055:0;cd /usr/bin
 : 1634346102:0;ls X*
-: 1634346230:0;ls
-: 1634346234:0;lk
 : 1634346284:0;echo $XDG_VTNR
-: 1634347157:0;notify-send 'Hello world!' 'This is an example notification.' --icon=dialog-information
 : 1634347302:0;search vdpau
 : 1634347331:0;vainfo
 : 1634347349:0;vdpau
@@ -11059,65 +9718,34 @@ cd projects/c
 : 1634347439:0;ls /usr/lib/vdpau/
 : 1634347640:0;nvidia-settings -q gpucoretemp
 : 1634347721:0;modinfo nvidia
-: 1634347839:0;sudoedit /etc/modprobe.d/nvidia.conf\
-
-: 1634347908:0;vim .xserverrc
 : 1634347959:0;nv-reg.h
-: 1634348402:0;reboot
 : 1634348931:0;sudoedit /etc/modprobe.d/nvidia.conf\
 
 : 1634348951:0;cd /etc/modprobe.d/
-: 1634348952:0;l
-: 1634348968:0;sudo rm -rf nvidia.conf 
-: 1634348972:0;reboot
 : 1634349197:0;mv .xserverrc Documents/backups
 : 1634349204:0;sudo rm -rf nvidia.conf 
-: 1634349216:0;reboot
-: 1634350233:0;tmux2
 : 1634350557:0;vim Documents/backups/.xserverrc
-: 1634351190:0;cd .local/share/xorg
-: 1634351191:0;l
 : 1634351198:0;lk
-: 1634351216:0;vim Xorg.0.log
 : 1634352422:0;sudoedit /etc/modprobe.d/nvidia.conf
-: 1634352480:0;cd
 : 1634352499:0;mv Documents/backups/.xserverrc ./
-: 1634352504:0;vim .xserverrc
 : 1634352547:0;sudoedit /etc/X11/Xwrapper.config
-: 1634352589:0;reboot
 : 1634352685:0;scustatus
 : 1634352706:0;scstatus
 : 1634352824:0;ps -ef | grep x
 : 1634352831:0;ps -ef | grep X
 : 1634352841:0;bashtop
-: 1634352892:0;cd .local/share/xorg
-: 1634352893:0;l
-: 1634352900:0;vim xorg.log
-: 1634352919:0;vim Xorg.0.log
-: 1634353045:0;vim xorg.log
 : 1634353076:0;du -h Xorg.0.log
 : 1634353090:0;cd /tmp
-: 1634353091:0;l
 : 1634353109:0;du -h polybar.log
 : 1634353123:0;vim polybar.log
-: 1634354068:0;vim .config/polybar/config
 : 1634354091:0;echo ${xrdb:color0}
 : 1634354108:0;${xrdb:color0}
-: 1634354151:0;vim .config/sxhkd/sxhkdrc
-: 1634354253:0;vim .config/polybar/scripts/sound.sh
 : 1634354442:0;pw-play
-: 1634354522:0;vim .xbindkeysrc
-: 1634355014:0;vim .local/bin/kernel
-: 1634356230:0;vim .config/polybar/scripts/sound.sh
 : 1634356480:0;pw-record --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
-: 1634356513:0;pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
 : 1634357913:0;wget https://raw.githubusercontent.com/JopStro/bspswallow/master/bspswallow
-: 1634357915:0;l
 : 1634357948:0;chmod +x bspswallow
-: 1634357949:0;l
 : 1634357959:0;mv bspswallow .config/bspwm
 : 1634357964:0;cd .config/bspwm
-: 1634357965:0;l
 : 1634358027:0;pgrep xorg
 : 1634358035:0;pgrep bspwm
 : 1634358040:0;pgrep Xorg
@@ -11125,16 +9753,10 @@ cd projects/c
 : 1634358309:0;vim .config/bspwm/terminals
 : 1634358325:0;vim .config/bspwm/bspswallow
 : 1634358532:0;touch noswallow
-: 1634358533:0;l
-: 1634358702:0;feh
-: 1634358720:0;vim .config/bspwm/bspwmrc
 : 1634358769:0;mkdir .config/bspwm/scripts
-: 1634358798:0;l
 : 1634358824:0;mv .config/bspwm/bspswallow .config/bspwm/scripts
-: 1634358845:0;feh
 : 1634359081:0;ps -aux
 : 1634359097:0;ps -aux | grep Xorg
-: 1634360355:0;sudo kernel
 : 1634360377:0;cd /usr/src/linux-5.14.12-MiniBeast
 : 1634360384:0;sudo make menuconfig
 : 1634361306:0;cat /proc/cpuinfo | grep flags
@@ -11144,53 +9766,632 @@ cd projects/c
 : 1634361866:0;cat /proc/cpuinfo | grep rdrand
 : 1634361880:0;cat /proc/cpuinfo | grep pat
 : 1634361907:0;cat /proc/cpuinfo | grep smap
-: 1634387600:0;cd
-: 1634387618:0;cd .config/polybar/scripts
-: 1634387619:0;l
-: 1634387625:0;vim sound.sh
 : 1634388593:0;cat /sys/kernel/mm/transparent_hugepage/enabled
 : 1634389049:0;grep AnonHugePages /proc/meminfo
-: 1634394334:0;nmtui
-: 1634394910:0;vim .config/polybar/config
-: 1634395051:0;cd
-: 1634395063:0;vim .local/bin/git_sync
-: 1634395077:0;ll
 : 1634395136:0;cd /etc/X11
-: 1634395138:0;l
 : 1634395340:0;cd .build/git/config-files
-: 1634395344:0;git_sync
 : 1634395360:0;cd /etc
 : 1634395364:0;popd
 : 1634395368:0;cd etc
-: 1634395370:0;ll
 : 1634395385:0;ll X11/
 : 1634395391:0;ll X11/xorg.conf.d
 : 1634395402:0;ll X11/xinit
 : 1634395416:0;ll X11/xinit/xinitrc.d
 : 1634395463:0;ll X11
-: 1634395477:0;l
-: 1634395483:0;ll *
 : 1634395495:0;vim xorg.conf.d/10-monitor.conf
-: 1634395636:0;cd
 : 1634395642:0;search btop
 : 1634395660:0;compile btop
-: 1634395743:0;btop
-: 1634396258:0;vim .config/sxhkd/sxhkdrc
-: 1634396369:0;ll
-: 1634396373:0;..
-: 1634396375:0;ll
 : 1634396397:0;l plasma
 : 1634396407:0;rmf plasma/plasma-kwin_x11.service
-: 1634396413:0;ga *
-: 1634396429:0;cd rofi
-: 1634396430:0;l
-: 1634396435:0;l rofi
-: 1634396441:0;l
-: 1634396450:0;cd rofi
-: 1634396451:0;l
-: 1634396455:0;..
 : 1634396465:0;vim .local/bin/git_sync
-: 1634396509:0;..
-: 1634396512:0;l
-: 1634396515:0;rmf rofi
 : 1634396520:0;git_sync
+: 1634396558:0;l rofi/rofi
+: 1634396572:0;ga
+: 1634396575:0;ga *
+: 1634396591:0;gc -m 10/16/21
+: 1634396596:0;pass -c System/ssh
+: 1634396604:0;gp
+: 1634396728:0;vim .xserverrc
+: 1634396914:0;rmf *
+: 1634396954:0;cd .local/share/xorg
+: 1634396965:0;vim Xorg.0.log
+: 1634396987:0;vim xorg.log
+: 1634397293:0;search xf86
+: 1634397611:0;remove bashtop
+: 1634398331:0;sysscan
+: 1634399035:0;df -Th /boot
+: 1634399048:0;df -Th /boot/efi
+: 1634399138:0;sudoedit loader/entries/MiniBeast.conf
+: 1634399249:0;cd /boot
+: 1634399263:0;bootctl
+: 1634399313:0;vim loader/entries/MiniBeast.conf
+: 1634399485:0;cd EFI
+: 1634399493:0;l systemd
+: 1634399524:0;sudo rm -rf initramfs-linux-5.14.1* intel-ucode.img 
+: 1634399531:0;cd Linux
+: 1634399542:0;sudo rm -rf *
+: 1634399555:0;l arch
+: 1634399567:0;l BOOT
+: 1634399579:0;l eed0d54cfa6f4219b370b3a0d5ad298f
+: 1634399589:0;ll eed0d54cfa6f4219b370b3a0d5ad298f
+: 1634399596:0;ll grub
+: 1634401939:0;vim .local/bin/kernel
+: 1634403513:0;search ytop
+: 1634403533:0;install ytop
+: 1634405199:0;cd btop
+: 1634405205:0;vim btop.conf
+: 1634405808:0;vim Makefile\
+\
+
+: 1634405900:0;echo $BUILD_NVIDIA
+: 1634407046:0;cd src
+: 1634407052:0;l assets
+: 1634407060:0;l debian
+: 1634407071:0;l debian/source
+: 1634407211:0;rm -rf zenith
+: 1634407229:0;git clone https://github.com/bvaisvil/zenith.git
+: 1634407241:0;cd zenith
+: 1634407363:0;find build
+: 1634407434:0;ls *
+: 1634407621:0;cd .build/git/zenith
+: 1634407658:0;cargo build --release --features nvidia
+: 1634407726:0;ll *
+: 1634407751:0;cd build
+: 1634407842:0;search zenith
+: 1634407967:0;install zenith
+: 1634408290:0;cd target/release
+: 1634408293:0;./zenith
+: 1634408358:0;rmf zenith
+: 1634408460:0;nvtop
+: 1634408470:0;remove zenith
+: 1634408497:0;remove zenith-git
+: 1634408503:0;zenith
+: 1634409693:0;search glances
+: 1634409708:0;install glances-git
+: 1634410577:0;man glances
+: 1634411324:0;ytop
+: 1634413540:0;glances
+: 1634414245:0;compile marble-maps
+: 1634414350:0;install marble-maps
+: 1634414668:0;remove marble-maps
+: 1634414672:0;se
+: 1634414675:0;search maps
+: 1634414690:0;install gnome-maps
+: 1634416902:0;man bspc
+: 1634422331:0;search kitty
+: 1634422352:0;compile kitty
+: 1634422444:0;dmesg
+: 1634425647:0;feh
+: 1634425669:0;nitrogen Pictures/Wallpapers
+: 1634426803:0;vim .local/share/xorg/xorg.log
+: 1634426831:0;vim .local/share/xorg/Xorg.0.log
+: 1634427783:0;printenv
+: 1634428563:0;vim
+: 1634434274:0;node --version
+: 1634596912:0;yay
+: 1634597066:0;compile btop ksshaskpass plasma-desktop
+: 1634597084:0;sudo kernel -u
+: 1634598358:0;npm audit fix
+: 1634598432:0;gpg --recv-keys --keyserver hkps://keys.openpgp.org D7574483BB57B18D
+: 1634598473:0;gpg --recv-keys --keyserver hkps://keys.gnupg.net D7574483BB57B18D
+: 1634598494:0;compile plasma-desktop ksshaskpass
+: 1634598508:0;vim .local/bin/compile
+: 1634598561:0;cd /run/user/1000
+: 1634598568:0;vim compile_error
+: 1634655637:0;grabc
+: 1634656617:0;vim Downloads/Xresources
+: 1634656639:0;vim .Xresources.bak
+: 1634656898:0;colorscript -r
+: 1634656927:0;colorscript -e
+: 1634656931:0;colorscript -e pacman
+: 1634657221:0;pukeskull
+: 1634657341:0;compile zathura
+: 1634657378:0;zathura
+: 1634657547:0;compile zathura-pdf-mupdf
+: 1634657617:0;zathura Documents/books/intel_x64_developers_manual.pdf
+: 1634657857:0;search xshell
+: 1634657895:0;search putty
+: 1634658036:0;vim .local/bin/get-verified-tarball
+: 1634658102:0;mkdir .config/zathura && wget https://raw.githubusercontent.com/Manas140/dotfiles/main/config/zathura/zathurarc -P ~/.config/zathura zathurarc
+: 1634658112:0;cd .config/zathura
+: 1634658213:0;cd /usr/share/applications/
+: 1634658247:0;xdg-mime default org.pwmt.zathura.desktop application/pdf
+: 1634658270:0;remove popple
+: 1634658281:0;remove okular
+: 1634658291:0;remove poppler
+: 1634659267:0;vim .config/zathura/zathurarc
+: 1634659401:0;sudo kernel -r 5.14.10-MiniBeast
+: 1634659469:0;sudo kernel -r 5.14.11-MiniBeast
+: 1634659742:0;search mpd
+: 1634660785:0;gimp
+: 1634661563:0;cd Downloads
+: 1634661571:0;ex lsw-0.3.tar.gz
+: 1634661576:0;cd lsw
+: 1634661580:0;cd lsw-0.3
+: 1634661595:0;vim README
+: 1634661621:0;vim lsw.c
+: 1634661679:0;./lsw
+: 1634661714:0;lsw
+: 1634661720:0;man lsw
+: 1634661805:0;search tabbed
+: 1634661848:0;git clone https://git.suckless.org/tabbed
+: 1634661865:0;cd tabbed
+: 1634661897:0;wget https://tools.suckless.org/tabbed/patches/xresources/tabbed-xresources-20210317-dabf6a2.diff
+: 1634661911:0;patch -p1 < tabbed-xresources-20210317-dabf6a2.diff
+: 1634661921:0;vim config.mk
+: 1634662018:0;zathura Documents/books/Understanding.Linux.Kernel.pdf
+: 1634662325:0;cd /
+: 1634662328:0;tabbed
+: 1634662338:0;tabbed st
+: 1634662412:0;tabbed surf
+: 1634662470:0;cd .local/b
+: 1634662492:0;cd share
+: 1634662500:0;cd man
+: 1634662504:0;cd man1
+: 1634662505:0;ls
+: 1634662521:0;rmf dmenu.1 tabbed.1
+: 1634662525:0;man tabbed
+: 1634662530:0;man stest
+: 1634662546:0;stest
+: 1634662564:0;rmf tabbed
+: 1634663309:0;sa
+: 1634663636:0;btop
+: 1634665138:0;man pavucontrol
+: 1634665695:0;search pamixer
+: 1634665865:0;search pipewire
+: 1634665987:0;install pamixer
+: 1634666151:0;pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p' | xclip
+: 1634666187:0;pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'
+: 1634666260:0;pactl list sinks | sed -n "/${pw-play --list-targets | sed -n 's/^*.*"\(.*\)" prio=.*$/\1/p'}/,/Volume/ s--list-targets[[:space:]]\+Volume:.* \([[:digit:]]\+\)%.*"
+: 1634666297:0;man pamixer
+: 1634666741:0;pamixer -i 10%
+: 1634666750:0;pamixer -i 10
+: 1634667394:0;pamixer --list-sinks
+: 1634667562:0;pamixer -m
+: 1634667572:0;pamixer -m --toggle
+: 1634667595:0;pamixer --toggle-mute
+: 1634667717:0;pamixer --list-sources
+: 1634667785:0;pamixer --get-default-sink
+: 1634668037:0;man alsa
+: 1634668091:0;vim task-manager.sh
+: 1634668127:0;vim kernel-update.sh
+: 1634668175:0;vim system-nvidia-smi.sh
+: 1634668758:0;wget https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
+: 1634668791:0;rmf rofi-power-menu.1
+: 1634668820:0;rofi -show p -modi p:rofi-power-menu \\
+  -theme Paper \\
+  -font "JetBrains Mono NF 16" \\
+  -width 20 \\
+  -lines 6
+: 1634669247:0;cp simple.rasi simple_power.rasi
+: 1634669255:0;vim simple_power.rasi
+: 1634669285:0;rofi -show power-menu -modi power-menu:rofi-power-menu
+: 1634669498:0;chmod +x rofi-power-menu
+: 1634669505:0;rofi-power-menu
+: 1634669555:0;l ..
+: 1634669797:0;rmf simple_power.rasi
+: 1634670037:0;./rofi-power-menu
+: 1634670455:0;vim .config/polybar/scripts/rofi-power-menu
+: 1634670479:0;vim .local/bin/rofi-power-menu
+: 1634672517:0;git clone https://github.com/adi1090x/rofi.git
+: 1634672542:0;l menu
+: 1634672724:0;cd themes
+: 1634672744:0;l styles
+: 1634672770:0;./rofi-p_menu.sh
+: 1634672780:0;rmf rofi-p_menu.sh
+: 1634672927:0;vim setup.sh 
+: 1634672970:0;cd 1080p
+: 1634672982:0;vim config.rasi
+: 1634672988:0;cd applets
+: 1634673058:0;cd rofi/1080p/applets/menu
+: 1634673063:0;./volume.sh
+: 1634673209:0;l configs/square
+: 1634673224:0;.
+: 1634673255:0;rm -rf 1080p
+: 1634673328:0;cd rofi
+: 1634673335:0;rmf 720p
+: 1634673346:0;mv 1080p/* ./
+: 1634673381:0;l configs
+: 1634673393:0;mv square/* ./
+: 1634673399:0;rmf square
+: 1634673475:0;mkdir square
+: 1634673484:0;mv *.rasi square
+: 1634673534:0;cd configs
+: 1634673536:0;cd square
+: 1634673584:0;l rofi
+: 1634673600:0;cd applets/menu
+: 1634673634:0;cd rofi/applets/
+: 1634673641:0;cd menu
+: 1634673664:0;cd .config/rofi/rofi/applets/menu
+: 1634673666:0;pwd
+: 1634673767:0;vim style.sh
+: 1634673864:0;vim configs/square/powermenu.rasi
+: 1634673947:0;..
+: 1634673968:0;l screenshots
+: 1634673977:0;rmf screenshots themes
+: 1634674024:0;rmf rofi
+: 1634674333:0;vim simple.rasi
+: 1634675598:0;mkdir powermenu
+: 1634675625:0;wget https://raw.githubusercontent.com/adi1090x/rofi/master/1080p/applets/menu/powermenu.sh
+: 1634676177:0;wget https://raw.githubusercontent.com/adi1090x/rofi/master/1080p/applets/menu/configs/square/powermenu.rasi
+: 1634677523:0;cd .config/rofi
+: 1634677526:0;cd powermenu
+: 1634677584:0;chmod +x powermenu.sh
+: 1634678664:0;vim colors.rasi
+: 1634678809:0;./powermenu.sh
+: 1634678976:0;vim rofi-power-menu
+: 1634679225:0;vim ../config
+: 1634679685:0;search i3lock
+: 1634679714:0;install i3lock-color
+: 1634679760:0;i3lock
+: 1634679971:0;wget https://raw.githubusercontent.com/Raymo111/i3lock-color/master/examples/lock.sh
+: 1634679989:0;chmod +x lock.sh
+: 1634680031:0;vim lock.sh
+: 1634680309:0;./lock.sh
+: 1634680870:0;mv lock.sh .local/bin/lock
+: 1634680875:0;lock
+: 1634681030:0;mv lock lock-screen
+: 1634681056:0;mv lock-screen lockscreen
+: 1634682180:0;ranger
+: 1634682521:0;vim .local/bin/lockscreen
+: 1634682531:0;lockscreen
+: 1634687408:0;sudo update-mirrors
+: 1634687564:0;vim confirm.rasi
+: 1634688029:0;vim powermenu.rasi
+: 1634691428:0;vim powermenu.sh
+: 1634693308:0;nmtui
+: 1634743939:0;cd projects/c
+: 1634743958:0;vim hello_world_gtk.c
+: 1634744060:0;mv hello_world_gtk.c hello-world-gtk.c
+: 1634744082:0;search gtk
+: 1634744225:0;vim hello-world-gtk.c
+: 1634744824:0;gcc -o hello-world-gtk hello-world-gtk.c `pkg-config --cflags --libs gtk4`
+: 1634744829:0;./hello-world-gtk
+: 1634745151:0;sudo kernel
+: 1634745193:0;install nvidia-dkms
+: 1634745276:0;vim kernel
+: 1634745754:0;update-boot frhfi
+: 1634745990:0;update-boot fdd
+: 1634747044:0;update-boot 5.4.12
+: 1634747056:0;update-boot f
+: 1634747949:0;xrdb
+: 1634749887:0;cd /boot/efi/loader/entries
+: 1634749894:0;cd /boot/loader/entries
+: 1634749908:0;sudo cp MiniBeast.conf MiniBeast2.conf
+: 1634749911:0;update-boot o
+: 1634749923:0;update-boot 5.12.9
+: 1634749944:0;vim /boot/loader/entries/MiniBeast.conf
+: 1634750028:0;update-boot 5.14.13
+: 1634750405:0;vim MiniBeast2.conf
+: 1634750698:0;rm -rf MiniBeast2.conf
+: 1634750700:0;sudo rm -rf MiniBeast2.conf
+: 1634750707:0;cat MiniBeast.conf
+: 1634751281:0;update-boot
+: 1634751642:0;sudo update-boot o
+: 1634751646:0;sudo update-boot
+: 1634751663:0;sudo update-boot 5.14.13
+: 1634752326:0;man grep
+: 1634752524:0;grep 5.14.14 /boot/loader/entries/MiniBeast.conf
+: 1634753168:0;sudo update-boot 5.14.13-MiniBeast
+: 1634753178:0;sudo update-boot 5.14.14-MiniBeast
+: 1634753655:0;cat /boot/loader/entries/MiniBeast.conf
+: 1634753701:0;vim .local/bin/update-boot
+: 1634756341:0;vim .config/rofi/powermenu/colors.rasi
+: 1634759520:0;uptime
+: 1634759846:0;vim .config/rofi/powermenu/confirm.rasi
+: 1634760060:0;uname -r
+: 1634760575:0;cd .config/rofi/powermenu
+: 1634760592:0;cp powermenu.rasi dialog.rasi
+: 1634760596:0;vim dialog.rasi
+: 1634762623:0;vim .config/rofi/powermenu/powermenu.rasi
+: 1634764078:0;vim .config/rofi/powermenu/powermenu.sh
+: 1634764418:0;vim lockscreen
+: 1634764860:0;man i3lock
+: 1634768748:0;sudoedit /etc/systemd/system/wakelock@.service
+: 1634768893:0;sudo systemctl enable wakelock@jason --now
+: 1634769602:0;sudoedit /etc/tlp.conf
+: 1634772336:0;compile shellcheck dunst
+: 1634773062:0;man bspwm
+: 1634773912:0;search tor
+: 1634773926:0;search tor-browser
+: 1634773936:0;search torbrowser
+: 1634777852:0;man xrdb
+: 1634778817:0;cd .build/git/suckless-st-fork
+: 1634779058:0;vim config.def.h
+: 1634779086:0;vim config.h
+: 1634779106:0;make clean
+: 1634779110:0;make -j5
+: 1634779826:0;nf
+: 1634779836:0;xrdb -query -all
+: 1634779894:0;xrdb ~/.Xresources
+: 1634782415:0;search deadd
+: 1634866909:0;ll
+: 1634866918:0;vim .Xauthority
+: 1634866985:0;pip3 install notify-send.py
+: 1634867102:0;notify-send.py Hello
+: 1634867113:0;notify-send.py Hello Jason
+: 1634867353:0;cd Pictures/Wallpapers
+: 1634867421:0;cd .config/dunst
+: 1634867425:0;vim dunstrc
+: 1634867654:0;notify-send.py "Images are" "COOL" \\
+               --hint string:image-path:file:/home/jason/Pictures/Wallpapers/hydrant.jpg
+: 1634867735:0;notify-send.py "This notification has a progressbar" "33%" \\
+                         --hint int:value:33)
+: 1634867783:0;install deadd-notification-center
+: 1634867877:0;cd .build/git
+: 1634867884:0;git clone https://github.com/phuhl/linux_notification_center.git
+: 1634868292:0;cd linux_notification_center
+: 1634868302:0;vim Makefile
+: 1634868478:0;make install
+: 1634868564:0;mkdir -p .out
+: 1634868645:0;sudo make install
+: 1634868799:0;vim style.css
+: 1634868813:0;mkdir deadd
+: 1634868843:0;mv style.css ~/.config/deadd/deadd.css
+: 1634868880:0;vim linux-notification-center.cabal
+: 1634868902:0;vim updateyourconfig2021.org
+: 1634868979:0;scudisable dunst
+: 1634868999:0;scustop dunst
+: 1634869065:0;cp dunst dunst.bak
+: 1634869071:0;cp -r dunst dunst.bak
+: 1634869089:0;remove dunst
+: 1634869099:0;xprop
+: 1634869121:0;scstatus dunst
+: 1634869129:0;scustatus dunst
+: 1634869287:0;notify-send.py "This notification has a progressbar" "33%" \\
+                         --hint int:value:33
+: 1634870572:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle
+: 1634870650:0;notify-send.py "Icons are" "COOL" \\
+               --hint string:image-path:face-cool\
+
+: 1634870944:0;xbacklight -dec 50
+: 1634870949:0;xbacklight -inc 50
+: 1634871064:0;chmod +x .local/bin/deadd-volume
+: 1634871119:0;deadd-volume
+: 1634871561:0;cd .config/polybar/scripts
+: 1634871567:0;vim sound.sh
+: 1634871787:0;notify-send.py "Lautstärke" "$VOLUME/100" \\
+                         --hint string:image-path:$ICON boolean:transient:true \\
+                                int:has-percentage:$VOLUME \\
+                         --replaces-process "volume-popup"
+: 1634871852:0;notify-send.py "Lautstärke" "$VOLUME/100" \\
+                         --hint string:image-path:/home/jason/Pictures/Wallpapers/keyboard.jpg boolean:transient:true \\
+                                int:has-percentage:$VOLUME \\
+                         --replaces-process "volume-popup"
+: 1634872077:0;deadd-volume dec
+: 1634872188:0;deadd-volume inc
+: 1634872235:0;rmf .local/bin/deadd-volume
+: 1634872397:0;notify-send.py "Images are" "COOL" \\
+               --hint string:image-path:file://home/jason/Pictures/Wallpapers/hydrant.jpg
+: 1634872476:0;notify-send.py "And buttons" "Do you like buttons?" \\
+               --hint boolean:action-icons:true \\
+               --action yes:face-cool no:face-sick  \
+
+: 1634872502:0;notify-send.py "Icons are" "COOL" \\
+               --hint string:image-path:face-cool
+: 1634872531:0;notify-send.py "This notification has a progressbar" "33%" \\
+                         --hint int:has-percentage:33)
+: 1634872535:0;notify-send.py "This notification has a progressbar" "33%" \\
+                         --hint int:has-percentage:33
+: 1634872555:0;notify-send.py "This notification has a slider" "33%" \\
+                         --hint int:has-percentage:33\
+                         --action changeValue:abc)\
+
+: 1634872559:0;notify-send.py "This notification has a slider" "33%" \\
+                         --hint int:has-percentage:33\
+                         --action changeValue:abc
+: 1634872887:0;vim .local/bin/deadd-brightness
+: 1634873001:0;vim .config/polybar/scripts/sound.sh
+: 1634873309:0;pamixer sget Master
+: 1634873480:0;pamixer --get-volume
+: 1634873485:0;pamixer --get-volume-human
+: 1634873905:0;cp .config/polybar/scripts/sound.sh .local/bin/deadd-volume
+: 1634873916:0;vim .local/bin/deadd-volume
+: 1634874085:0;vim .xbindkeysrc
+: 1634874545:0;deadd-notification-center
+: 1634874587:0;chmod +x .local/bin/deadd-brightness
+: 1634874729:0;kill -s USR1 $(pidof deadd-notification-center)
+: 1634874772:0;vim .config/bspwm/bspwmrc
+: 1634875244:0;cd .local/bin
+: 1634875252:0;vim deadd-volume
+: 1634875613:0;vim deadd-brightness
+: 1634875900:0;man deadd-notification-center
+: 1634875907:0;apropos grep
+: 1634876098:0;vim deadd.css
+: 1634888009:0;
+: 1634877701:0;cd .config/deadd
+: 1634877707:0;vim deadd.conf
+: 1634881387:0;echo $XDG_DATA_HOME
+: 1634881688:0;/usr/lib/
+: 1634881797:0;man d
+: 1634881799:0;d
+: 1634881810:0;cd .local/share
+: 1634881836:0;mkdir dbus-1
+: 1634881843:0;cd dbus-1
+: 1634881887:0;vim org.freedesktop.Notifications.service
+: 1634882244:0;notify-send 'Hello world!' 'This is an example notification.' --icon=dialog-information
+: 1634882500:0;vim .Xresources
+: 1634883224:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1634883599:0;install networkmanager-dmenu-git
+: 1634883691:0;vim /usr/bin/networkmanager_dmenu
+: 1634883866:0;networkmanager_dmenu rofi
+: 1634883912:0;cd .config
+: 1634884019:0;man rofi
+: 1634884076:0;sudoedit /usr/bin/networkmanager_dmenu
+: 1634884122:0;networkmanager_dmenu
+: 1634884160:0;remove networkmanager-dmenu-git
+: 1634884236:0;install nm-applet
+: 1634884255:0;install network-manager-applet
+: 1634884294:0;chmod +x .local/bin/nmgui
+: 1634884486:0;remove plasma-workspace
+: 1634884530:0;remove plasma-desktop plasma-workspace
+: 1634884574:0;sudo pacman -Rcsn plasma-workspace
+: 1634884659:0;remove plasma-desktop
+: 1634884675:0;cd /usr/share/dbus-1
+: 1634884677:0;l
+: 1634884680:0;l *
+: 1634884810:0;cd
+: 1634884817:0;vim .local/bin/nmgui
+: 1634884837:0;search trayer
+: 1634884849:0;install trayer
+: 1634884854:0;nmgui
+: 1634884975:0;remove trayer
+: 1634884991:0;rmf .local/bin/nmgui
+: 1634885622:0;reboot
+: 1634885700:0;nm-applet
+: 1634886495:0;search open-vpn
+: 1634886499:0;search openvpn
+: 1634886566:0;tmux2
+: 1634886778:0;vim .config/polybar/config
+: 1634887127:0;l .local/share/dbus-1
+: 1634887219:0;nm-applet &
+: 1634887237:0;vim .config/deadd/deadd.css
+: 1634887267:0;vim .config/deadd/deadd.conf
+: 1634887963:0;vim .config/sxhkd/sxhkdrc
+: 1634887995:0;vim .config/deadd/deadd.conf
+: 1634888085:0;vim .config/bspwm/bspwmrc
+: 1634888127:0;nm-applet &
+: 1634888215:0;vim .config/polybar/config
+: 1634889653:0;vim .config/deadd/deadd.conf
+: 1634907636:0;vim .config/deadd/deadd.css
+: 1634909511:0;cd /usr/share/dbus-1
+: 1634909515:0;l *
+: 1634909660:0;sudo rm -rf */org.kde*
+: 1634909667:0;l *
+: 1634910476:0;/usr/share/icons/gnome/32x32$ ls emotes/
+: 1634910493:0;/usr/share/icons/
+: 1634910494:0;l
+: 1634910511:0;l default
+: 1634910516:0;l Adwaita
+: 1634910787:0;cd
+: 1634910791:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1634911159:0;notify-send.py "And buttons" "Do you like buttons?" \\
+               --hint boolean:action-icons:true \\
+               --action yes:face-cool no:face-sick  \
+
+: 1634911653:0;cd .local/bin
+: 1634911654:0;l
+: 1634911662:0;vim deadd-volume
+: 1634911856:0;vim deadd-notification-center
+: 1634914247:0;search zenity
+: 1634914491:0;vim .config/deadd/deadd.css
+: 1634914511:0;vim .config/deadd/deadd.conf
+: 1634914817:0;notify-send.py "And buttons" "Do you like buttons?" \\
+               --hint boolean:action-icons:true \\
+               --action yes:face-cool no:face-sick  \
+
+: 1634914849:0;notify-send.py "Images are" "COOL" \\
+               --hint string:image-path:file://home/jason/Pictures/Wallpapers/hydrant.jpg
+: 1634914870:0;notify-send.py "Icons are" "COOL" \\
+               --hint string:image-path:face-cool\
+
+: 1634914882:0;notify-send.py "This notification has a slider" "33%" \\
+                         --hint int:has-percentage:33\
+                         --action changeValue:abc)\
+
+: 1634914888:0;notify-send.py "This notification has a slider" "33%" \\
+                         --hint int:has-percentage:33\
+                         --action changeValue:abc
+: 1634914992:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1634915396:0;reboot
+: 1634915491:0;notify-send.py "And buttons" "Do you like buttons?" \\
+               --hint boolean:action-icons:true \\
+               --action yes:face-cool no:face-sick  \
+
+: 1634915523:0;vim .config/deadd/deadd.css
+: 1634915685:0;vim .config/bspwm/bspwmrc
+: 1634915793:0;bash
+: 1634916084:0;vim .local/bin/kernel
+: 1634919272:0;vim .config/deadd/deadd.css
+: 1634925322:0;vim .config/deadd/deadd.conf
+: 1634925951:0;vim .config/polybar/config
+: 1634926807:0;man polybar
+: 1634927377:0;vim .Xresources
+: 1634927389:0;nf
+: 1634927414:0;vim .config/polybar/config
+: 1634928114:0;vim .Xresources
+: 1634928140:0;vim .config/polybar/config
+: 1634930922:0;vim .config/deadd/deadd.conf
+: 1634934884:0;search jq
+: 1634934897:0;install jq
+: 1634936134:0;cd .build/git
+: 1634936136:0;l
+: 1634936151:0;rmf *.tar.gz
+: 1634936152:0;l
+: 1634936159:0;git clone https://github.com/piutranq/sxhkd-statusd.git
+: 1634936161:0;l
+: 1634936165:0;cd sxhkd-statusd
+: 1634936168:0;l
+: 1634936172:0;vim Makefile
+: 1634936207:0;l
+: 1634936214:0;make install
+: 1634936219:0;sudo make install
+: 1634936231:0;l
+: 1634936250:0;cd .local/bin
+: 1634936251:0;l
+: 1634936267:0;..
+: 1634936268:0;l
+: 1634936274:0;l state
+: 1634936291:0;vim Makefile
+: 1634936305:0;make install
+: 1634936311:0;cd bi
+: 1634936314:0;cd bin
+: 1634936315:0;l
+: 1634936359:0;make
+: 1634936369:0;make install
+: 1634936375:0;l
+: 1634936388:0;sxhkd-statusd
+: 1634936424:0;search socat
+: 1634936437:0;compile socat
+: 1634936580:0;wget https://raw.githubusercontent.com/piutranq/polybar-sxhkd/master/polybar-sxhkd.sh
+: 1634936591:0;chmod +x polybar-sxhkd.sh
+: 1634936593:0;l
+: 1634936861:0;install socat
+: 1634936884:0;mkfifo /run/user/$UID/sxhkd.fifo
+: 1634936890:0;l /run/user/1000
+: 1634936967:0;vim .config/bspwm/bspwmrc
+: 1634937101:0;vim polybar-sxhkd.sh
+: 1634937221:0;vim .config/polybar/config
+: 1634937337:0;mv polybar-sxhkd.sh ~/.config/polybar/scripts
+: 1634937375:0;vim .config/polybar/config
+: 1634937503:0;vim /tmp/polybar.log
+: 1634937580:0;vim .config/polybar/config
+: 1634937687:0;l /run/user/1000
+: 1634937713:0;cat /run/user/1000/sxhkd.fifo.sxhkd-statusd
+: 1634937726:0;l /run/user/1000
+: 1634937733:0;cat /run/user/1000/sxhkd.fifo.sxhkd-statusd
+: 1634937830:0;vim /tmp/polybar.log
+: 1634937867:0;vim .config/polybar/config
+: 1634938105:0;vim /tmp/polybar.log
+: 1634938116:0;vim .config/polybar/config
+: 1634938160:0;cd .config/polybar/scripts
+: 1634938161:0;l
+: 1634938167:0;./polybar-sxhkd.sh
+: 1634938195:0;./polybar-sxhkd.sh | echo
+: 1634938223:0;vim polybar-sxhkd.sh
+: 1634938325:0;cd
+: 1634938330:0;vim .config/polybar/config
+: 1634938395:0;vim .config/bspwm/bspwmrc
+: 1634938427:0;cd .local/bin
+: 1634938428:0;l
+: 1634938471:0;rmf sxhkd-statusd
+: 1634938474:0;cd
+: 1634938478:0;cd .config/polybar/scripts
+: 1634938479:0;l
+: 1634938493:0;rmf polybar-sxhkd.sh
+: 1634938500:0;cd
+: 1634938505:0;cd .build/git
+: 1634938506:0;l
+: 1634938514:0;rmf sxhkd-statusd
+: 1634938549:0;cd
+: 1634938553:0;vim .Xresources
+: 1634938574:0;vim .config/deadd/deadd.css
+: 1634939496:0;vim .local/bin/git_sync
+: 1634939561:0;git_sync
