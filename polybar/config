@@ -104,7 +104,7 @@ font-3 = "JetBrainsMono Nerd Font:weight=bold:size=14;0"
 font-4 = "JetBrainsMono Nerd Font:weight=bold:size=16;0"
 font-5 = "Material Design Icons:style=Regular:size=15;2"
 
-modules-left = rofi kernel-updates pacman-updates sep0 bspwm sxhkd
+modules-left = rofi kernel-updates pacman-updates sep0 bspwm
 modules-center = xwindow
 modules-right = pavolume wireless-network battery sep date sep2
 
@@ -894,10 +894,10 @@ type = custom/script
 label = %output%
 interval = 1.0
 exec = ~/.config/polybar/scripts/sound.sh
-click-left = ~/.config/polybar/scripts/sound.sh mute &
+click-left = ~/.local/bin/deadd-volume mute &
 click-right = pavucontrol
-scroll-up = ~/.config/polybar/scripts/sound.sh up &
-scroll-down = ~/.config/polybar/scripts/sound.sh down &
+scroll-up = ~/.local/bin/deadd-volume up &
+scroll-down = ~/.local/bin/deadd-volume down &
 format-prefix-font = 3
 format-prefix-foreground = ${colors.color4}
 format-foreground = ${colors.foreground}

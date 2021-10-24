@@ -10395,3 +10395,266 @@ cd projects/c
 : 1634938574:0;vim .config/deadd/deadd.css
 : 1634939496:0;vim .local/bin/git_sync
 : 1634939561:0;git_sync
+: 1634939569:0;cd .build/git/config-files
+: 1634939584:0;ga *
+: 1634939607:0;gc -m 10/22/21
+: 1634939629:0;pass -c System/ssh
+: 1634939641:0;gp
+: 1634940008:0;vim .config/deadd/deadd.conf
+: 1634940155:0;cd
+: 1634940162:0;vim .config/bspwm/bspwmrc
+: 1634944975:0;cd .local/bin
+: 1634944976:0;l
+: 1634944991:0;vim bspwm_floating
+: 1634945056:0;bspwm_floating &
+: 1634945360:0;mv .local/bin/bspwm_floating .config/bspwm/scripts/
+: 1634946301:0;vim .config/polybar/config
+: 1634946335:0;vim .config/deadd/deadd.conf
+: 1634946939:0;vim .config/bspwm/bspwmrc
+: 1634947180:0;sudo rmorphan
+: 1634947207:0;yay
+: 1634947288:0;vim .config/deadd/deadd.conf
+: 1634947306:0;vim .config/deadd/deadd.css
+: 1634947387:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1634948242:0;tmux2
+: 1634990091:0;vim
+: 1634994521:0;cd .build/git/config-files
+: 1634994524:0;..
+: 1634994526:0;l
+: 1634994534:0;rmf linux-scripts
+: 1634994540:0;git clone git@github.com:cjmcguire88/linux-scripts.git
+: 1634994545:0;pass -c System/ssh
+: 1634994564:0;cd linux-scripts
+: 1634994565:0;l
+: 1634994578:0;l kernel
+: 1634994583:0;l compile
+: 1634994591:0;cd .local/bin
+: 1634994592:0;l
+: 1634994658:0;keybinds
+: 1634994757:0;vim .local/bin/xembed
+: 1634994766:0;man xembed
+: 1634994810:0;cp deadd-* git_sync lockscreen polybar_launch rmorphan rofi-power-menu update-boot ~/.build/git/linux-scripts
+: 1634994814:0;l
+: 1634994826:0;vim update-boot
+: 1634994835:0;ga *
+: 1634994847:0;gc -m 10/23/21
+: 1634994854:0;gp
+: 1634994857:0;pass -c System/ssh
+: 1635001344:0;dmesg
+: 1635001939:0;cd
+: 1635001945:0;cd .config/ranger
+: 1635001945:0;l
+: 1635001949:0;vim rc.conf
+: 1635002104:0;ranger
+: 1635002191:0;cd
+: 1635002193:0;ranger
+: 1635003820:0;ll
+: 1635003864:0;vim .xbindkeysrc
+: 1635005773:0;dmesg
+: 1635007241:0;nf
+: 1635007398:0;vim .config/polybar/config
+: 1635007447:0;xrdb color0
+: 1635007750:0;cd
+: 1635007753:0;cd .local/bin
+: 1635007763:0;vim deadd-volume
+: 1635010139:0;vim .local/bin/deadd-volume
+: 1635010166:0;pamixer --get-volume
+: 1635010556:0;pamixer --get-volume-human
+: 1635010697:0;vim .config/polybar/config
+: 1635010755:0;vim .config/polybar/scripts/sound.sh
+: 1635013277:0;vim .local/bin/deadd-volume
+: 1635013369:0;vim .xbindkeysrc
+: 1635013500:0;vim .local/bin/deadd-volume
+: 1635013616:0;deadd-volume up
+: 1635013628:0;vim .local/bin/deadd-volume
+: 1635020501:0;cd .local/bin
+: 1635020504:0;l
+: 1635020515:0;vim colorscript
+: 1635020571:0;https://gitlab.com/dwt1/shell-color-scripts.git
+: 1635020579:0;git clone https://gitlab.com/dwt1/shell-color-scripts.git
+: 1635020584:0;cd shell-color-scripts
+: 1635020585:0;l
+: 1635020598:0;vim colorscript.1
+: 1635020621:0;./colorscript.sh
+: 1635020675:0;mv colorscripts colorscript.sh ~/.local/bin
+: 1635020679:0;l
+: 1635020686:0;vim colorscript.sh
+: 1635020717:0;mv colorscript.sh colorscript
+: 1635020724:0;colorscript -r
+: 1635020746:0;vim colorscript
+: 1635020776:0;command -v ls
+: 1635026275:0;compile btop
+: 1635026399:0;btop
+: 1635026450:0;vim imshite.c
+: 1635026470:0;cd
+: 1635026473:0;l
+: 1635026479:0;rmf shell-color-scripts
+: 1635026488:0;cd projects/c
+: 1635026489:0;l
+: 1635026495:0;vim print_ram
+: 1635026507:0;vim refresher.c
+: 1635027561:0;colorscript -r
+: 1635027598:0;l
+: 1635027603:0;cd
+: 1635027604:0;ll
+: 1635027612:0;vim .Xresources.bak
+: 1635027644:0;cd
+: 1635027653:0;vim .Xresources
+: 1635027694:0;xrdb ~/.Xresources
+: 1635027715:0;cp .Xresources .Xresources.bak
+: 1635027722:0;vim .Xresources.bak
+: 1635027859:0;cd .local/bin
+: 1635027861:0;l
+: 1635027870:0;flask
+: 1635027908:0;rmf kernel.bak
+: 1635027920:0;cp kernel kernel.bak
+: 1635027924:0;l
+: 1635027941:0;chmod -x kernel.bak
+: 1635027943:0;l
+: 1635027987:0;du -h st
+: 1635028094:0;du -h grip
+: 1635028104:0;du -h kernel
+: 1635028112:0;du -h xembed
+: 1635029074:0;vim update-boot
+: 1635029522:0;crunchbang
+: 1635029538:0;ll
+: 1635029601:0;cd
+: 1635029618:0;vim .config/deadd/deadd.css
+: 1635029970:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635030005:0;vim .config/deadd/deadd.css
+: 1635030045:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635030110:0;vim .config/deadd/deadd.css
+: 1635030206:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635032298:0;vim .config/deadd/deadd.css
+: 1635032323:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635033274:0;vim .config/deadd/deadd.css
+: 1635033345:0;vim .config/deadd/deadd.conf
+: 1635033372:0;vim .local/bin/deadd-volume
+: 1635033414:0;vim .config/deadd/deadd.css
+: 1635033444:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635079532:0;vim .config/deadd/deadd.css
+: 1635079546:0;notify-send.py a --hint boolean:deadd-notification-center:true \\
+                 string:type:reloadStyle\
+
+: 1635087296:0;cp .xinitrc Documents/backups/dotfiles
+: 1635088340:0;vim .xinitrc
+: 1635088553:0;mkdir Xorg
+: 1635088650:0;vim .xbindkeysrc
+: 1635088753:0;ll
+: 1635088824:0;vim .xsession-errors
+: 1635089205:0;rmf .xsession-errors
+: 1635089231:0;vim .local/bin/git_sync
+: 1635089403:0;l .local/bin
+: 1635089574:0;vim .local/bin/rofi-power-menu
+: 1635089602:0;cd .config/rofi
+: 1635089603:0;l
+: 1635089608:0;l powermenu
+: 1635089626:0;vim powermenu/powermenu.sh
+: 1635089631:0;vim .local/bin/rofi-power-menu
+: 1635089768:0;rmf .local/bin/update-boot.sh
+: 1635089776:0;l .local/bin
+: 1635089799:0;xrdb -query -all
+: 1635090297:0;vim hosts
+: 1635090422:0;vim /etc/hosts
+: 1635090692:0;vim .config/bspwm/bspwmrc
+: 1635091187:0;cat hosts
+: 1635091230:0;sudo mv hosts /etc/hosts
+: 1635091232:0;l
+: 1635091237:0;vim /etc/hosts
+: 1635092594:0;cd /etc
+: 1635092602:0;sudoedit makepkg.conf
+: 1635092728:0;sudoedit mkinitcpio.conf
+: 1635092860:0;vim .config/bspwm/bspwmrc
+: 1635095488:0;xrdb -query -all
+: 1635095519:0;xrdb -query -all | awk '{print $2)'
+: 1635095529:0;xrdb -query -all | awk '{print $2}'
+: 1635095609:0;xrdb -query -all | awk '{print $2)'
+: 1635095616:0;xrdb -query -all
+: 1635095649:0;cd
+: 1635095654:0;vim test.sh
+: 1635095813:0;chmod +x test.sh
+: 1635095817:0;./test.sh
+: 1635097970:0;vim test.sh
+: 1635098014:0;./test.sh
+: 1635098036:0;vim test.sh
+: 1635098051:0;./test.sh
+: 1635098066:0;vim test.sh
+: 1635098077:0;./test.sh
+: 1635098112:0;vim test.sh
+: 1635098168:0;./test.sh
+: 1635098184:0;vim test.sh
+: 1635098198:0;man awk
+: 1635098203:0;tldr awk
+: 1635098285:0;l
+: 1635098290:0;rmf test.sh
+: 1635098291:0;l
+: 1635098300:0;vim .Xresources
+: 1635098354:0;vim test.sh
+: 1635098461:0;chmod +x test.sh
+: 1635098466:0;./test.sh
+: 1635098472:0;vim test.sh
+: 1635098487:0;./test.sh
+: 1635098493:0;vim test.sh
+: 1635098513:0;./test.sh
+: 1635098538:0;vim test.sh
+: 1635098549:0;./test.sh
+: 1635098551:0;vim test.sh
+: 1635098589:0;./test.sh
+: 1635098671:0;vim test.sh
+: 1635098727:0;./test.sh
+: 1635098739:0;vim test.sh
+: 1635098758:0;./test.sh
+: 1635098764:0;vim test.sh
+: 1635098777:0;./test.sh
+: 1635098780:0;vim test.sh
+: 1635101186:0;./test.sh
+: 1635101192:0;vim test.sh
+: 1635101480:0;./test.sh
+: 1635101501:0;vim test.sh
+: 1635101523:0;./test.sh
+: 1635101531:0;vim test.sh
+: 1635101541:0;./test.sh
+: 1635101543:0;vim test.sh
+: 1635101567:0;xrdb -query -all
+: 1635101574:0;man xrdb
+: 1635101652:0;xrdb -get foreground
+: 1635101661:0;xrdb -get color0
+: 1635101671:0;vim test.sh
+: 1635102947:0;./test.sh
+: 1635102958:0;vim test.sh
+: 1635102982:0;./test.sh
+: 1635103002:0;vim test.sh
+: 1635103111:0;./test.sh
+: 1635103117:0;vim test.sh
+: 1635103422:0;xrdb -get font
+: 1635103508:0;cd .local/lib
+: 1635103509:0;l
+: 1635103587:0;mkdir .local/bin/libs && mv test.sh .local/bin/libs/Xcolors.sh
+: 1635103593:0;l .local/bin
+: 1635103598:0;l .local/bin/libs
+: 1635103697:0;vim .local/bin/git_sync
+: 1635103833:0;git_sync
+: 1635103868:0;vim .local/bin/git_sync
+: 1635103915:0;cd
+: 1635103925:0;cd .build/git/linux-scripts
+: 1635103926:0;l
+: 1635103942:0;l kernel
+: 1635103959:0;git_sync
+: 1635103967:0;vim .local/bin/git_sync
+: 1635103992:0;git_sync
+: 1635104007:0;vim .local/bin/git_sync
+: 1635104018:0;l
+: 1635104021:0;l compile
+: 1635104067:0;git_sync
