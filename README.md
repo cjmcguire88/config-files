@@ -29,6 +29,6 @@ ___
 See [Minimal initramfs - ArchWiki](https://wiki.archlinux.org/index.php/Minimal_initramfs)
 
 - `/etc/hosts`  
-*My hosts file blocks traffic from over 59,000 different sites known to contain or distribute adware/malware.*  
+*My hosts file blocks traffic from over 100,000 different sites known to contain or distribute adware/malware.*  
 
 ![desktop3](screenshots/desktop3.png)
