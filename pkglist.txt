@@ -1,6 +1,7 @@
 acpi
 acpilight
 aide
+alsa-utils
 android-file-transfer
 android-tools
 android-udev
@@ -16,7 +17,7 @@ bat
 bc
 binutils
 bison
-bluedevil
+bluez
 bluez-cups
 bluez-hid2hci
 bluez-plugins
@@ -72,15 +73,9 @@ inetutils
 intel-ucode
 irqbalance
 jq
-kcontacts
-kde-gtk-config
-khtml
-kinit
 kitty
 kitty-terminfo
-kmon
 kodi
-kscreen
 ksshaskpass
 ksysguard
 ksystemlog
@@ -110,6 +105,7 @@ network-manager-applet
 networkmanager
 newsboat
 nftables
+nikto
 nitrogen
 nmap
 npm
@@ -160,7 +156,6 @@ rsync
 rust-analyzer
 rustup
 scrot
-sddm
 sed
 shellcheck
 sherlock-git

@@ -39,7 +39,6 @@ alias scumask="systemctl --user mask"
 
 # boot commands
 alias uefi="systemctl reboot --firmware-setup"
-alias windows="sudo efibootmgr -n 0 && reboot"
 alias grub="sudo efibootmgr -n 1 && reboot"
 
 # package management
@@ -56,8 +55,6 @@ alias files="yay -Ql"      # either belonging to a specific package or the whole
 alias cache="yay -Sc"
 alias pkglist="sudo pacman -Qqe > /home/jason/.build/git/config-files/pkglist.txt"
 
-alias microcode="sudo cp -v /boot/intel-ucode.img /boot/efi/EFI/"
-
 # etc
 alias sysscan="sudo lynis audit system ; sudo rkhunter --propupd && sudo rkhunter --check -sk ; sudo rkhunter --config-check ; sudo arch-audit"
 alias matrix="unimatrix"
@@ -73,8 +70,3 @@ alias cefs="sudo umount /dev/mapper/efs && sudo cryptsetup close efs"
 alias rmf="rm -rf"
 alias dmesg="sudo dmesg"
 alias update_nv="sudo dkms install --no-depmod -m nvidia -v $(sudo pacman -Q nvidia-dkms | sed 's/-/ /g' | awk '{ print $3 }') -k $(uname -r) && sudo depmod $(uname -r)"
-
-# information gathering
-alias phone="cd /home/jason/Programs/ && ./phoneinfoga serve -p 8080"
-alias username="python ~/Programs/sherlock/sherlock/sherlock.py"
-alias website="nikto -host"
