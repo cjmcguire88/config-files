@@ -1,12 +1,12 @@
 acpi
 acpilight
 aide
+android-file-transfer
 android-tools
 android-udev
 apparmor
 arch-audit
 aria2
-ark
 autoconf
 automake
 base
@@ -30,7 +30,7 @@ ctags
 debootstrap
 debuginfod
 dialog
-dolphin
+discord
 dosfstools
 easyeffects
 ecryptfs-utils
@@ -41,6 +41,7 @@ fakeroot
 feh
 figlet
 file
+file-roller
 findutils
 flameshot
 flex

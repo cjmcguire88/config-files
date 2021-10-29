@@ -295,6 +295,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 let mapleader=" "
 nmap <leader>q :NERDTreeToggle<CR>
 nmap \ <leader>q

@@ -40,11 +40,11 @@ super + ctrl + u
 
 # terminal
 super + t
-	~/.local/bin/st -e /usr/bin/zsh
+    kitty
 
 # alternative terminal
 super + alt +t
-    kitty
+    $HOME/.local/bin/st -e /usr/bin/zsh
 
 # terminal (Multiplex)
 super + shift + t
@@ -209,7 +209,7 @@ super + alt + b
 
 # open file manager
 super + shift + f
-	dolphin
+	pcmanfm
 
 # open pamac 
 super + shift + u
