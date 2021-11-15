@@ -201,7 +201,7 @@ super + @space
 
 # open browser
 super + shift + b
-    chromium	
+    firefox
 
 # open tor browser
 super + alt + b

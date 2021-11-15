@@ -15,7 +15,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Enable autocomplete
-autoload -Uz compinit
+autoload -Uz compinit && compinit -u
 
 # Path to your oh-my-zsh installation.
 # export ZSH="/home/jason/.config/zsh/.oh-my-zsh"

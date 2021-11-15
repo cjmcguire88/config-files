@@ -8,16 +8,16 @@
 # ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝
 
 # 01001101 01101001 01101110 01101001 01000010 01100101 01100001 01110011 01110100
-#
+
 SCRIPTS=$HOME/.config/bspwm/scripts
-#
+
 #    _       _          _            _
 #   /_\ _  _| |_ ___ __| |_ __ _ _ _| |_
 #  / _ \ || |  _/ _ (_-<  _/ _` | '_|  _|
 # /_/ \_\_,_|\__\___/__/\__\__,_|_|  \__|
 
 sxhkd &
-picom &
+picom -f &
 polybar_launch &
 nitrogen --restore &
 deadd-notification-center &
@@ -52,23 +52,23 @@ bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors   true
 bspc config automatic_scheme            alternate
 bspc config pointer_modifier            mod4
-bspc config border_width        0
-bspc config window_gap          12
-bspc config top_padding	        22
-bspc config split_ratio         0.50
-bspc config borderless_monocle  true
-bspc config gapless_monocle     true
-bspc config single_monocle      true
+bspc config border_width                0
+bspc config window_gap                  12
+bspc config top_padding                 22
+bspc config split_ratio                 0.50
+bspc config borderless_monocle          true
+bspc config gapless_monocle             true
+bspc config single_monocle              true
 
 #   ___     _
 #  / __|___| |___ _ _ ___
 # | (__/ _ \ / _ \ '_(_-<
 #  \___\___/_\___/_| /__/
 
-bspc config normal_border_color "333333"
-bspc config active_border_color "333333"
-bspc config focused_border_color "333333"
-bspc config presel_feedback_color "1793d1"
+bspc config normal_border_color         "333333"
+bspc config active_border_color         "333333"
+bspc config focused_border_color        "333333"
+bspc config presel_feedback_color       "1793d1"
 
 #  ___      _
 # | _ \_  _| |___ ___
@@ -78,10 +78,7 @@ bspc config presel_feedback_color "1793d1"
 
 bspc rule -a Gimp state=floating follow=on
 bspc rule -a Screenkey manage=off
-bspc rule -a plasmashell state=floating border=off layer=normal
-bspc rule -a krunner state=floating border=off
 bspc rule -a Steam state=floating border=off follow=on
 bspc rule -a Lutris state=floating border=off follow=on
-bspc rule -a android-studio state=floating border=off follow=on
 bspc rule -a Sxiv state=floating follow=on
 bspc rule -a Kodi state=fullscreen

@@ -1,125 +1,3 @@
-zsh
-#1630766742
-neofetch
-#1630766806
-zsh
-#1630911240
-dmesg
-#1630911570
-l
-#1630911788
-unitmatrix
-#1630911794
-unimatrix
-#1630911272
-zsh
-#1630911574
-zsh
-#1630912415
-cd "themes"
-#1630912576
-l
-#1630912588
-red.json
-#1630912681
-cd "themes"
-#1630912865
-zsh
-#1631315145
-zsh
-#1631320820
-ls .build/sources/packages/
-#1631320847
-ls .build/sources/{packages,community}
-#1631320859
-ls .build/sources/{packages,community} >> pkg.txt
-#1631320866
-vim pkg.txt 
-#1631320910
-nvim pkg.txt 
-#1631331124
-shopt expand_aliases
-#1631406341
-ls -l
-#1631406495
-cat /proc/sys/kernel/watchdog
-#1631406520
-zsh
-#1631663734
-ls /etc/mkinitcpio.d/linux-5.14.3-MiniBeast.preset | awk -F "/" '{print $3}'
-#1631663740
-ls /etc/mkinitcpio.d/linux-5.14.3-MiniBeast.preset | awk -F "/" '{print $4}'
-#1631663986
-ls /etc/mkinitcpio.d/linux-5.14.3-MiniBeast.preset
-#1631670948
-$EDITOR /run/user/1000 coc-nvim-19348.log
-#1631844008
-ls -a
-#1631844040
-cat .config/zsh/zsh_history | grep nmcli
-#1631844324
-sudo nmap -sn 192.168.1.0/24
-#1631844519
-sudo nmap -sn 10.88.90.1/24
-#1631844555
-sudo nmap -A 10.88.90.1/24
-#1631845211
-zsh
-#1632274081
-dmesg
-#1632274129
-cd /etc/
-#1632274130
-l
-#1632274148
-cd audit/
-#1632274170
-sudoedit auditd.conf 
-#1632274245
-ls plugins.d/
-#1632274255
-cd plugins.d/
-#1632411303
-sudo systemctl start sddm.service 
-#1632412699
-systemd-analyze
-#1632413224
-vim .bashrc 
-#1632412846
-zsh
-#1632413479
-uninstall_oh_my_bash
-#1632413501
-vim .bashrc
-#1632413518
-ls -a
-#1632413542
-zsh
-sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-vim .bashrc 
-zsh
-cd /
-cd
-cd .config/
-cd sxhkd/
-cd
-zsh
-#1632412731
-startx
-#1632413402
-zsh
-#1632412872
-zsh
-cd /
-cd
-cd .config/
-cd
-nvim .xinitrc 
-startx
-startx
-#1632419248
-tmux2
-#1632419264
 cd .local/bin/
 #1632419289
 ls -p
@@ -876,3 +754,71 @@ vim .xinitrc
 nf
 #1635485983
 zsh
+startx
+bash
+startx
+startx
+startx
+startx
+startx
+bash
+#1636205327
+startx
+bash
+bash
+#1636220605
+startx
+bash
+#1636233835
+startx
+bash
+#1636234136
+startx
+bash
+#1636420958
+startx
+bash
+startx
+startx
+#1636691434
+echo $SHELL
+startx
+startx
+bash
+startx
+startx
+startx
+bash
+bash
+#1636760124
+startx
+zsh
+zsh
+zsh
+#1636762416
+startx
+dmesg
+sudo dmesg
+sudo dmesg | grep failed
+reboot
+startx
+startx
+startx
+neofetch
+startx
+startx
+bash
+startx
+startx
+zsh
+bash
+#1636842985
+startx
+#1636842980
+bash
+bash
+#1636974032
+startx
+bash
+#1636978657
+startx

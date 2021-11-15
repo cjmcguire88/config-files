@@ -10754,3 +10754,1246 @@ cd projects/c
 : 1635549070:0;git_sync
 : 1635549078:0;vim .local/bin/git_sync
 : 1635549091:0;git_sync
+: 1635549114:0;cd .build/git/config-files
+: 1635549131:0;ga *
+: 1635549138:0;gc -m 10/29/21
+: 1635549145:0;pass -c System/ssh
+: 1635549159:0;gp
+: 1635549172:0;../linux-scripts
+: 1635549183:0;ga *
+: 1635549195:0;gc
+: 1635549312:0;pass -c System/ssh
+: 1635549315:0;gp
+: 1635549449:0;cd libs
+: 1635549450:0;l
+: 1635549456:0;du -h rick.vid
+: 1635549462:0;du -h roll.aud
+: 1635549472:0;vim roll.aud
+: 1635549489:0;roll
+: 1635549718:0;alias
+: 1635549944:0;l
+: 1635549951:0;vim Xcolors.sh
+: 1635550257:0;cd
+: 1635550261:0;roll
+: 1635550789:0;vim .config/polybar/config
+: 1635551762:0;roll
+: 1635552289:0;cd .local/bin
+: 1635552290:0;l
+: 1635552293:0;vim roll
+: 1635552671:0;roll
+: 1635553951:0;vim .local/bin/roll
+: 1635554368:0;roll
+: 1635554378:0;vim .local/bin/roll
+: 1635554402:0;roll
+: 1635554411:0;vim .local/bin/roll
+: 1635554432:0;roll
+: 1635554476:0;vim .local/bin/roll
+: 1635554516:0;roll
+: 1635557160:0;vim .local/bin/roll
+: 1635557412:0;roll
+: 1635558721:0;git diff
+: 1635559527:0;newsboat
+: 1635562351:0;roll
+: 1635562538:0;vim roll
+: 1635563231:0;search hiptext
+: 1635563280:0;install hiptext
+: 1635563345:0;cd
+: 1635563348:0;youtube-dl -o gangnam-style.mp4 https://www.youtube.com/watch\?v\=9bZkp7q19f0\
+hiptext gangnam-style.mp4\
+
+: 1635563408:0;l
+: 1635563420:0;rmf gangnam-style.f137.mp4.part
+: 1635563496:0;youtube-dl -o pokemon.mp4 https://www.youtube.com/watch\?v\=rHG-JO8gIGk\
+hiptext pokemon.mp4\
+
+: 1635563545:0;youtube-dl -o pokemon.mp4 https://www.youtube.com/watch\?v\=yvk2u03xETM\
+hiptext pokemon.mp4\
+
+: 1635563775:0;l
+: 1635563792:0;hiptext pokemon.mp4.webm
+: 1635563936:0;hiptext pokemon.mp4.mp4
+: 1635563958:0;remove hiptext
+: 1635563966:0;remove hiptext-gif
+: 1635563970:0;install hiptext
+: 1635563996:0;l
+: 1635564003:0;rmf pokemon.mp4.webm
+: 1635564009:0;mv pokemon.mp4.mp4 pokemon.mp4
+: 1635564011:0;l
+: 1635564020:0;mpv pokemon.mp4
+: 1635566650:0;cd
+: 1635566654:0;cd .local/bin
+: 1635566657:0;vim roll
+: 1635566708:0;man aplay
+: 1635566752:0;cd .local/bin/libs
+: 1635566753:0;l
+: 1635566764:0;aplay roll.aud
+: 1635566846:0;aplay -Dplug:default -q -f S16_LE -r 8000 roll.aud 
+: 1635566864:0;aplay roll.aud
+: 1635566878:0;aplay -Dplug:default -q -f S16_LE -r 8000 roll.aud 
+: 1635566922:0;cat roll.aud | aplay -Dplug:default -q -f S16_LE -r 8000
+: 1635566934:0;aplay -Dplug:default -q -f S16_LE -r 8000 roll.aud 
+: 1635566987:0;cd
+: 1635566990:0;roll
+: 1635567204:0;cd .local/bin/libs
+: 1635567208:0;vim roll.aud
+: 1635567248:0;file roll.aud
+: 1635567280:0;aplay -Dplug:default -q -f S16_LE -r 16000 roll.aud 
+: 1635567333:0;aplay -Dplug:default -q -f S16_LE -r 8000 roll.aud 
+: 1635567381:0;aplay roll.aud
+: 1635567411:0;aplay -Dplug:default -f S16_LE -r 8000 roll.aud 
+: 1635567417:0;vim roll.aud
+: 1635567726:0;cd
+: 1635567731:0;roll
+: 1635567800:0;60
+: 1635567809:0;60*4
+: 1635567814:0;60 * 4
+: 1635567824:0;bc 60 * 4
+: 1635567878:0;roll
+: 1635568759:0;vim .local/bin/libs/rick.vid
+: 1635569809:0;roll
+: 1635570868:0;wget https://github.com/jart/hiptext/releases/download/0.2/hiptext-0.2.tar.gz\
+tar xvzf hiptext-0.2.tar.gz\
+cd hiptext-0.2
+: 1635570874:0;l
+: 1635570902:0;vim Makefile.am
+: 1635570909:0;vim Makefile.in
+: 1635570921:0;vim Makefile.am
+: 1635570978:0;./configure
+: 1635571021:0;install gflags
+: 1635571025:0;./configure
+: 1635571116:0;cd /bin
+: 1635571120:0;la
+: 1635571161:0;la | grep lib
+: 1635571174:0;la
+: 1635571336:0;search gflags
+: 1635571365:0;remove gflags
+: 1635571411:0;sudo pacman -Rcsn gflags
+: 1635571475:0;install gflags-static
+: 1635571521:0;./configure
+: 1635571632:0;remove gflags-static
+: 1635571649:0;install gflags-git
+: 1635571679:0;./configure
+: 1635571693:0;la
+: 1635571705:0;cd /usr/lib
+: 1635571707:0;l
+: 1635571821:0;export LIBGFLAGS_LIBS="/usr/lib/libgflags.so"
+: 1635571826:0;./configure
+: 1635571834:0;env
+: 1635571849:0;./configure
+: 1635571914:0;cd /usr/bin
+: 1635571917:0;la
+: 1635572008:0;la | gflags
+: 1635572014:0;la | grep gflags
+: 1635572022:0;cd /bin
+: 1635572025:0;la | grep gflags
+: 1635572074:0;remove gflags-git
+: 1635572080:0;la | grep gflags
+: 1635572084:0;cd
+: 1635572100:0;l
+: 1635572110:0;rmf hiptext-0.2*
+: 1635572161:0;man wait
+: 1635572187:0;man sleep
+: 1635572925:0;roll
+: 1635574965:0;vim
+: 1635575664:0;roll
+: 1635576883:0;cd
+: 1635576886:0;roll
+: 1635576923:0;cd .local/bin/
+: 1635576930:0;vim roll
+: 1635576981:0;cd
+: 1635576987:0;roll
+: 1635577442:0;vim roll
+: 1635578434:0;vim
+: 1635579669:0;roll
+: 1635599680:0;feh
+: 1635599698:0;cd
+: 1635599706:0;cd Pictures/Wallpapers
+: 1635599710:0;feh
+: 1635599819:0;nitrogen Pictures/Wallpapers
+: 1635599904:0;nf
+: 1635599919:0;roll
+: 1635600134:0;zshrc
+: 1635600165:0;frev
+: 1635602257:0;roll
+: 1635626197:0;cd
+: 1635626200:0;roll
+: 1635626273:0;sudo kernl
+: 1635626278:0;sudo kernel
+: 1635626281:0;nf
+: 1635626286:0;sa
+: 1635635200:0;l
+: 1635637260:0;roll
+: 1635724245:0;compile xorg-server
+: 1635814297:0;cd .config/shell
+: 1635814300:0;vim functions
+: 1635818451:0;yay
+: 1635861069:0;sudo kernel
+: 1635861074:0;sudo kernel -u
+: 1635861109:0;cd /usr/src
+: 1635861110:0;l
+: 1635861134:0;rmf linux-5.15.0-MiniBeast
+: 1635861145:0;sudo rm -rf linux-5.15.0-MiniBeast
+: 1635861151:0;l
+: 1635861154:0;cd
+: 1635861160:0;sudo kernel -u
+: 1635861221:0;cd /usr/src/linux-5.15.0-MiniBeast
+: 1635861222:0;l
+: 1635861243:0;vim kernel/sched/fair.c.rej
+: 1635861309:0;cd /usr/src/linux-5.15.0-MiniBeast
+: 1635861331:0;vim kernel/sched/fair.c.orig
+: 1635861802:0;cd /usr/src/linux-5.14.12-MiniBeast
+: 1635861808:0;cd /usr/src/linux-5.14.15-MiniBeast
+: 1635861824:0;vim kernel/sched/fair.c
+: 1635861921:0;vim ../linux-5.14.14-MiniBeast/kernel/sched/fair.c.orig
+: 1635862134:0;cd /usr/src/linux-5.14.15-MiniBeast
+: 1635862155:0;vim kernel/sched/fair.c.orig
+: 1635862366:0;cd /usr/src/linux-5.14.15-MiniBeast
+: 1635862374:0;vim kernel/sched/fair.c
+: 1635863044:0;cd /usr/src/linux-5.14.15-MiniBeast
+: 1635863063:0;../linux-5.15.0-MiniBeast
+: 1635863092:0;vim kernel/sched/fair.c
+: 1635863104:0;vim kernel/sched/fair.c.orig
+: 1635863115:0;..
+: 1635863123:0;cd linux-5.15.0-MiniBeast
+: 1635863125:0;vim kernel/sched/fair.c.orig
+: 1635863140:0;vim kernel/sched/fair.c.rej
+: 1635863311:0;cd linux-5.15.0-MiniBeast
+: 1635863320:0;cd /usr/src/linux-5.15.0-MiniBeast
+: 1635863323:0;l
+: 1635863326:0;cd patches
+: 1635863327:0;l
+: 1635863334:0;vim cacule-5.14-full.patch
+: 1635870263:0;vim include/linux/sched.h
+: 1635870335:0;cd
+: 1635870362:0;sudo kernel -i 5.14.1
+: 1635870480:0;cd /usr/src/linux-5.14.1-MiniBeast
+: 1635870503:0;vim include/linux/sched.h
+: 1635870627:0;..
+: 1635870628:0;l
+: 1635870659:0;sudo rm -rf linux-5.14.8.tar.xz
+: 1635870668:0;l
+: 1635870682:0;ex linux-5.14.1.tar.xz
+: 1635870691:0;sudo ex linux-5.14.1.tar.xz
+: 1635870695:0;l
+: 1635870750:0;sudo tar -xzf linux-5.14.1.tar.xz
+: 1635870763:0;sudo tar -xJf linux-5.14.1.tar.xz
+: 1635870784:0;vim .config/shell/functions
+: 1635870799:0;l
+: 1635870808:0;cd linux-5.14.1
+: 1635870817:0;vim include/linux/sched.h
+: 1635870850:0;cd patches
+: 1635870854:0;vim cacule-5.14-full.patch
+: 1635870943:0;vim include/linux/sched.h
+: 1635870959:0;..
+: 1635870980:0;sudo rm -rf linux-5.15.0-MiniBeast/
+: 1635871002:0;sudo tar -xJf linux-5.15.tar.xz
+: 1635871027:0;cd linux-5.15
+: 1635871035:0;cd
+: 1635871054:0;cd /usr/src/linux-5.14.15-MiniBeast/patches
+: 1635871062:0;vim cacule-5.14-full.patch
+: 1635871151:0;vim include/linux/sched.h
+: 1635871511:0;vim include/linux/sched/sysctl.h
+: 1635873440:0;..
+: 1635873450:0;sudo kernel -i 5.14
+: 1635873494:0;..
+: 1635873499:0;l
+: 1635873522:0;rm -rf linux-5.14.1*
+: 1635873526:0;sudo rm -rf linux-5.14.1*
+: 1635873539:0;l
+: 1635873717:0;..
+: 1635873722:0;cd src
+: 1635873724:0;l
+: 1635873741:0;sudo tar -xJf linux-5.14.tar.xz
+: 1635873769:0;cd /boot
+: 1635873770:0;l
+: 1635873776:0;la
+: 1635873837:0;cd
+: 1635873843:0;sudo kernel
+: 1635873874:0;sudo kernel -a 5.14.13-MiniBeast
+: 1635874031:0;l
+: 1635874046:0;cd linux-5.14
+: 1635874058:0;cd linux-5.14.0-MiniBeast
+: 1635874067:0;vim include/linux/sched/sysctl.h
+: 1635874284:0;../../linux-5.14
+: 1635874290:0;cd
+: 1635874302:0;cd /usr/src/linux-5.14
+: 1635874312:0;l ..
+: 1635874384:0;vim include/linux/sched.h
+: 1635874407:0;cd /usr/src/linux-5.14.13-MiniBeast
+: 1635874417:0;vim patches/cacule-5.14-full.patch
+: 1635874727:0;sudo cp patches/cacule-5.14-full.patch ~/
+: 1635874758:0;cd /usr
+: 1635874761:0;cd src
+: 1635874762:0;l
+: 1635874808:0;rm -rf linux-5.14.tar.xz
+: 1635874810:0;sudo rm -rf linux-5.14.tar.xz
+: 1635874842:0;sudo update-boot 5.14.13-MiniBeast
+: 1635874890:0;reboot
+: 1635874942:0;sudo kernel -i 5.14.15
+: 1635874957:0;l /boot
+: 1635875000:0;sudo kernel -r 5.14.15-MiniBeast
+: 1635875021:0;cd /usr/src
+: 1635875022:0;l
+: 1635875053:0;sudo cp -r linux-5.14.13-MiniBeast linux-5.14.15-MiniBeast
+: 1635875061:0;sudo kernel -r 5.14.15-MiniBeast
+: 1635875081:0;sudo cp -r linux-5.14.13-MiniBeast linux-5.14.14-MiniBeast
+: 1635875088:0;sudo kernel -r 5.14.14-MiniBeast
+: 1635875112:0;sudo kernel -i 5.14.15
+: 1635876045:0;install nvidia-dkms
+: 1635876280:0;sudo update-boot 5.14.15-MiniBeast
+: 1635876285:0;reboot
+: 1635876325:0;sudo kernel
+: 1635876347:0;cd /usr/src
+: 1635876348:0;l
+: 1635876521:0;cd linux-5.14
+: 1635876532:0;cd /usr/src/linux-5.14.0-MiniBeast
+: 1635876543:0;vim cacule-5.14-full.patch
+: 1635876562:0;..
+: 1635876563:0;l
+: 1635876571:0;cd linux-5.15
+: 1635876585:0;vim include/linux/sched.h
+: 1635876658:0;cd /usr/src/linux-5.14.0-MiniBeast
+: 1635876660:0;vim include/linux/sched.h
+: 1635876717:0;vim include/linux/sched/sysctl.h
+: 1635877232:0;..
+: 1635877257:0;vim linux-5.14.13-MiniBeast/patches/cacule-5.14-full.patch
+: 1635877368:0;cd /usr/src/linux-5.14.13-MiniBeast
+: 1635877372:0;vim include/linux/sched/sysctl.h
+: 1635877897:0;ll
+: 1635877900:0;l
+: 1635877911:0;sudo chown -R jason:jason cacule-5.14-full.patch 
+: 1635877913:0;la
+: 1635877925:0;vim cacule-5.14-full.patch
+: 1635877971:0;vim init/Kconfig
+: 1635878307:0;vim linux-5.14.13-MiniBeast/patches/cacule-5.14-full.patch
+: 1635878320:0;vim init/Kconfig
+: 1635878880:0;vim kernel/Kconfig.hz
+: 1635879100:0;vim kernel/sched/core.c
+: 1635880311:0;vim kernel/sched/debug.c
+: 1635880561:0;vim kernel/sched/fair.c
+: 1635883680:0;l
+: 1635883715:0;mv cacule-5.14-full.patch cacule-5.15.839
+: 1635883717:0;l
+: 1635883721:0;vim cacule-5.15.839
+: 1635884995:0;mv cacule-5.15.839 cacule-5.15.fair.c-839
+: 1635884996:0;l
+: 1635887065:0;vim cacule-5.15.fair.c-839
+: 1635888703:0;mv cacule-5.15.fair.c-839 cacule-5.15.fair.c-958
+: 1635888704:0;l
+: 1635891075:0;vim cacule-5.15.fair.c-958
+: 1635894716:0;mv cacule-5.15.fair.c-958 cacule-5.15.fair.c-1065
+: 1635894720:0;l
+: 1635895398:0;roll
+: 1635895412:0;vim cacule-5.15.fair.c-1065
+: 1635895545:0;cd /usr/src
+: 1635895547:0;ll
+: 1635895620:0;sudo cp -r linux-5.15 ~/ && sudo chown -r jason:jason linux-5.15 
+: 1635895639:0;cd
+: 1635895640:0;l
+: 1635895665:0;sudo chown -R jason:jason linux-5.15 
+: 1635895668:0;la
+: 1635895691:0;cp cacule-5.15.fair.c-1065 linux-5.15
+: 1635895694:0;cd linux-5.15
+: 1635895708:0;patch -p1 < cacule-5.15.fair.c-1065
+: 1635895786:0;cd
+: 1635895791:0;vim cacule-5.15.fair.c-1065
+: 1635895877:0;cd
+: 1635895881:0;popd
+: 1635895885:0;cd
+: 1635895899:0;cd /usr/src/linux-5.14
+: 1635895969:0;vim init/Kconfig
+: 1635898422:0;../linux-5.14.13-MiniBeast/patches
+: 1635898425:0;vim cacule-5.14-full.patch
+: 1635987119:0;compile harfbuzz
+: 1636065014:0;sudo kernel -c
+: 1636065019:0;sudo kernel -c 5.15
+: 1636065531:0;aria2c -x 3 -m 3 https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz
+: 1636065605:0;wget https://raw.githubusercontent.com/CachyOS/cacule-cpu-scheduler/master/patches/CacULE/v5.15/cacule-5.15-full.patch
+: 1636065644:0;wget https://raw.githubusercontent.com/CachyOS/cacule-cpu-scheduler/master/patches/CacULE/v5.15/cacule-5.15-rt-full.patch
+: 1636065664:0;diff cacule-5.15-full.patch cacule-5.15-rt-full.patch
+: 1636065738:0;l
+: 1636065768:0;rmf linux-5.15 cacule-5.15.fair.c-1065
+: 1636065771:0;l
+: 1636065781:0;tar -xJf linux-5.15.tar.xz
+: 1636065791:0;l
+: 1636065809:0;cp linux-5.15 linux-5.15-rt
+: 1636065815:0;cp -r linux-5.15 linux-5.15-rt
+: 1636065819:0;l
+: 1636065828:0;mv cacule-5.15-full.patch linux-5.15
+: 1636065841:0;mv cacule-5.15-rt-full.patch linux-5.15-rt
+: 1636065877:0;cd Documents
+: 1636065877:0;l
+: 1636065881:0;vim patchfile
+: 1636065902:0;cd linux-5.15
+: 1636065908:0;mkdir patches
+: 1636065917:0;mv cacule-5.15-full.patch patches
+: 1636065919:0;cd patches
+: 1636065940:0;man aria2c
+: 1636065958:0;aria2c -x 3 -m 3 -i ~/Documents/patchfile
+: 1636065961:0;l
+: 1636065965:0;..
+: 1636065988:0;patch -p1 < patches/*
+: 1636066045:0;vim arch/x86/Makefile.rej
+: 1636066117:0;vim patchfile
+: 1636066160:0;..
+: 1636066165:0;rmf linux-5.15
+: 1636066169:0;tar -xJf linux-5.15.tar.xz
+: 1636066216:0;cd linux-5.15
+: 1636066219:0;mkdir patches
+: 1636066222:0;cd patches
+: 1636066227:0;wget https://raw.githubusercontent.com/CachyOS/cacule-cpu-scheduler/master/patches/CacULE/v5.15/cacule-5.15-full.patch
+: 1636066232:0;aria2c -x 3 -m 3 -i ~/Documents/patchfile
+: 1636066241:0;..
+: 1636066246:0;patch -p1 < patches/*
+: 1636066315:0;cp /usr/src/linux-5.14.15-MiniBeast/.config ./
+: 1636066327:0;make oldconfig
+: 1636067003:0;make menuconfig
+: 1636067646:0;..
+: 1636067652:0;cd linux-5.15-rt
+: 1636067655:0;mkdir patches
+: 1636067663:0;mv cacule-5.15-rt-full.patch patches
+: 1636067667:0;cd patches
+: 1636067673:0;aria2c -x 3 -m 3 -i ~/Documents/patchfile
+: 1636067677:0;l
+: 1636067680:0;..
+: 1636067685:0;patch -p1 < patches/*
+: 1636067708:0;vim patchfile
+: 1636067803:0;cd /usr/src/linux-5.14.15-MiniBeast
+: 1636067825:0;sudo mv .config ~/.config.bak
+: 1636067829:0;cd
+: 1636067842:0;rmf linux-5.15 linux-5.15-rt
+: 1636067884:0;sudo mv ~/.config.bak ./.config
+: 1636067886:0;ll
+: 1636067892:0;cd
+: 1636067898:0;sudo kernel -u
+: 1636068509:0;yay
+: 1636068551:0;cd
+: 1636068556:0;compile neovim
+: 1636069012:0;sudo update-boot 5.15.0-MiniBeast
+: 1636069023:0;install nvidia-dkms
+: 1636069310:0;reboot
+: 1636069623:0;sa
+: 1636069631:0;nf
+: 1636074459:0;vim .config/picom/picom.conf
+: 1636074472:0;vim .config/bspwm/bspwmrc
+: 1636074643:0;xrandr
+: 1636074739:0;man picom
+: 1636076874:0;nf
+: 1636076882:0;sudo kernel
+: 1636076905:0;sudo kernel -r 5.14.13-MiniBeast
+: 1636076929:0;sudo kernel
+: 1636076980:0;df -h /usr/src/backups
+: 1636076993:0;du -h /usr/src/backups
+: 1636077046:0;sudo rm -rf /usr/src/backups/5.14.{2..9}
+: 1636077051:0;sudo kernel
+: 1636077066:0;sudo rm -rf /usr/src/backups/5.14.[2..9]
+: 1636077084:0;sudo rm -rf /usr/src/backups/5.14.{2..9}*
+: 1636077088:0;sudo kernel
+: 1636077157:0;sudo rm -rf /usr/src/backups/5.14.1{0..2}*
+: 1636077159:0;sudo kernel
+: 1636077207:0;du -h /usr/src/backups
+: 1636077463:0;vim
+: 1636077813:0;vim .config/bspwm/bspwmrc
+: 1636077895:0;cat .Xresources
+: 1636077978:0;search screenkey
+: 1636092581:0;search st-luke-git
+: 1636095085:0;cd /boot
+: 1636095090:0;ncdu
+: 1636112881:0;man compinit
+: 1636112885:0;man zsh
+: 1636113176:0;zshrc
+: 1636113557:0;cd
+: 1636113558:0;ll
+: 1636113578:0;vim .profile
+: 1636114051:0;vim .config/picom/picom.conf
+: 1636126282:0;xrdb -get color4
+: 1636126333:0;cd /usr/src/linux-5.15.0-MiniBeast
+: 1636126340:0;sudo make menuconfig
+: 1636126752:0;scstatus
+: 1636129518:0;vim .local/bin/kernel
+: 1636130026:0;vim newer
+: 1636130283:0;vim .local/bin/kernel
+: 1636131190:0;chmod +x newer
+: 1636131211:0;./newer 5.14.13 5.12.1
+: 1636131215:0;vim .local/bin/kernel
+: 1636131220:0;vim newer
+: 1636131241:0;./newer 5.14.13 5.12.1
+: 1636131261:0;vim newer
+: 1636131393:0;awk -F "." '{print $1 $2 $3}' 5.14.1
+: 1636131418:0;awk -F "." '{print $1 $2 $3}' '5.14.1'
+: 1636131566:0;echo 5.12.1 | awk -F "." '{print $1 $2 $3}'
+: 1636131592:0;echo 5.12.1 | awk -F "." '{print $1,$2,$3}'
+: 1636131673:0;./newer 5.14.13 5.12.1
+: 1636131682:0;vim newer
+: 1636131699:0;./newer 5.14.13 5.12.1
+: 1636131701:0;vim newer
+: 1636131974:0;./newer 5.14.13 5.12.1
+: 1636131978:0;vim newer
+: 1636132352:0;./newer 5.14.13 5.12.1
+: 1636132354:0;vim newer
+: 1636133389:0;./newer 5.14.13 5.12.1
+: 1636133397:0;./newer 5.14.13
+: 1636133520:0;vim newer
+: 1636133586:0;./newer 5.14.13 5.12.1
+: 1636134042:0;vim newer
+: 1636134150:0;./newer 5.14.13 5.12.1
+: 1636134152:0;vim newer
+: 1636134211:0;./newer 5.14.13 5.12.1
+: 1636134220:0;vim newer
+: 1636134268:0;./newer 5.14.13 5.12.1
+: 1636134435:0;vim newer
+: 1636134527:0;./newer 5.14.13 5.12.1
+: 1636134563:0;vim newer
+: 1636135158:0;./newer 5.14.13 5.12.1
+: 1636135169:0;vim newer
+: 1636135237:0;./newer 5.14.13 5.12.1
+: 1636135252:0;vim newer
+: 1636135525:0;./newer 5.14.13 5.12.1
+: 1636135553:0;./newer 5.12.3 5.12.11
+: 1636135562:0;vim newer
+: 1636135585:0;./newer 5.12.13 5.12.11
+: 1636135592:0;vim newer
+: 1636135638:0;./newer 5.12.13 5.12.11
+: 1636135643:0;vim newer
+: 1636135708:0;vim .local/bin/kernel
+: 1636136039:0;./newer 5.12.13 5.12.11
+: 1636136087:0;vim .local/bin/compile
+: 1636136096:0;vim .local/bin/kernel
+: 1636136102:0;vim newer
+: 1636136127:0;./newer 5.12.13 5.12.11
+: 1636136136:0;./newer 5.12.10 5.12.11
+: 1636136159:0;vim .local/bin/kernel
+: 1636136186:0;./newer 5.15 5.12.11
+: 1636136192:0;./newer 5.11 5.12.11
+: 1636136198:0;./newer 5.12 5.12.11
+: 1636136208:0;./newer 5.13 5.12.11
+: 1636136214:0;vim newer
+: 1636136745:0;./newer 5.15.1 5.15.0
+: 1636136759:0;./newer 5.15.0 5.15.1
+: 1636136767:0;vim newer
+: 1636136820:0;./newer 5.15.0 5.15.1
+: 1636136825:0;./newer 5.15.1 5.15.0
+: 1636136833:0;./newer 5.15.11 5.15.0
+: 1636136844:0;./newer 5.15.9 5.15.11
+: 1636136852:0;./newer 5.15.19 5.15.9
+: 1636136858:0;vim newer
+: 1636136924:0;./newer 5.15.19 5.15.9
+: 1636136941:0;./newer 5.15.1 5.15.0
+: 1636136949:0;vim .local/bin/kernel
+: 1636136996:0;sudo kernel -u
+: 1636137011:0;vim .local/bin/kernel
+: 1636137114:0;sudo kernel -u
+: 1636137145:0;vim .local/bin/kernel
+: 1636137708:0;git_sync
+: 1636137718:0;cd .build/git/linux-scripts
+: 1636137726:0;ga *
+: 1636137810:0;git reset
+: 1636137822:0;ga kernel/kernel
+: 1636137877:0;gc -m "Improved function to check for updates"
+: 1636137886:0;ga roll
+: 1636137908:0;gc -m 11/5/21
+: 1636137916:0;pass -c System/ssh
+: 1636137925:0;gp
+: 1636177585:0;sudo kernel -u
+: 1636203676:0;cd .build/git/linux-MiniBeast
+: 1636203680:0;l
+: 1636203694:0;ll
+: 1636203743:0;vim ~/.local/bin/git_sync
+: 1636203876:0;mv .git README.md ../
+: 1636203882:0;ll
+: 1636203891:0;..
+: 1636203893:0;l
+: 1636203896:0;ll
+: 1636203905:0;cd linux-MiniBeast
+: 1636203906:0;l
+: 1636203911:0;ll
+: 1636203932:0;sudo rsync -a --chown=jason:jason * .* ~/.build/git/linux-MiniBeast
+: 1636203949:0;ll
+: 1636203957:0;la
+: 1636203969:0;make clean
+: 1636203983:0;mv ../.git ./
+: 1636203994:0;mv ../README.md ./
+: 1636204011:0;mv .git README.md ../
+: 1636204022:0;rmf *
+: 1636204029:0;ll
+: 1636204033:0;rmf .*
+: 1636204035:0;ll
+: 1636204041:0;sudo rsync -a --chown=jason:jason * .* ~/.build/git/linux-MiniBeast
+: 1636204059:0;ll
+: 1636204065:0;mv ../README.md ./
+: 1636204070:0;mv ../.git ./
+: 1636204077:0;vim README.md
+: 1636204322:0;make clean
+: 1636204328:0;ll
+: 1636204335:0;ll patches
+: 1636204367:0;ga *
+: 1636204395:0;ga .config .config.old .mailmap
+: 1636204430:0;gc -m "Updated to linux-5.15"
+: 1636204447:0;pass
+: 1636204453:0;pass -c System/ssh
+: 1636204464:0;gp
+: 1636204708:0;cd
+: 1636204714:0;vim .tmux.conf.local
+: 1636205375:0;vim .config/polybar/config
+: 1636205421:0;cd .config/polybar/scripts
+: 1636205422:0;l
+: 1636205427:0;vim kernel-update.sh
+: 1636205446:0;vim .local/bin/kernel
+: 1636205878:0;vim kernel-update.sh
+: 1636207022:0;sudo kernel -u
+: 1636207107:0;vim .local/bin/kernel
+: 1636207125:0;sudo kernel -u
+: 1636207141:0;vim .local/bin/kernel
+: 1636207209:0;sudo kernel -u
+: 1636207216:0;vim .local/bin/kernel
+: 1636207231:0;sudo kernel -u
+: 1636207238:0;vim .local/bin/kernel
+: 1636207252:0;sudo kernel -u
+: 1636207280:0;vim .local/bin/kernel
+: 1636207519:0;sudo kernel -u
+: 1636209669:0;sudo update-boot 5.15.1-MiniBeast
+: 1636210005:0;cd
+: 1636210008:0;install nvidia-dkms
+: 1636211422:0;vim .local/bin/kernel
+: 1636211432:0;vim .local/bin/get-verified-tarball
+: 1636213090:0;sudo kernel
+: 1636213098:0;sudo kernel -u
+: 1636213704:0;vim .local/bin/kernel
+: 1636213911:0;vim .local/bin/get-verified-tarball
+: 1636216484:0;cd .config
+: 1636216486:0;ll
+: 1636216497:0;mkdir kernel
+: 1636216557:0;cd kernel
+: 1636216565:0;vim kernel.conf
+: 1636216807:0;sudo kernel
+: 1636216898:0;vim .local/bin/kernel
+: 1636216991:0;vim kernel.conf
+: 1636217035:0;sudo kernel
+: 1636217202:0;vim .config/bspwm/bspwmrc
+: 1636218409:0;vim .local/bin/kernel
+: 1636220359:0;sudo kernel
+: 1636220446:0;mv kernel.conf kernel.conf.bak
+: 1636220450:0;sudo kernel
+: 1636220480:0;mv kernel.conf.bak kernel.conf
+: 1636220485:0;sudo kernel
+: 1636220539:0;hardinfo
+: 1636220580:0;reboot
+: 1636220813:0;sudo kernel
+: 1636220854:0;sudo kernel -i 5.12.1
+: 1636221011:0;cd /usr/src
+: 1636221012:0;l
+: 1636221052:0;cd /boot
+: 1636221053:0;l
+: 1636221108:0;sudo rm -rf linux-5.12.1.tar.xz linux-5.12.1-Testing/ linux-5.14.0-MiniBeast/ linux-5.14 linux-5.14.15.tar.xz
+: 1636221115:0;l
+: 1636221175:0;ls
+: 1636221179:0;l
+: 1636221197:0;cd
+: 1636221199:0;ll
+: 1636221208:0;cat newer
+: 1636221214:0;rmf newer
+: 1636221216:0;ll
+: 1636221219:0;l
+: 1636221223:0;rmf linux-5.15.tar.xz
+: 1636221228:0;mpv pokemon.mp4
+: 1636221283:0;vim .local/bin/kernel
+: 1636221371:0;sudo kernel -n
+: 1636221997:0;vim .local/bin/get-verified-tarball
+: 1636222086:0;cd
+: 1636222098:0;cd .config/polybar/scripts
+: 1636222098:0;l
+: 1636222102:0;vim kernel-update.sh
+: 1636222891:0;vim .config/kernel/kernel.conf
+: 1636223158:0;cd
+: 1636223177:0;mv Documents/patchfile .config/kernel/
+: 1636223186:0;cd .config/kernel
+: 1636223187:0;l
+: 1636224641:0;sudo kernel
+: 1636224701:0;sudo kernel -r 5.14.15-MiniBeast
+: 1636226164:0;vim kernel.conf
+: 1636229432:0;install firefox-developer-edition
+: 1636230086:0;sudo kernel -u
+: 1636231212:0;pass
+: 1636231480:0;search firefox
+: 1636231496:0;search firefox-quantum
+: 1636231572:0;install firefox
+: 1636232431:0;vim .config/sxhkd/sxhkdrc
+: 1636232495:0;remove firefox-developer-edition
+: 1636232511:0;vim .profile
+: 1636232536:0;btop
+: 1636232810:0;source .profile
+: 1636232815:0;printenv
+: 1636233039:0;install profile-sync-daemon
+: 1636233049:0;psd
+: 1636233069:0;psd preview
+: 1636233089:0;..
+: 1636233096:0;vim psd/psd.conf
+: 1636233119:0;psd preview
+: 1636233138:0;vim psd/psd.conf
+: 1636233160:0;psd
+: 1636233198:0;scuenable psd
+: 1636233210:0;scustart psd
+: 1636233222:0;psd preview
+: 1636233271:0;vim psd/psd.conf
+: 1636233283:0;psd preview
+: 1636233298:0;cd psd
+: 1636233299:0;ll
+: 1636233304:0;vim .psd.conf
+: 1636233332:0;scustop psd
+: 1636233340:0;ll
+: 1636233346:0;psd preview
+: 1636233358:0;scustart psd
+: 1636233362:0;psd preview
+: 1636233374:0;cd
+: 1636233377:0;cd .cache
+: 1636233378:0;l
+: 1636233381:0;la
+: 1636233397:0;..
+: 1636233400:0;cd .config
+: 1636233402:0;la
+: 1636233419:0;cd
+: 1636233420:0;ll
+: 1636233436:0;cd .mozilla
+: 1636233438:0;ll
+: 1636233440:0;la
+: 1636233444:0;cd firefox
+: 1636233445:0;la
+: 1636233488:0;rmf *dev-edition*
+: 1636233491:0;l
+: 1636233496:0;la
+: 1636233515:0;cd
+: 1636233628:0;vim .config/polybar/config
+: 1636233917:0;vim /tmp/polybar.log
+: 1636233937:0;vim /tmp/polybar-dock.log
+: 1636233974:0;cd /sys/devices/platform
+: 1636233975:0;l
+: 1636234056:0;search lm_sensors
+: 1636234084:0;scstatus lm_sensors
+: 1636234105:0;scenable lm_sensors
+: 1636234112:0;reboot
+: 1636234167:0;vim /tmp/polybar-dock.log
+: 1636234218:0;cd /sys/devices/platform/coretemp.0/hwmon/hwmon6/
+: 1636234219:0;l
+: 1636234240:0;vim .config/polybar/config
+: 1636240296:0;sudo kernel
+: 1636240298:0;sudo kernel -u
+: 1636243511:0;ls
+: 1636243512:0;la
+: 1636243517:0;mpv pokemon.mp4
+: 1636243547:0;roll
+: 1636243634:0;nf
+: 1636245226:0;yay -Syyu
+: 1636245272:0;cd .config
+: 1636245273:0;l
+: 1636245305:0;l whoozle.github.io
+: 1636245317:0;l mpv
+: 1636245457:0;yay -Syyu
+: 1636245527:0;l kernel.org
+: 1636245537:0;vim kernel.org/qconf.conf
+: 1636245582:0;ll
+: 1636246110:0;cd /etc
+: 1636246111:0;ll
+: 1636246117:0;cd i3
+: 1636246118:0;l
+: 1636246122:0;vim config
+: 1636246147:0;remove i3
+: 1636246198:0;l
+: 1636246201:0;..
+: 1636246204:0;cd /etc
+: 1636246206:0;l
+: 1636246239:0;cd .config
+: 1636246241:0;l
+: 1636246250:0;ll
+: 1636246393:0;cd
+: 1636246417:0;cd .local/bin/
+: 1636246418:0;l
+: 1636246425:0;vim lockscreen
+: 1636247855:0;man i3lock
+: 1636249329:0;compile giggle
+: 1636249880:0;remove giggle
+: 1636250533:0;l
+: 1636250545:0;exa
+: 1636251873:0;roll
+: 1636252188:0;search xdman
+: 1636252260:0;install xdman
+: 1636252384:0;cd
+: 1636252392:0;install onefetch
+: 1636252531:0;onefetch
+: 1636252538:0;cd .build/git/linux-MiniBeast
+: 1636252542:0;onefetch
+: 1636252902:0;..
+: 1636252909:0;cd linux-scripts
+: 1636252911:0;onefetch
+: 1636252951:0;..
+: 1636252953:0;l
+: 1636252959:0;cd config-files
+: 1636252962:0;onefetch
+: 1636253299:0;xprop
+: 1636253684:0;remove xdman
+: 1636254215:0;zathura Documents/books/Understanding.Linux.Kernel.pdf
+: 1636254287:0;pcmanfm
+: 1636254311:0;cd .config/bspwm
+: 1636254312:0;l
+: 1636254316:0;cd scripts
+: 1636254317:0;l
+: 1636254326:0;vim bspswallow
+: 1636254700:0;search yandex
+: 1636330122:0;yay
+: 1636330161:0;cd
+: 1636330164:0;voice
+: 1636330169:0;search voice
+: 1636330214:0;compile ncurses
+: 1636331328:0;lsof
+: 1636371767:0;xdg-settings get default-web-browser
+: 1636373116:0;matrix
+: 1636419137:0;speedtest
+: 0:0;
+: 1636420990:0;cd /sys/devices/platform/coretemp.0/hwmon/hwmon6/
+: 1636420995:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636420996:0;ll
+: 1636421015:0;vim .config/polybar/config
+: 1636421735:0;speedtest
+: 1636421991:0;vim .config/polybar/config
+: 1636421997:0;speedtest
+: 1636422888:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636422889:0;l
+: 1636422894:0;cd
+: 1636422900:0;vim .config/polybar/config
+: 1636427861:0;speedtest
+: 1636502639:0;yay
+: 1636502708:0;compile xorg-server 
+: 1636598565:0;cd /dev
+: 1636598567:0;l
+: 1636598580:0;cat btrfs-control
+: 1636598585:0;sudo cat btrfs-control
+: 1636598593:0;la
+: 1636598611:0;vim tty1
+: 1636598652:0;l
+: 1636598661:0;cd cpu
+: 1636598663:0;l
+: 1636598668:0;cd 0
+: 1636598669:0;l
+: 1636598675:0;vim cpuid
+: 1636598683:0;cat cpuid
+: 1636598686:0;sudo cat cpuid
+: 1636598718:0;l
+: 1636598727:0;sudo cat msr 
+: 1636598745:0;sudoedit msr
+: 1636598753:0;file msr
+: 1636681368:0;vim .config/sxhkd/sxhkdrc
+: 1636681456:0;compile xorg-server pipewire wireplumber
+: 1636691284:0;cd
+: 1636691308:0;vim .profile
+: 1636691396:0;shell
+: 1636691421:0;echo $SHELL
+: 1636691425:0;bash
+: 1636691509:0;weather
+: 1636691536:0;yay
+: 1636691597:0;speedtest
+: 1636722060:0;vim .config/polybar/config
+: 1636722163:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636722165:0;l
+: 1636752104:0;sudo kernel -n
+: 1636752277:0;vim /boot/loader/entries/MiniBeast.conf
+: 1636754403:0;lsblk
+: 1636754639:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-testing --unicode --verbose
+: 1636754673:0;efibootmgr
+: 1636754771:0;reboot
+: 1636754895:0;man efibootmgr
+: 1636754903:0;efibootmgr
+: 1636754930:0;sudo efibootmgr -B 1
+: 1636754956:0;sudo efibootmgr -B -b 0001
+: 1636754966:0;cd /boot
+: 1636754967:0;l
+: 1636755042:0;mv vmlinuz-linux-5.15.2-testing vmlinuz-linux-5.15.2-testing.efi
+: 1636755044:0;sudo mv vmlinuz-linux-5.15.2-testing vmlinuz-linux-5.15.2-testing.efi
+: 1636755046:0;l
+: 1636755076:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-testing.efi --unicode --verbose
+: 1636755079:0;efibootmgr
+: 1636755084:0;reboot
+: 1636755315:0;efibootmgr
+: 1636755326:0;sudo efibootmgr -B -b 0001
+: 1636755457:0;cd /usr/src/linux-5.15.2-testing
+: 1636755464:0;sudo make menuconfig
+: 1636755546:0;sudo make clean
+: 1636755583:0;sudo make -j6
+: 1636755644:0;vim .local/bin/kernel
+: 1636756115:0;..
+: 1636756290:0;tar -czvf /usr/src/backups/linux-5.15.2-testing linux-5.15.2-testing
+: 1636756292:0;sudo tar -czvf /usr/src/backups/linux-5.15.2-testing linux-5.15.2-testing
+: 1636756401:0;l
+: 1636756410:0;sudo kernel
+: 1636756428:0;sudo tar -czvf /usr/src/backups/linux-5.15.2-testing 5.15.2-testing
+: 1636756440:0;sudo tar -czvf /usr/src/backups/5.15.2-testing linux-5.15.2-testing
+: 1636756511:0;sudo kernel
+: 1636756548:0;sudo tar -czvf /usr/src/backups/5.15.2-testing.tar.gz linux-5.15.2-testing
+: 1636756599:0;sudo kernel
+: 1636756669:0;sudo rm -rf backups/{5.15.2-testing,linux-5.15.2-testing}
+: 1636756672:0;sudo kernel
+: 1636756697:0;sudo kernel -r 5.15.2-testing
+: 1636756719:0;sudo kernel -a 5.15.2-testing
+: 1636756810:0;cd /boot
+: 1636756811:0;l
+: 1636756894:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-testing --unicode --verbose
+: 1636756899:0;efibootmgr
+: 1636756913:0;reboot
+: 1636757053:0;efibootmgr
+: 1636757060:0;sudo efibootmgr -B -b 0001
+: 1636757441:0;sudo kernel -r 5.15.2-testing
+: 1636757475:0;sudo kernel
+: 1636757507:0;sudo rm -rf /usr/src/backups/5.15.2-testing.tar.gz
+: 1636757510:0;sudo kernel
+: 1636757580:0;sudo kernel -u
+: 1636758806:0;vim /boot/loader/entries/MiniBeast.conf
+: 1636759936:0;l /boot
+: 1636760045:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-MiniBeast --unicode 'root=UUID=0e1e8a9b-93b2-4fc4-a85d-dffd88f1e800 rootflags=subvol=@ rw resume=UUID=94f2f52a-fb58-40ba-96a0-8f7f27faeb36 quiet apparmor=1 systemd.unified_cgroup_hierarchy=1 nowatchdog initrd=\intel-ucode.img initrd=\initramfs-linux-5.15.2-MiniBeast.img' --verbose
+: 1636760050:0;efibootmgr
+: 1636760066:0;sudo update-boot 5.15.2-MiniBeast
+: 1636760072:0;reboot
+: 1636760136:0;sa
+: 1636760953:0;nf
+: 1636760976:0;install nvidia-dkms
+: 1636762109:0;cd /usr/lib/modules
+: 1636762110:0;l
+: 1636762122:0;sudo rm -rf 5.14.16-arch1-1/
+: 1636762124:0;ll
+: 1636762127:0;cd
+: 1636762135:0;reboot
+: 1636762224:0;sa
+: 1636762250:0;reboot
+: 1636762271:0;sa
+: 1636762279:0;sa blame
+: 1636762303:0;scdisable tlp
+: 1636762307:0;reboot
+: 1636762326:0;sa
+: 1636762331:0;sa blame
+: 1636762368:0;sudo aa-status
+: 1636762393:0;sa blame
+: 1636762411:0;bash
+: 1636762461:0;sudo rmorphan
+: 1636762509:0;sudo kernel
+: 1636762522:0;efibootmgr
+: 1636762765:0;la
+: 1636762773:0;nf
+: 1636762805:0;sa
+: 1636762816:0;sa blame
+: 1636764686:0;vim /etc/mkinitcpio.conf
+: 1636764718:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636764725:0;sudo make menuconfig
+: 1636765476:0;sudo make clean
+: 1636765497:0;sudo make -j6
+: 1636766096:0;sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.15.2-MiniBeast
+: 1636766111:0;sudo make modules install
+: 1636766602:0;..
+: 1636766650:0;sudo tar -czvf /usr/src/backups/5.15.2-MiniBeast.tar.gz linux-5.15.2-MiniBeast
+: 1636766759:0;sudo rm -rf linux-5.15.2-MiniBeast/
+: 1636766778:0;sudo kernel -a 5.15.2-MiniBeast
+: 1636766832:0;reboot
+: 1636766954:0;sa
+: 1636767044:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636767051:0;sudo make menuconfig
+: 1636767167:0;.. 
+: 1636767174:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636767180:0;sudo make clean
+: 1636767204:0;sudo make -j6
+: 1636767305:0;efibootmgr
+: 1636767360:0;sudo efibootmgr -B -b 0001
+: 1636767382:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-MiniBeast --unicode 'root=UUID=0e1e8a9b-93b2-4fc4-a85d-dffd88f1e800 rootflags=subvol=@ rw resume=UUID=94f2f52a-fb58-40ba-96a0-8f7f27faeb36 quiet apparmor=1 systemd.unified_cgroup_hierarchy=1 nowatchdog initrd=\intel-ucode.img' --verbose
+: 1636767388:0;efibootmgr
+: 1636767600:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636767607:0;sudo make menuconfig
+: 1636767960:0;..
+: 1636767981:0;sudo rm -rf backups/5.15.2-MiniBeast.tar.gz 
+: 1636768012:0;tar -czvf /usr/src/backups/linux-5.15.2-MiniBeast linux-5.15.2-MiniBeast
+: 1636768017:0;sudo tar -czvf /usr/src/backups/linux-5.15.2-MiniBeast linux-5.15.2-MiniBeast
+: 1636768083:0;sudo kernel -a 5.15.2-MiniBeast
+: 1636768112:0;sudo kernel
+: 1636768124:0;sudo tar -czvf /usr/src/backups/5.15.2-MiniBeast.tar.gz linux-5.15.2-MiniBeast
+: 1636768134:0;..
+: 1636768151:0;sudo rm -rf backups/linux-5.15.2-MiniBeast 
+: 1636768194:0;sudo kernel -a 5.15.2-MiniBeast
+: 1636768320:0;reboot
+: 1636769121:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636769126:0;sudo make menuconfig
+: 1636769598:0;sudo make clean
+: 1636769709:0;sudo make -j6
+: 1636770427:0;..
+: 1636770441:0;sudo kernel
+: 1636770464:0;sudo rm -rf backups/5.15.2-MiniBeast.tar.gz 
+: 1636770479:0;sudo tar -czvf /usr/src/backups/5.15.2-MiniBeast.tar.gz linux-5.15.2-MiniBeast
+: 1636770612:0;sudo kernel -a 5.15.2-MiniBeast
+: 1636770676:0;sudo rm -rf linux-5.15.2-MiniBeast/
+: 1636770681:0;sudo kernel -a 5.15.2-MiniBeast
+: 1636770729:0;efibootmgr
+: 1636770737:0;reboot
+: 1636771127:0;sudo efibootmgr -B -b 0001
+: 1636771140:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /vmlinuz-linux-5.15.2-MiniBeast --unicode 'root=UUID=0e1e8a9b-93b2-4fc4-a85d-dffd88f1e800 rootflags=subvol=@ rw resume=UUID=94f2f52a-fb58-40ba-96a0-8f7f27faeb36 quiet apparmor=1 systemd.unified_cgroup_hierarchy=1 nowatchdog initrd=\intel-ucode.img initrd=\initramfs-linux-5.15.2-MiniBeast.img' --verbose
+: 1636771144:0;efibootmgr
+: 1636771250:0;sudo kernel -r 5.15.2-MiniBeast
+: 1636771285:0;sudo kernel -u
+: 1636771312:0;sudo kernel
+: 1636771361:0;speedtest
+: 1636771973:0;install nvidia-dkms
+: 1636772182:0;efibootmgr
+: 1636772254:0;sa
+: 1636773869:0;cd /usr/lib/modules
+: 1636773870:0;l
+: 1636773890:0;..
+: 1636773923:0;pacman -Q linux
+: 1636774376:0;cd /etc/mkinitcpio.d
+: 1636774377:0;l
+: 1636774801:0;sudo kernel
+: 1636779678:0;cd /etc
+: 1636779679:0;l
+: 1636779691:0;l dbus-1
+: 1636779707:0;vim dbus-1/system.d/org.manjaro.pamac.daemon.conf
+: 1636779731:0;vim inputrc
+: 1636779799:0;libinput list-devices
+: 1636779802:0;sudo libinput list-devices
+: 1636779851:0;xinput list
+: 1636779905:0;cd /etc/X11/xorg.conf.d
+: 1636779906:0;l
+: 1636779909:0;vim 30-touchpad.conf
+: 1636809370:0;cd
+: 1636809382:0;cd /usr/src/linux-5.15.2-MiniBeast
+: 1636809395:0;sudo make menuconfig
+: 1636809497:0;lsmod
+: 1636810123:0;cd
+: 1636810128:0;lsmod
+: 1636810341:0;lsmod | grep elantech
+: 1636810713:0;cd .ext4
+: 1636810715:0;l
+: 1636810719:0;cd Games
+: 1636810720:0;l
+: 1636811871:0;intel
+: 1636811873:0;l
+: 1636812461:0;dmesg
+: 1636838416:0;search sbtools
+: 1636840544:0;trolol
+: 1636840564:0;bootctl
+: 1636840741:0;nf
+: 1636840743:0;sa
+: 1636841556:0;/usr/share/systemd/bootctl
+: 1636841557:0;l
+: 1636841565:0;feh splash-arch.bmp
+: 1636841611:0;cd /etc/kernel
+: 1636841612:0;l
+: 1636841618:0;l install.d
+: 1636841671:0;sudoedit cmdline
+: 1636841693:0;cd
+: 1636841698:0;vim /boot/loader/entries/MiniBeast.conf
+: 1636841753:0;cat /usr/lib/os-release
+: 1636841837:0;vim uefi
+: 1636842228:0;objcopy \\
+    --add-section .osrel="/usr/lib/os-release" --change-section-vma .osrel=0x20000 \\
+    --add-section .cmdline="/etc/kernel/cmdline" --change-section-vma .cmdline=0x30000 \\
+    --add-section .splash="/usr/share/systemd/bootctl/splash-arch.bmp" --change-section-vma .splash=0x40000 \\
+    --add-section .linux="/boot/vmlinuz-linux-5.15.2-MiniBeast" --change-section-vma .linux=0x2000000 \\
+    --add-section .initrd="/boot/initramfs-linux-5.15.2-MiniBeast.img" --change-section-vma .initrd=0x3000000 \\
+    "/usr/lib/systemd/boot/efi/linuxx64.efi.stub" "linux.efi"
+: 1636842242:0;l
+: 1636842255:0;file linux.efi
+: 1636842271:0;sudo mv linux.efi /boot
+: 1636842284:0;l
+: 1636842289:0;cd /boot
+: 1636842290:0;l
+: 1636842307:0;la
+: 1636842318:0;sudo rm -rf linux.efi 
+: 1636842342:0;sudo rm -rf bzImage
+: 1636842358:0;sudo objcopy \\
+    --add-section .osrel="/usr/lib/os-release" --change-section-vma .osrel=0x20000 \\
+    --add-section .cmdline="/etc/kernel/cmdline" --change-section-vma .cmdline=0x30000 \\
+    --add-section .splash="/usr/share/systemd/bootctl/splash-arch.bmp" --change-section-vma .splash=0x40000 \\
+    --add-section .linux="/boot/vmlinuz-linux-5.15.2-MiniBeast" --change-section-vma .linux=0x2000000 \\
+    --add-section .initrd="/boot/initramfs-linux-5.15.2-MiniBeast.img" --change-section-vma .initrd=0x3000000 \\
+    "/usr/lib/systemd/boot/efi/linuxx64.efi.stub" "linux.efi"
+: 1636842360:0;l
+: 1636842448:0;cd
+: 1636842523:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast2" --loader /linux.efi
+: 1636842548:0;reboot
+: 1636842667:0;efibootmgr
+: 1636842676:0;reboot
+: 1636842714:0;sa
+: 1636842729:0;reboot
+: 1636842764:0;tmux
+: 1636842842:0;sudo efibootmgr -B -b 0001
+: 1636842849:0;sudo efibootmgr -B -b 0009
+: 1636842868:0;sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "MiniBeast" --loader /linux.efi
+: 1636842874:0;reboot
+: 1636843128:0;sa
+: 1636843456:0;nf
+: 1636843478:0;cd /boot
+: 1636843479:0;l
+: 1636843513:0;sudo kernel
+: 1636843535:0;sudo kernel -r 5.15.0-MiniBeast
+: 1636843588:0;l
+: 1636843623:0;cd /etc/mkinitcpio.d
+: 1636843624:0;l
+: 1636843633:0;vim linux-5.15.2-MiniBeast.preset
+: 1636843670:0;sudoedit linux-5.15.2-MiniBeast.preset
+: 1636843752:0;sudo rm -rf *fallback*
+: 1636843754:0;l
+: 1636843801:0;sudo rm -rf *5.14.1*
+: 1636843802:0;l
+: 1636845915:0;l /boot/eed0d54cfa6f4219b370b3a0d5ad298f
+: 1636845925:0;la /boot/eed0d54cfa6f4219b370b3a0d5ad298f
+: 1636846217:0;nf
+: 1636850744:0;bootctl status
+: 1636850798:0;dmesg
+: 1636942582:0;sudo kernel -u
+: 1636973601:0;remove kdeclarative
+: 1636973632:0;sudo pacman -Rcsn kdeclarative
+: 1636973746:0;yay
+: 1636973772:0;sudo pacman -Rcsn kglobalaccel
+: 1636973844:0;sudo pacman -Rcsn kdbusaddons
+: 1636973875:0;yay
+: 1636973904:0;sudo pacman -Rcsn kwindowsystem
+: 1636973952:0;reboot
+: 1636975369:0;yay
+: 1636975399:0;sudo pacman -Rcsn kdoctools
+: 1636975486:0;yay
+: 1636975861:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636975863:0;l
+: 1636975867:0;cd hwmon6
+: 1636975868:0;l
+: 1636975887:0;vim .config/polybar/config
+: 1636975914:0;vim temp1_input
+: 1636975973:0;sensors
+: 1636975995:0;vim temp1_input
+: 1636976083:0;cat temp1_input
+: 1636976569:0;vim temperature.sh
+: 1636976803:0;l
+: 1636976815:0;chmod +x temperature.sh
+: 1636976823:0;./temperature.sh
+: 1636976836:0;cat temp1_input
+: 1636976852:0;./temperature.sh
+: 1636976873:0;cat temp1_input
+: 1636976883:0;./temperature.sh
+: 1636976916:0;vim temperature.sh
+: 1636977133:0;mv temperature.sh .config/polybar/scripts/tempcores.sh
+: 1636977368:0;cd .config/polybar/scripts
+: 1636977370:0;l
+: 1636977386:0;vim tempcores.sh
+: 1636977400:0;cat temp1_input
+: 1636977513:0;cd .config/polybar/scripts
+: 1636977515:0;vim tempcores.sh
+: 1636977525:0;vim ../config
+: 1636977720:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636977721:0;l
+: 1636977748:0;cd
+: 1636977758:0;cd .config/polybar/scripts
+: 1636977762:0;vim tempcores.sh
+: 1636977899:0;l
+: 1636977926:0;vim ../config
+: 1636978807:0;sa
+: 1636978851:0;dmesg
+: 1636979269:0;nf
+: 1636980017:0;notify-send.py Hello Jason
+: 1636980519:0;cd .config/polybar/scripts
+: 1636980520:0;l
+: 1636980525:0;vim tempcores.sh
+: 1636980593:0;cd /sys/devices/platform/coretemp.0/hwmon
+: 1636980594:0;l
+: 1636980599:0;cd hwmon5
+: 1636980600:0;l
+: 1636980610:0;vim temp1_max
+: 1636980623:0;vim temp1_crit
+: 1636980633:0;sensors
+: 1636980689:0;l
+: 1636980706:0;vim temp2_input
+: 1636980713:0;vim temp1_input
+: 1636980776:0;vim temp1_crit_alarm
+: 1636980798:0;vim temp5_input
+: 1636980871:0;vim .local/bin/kernel
+: 1636981172:0;../..
+: 1636981176:0;l
+: 1636981180:0;..
+: 1636981181:0;l
+: 1636981310:0;nf
+: 1636991830:0;yay
+: 1636992653:0;cd
+: 1636992660:0;cd .local/bin/
+: 1636992661:0;l
+: 1636992715:0;vim ~/.config/kernel/kernel.conf
+: 1636996155:0;man objcopy
+: 1636996692:0;sudo kernel -d 5.5.2
+: 1636996704:0;vim .local/bin/kernel
+: 1636996721:0;sudo kernel -d 5.5.2
+: 1636996761:0;cd
+: 1636996764:0;vim .local/bin/kernel
+: 1636996821:0;cd /usr/src
+: 1636996822:0;l
+: 1636996835:0;sudo rm -rf linux-5.5.2.tar.xz
+: 1636996838:0;cd
+: 1636996857:0;sudo kernel -h
+: 1636996895:0;vim .local/bin/kernel
+: 1636996986:0;sudo kernel -h
+: 1636998006:0;vim .local/bin/kernel
+: 1636999273:0;cd /etc
+: 1636999274:0;l
+: 1636999623:0;vim .local/bin/kernel
+: 1636999628:0;cd
+: 1636999629:0;vim .local/bin/kernel
+: 1636999827:0;cd /boot
+: 1636999827:0;l
+: 1636999886:0;cd /usr/lib/modules
+: 1636999888:0;l
+: 1637000546:0;cd
+: 1637000928:0;l
+: 1637000954:0;vim k_efi
+: 1637008187:0;mv k_efi .config/kernel/hooks && chmod +x .config/kernel/hooks
+: 1637008195:0;cd .config/kernel
+: 1637008196:0;l
+: 1637008236:0;vim hooks
+: 1637008281:0;cd
+: 1637008297:0;vim .config/polybar/scripts/kernel-update.sh
+: 1637008596:0;vim .local/bin/kernel
+: 1637008977:0;kernel
+: 1637008995:0;cd .config/kernel
+: 1637008996:0;l
+: 1637009002:0;vim .local/bin/kernel
+: 1637009353:0;kernel
+: 1637009359:0;vim .local/bin/kernel
+: 1637010046:0;sudo kernel -x
+: 1637010059:0;sudo kernel -c
+: 1637010066:0;kernel
+: 1637010096:0;vim .local/bin/kernel
+: 1637010158:0;kernel
+: 1637010171:0;sudo kernel -u
+: 1637010185:0;vim .local/bin/kernel
+: 1637011055:0;sudo kernel -r 4.14.1
+: 1637011091:0;vim .local/bin/kernel
+: 1637011253:0;sudo kernel -r 4.14.1
+: 1637011270:0;vim .local/bin/kernel
+: 1637011324:0;cd
+: 1637011326:0;vim .local/bin/kernel
+: 1637011891:0;sudo kernel -r 4.14.1
+: 1637011922:0;sudo kernel
+: 1637011993:0;sudo kernel -r 5.15.1-MiniBeast
+: 1637012018:0;cd /boot
+: 1637012019:0;l
+: 1637012056:0;vim .local/bin/kernel
+: 1637012075:0;sudo kernel -r 5.15.1-MiniBeast
+: 1637012088:0;vim .local/bin/kernel
+: 1637012174:0;sudo kernel -r 5.15.1-MiniBeast
+: 1637012184:0;vim .local/bin/kernel
+: 1637012278:0;cd /usr/lib/modules
+: 1637012279:0;l
+: 1637012330:0;sudo kernel -r 5.15.1-MiniBeast
+: 1637012406:0;vim .local/bin/kernel
+: 1637012662:0;man declare
+: 1637013255:0;kernel
+: 1637013259:0;sudo kernel
+: 1637013688:0;sudo kernel -r 5.15.2-arch1-1
+: 1637013838:0;mpv pokemon.mp4
+: 1637013980:0;echo $TERM
+: 1637013984:0;nf
+: 1637014023:0;vim .local/bin/git_sync
+: 1637014167:0;cd
+: 1637014180:0;cd .build/git
+: 1637014190:0;git clone git@github.com:cjmcguire88/custom-kernel-manager.git
+: 1637014199:0;pass -c System/ssh
+: 1637014210:0;l
+: 1637014360:0;cd custom-kernel-manager
+: 1637014361:0;l
+: 1637014373:0;git_sync
