@@ -201,7 +201,7 @@ super + @space
 
 # open browser
 super + shift + b
-    firefox
+    chromium
 
 # open tor browser
 super + alt + b
@@ -214,10 +214,6 @@ super + shift + f
 # open pamac 
 super + shift + u
 	pamac-manager
-
-# open settings
-super + shift + s
-	systemsettings5
 
 # open steam 
 super + shift + g
@@ -234,10 +230,6 @@ super + shift + d
 # open task manager
 super + F1
 	st btop
-
-# open system log
-super + F2
-	ksystemlog
 
 # open nvtop
 super + F3

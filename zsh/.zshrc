@@ -43,7 +43,6 @@ HISTSIZE=1000000
 
 HISTFILE=~/.config/zsh/zsh_history
 
-source ~/.profile
 source $ZSH/oh-my-zsh.sh
 source ~/.config/shell/aliases
 source ~/.config/shell/functions
