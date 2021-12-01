@@ -33,6 +33,7 @@ debuginfod
 dialog
 discord
 dosfstools
+dust
 easyeffects
 ecryptfs-utils
 edex-ui
@@ -169,6 +170,8 @@ subversion
 sudo
 surf-git
 sxhkd
+sysstat
+systemd-resolvconf
 terminus-font
 texinfo
 thermald
