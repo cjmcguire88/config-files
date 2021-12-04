@@ -184,9 +184,6 @@ super + {h,j,k,l}
 #              |___/
 
 # cheatsheet
-super + F5
-	st cat ~/.config/sxhkd/sxhkd-cheatsheet
-
 # rofi
 super + grave
     rofi -show drun

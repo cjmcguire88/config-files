@@ -11,9 +11,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-autoload -Uz compinit && compinit -u
-compinit -i -C -d $ZDOTDIR/.zcompdump-MiniBeast-5.8
+autoload -Uz compinit
+compinit
+eval "$(zoxide init zsh)"
 
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+ZSH_CACHE_DIR=~/.cache/zsh
 HISTSIZE=1000000
 
 HISTFILE=~/.config/zsh/zsh_history

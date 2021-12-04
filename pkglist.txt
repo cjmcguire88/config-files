@@ -49,6 +49,7 @@ firefox
 flameshot
 flex
 font-manager-git
+fzf
 gawk
 gcc
 gcr
@@ -133,6 +134,7 @@ pipewire-pulse
 pipewire-v4l2
 pipewire-zeroconf
 pkgconf
+polkit-gnome
 polybar
 poppler-qt6
 powertop
@@ -210,4 +212,5 @@ youtube-dl
 ytop
 zathura
 zathura-pdf-mupdf
+zoxide
 zsh
