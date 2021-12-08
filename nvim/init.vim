@@ -38,6 +38,7 @@ Plug 'chrisbra/Colorizer' " Color hex codes and color names.
 Plug 'honza/vim-snippets' " Community maintained snippets for various programming languages.
 Plug 'dkarter/bullets.vim' " Bullets.vim is a Vim plugin for automated bullet lists.
 Plug 'luochen1990/rainbow' " Rainbow parenthesis improved
+Plug 'unblevable/quick-scope' " An always-on highlight for a unique character in every word on a line.
 
 call plug#end()
 

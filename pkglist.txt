@@ -58,6 +58,7 @@ gimp
 git
 glances-git
 gnome-maps
+google-chrome
 grabc
 graphicsmagick
 grep
@@ -122,6 +123,7 @@ pacman-debug
 pacwall-git
 pamac-aur
 pamixer
+paru
 pass
 patch
 pavucontrol
@@ -183,7 +185,9 @@ tlp-rdw
 tmux
 tor
 torbrowser-launcher
+tpm2-tools
 traceroute
+trash-cli
 tree
 ttf-material-design-icons
 ueberzug
