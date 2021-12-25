@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-if yay -Sy > /dev/null 2>&1; then
-    yay -Qu | wc -l
-else
-    echo DISCONNECTED
-fi
